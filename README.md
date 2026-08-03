@@ -19,6 +19,7 @@ Depois de ativar o GitHub Pages:
 - **Meridian (Advogados):** https://edudiasr.github.io/portfolio-web/site-advocacia/
 - **Amora Pet:** https://edudiasr.github.io/portfolio-web/site-petshop/
 - **Solara (Energia Solar):** https://edudiasr.github.io/portfolio-web/site-energia-solar/
+- **Pulse (Academia):** https://edudiasr.github.io/portfolio-web/site-academia/
 
 ---
 
@@ -34,10 +35,20 @@ Depois de ativar o GitHub Pages:
 | [`site-advocacia`](./site-advocacia) | Advocacia — charcoal/vinho, áreas, equipe, consulta WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-petshop`](./site-petshop) | Pet shop / vet — coral/mint, filtros, planos, WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-energia-solar`](./site-energia-solar) | Energia solar — navy/dourado, simulador, projetos, WhatsApp | HTML · CSS · JS | ✅ Pronto |
+| [`site-academia`](./site-academia) | Academia — preto/volt, grade, planos, trial WhatsApp | HTML · CSS · JS | ✅ Pronto |
 
-### Próximos na fila
+### Próximos na fila (ideias)
 
-1. Academia
+1. Padaria / confeitaria  
+2. Salão de beleza / estética  
+3. Oficina mecânica / auto center  
+4. Contabilidade / escritório contábil  
+5. Escola de idiomas  
+6. Arquitetura / interiores  
+7. Delivery de açaí / cafeteria  
+8. Lavanderia / limpeza  
+9. Clínica de fisioterapia / pilates  
+10. Construtora / reformas
 
 ---
 

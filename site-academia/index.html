@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulse Academia — Treino em Joinville, SC</title>
+  <meta name="description" content="Academia em Joinville. Musculação, funcional, aulas coletivas e personal. Experimente uma semana." />
+  <meta name="author" content="Pulse Academia" />
+  <meta property="og:title" content="Pulse Academia — Joinville" />
+  <meta property="og:description" content="Treino com método, energia e resultado real." />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23090a0c'/><path d='M20 55 L35 55 L42 30 L50 70 L58 40 L65 55 L80 55' stroke='%23ffe600' stroke-width='8' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__photo"></div>
+    <div class="ambient__veil"></div>
+    <div class="ambient__glow" id="ambient-glow"></div>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <span class="cursor__dot"></span>
+    <span class="cursor__ring"></span>
+  </div>
+
+  <div class="pulse-bg" aria-hidden="true">
+    <span class="pulse-bg__ring"></span>
+    <span class="pulse-bg__ring pulse-bg__ring--2"></span>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Pulse Academia">
+        <span class="logo__wave" aria-hidden="true"></span>
+        <span class="logo__text">PULSE<em>ACADEMIA</em></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link active">Início</a></li>
+          <li><a href="#modalidades" class="nav__link">Modalidades</a></li>
+          <li><a href="#planos" class="nav__link">Planos</a></li>
+          <li><a href="#horarios" class="nav__link">Horários</a></li>
+          <li><a href="#equipe" class="nav__link">Equipe</a></li>
+          <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#contato" class="btn btn--volt btn--sm header__cta">Começar agora</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="hero__eyebrow reveal">
+            <span class="live"></span>
+            Joinville · SC · Academia &amp; Performance
+          </p>
+          <h1 class="hero__title reveal">
+            TREINE COM<br />
+            <em>INTENÇÃO.</em>
+          </h1>
+          <p class="hero__text reveal">
+            Musculação, funcional e aulas coletivas num espaço intenso —
+            estrutura de verdade e acompanhamento que puxa resultado.
+          </p>
+          <div class="hero__actions reveal">
+            <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20experimentar%20a%20Pulse%20Academia." class="btn btn--volt magnetic" target="_blank" rel="noopener">
+              Experimentar 7 dias
+            </a>
+            <a href="#planos" class="btn btn--ghost magnetic">Ver planos</a>
+          </div>
+          <dl class="hero__stats reveal">
+            <div>
+              <dt data-count="1200" data-suffix="+">0</dt>
+              <dd>alunos ativos</dd>
+            </div>
+            <div>
+              <dt data-count="18">0</dt>
+              <dd>h / dia aberta</dd>
+            </div>
+            <div>
+              <dt data-count="40" data-suffix="+">0</dt>
+              <dd>aulas / semana</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__stage reveal">
+          <div class="hero__photo tilt" data-tilt>
+            <img src="assets/img/academia-interior.png" alt="Área de musculação da Pulse Academia" />
+            <div class="hero__photo-badge">Floor · Force</div>
+          </div>
+          <aside class="hero__board tilt" data-tilt aria-label="Treino do dia">
+            <div class="board__head">
+              <span class="board__live"></span>
+              Treino do dia
+            </div>
+            <div class="board__list" id="wod">
+              <article class="board__item is-active">
+                <strong>05h30</strong>
+                <span>Funcional · Power</span>
+              </article>
+              <article class="board__item">
+                <strong>07h00</strong>
+                <span>Bike Indoor</span>
+              </article>
+              <article class="board__item">
+                <strong>12h15</strong>
+                <span>HIIT Express</span>
+              </article>
+              <article class="board__item">
+                <strong>19h00</strong>
+                <span>Musculação guiada</span>
+              </article>
+            </div>
+            <div class="board__meter">
+              <span>Energia da unidade</span>
+              <div class="meter"><i id="energy-bar"></i></div>
+              <strong id="energy-label">Alta</strong>
+            </div>
+          </aside>
+        </div>
+      </div>
+      <a href="#sobre" class="hero__scroll" aria-label="Rolar para baixo"><span></span></a>
+    </section>
+
+    <section class="strip" aria-hidden="true">
+      <div class="strip__track">
+        <p>FORÇA · CONDICIONAMENTO · MOBILIDADE · FOCO · DISCIPLINA · RESULTADO · FORÇA · CONDICIONAMENTO · MOBILIDADE · FOCO · DISCIPLINA · RESULTADO ·</p>
+        <p>FORÇA · CONDICIONAMENTO · MOBILIDADE · FOCO · DISCIPLINA · RESULTADO · FORÇA · CONDICIONAMENTO · MOBILIDADE · FOCO · DISCIPLINA · RESULTADO ·</p>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container about">
+        <div class="about__copy reveal">
+          <span class="tag">A Pulse</span>
+          <h2 class="title">Menos pose. <em>Mais progresso.</em></h2>
+          <p>
+            A Pulse nasceu no Centro de Joinville para quem quer treinar com método:
+            avaliação, plano, correção de movimento e ambiente que puxa o melhor de você.
+          </p>
+          <ul class="checks">
+            <li>Avaliação física na entrada</li>
+            <li>App com treinos e evolução</li>
+            <li>Professores em todos os turnos</li>
+            <li>Vestiários limpos e armários</li>
+          </ul>
+        </div>
+        <div class="about__grid">
+          <article class="stat-card tilt reveal" data-tilt>
+            <span>01</span>
+            <h3>Método</h3>
+            <p>Treino periodizado, sem achismo.</p>
+          </article>
+          <article class="stat-card tilt reveal" data-tilt>
+            <span>02</span>
+            <h3>Comunidade</h3>
+            <p>Turmas que empurram o ritmo.</p>
+          </article>
+          <article class="stat-card tilt reveal" data-tilt>
+            <span>03</span>
+            <h3>Estrutura</h3>
+            <p>Peso livre, máquinas e studio.</p>
+          </article>
+          <article class="stat-card tilt reveal" data-tilt>
+            <span>04</span>
+            <h3>Resultado</h3>
+            <p>Acompanhamento mensal de metas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase" id="espaco">
+      <div class="container showcase__grid">
+        <figure class="showcase__frame reveal">
+          <img src="assets/img/academia-interior.png" alt="Salão de musculação Pulse com equipamentos e iluminação linear" />
+          <figcaption>Nosso floor · Centro de Joinville</figcaption>
+        </figure>
+        <div class="showcase__copy reveal">
+          <span class="tag">O espaço</span>
+          <h2 class="title">Equipamento sério. <em>Ambiente quente.</em></h2>
+          <p>
+            Linha de máquinas, peso livre e iluminação que mantém o foco —
+            o tipo de sala que faz você querer voltar no dia seguinte.
+          </p>
+          <a href="#contato" class="btn btn--volt magnetic">Agendar visita</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="modalidades">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Modalidades</span>
+          <h2 class="title">Escolha como você <em>treina</em></h2>
+          <p>Filtre e monte sua rotina.</p>
+        </div>
+
+        <div class="filters reveal">
+          <button class="chip active" data-filter="all">Todas</button>
+          <button class="chip" data-filter="musculacao">Musculação</button>
+          <button class="chip" data-filter="funcional">Funcional</button>
+          <button class="chip" data-filter="coletiva">Coletivas</button>
+          <button class="chip" data-filter="personal">Personal</button>
+        </div>
+
+        <div class="mods">
+          <article class="mod tilt reveal" data-tilt data-cat="musculacao">
+            <span>01</span>
+            <h3>Musculação</h3>
+            <p>Peso livre e máquinas com orientação em todos os horários.</p>
+            <button type="button" class="link-wa" data-wa="Musculação na Pulse">Quero treinar</button>
+          </article>
+          <article class="mod tilt reveal" data-tilt data-cat="funcional">
+            <span>02</span>
+            <h3>Funcional</h3>
+            <p>Condicionamento, potência e core em blocos intensos.</p>
+            <button type="button" class="link-wa" data-wa="Funcional na Pulse">Quero treinar</button>
+          </article>
+          <article class="mod tilt reveal" data-tilt data-cat="coletiva">
+            <span>03</span>
+            <h3>Bike Indoor</h3>
+            <p>Aulas com playlist e metas de cadência.</p>
+            <button type="button" class="link-wa" data-wa="Bike Indoor na Pulse">Quero treinar</button>
+          </article>
+          <article class="mod tilt reveal" data-tilt data-cat="coletiva">
+            <span>04</span>
+            <h3>HIIT</h3>
+            <p>Alta intensidade em 30–40 minutos — suor garantido.</p>
+            <button type="button" class="link-wa" data-wa="HIIT na Pulse">Quero treinar</button>
+          </article>
+          <article class="mod tilt reveal" data-tilt data-cat="coletiva">
+            <span>05</span>
+            <h3>Mobilidade</h3>
+            <p>Recuperação ativa, amplitude e prevenção de lesão.</p>
+            <button type="button" class="link-wa" data-wa="Mobilidade na Pulse">Quero treinar</button>
+          </article>
+          <article class="mod tilt reveal" data-tilt data-cat="personal">
+            <span>06</span>
+            <h3>Personal Training</h3>
+            <p>Plano individual com Eduarda ou Eduardo Dias.</p>
+            <button type="button" class="link-wa" data-wa="Personal Training na Pulse">Quero treinar</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="planos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Planos</span>
+          <h2 class="title">Escolha seu <em>ritmo</em></h2>
+        </div>
+        <div class="plans">
+          <article class="plan tilt reveal" data-tilt>
+            <h3>Start</h3>
+            <p class="plan__price">R$ 99<span>/mês</span></p>
+            <ul>
+              <li>Musculação livre</li>
+              <li>Avaliação inicial</li>
+              <li>Horário comercial</li>
+            </ul>
+            <button type="button" class="btn btn--ghost btn--block link-wa" data-wa="Plano Start">Assinar</button>
+          </article>
+          <article class="plan plan--hot tilt reveal" data-tilt>
+            <span class="plan__badge">Mais forte</span>
+            <h3>Pulse</h3>
+            <p class="plan__price">R$ 149<span>/mês</span></p>
+            <ul>
+              <li>Todas as modalidades</li>
+              <li>Aulas coletivas ilimitadas</li>
+              <li>App de treinos</li>
+              <li>Acesso 05h–23h</li>
+            </ul>
+            <button type="button" class="btn btn--volt btn--block link-wa" data-wa="Plano Pulse">Assinar</button>
+          </article>
+          <article class="plan tilt reveal" data-tilt>
+            <h3>Black</h3>
+            <p class="plan__price">R$ 249<span>/mês</span></p>
+            <ul>
+              <li>Tudo do Pulse</li>
+              <li>4 sessões personal / mês</li>
+              <li>Prioridade em aulas</li>
+            </ul>
+            <button type="button" class="btn btn--ghost btn--block link-wa" data-wa="Plano Black">Assinar</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="horarios">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Grade</span>
+          <h2 class="title">Horários da <em>semana</em></h2>
+          <p>Selecione o dia.</p>
+        </div>
+
+        <div class="days reveal" role="tablist">
+          <button class="day active" data-day="seg">Seg</button>
+          <button class="day" data-day="ter">Ter</button>
+          <button class="day" data-day="qua">Qua</button>
+          <button class="day" data-day="qui">Qui</button>
+          <button class="day" data-day="sex">Sex</button>
+          <button class="day" data-day="sab">Sáb</button>
+        </div>
+
+        <div class="schedule reveal" id="schedule">
+          <!-- filled by JS -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="equipe">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Equipe</span>
+          <h2 class="title">Quem puxa o <em>treino</em></h2>
+        </div>
+        <div class="team">
+          <article class="team-card tilt reveal" data-tilt>
+            <div class="team-card__avatar" aria-hidden="true">ED</div>
+            <h3>Eduarda Dias</h3>
+            <p class="team-card__role">CREF · Coordenação &amp; Personal</p>
+            <p>Força, hipertrofia e periodização com olhar técnico e motivação afiada.</p>
+          </article>
+          <article class="team-card tilt reveal" data-tilt>
+            <div class="team-card__avatar team-card__avatar--alt" aria-hidden="true">ED</div>
+            <h3>Eduardo Dias</h3>
+            <p class="team-card__role">CREF · Funcional &amp; HIIT</p>
+            <p>Condicionamento, potência e aulas coletivas que não perdoam o relógio.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="depoimentos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Alunos</span>
+          <h2 class="title">Quem já sente a <em>Pulse</em></h2>
+        </div>
+        <div class="quotes">
+          <blockquote class="quote reveal">
+            <p>“Em 3 meses troquei de roupa — e de mentalidade. Aqui ninguém treina sozinho.”</p>
+            <footer>— Carla · Plano Pulse</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“Funcional das 19h é viciante. Saio destruído e voltando no dia seguinte.”</p>
+            <footer>— Bruno · Centro</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“Personal com a Eduarda mudou meu treino. Finalmente tenho método.”</p>
+            <footer>— Diego · Plano Black</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head reveal">
+          <span class="tag">FAQ</span>
+          <h2 class="title">Dúvidas <em>rápidas</em></h2>
+        </div>
+        <div class="faq">
+          <details class="faq-item reveal">
+            <summary>Posso experimentar antes de assinar?<span></span></summary>
+            <p>Sim. Oferecemos 7 dias de experiência — fale no WhatsApp para liberar o acesso.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Tem estacionamento?<span></span></summary>
+            <p>Convênio com estacionamento no quarteirão e vagas rápidas na frente em horários específicos.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Iniciante pode treinar?<span></span></summary>
+            <p>Com certeza. Avaliação na entrada e orientação em todos os turnos.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Fidelidade de plano?<span></span></summary>
+            <p>Planos mensais sem fidelidade longa. Anual com desconto — detalhes na recepção.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta__inner reveal">
+        <div>
+          <h2>Pronto pra subir o nível?</h2>
+          <p>7 dias pra sentir a diferença. Sem enrolação.</p>
+        </div>
+        <a href="#contato" class="btn btn--dark magnetic">Quero experimentar</a>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="contato">
+      <div class="container contact">
+        <div class="contact__info reveal">
+          <span class="tag">Contato</span>
+          <h2 class="title">Entre na <em>Pulse</em></h2>
+          <ul class="contact__list">
+            <li>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/5547992072891">(47) 99207-2891</a>
+            </li>
+            <li>
+              <strong>E-mail</strong>
+              <a href="mailto:edudiasr6@gmail.com">edudiasr6@gmail.com</a>
+            </li>
+            <li>
+              <strong>Endereço</strong>
+              <span>Centro de Joinville<br />Joinville — SC · Brasil</span>
+            </li>
+            <li>
+              <strong>Horário</strong>
+              <span>Seg a Sex · 05h–23h<br />Sáb · 07h–18h · Dom · 08h–13h</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contact-form" novalidate>
+          <h3>Quero experimentar</h3>
+          <p class="form__lead">Retorno rápido com horários e planos.</p>
+
+          <div class="form__row">
+            <label>
+              Nome
+              <input type="text" name="name" required placeholder="Seu nome" autocomplete="name" />
+              <span class="form__error">Informe seu nome.</span>
+            </label>
+            <label>
+              WhatsApp
+              <input type="tel" name="phone" required placeholder="(47) 99207-2891" autocomplete="tel" inputmode="tel" />
+              <span class="form__error">Informe um telefone válido.</span>
+            </label>
+          </div>
+          <label>
+            Objetivo
+            <select name="goal" required>
+              <option value="" disabled selected>Selecione</option>
+              <option>Emagrecimento</option>
+              <option>Hipertrofia</option>
+              <option>Condicionamento</option>
+              <option>Saúde / qualidade de vida</option>
+              <option>Personal training</option>
+            </select>
+            <span class="form__error">Escolha um objetivo.</span>
+          </label>
+          <label>
+            Plano de interesse
+            <select name="plan">
+              <option value="">Ainda não sei</option>
+              <option>Start</option>
+              <option>Pulse</option>
+              <option>Black</option>
+              <option>Só experimentar</option>
+            </select>
+          </label>
+          <label>
+            Mensagem
+            <textarea name="message" rows="3" placeholder="Horário preferido, experiência prévia..."></textarea>
+          </label>
+          <button type="submit" class="btn btn--volt btn--block">Enviar no WhatsApp</button>
+          <p class="form__ok" id="form-ok" hidden>✓ Abrindo o WhatsApp…</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="logo">
+        <span class="logo__wave" aria-hidden="true"></span>
+        <span class="logo__text">PULSE<em>ACADEMIA</em></span>
+      </a>
+      <p>Centro de Joinville · SC · Brasil</p>
+      <p>© <span id="year"></span> Pulse Academia · Portfólio</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20Pulse%20Academia." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  </a>
+
+  <button class="to-top" id="to-top" aria-label="Voltar ao topo">↑</button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
