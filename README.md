@@ -18,6 +18,7 @@ Depois de ativar o GitHub Pages:
 - **Vértice (Imóveis):** https://edudiasr.github.io/portfolio-web/site-imobiliaria/
 - **Meridian (Advogados):** https://edudiasr.github.io/portfolio-web/site-advocacia/
 - **Amora Pet:** https://edudiasr.github.io/portfolio-web/site-petshop/
+- **Solara (Energia Solar):** https://edudiasr.github.io/portfolio-web/site-energia-solar/
 
 ---
 
@@ -32,11 +33,11 @@ Depois de ativar o GitHub Pages:
 | [`site-imobiliaria`](./site-imobiliaria) | Imobiliária — filtros, listings, bairros, visita WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-advocacia`](./site-advocacia) | Advocacia — charcoal/vinho, áreas, equipe, consulta WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-petshop`](./site-petshop) | Pet shop / vet — coral/mint, filtros, planos, WhatsApp | HTML · CSS · JS | ✅ Pronto |
+| [`site-energia-solar`](./site-energia-solar) | Energia solar — navy/dourado, simulador, projetos, WhatsApp | HTML · CSS · JS | ✅ Pronto |
 
 ### Próximos na fila
 
-1. Energia solar  
-2. Academia
+1. Academia
 
 ---
 

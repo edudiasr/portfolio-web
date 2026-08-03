@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solara — Energia Solar em Joinville, SC</title>
+  <meta name="description" content="Energia solar em Joinville. Projeto, instalação e monitoramento. Economia na conta de luz com atendimento local." />
+  <meta name="author" content="Solara Energia" />
+  <meta property="og:title" content="Solara — Energia Solar Joinville" />
+  <meta property="og:description" content="Do diagnóstico à geração: energia limpa com retorno mensurável." />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230b1220'/><circle cx='50' cy='50' r='22' fill='%23f5b942'/><circle cx='50' cy='50' r='12' fill='%23ffe08a'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="sky" aria-hidden="true">
+    <span class="sky__sun"></span>
+    <span class="sky__ray sky__ray--1"></span>
+    <span class="sky__ray sky__ray--2"></span>
+    <span class="sky__ray sky__ray--3"></span>
+    <span class="sky__grid"></span>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Solara Energia">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">Solara<em>Energia</em></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link active">Início</a></li>
+          <li><a href="#como" class="nav__link">Como funciona</a></li>
+          <li><a href="#economia" class="nav__link">Economia</a></li>
+          <li><a href="#projetos" class="nav__link">Projetos</a></li>
+          <li><a href="#faq" class="nav__link">FAQ</a></li>
+          <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#contato" class="btn btn--sun btn--sm header__cta">Simular economia</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="hero__eyebrow reveal">Joinville · SC · Energia fotovoltaica</p>
+          <h1 class="hero__title reveal">
+            Sua conta de luz<br />
+            no <em>modo economia</em>.
+          </h1>
+          <p class="hero__text reveal">
+            Projeto, instalação e monitoramento solar para residências e empresas.
+            Transparência no investimento e retorno que você acompanha todo mês.
+          </p>
+          <div class="hero__actions reveal">
+            <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20simular%20economia%20com%20a%20Solara." class="btn btn--sun" target="_blank" rel="noopener">
+              Falar no WhatsApp
+            </a>
+            <a href="#economia" class="btn btn--ghost">Calcular economia</a>
+          </div>
+          <dl class="hero__stats reveal">
+            <div>
+              <dt data-count="450" data-suffix="+">0</dt>
+              <dd>sistemas instalados</dd>
+            </div>
+            <div>
+              <dt data-count="12">0</dt>
+              <dd>anos de experiência</dd>
+            </div>
+            <div>
+              <dt data-count="95" data-suffix="%">0</dt>
+              <dd>economia média*</dd>
+            </div>
+          </dl>
+          <p class="hero__note reveal">*Varia conforme consumo, tarifa e dimensão do sistema.</p>
+        </div>
+
+        <aside class="hero__panel reveal" aria-label="Simulador rápido">
+          <div class="panel__head">
+            <span class="panel__live"></span>
+            Simulador rápido
+          </div>
+          <label class="panel__field">
+            Conta de luz mensal
+            <div class="panel__range">
+              <input type="range" id="bill-range" min="150" max="2500" step="50" value="450" />
+              <strong id="bill-value">R$ 450</strong>
+            </div>
+          </label>
+          <label class="panel__field">
+            Tipo de imóvel
+            <select id="property-type">
+              <option value="1">Residencial</option>
+              <option value="1.05">Comercial</option>
+              <option value="1.1">Industrial / rural</option>
+            </select>
+          </label>
+          <div class="panel__result">
+            <div>
+              <span>Economia estimada / mês</span>
+              <strong id="save-month">R$ 405</strong>
+            </div>
+            <div>
+              <span>Em 12 meses</span>
+              <strong id="save-year">R$ 4.860</strong>
+            </div>
+          </div>
+          <button type="button" class="btn btn--sun btn--block" id="sim-wa">Receber proposta no WhatsApp</button>
+        </aside>
+      </div>
+    </section>
+
+    <section class="strip" aria-hidden="true">
+      <div class="strip__track">
+        <p>Projeto · Homologação · Instalação · Monitoramento · Manutenção · Economia · Projeto · Homologação · Instalação · Monitoramento · Manutenção · Economia ·</p>
+        <p>Projeto · Homologação · Instalação · Monitoramento · Manutenção · Economia · Projeto · Homologação · Instalação · Monitoramento · Manutenção · Economia ·</p>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container about">
+        <div class="about__copy reveal">
+          <span class="tag">A Solara</span>
+          <h2 class="title">Energia limpa com <em>engenharia clara</em></h2>
+          <p>
+            Do diagnóstico ao pós-venda, a Solara conduz cada etapa com linguagem simples
+            e números objetivos. Sem surpresa na proposta — e com acompanhamento real da geração.
+          </p>
+          <ul class="checks">
+            <li>Visita técnica e análise da sua conta</li>
+            <li>Dimensionamento sob medida</li>
+            <li>Homologação junto à concessionária</li>
+            <li>App de monitoramento da geração</li>
+          </ul>
+        </div>
+        <div class="about__cards">
+          <article class="mini reveal">
+            <span>01</span>
+            <h3>Residencial</h3>
+            <p>Casas e condomínios com foco em redução da fatura.</p>
+          </article>
+          <article class="mini reveal">
+            <span>02</span>
+            <h3>Comercial</h3>
+            <p>Lojas, escritórios e clínicas com consumo diurno.</p>
+          </article>
+          <article class="mini reveal">
+            <span>03</span>
+            <h3>Empresarial</h3>
+            <p>Indústria e agronegócio com sistemas de maior porte.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="como">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Como funciona</span>
+          <h2 class="title">Do primeiro contato à <em>primeira geração</em></h2>
+        </div>
+        <ol class="steps">
+          <li class="reveal">
+            <span>01</span>
+            <div>
+              <h3>Diagnóstico</h3>
+              <p>Analisamos sua conta, telhado e perfil de consumo.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span>02</span>
+            <div>
+              <h3>Proposta</h3>
+              <p>Simulação de economia, payback e escopo do sistema.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span>03</span>
+            <div>
+              <h3>Instalação</h3>
+              <p>Equipe própria, cronograma alinhado e obra organizada.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span>04</span>
+            <div>
+              <h3>Geração</h3>
+              <p>Homologação concluída e monitoramento ativo.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="economia">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Economia</span>
+          <h2 class="title">Veja o impacto na <em>sua fatura</em></h2>
+          <p>Ajuste o valor da conta e compare o cenário atual com solar.</p>
+        </div>
+
+        <div class="calc reveal">
+          <div class="calc__controls">
+            <label>
+              Conta atual (R$/mês)
+              <input type="number" id="calc-bill" min="100" max="10000" step="10" value="450" />
+            </label>
+            <label>
+              % de compensação estimada
+              <input type="range" id="calc-pct" min="70" max="98" value="90" />
+              <output id="calc-pct-out">90%</output>
+            </label>
+            <p class="calc__hint">Estimativa educativa — a proposta formal considera tarifa, impostos e perfil real.</p>
+          </div>
+          <div class="calc__charts">
+            <div class="bar-card">
+              <span>Hoje</span>
+              <div class="bar"><i id="bar-now" style="height: 90%"></i></div>
+              <strong id="label-now">R$ 450</strong>
+            </div>
+            <div class="bar-card bar-card--sun">
+              <span>Com Solara</span>
+              <div class="bar"><i id="bar-solar" style="height: 18%"></i></div>
+              <strong id="label-solar">R$ 45</strong>
+            </div>
+            <div class="bar-card bar-card--save">
+              <span>Você economiza</span>
+              <strong id="label-save" class="bar-card__big">R$ 405</strong>
+              <em id="label-year">R$ 4.860 / ano</em>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="beneficios">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Benefícios</span>
+          <h2 class="title">Por que investir em <em>solar</em></h2>
+        </div>
+        <div class="benefits">
+          <article class="benefit reveal">
+            <h3>Previsibilidade</h3>
+            <p>Menos exposição aos reajustes tarifários ano a ano.</p>
+          </article>
+          <article class="benefit reveal">
+            <h3>Valorização</h3>
+            <p>Imóvel com geração própria tende a se destacar na venda.</p>
+          </article>
+          <article class="benefit reveal">
+            <h3>Sustentabilidade</h3>
+            <p>Energia limpa com impacto ambiental mensurável.</p>
+          </article>
+          <article class="benefit reveal">
+            <h3>Suporte local</h3>
+            <p>Atendimento em Joinville, do projeto à manutenção.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projetos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Projetos</span>
+          <h2 class="title">Sistemas que já estão <em>gerando</em></h2>
+          <p>Filtre por perfil e peça um projeto semelhante.</p>
+        </div>
+
+        <div class="filters reveal">
+          <button class="chip active" data-filter="all">Todos</button>
+          <button class="chip" data-filter="residencial">Residencial</button>
+          <button class="chip" data-filter="comercial">Comercial</button>
+          <button class="chip" data-filter="rural">Rural</button>
+        </div>
+
+        <div class="projects">
+          <article class="project reveal" data-cat="residencial">
+            <div class="project__visual project__visual--a" aria-hidden="true"></div>
+            <div class="project__body">
+              <span>Residencial · 5,2 kWp</span>
+              <h3>Casa em América</h3>
+              <p>Conta de R$ 480 → residual médio de R$ 62.</p>
+              <button type="button" class="link-wa" data-wa="Projeto semelhante: Casa em América 5,2 kWp">Quero um assim</button>
+            </div>
+          </article>
+          <article class="project reveal" data-cat="comercial">
+            <div class="project__visual project__visual--b" aria-hidden="true"></div>
+            <div class="project__body">
+              <span>Comercial · 18 kWp</span>
+              <h3>Clínica no Centro</h3>
+              <p>Consumo diurno compensado com sobra em feriados.</p>
+              <button type="button" class="link-wa" data-wa="Projeto semelhante: Clínica Centro 18 kWp">Quero um assim</button>
+            </div>
+          </article>
+          <article class="project reveal" data-cat="residencial">
+            <div class="project__visual project__visual--c" aria-hidden="true"></div>
+            <div class="project__body">
+              <span>Residencial · 8,4 kWp</span>
+              <h3>Sobrado Costa e Silva</h3>
+              <p>Família 4 pessoas + ar-condicionado — payback ~4,8 anos.</p>
+              <button type="button" class="link-wa" data-wa="Projeto semelhante: Sobrado Costa e Silva 8,4 kWp">Quero um assim</button>
+            </div>
+          </article>
+          <article class="project reveal" data-cat="rural">
+            <div class="project__visual project__visual--d" aria-hidden="true"></div>
+            <div class="project__body">
+              <span>Rural · 25 kWp</span>
+              <h3>Propriedade no interior</h3>
+              <p>Irrigação e galpão com geração própria estável.</p>
+              <button type="button" class="link-wa" data-wa="Projeto semelhante: Propriedade rural 25 kWp">Quero um assim</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="equipe">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Equipe</span>
+          <h2 class="title">Quem conduz o <em>seu projeto</em></h2>
+        </div>
+        <div class="team">
+          <article class="team-card reveal">
+            <div class="team-card__avatar" aria-hidden="true">ED</div>
+            <h3>Eduarda Dias</h3>
+            <p class="team-card__role">Engenharia &amp; projetos</p>
+            <p>Dimensionamento, memorial e acompanhamento técnico de ponta a ponta.</p>
+          </article>
+          <article class="team-card reveal">
+            <div class="team-card__avatar team-card__avatar--alt" aria-hidden="true">ED</div>
+            <h3>Eduardo Dias</h3>
+            <p class="team-card__role">Instalação &amp; campo</p>
+            <p>Execução segura, cronograma cumprido e entrega com checklist completo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="depoimentos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Clientes</span>
+          <h2 class="title">Quem já gera com a <em>Solara</em></h2>
+        </div>
+        <div class="quotes">
+          <blockquote class="quote reveal">
+            <p>“Em 45 dias estava gerando. A conta caiu exatamente como a simulação.”</p>
+            <footer>— Marcos · Residencial</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“Proposta clara, sem letra miúda. Instalação organizada e limpa.”</p>
+            <footer>— Clínica Horizonte · Centro</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“O app de monitoramento virou rotina. Sei o que o sistema gerou ontem.”</p>
+            <footer>— Ana · Costa e Silva</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head reveal">
+          <span class="tag">FAQ</span>
+          <h2 class="title">Perguntas <em>frequentes</em></h2>
+        </div>
+        <div class="faq">
+          <details class="faq-item reveal">
+            <summary>Quanto tempo até começar a gerar?<span></span></summary>
+            <p>Em média 30 a 60 dias após a aprovação do projeto, variando com a concessionária e o porte do sistema.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Funciona em dia nublado?<span></span></summary>
+            <p>Sim, com geração reduzida. O sistema é dimensionado pela média anual, não só pelos dias de sol forte.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Preciso trocar o telhado?<span></span></summary>
+            <p>Nem sempre. Avaliamos estrutura, orientação e sombreamento na visita técnica.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Há financiamento?<span></span></summary>
+            <p>Sim. Apresentamos opções com instituições parceiras e também proposta à vista.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta__inner reveal">
+        <div>
+          <h2>Pronto para reduzir a conta?</h2>
+          <p>Envie sua fatura e receba uma simulação personalizada.</p>
+        </div>
+        <a href="#contato" class="btn btn--dark">Quero minha simulação</a>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="container contact">
+        <div class="contact__info reveal">
+          <span class="tag">Contato</span>
+          <h2 class="title">Fale com a <em>Solara</em></h2>
+          <ul class="contact__list">
+            <li>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/5547992072891">(47) 99207-2891</a>
+            </li>
+            <li>
+              <strong>E-mail</strong>
+              <a href="mailto:edudiasr6@gmail.com">edudiasr6@gmail.com</a>
+            </li>
+            <li>
+              <strong>Endereço</strong>
+              <span>Centro de Joinville<br />Joinville — SC · Brasil</span>
+            </li>
+            <li>
+              <strong>Horário</strong>
+              <span>Seg a Sex · 08h–18h<br />Sáb · 08h–12h</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contact-form" novalidate>
+          <h3>Pedir simulação</h3>
+          <p class="form__lead">Retorno em horário comercial com próximos passos.</p>
+
+          <div class="form__row">
+            <label>
+              Nome
+              <input type="text" name="name" required placeholder="Seu nome" autocomplete="name" />
+              <span class="form__error">Informe seu nome.</span>
+            </label>
+            <label>
+              WhatsApp
+              <input type="tel" name="phone" required placeholder="(47) 99207-2891" autocomplete="tel" inputmode="tel" />
+              <span class="form__error">Informe um telefone válido.</span>
+            </label>
+          </div>
+          <div class="form__row">
+            <label>
+              Conta média (R$)
+              <input type="number" name="bill" min="50" placeholder="Ex.: 450" />
+            </label>
+            <label>
+              Tipo
+              <select name="type" required>
+                <option value="" disabled selected>Selecione</option>
+                <option>Residencial</option>
+                <option>Comercial</option>
+                <option>Industrial / rural</option>
+              </select>
+              <span class="form__error">Escolha o tipo.</span>
+            </label>
+          </div>
+          <label>
+            Cidade / bairro
+            <input type="text" name="place" placeholder="Ex.: Centro de Joinville" />
+          </label>
+          <label>
+            Observações
+            <textarea name="message" rows="3" placeholder="Telhado, interesse em financiamento, etc."></textarea>
+          </label>
+          <button type="submit" class="btn btn--sun btn--block">Enviar no WhatsApp</button>
+          <p class="form__ok" id="form-ok" hidden>✓ Abrindo o WhatsApp…</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="logo">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">Solara<em>Energia</em></span>
+      </a>
+      <p>Centro de Joinville · SC · Brasil</p>
+      <p>© <span id="year"></span> Solara Energia · Portfólio</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20Solara%20Energia." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  </a>
+
+  <button class="to-top" id="to-top" aria-label="Voltar ao topo">↑</button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
