@@ -12,6 +12,7 @@ Depois de ativar o GitHub Pages:
 
 - **Portfólio:** https://edudiasr.github.io/portfolio-web/
 - **CtrlTec (Informática):** https://edudiasr.github.io/portfolio-web/site-informatica/
+- **Ónix (Barbearia):** https://edudiasr.github.io/portfolio-web/landing-barbearia/
 
 ---
 
@@ -20,6 +21,7 @@ Depois de ativar o GitHub Pages:
 | Projeto | Descrição | Stack | Status |
 | ------- | --------- | ----- | ------ |
 | [`site-informatica`](./site-informatica) | Site completo para assistência técnica e loja de informática — dark mode, before/after, WhatsApp, animações, SEO | HTML · CSS · JS | ✅ Pronto |
+| [`landing-barbearia`](./landing-barbearia) | Landing page premium para barbearia — identidade charcoal/brass, equipe, preços, agendamento WhatsApp | HTML · CSS · JS | ✅ Pronto |
 
 ---
 
