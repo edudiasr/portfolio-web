@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://edudiasr.github.io/portfolio-web/site-informatica/sitemap.xml

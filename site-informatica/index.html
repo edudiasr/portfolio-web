@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CtrlTec — Assistência Técnica e Informática</title>
+  <meta name="description" content="Assistência técnica especializada em computadores e notebooks. Formatação, limpeza, upgrades, montagem de PCs e recuperação de dados com garantia de 90 dias." />
+  <meta name="keywords" content="assistência técnica, informática, formatação, limpeza de pc, upgrade, montagem de pc gamer" />
+  <meta name="author" content="CtrlTec Informática" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="CtrlTec — Assistência Técnica e Informática" />
+  <meta property="og:description" content="Seu computador novo de novo. Diagnóstico gratuito e garantia de 90 dias em todos os serviços." />
+  <meta property="og:locale" content="pt_BR" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230ea5e9'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='monospace' font-weight='bold'>^T</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <span class="preloader__logo">Ctrl<b>Tec</b></span>
+    <span class="preloader__bar"></span>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="CtrlTec — voltar ao início">
+        <span class="logo__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+        </span>
+        Ctrl<b>Tec</b>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link active">Início</a></li>
+          <li><a href="#servicos" class="nav__link">Serviços</a></li>
+          <li><a href="#processo" class="nav__link">Como funciona</a></li>
+          <li><a href="#planos" class="nav__link">Planos</a></li>
+          <li><a href="#resultado" class="nav__link">Resultado</a></li>
+          <li><a href="#depoimentos" class="nav__link">Depoimentos</a></li>
+          <li><a href="#faq" class="nav__link">FAQ</a></li>
+          <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Alternar tema claro/escuro">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <a href="#contato" class="btn btn--primary btn--sm header__cta">Orçamento grátis</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio">
+      <div class="hero__glow hero__glow--1" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--2" aria-hidden="true"></div>
+      <div class="hero__grid" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="badge reveal">
+            <span class="badge__dot" aria-hidden="true"></span>
+            Diagnóstico gratuito · Garantia de 90 dias
+          </span>
+          <h1 class="hero__title reveal">
+            Seu computador<br />
+            <span class="gradient-text">novo de novo.</span>
+          </h1>
+          <p class="hero__text reveal">
+            Formatação, limpeza, upgrades e montagem de PCs com atendimento
+            transparente. Você acompanha cada etapa do serviço — sem surpresas no orçamento.
+          </p>
+          <div class="hero__buttons reveal">
+            <a href="#contato" class="btn btn--primary">
+              Solicitar orçamento
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+            </a>
+            <a href="#servicos" class="btn btn--ghost">Ver serviços</a>
+          </div>
+
+          <dl class="hero__stats reveal">
+            <div class="stat">
+              <dt class="stat__number" data-count="1200">0</dt>
+              <dd class="stat__label">Equipamentos reparados</dd>
+            </div>
+            <div class="stat">
+              <dt class="stat__number" data-count="8">0</dt>
+              <dd class="stat__label">Anos de experiência</dd>
+            </div>
+            <div class="stat">
+              <dt class="stat__number" data-count="98" data-suffix="%">0</dt>
+              <dd class="stat__label">Clientes satisfeitos</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__visual reveal" aria-hidden="true">
+          <div class="terminal">
+            <div class="terminal__bar">
+              <span class="terminal__dot terminal__dot--red"></span>
+              <span class="terminal__dot terminal__dot--yellow"></span>
+              <span class="terminal__dot terminal__dot--green"></span>
+              <span class="terminal__title">ctrltec — diagnóstico</span>
+            </div>
+            <div class="terminal__body">
+              <p><span class="t-prompt">$</span> ctrltec --diagnostico</p>
+              <p class="t-dim">Analisando hardware...</p>
+              <p><span class="t-ok">✓</span> Processador <span class="t-dim">.......... OK</span></p>
+              <p><span class="t-ok">✓</span> Memória RAM <span class="t-dim">......... OK</span></p>
+              <p><span class="t-warn">!</span> Armazenamento <span class="t-dim">....</span> <span class="t-warn">HD lento</span></p>
+              <p><span class="t-warn">!</span> Temperatura <span class="t-dim">......</span> <span class="t-warn">87°C</span></p>
+              <p class="t-accent">→ Recomendado: SSD + limpeza completa</p>
+              <p><span class="t-prompt">$</span> <span class="t-cursor"></span></p>
+            </div>
+          </div>
+          <div class="hero__card hero__card--1">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            <div><strong>+70% mais rápido</strong><small>com upgrade de SSD</small></div>
+          </div>
+          <div class="hero__card hero__card--2">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div><strong>Garantia 90 dias</strong><small>em todos os serviços</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARCAS ============ -->
+    <section class="brands" aria-label="Marcas atendidas">
+      <div class="container">
+        <p class="brands__label">Atendemos todas as marcas</p>
+        <div class="brands__track">
+          <ul class="brands__list">
+            <li>DELL</li><li>LENOVO</li><li>ACER</li><li>ASUS</li><li>HP</li><li>SAMSUNG</li><li>APPLE</li><li>POSITIVO</li><li>VAIO</li><li>LG</li>
+          </ul>
+          <ul class="brands__list" aria-hidden="true">
+            <li>DELL</li><li>LENOVO</li><li>ACER</li><li>ASUS</li><li>HP</li><li>SAMSUNG</li><li>APPLE</li><li>POSITIVO</li><li>VAIO</li><li>LG</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVIÇOS ============ -->
+    <section class="section" id="servicos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Serviços</span>
+          <h2 class="section__title">Tudo o que seu equipamento precisa, <span class="gradient-text">em um só lugar</span></h2>
+          <p class="section__subtitle">Do diagnóstico à entrega, cuidamos do seu computador como se fosse nosso.</p>
+        </div>
+
+        <div class="services__grid">
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9"/><path d="M21 3v6h-6"/></svg>
+            </div>
+            <h3>Formatação completa</h3>
+            <p>Sistema reinstalado, drivers atualizados e seus arquivos preservados com backup completo antes de qualquer alteração.</p>
+            <span class="service-card__price">a partir de R$ 80</span>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 6 8 12l-4-1 9-9 1 4zM16 8l6 6-9 9-1-4 4-4-4-1 4-6z"/></svg>
+            </div>
+            <h3>Limpeza preventiva</h3>
+            <p>Limpeza interna profunda, troca de pasta térmica e verificação de coolers. Reduz a temperatura e prolonga a vida útil.</p>
+            <span class="service-card__price">a partir de R$ 100</span>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9zM4 9h-2m2 6h-2m20-6h-2m2 6h-2M9 4V2m6 2V2M9 22v-2m6 2v-2"/></svg>
+            </div>
+            <h3>Upgrade de hardware</h3>
+            <p>SSD, memória RAM, placa de vídeo e fonte. Indicamos exatamente o que traz mais desempenho pelo menor custo.</p>
+            <span class="service-card__price">consulte peças</span>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h3>Remoção de vírus</h3>
+            <p>Eliminação de malwares, adwares e extensões maliciosas, com proteção configurada para evitar novas infecções.</p>
+            <span class="service-card__price">a partir de R$ 70</span>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8m-4-4v4M7 9.5 9.5 12 7 14.5m4 0h4"/></svg>
+            </div>
+            <h3>Montagem de PC</h3>
+            <p>PCs sob medida para jogos, trabalho ou estudo. Projeto completo com as melhores peças dentro do seu orçamento.</p>
+            <span class="service-card__price">projeto gratuito</span>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 5c0 1.66-4 3-9 3S3 6.66 3 5m18 0c0-1.66-4-3-9-3S3 3.34 3 5m18 0v14c0 1.66-4 3-9 3s-9-1.34-9-3V5m18 7c0 1.66-4 3-9 3s-9-1.34-9-3"/></svg>
+            </div>
+            <h3>Recuperação de dados</h3>
+            <p>Fotos, documentos e projetos recuperados de HDs, SSDs e pendrives com falha. Avaliação sem compromisso.</p>
+            <span class="service-card__price">avaliação grátis</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMO FUNCIONA ============ -->
+    <section class="section section--alt" id="processo">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Como funciona</span>
+          <h2 class="section__title">Simples, rápido e <span class="gradient-text">transparente</span></h2>
+          <p class="section__subtitle">Você sabe o que está sendo feito no seu equipamento em cada etapa.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__number">01</span>
+            <h3>Diagnóstico gratuito</h3>
+            <p>Traga seu equipamento ou chame no WhatsApp. Avaliamos o problema sem nenhum custo.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__number">02</span>
+            <h3>Orçamento aprovado</h3>
+            <p>Você recebe o valor exato e o prazo antes de qualquer serviço. Sem taxas escondidas.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__number">03</span>
+            <h3>Reparo com registro</h3>
+            <p>Executamos o serviço e enviamos fotos do processo pelo WhatsApp, em tempo real.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__number">04</span>
+            <h3>Entrega com garantia</h3>
+            <p>Equipamento testado na sua frente e garantia de 90 dias registrada em nota.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ PLANOS ============ -->
+    <section class="section" id="planos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Planos</span>
+          <h2 class="section__title">Combos com <span class="gradient-text">preço fechado</span></h2>
+          <p class="section__subtitle">Os serviços mais pedidos, em pacotes sem surpresa no valor final.</p>
+        </div>
+
+        <div class="pricing__grid">
+          <article class="price-card reveal">
+            <h3>Revitalização</h3>
+            <p class="price-card__desc">Para PCs lentos que precisam voltar a funcionar bem.</p>
+            <p class="price-card__value"><small>R$</small>149<span>/serviço</span></p>
+            <ul class="price-card__list">
+              <li>Formatação completa</li>
+              <li>Backup dos arquivos</li>
+              <li>Instalação de programas essenciais</li>
+              <li>Otimização de inicialização</li>
+              <li class="off">Limpeza interna + pasta térmica</li>
+              <li class="off">Instalação de SSD</li>
+            </ul>
+            <a href="#contato" class="btn btn--ghost btn--block">Quero este plano</a>
+          </article>
+
+          <article class="price-card price-card--featured reveal">
+            <span class="price-card__badge">Mais escolhido</span>
+            <h3>Performance total</h3>
+            <p class="price-card__desc">A experiência de um computador novo, de verdade.</p>
+            <p class="price-card__value"><small>R$</small>249<span>/serviço</span></p>
+            <ul class="price-card__list">
+              <li>Formatação completa</li>
+              <li>Backup dos arquivos</li>
+              <li>Instalação de programas essenciais</li>
+              <li>Otimização de inicialização</li>
+              <li>Limpeza interna + pasta térmica</li>
+              <li class="off">Instalação de SSD</li>
+            </ul>
+            <a href="#contato" class="btn btn--primary btn--block">Quero este plano</a>
+          </article>
+
+          <article class="price-card reveal">
+            <h3>Turbo SSD</h3>
+            <p class="price-card__desc">Upgrade completo com a maior diferença de velocidade.</p>
+            <p class="price-card__value"><small>R$</small>349<span>+ peça</span></p>
+            <ul class="price-card__list">
+              <li>Formatação completa</li>
+              <li>Backup dos arquivos</li>
+              <li>Instalação de programas essenciais</li>
+              <li>Otimização de inicialização</li>
+              <li>Limpeza interna + pasta térmica</li>
+              <li>Instalação de SSD</li>
+            </ul>
+            <a href="#contato" class="btn btn--ghost btn--block">Quero este plano</a>
+          </article>
+        </div>
+        <p class="pricing__note reveal">* Valores de referência para demonstração. Peças cotadas à parte com nota fiscal.</p>
+      </div>
+    </section>
+
+    <!-- ============ ANTES / DEPOIS ============ -->
+    <section class="section section--alt" id="resultado">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Resultado real</span>
+          <h2 class="section__title">Arraste e veja a <span class="gradient-text">diferença</span></h2>
+          <p class="section__subtitle">Comparação típica após limpeza + pasta térmica + upgrade de SSD. Arraste o controle no meio.</p>
+        </div>
+
+        <div class="ba reveal" id="before-after" role="group" aria-label="Comparação antes e depois do serviço">
+          <div class="ba__stage">
+            <div class="ba__panel ba__panel--after" aria-hidden="true">
+              <span class="ba__label ba__label--after">Depois</span>
+              <div class="ba__metrics">
+                <div class="ba__metric">
+                  <span class="ba__metric-label">Temperatura</span>
+                  <strong class="ba__metric-value ba__metric-value--ok">42°C</strong>
+                </div>
+                <div class="ba__metric">
+                  <span class="ba__metric-label">Tempo de boot</span>
+                  <strong class="ba__metric-value ba__metric-value--ok">12s</strong>
+                </div>
+                <div class="ba__metric">
+                  <span class="ba__metric-label">Desempenho</span>
+                  <strong class="ba__metric-value ba__metric-value--ok">Rápido</strong>
+                </div>
+              </div>
+              <div class="ba__bars">
+                <div class="ba__bar"><span style="--w: 28%"></span><small>CPU idle 28%</small></div>
+                <div class="ba__bar"><span style="--w: 35%"></span><small>Temp. GPU 35%</small></div>
+                <div class="ba__bar"><span style="--w: 18%"></span><small>Disco 18%</small></div>
+              </div>
+              <p class="ba__status ba__status--ok">Sistema otimizado · Pronto para uso</p>
+            </div>
+
+            <div class="ba__panel ba__panel--before" id="ba-before" aria-hidden="true">
+              <span class="ba__label ba__label--before">Antes</span>
+              <div class="ba__metrics">
+                <div class="ba__metric">
+                  <span class="ba__metric-label">Temperatura</span>
+                  <strong class="ba__metric-value ba__metric-value--bad">87°C</strong>
+                </div>
+                <div class="ba__metric">
+                  <span class="ba__metric-label">Tempo de boot</span>
+                  <strong class="ba__metric-value ba__metric-value--bad">2m 40s</strong>
+                </div>
+                <div class="ba__metric">
+                  <span class="ba__metric-label">Desempenho</span>
+                  <strong class="ba__metric-value ba__metric-value--bad">Travando</strong>
+                </div>
+              </div>
+              <div class="ba__bars ba__bars--hot">
+                <div class="ba__bar"><span style="--w: 92%"></span><small>CPU idle 92%</small></div>
+                <div class="ba__bar"><span style="--w: 88%"></span><small>Temp. GPU 88%</small></div>
+                <div class="ba__bar"><span style="--w: 97%"></span><small>Disco 97%</small></div>
+              </div>
+              <p class="ba__status ba__status--bad">Superaquecimento · HD no limite</p>
+            </div>
+
+            <div class="ba__handle" id="ba-handle" role="slider" tabindex="0" aria-label="Comparar antes e depois" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-valuetext="50% antes, 50% depois">
+              <span class="ba__handle-line"></span>
+              <span class="ba__handle-knob">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/><path d="m9 18 6-6-6-6"/></svg>
+              </span>
+            </div>
+          </div>
+
+          <div class="ba__summary">
+            <article>
+              <h3>−45°C</h3>
+              <p>na temperatura média sob carga</p>
+            </article>
+            <article>
+              <h3>13×</h3>
+              <p>mais rápido na inicialização</p>
+            </article>
+            <article>
+              <h3>+70%</h3>
+              <p>de responsividade geral</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DEPOIMENTOS ============ -->
+    <section class="section" id="depoimentos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Depoimentos</span>
+          <h2 class="section__title">Quem confiou, <span class="gradient-text">recomenda</span></h2>
+        </div>
+
+        <div class="slider reveal" id="slider">
+          <div class="slider__viewport">
+            <div class="slider__track" id="slider-track">
+              <blockquote class="testimonial">
+                <div class="testimonial__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+                <p>"Meu notebook desligava sozinho de tanto esquentar. Fizeram a limpeza com troca de pasta térmica e me mandaram fotos de todo o processo. Nunca mais deu problema."</p>
+                <footer>
+                  <span class="testimonial__avatar" aria-hidden="true">M</span>
+                  <div><cite>Mariana S.</cite><small>Notebook Dell — Limpeza preventiva</small></div>
+                </footer>
+              </blockquote>
+              <blockquote class="testimonial">
+                <div class="testimonial__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+                <p>"Achei que precisava comprar um PC novo. Colocaram um SSD e dobraram a memória por uma fração do preço. Ficou absurdamente mais rápido."</p>
+                <footer>
+                  <span class="testimonial__avatar" aria-hidden="true">R</span>
+                  <div><cite>Ricardo A.</cite><small>Desktop — Upgrade SSD + RAM</small></div>
+                </footer>
+              </blockquote>
+              <blockquote class="testimonial">
+                <div class="testimonial__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+                <p>"Perdi o TCC quando o HD falhou. Conseguiram recuperar tudo em dois dias. O atendimento pelo WhatsApp foi rápido e super atencioso."</p>
+                <footer>
+                  <span class="testimonial__avatar" aria-hidden="true">J</span>
+                  <div><cite>Juliana M.</cite><small>HD externo — Recuperação de dados</small></div>
+                </footer>
+              </blockquote>
+              <blockquote class="testimonial">
+                <div class="testimonial__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+                <p>"Montaram meu PC gamer dentro do orçamento que eu tinha. Me explicaram cada peça escolhida e o porquê. Roda tudo no ultra até hoje."</p>
+                <footer>
+                  <span class="testimonial__avatar" aria-hidden="true">P</span>
+                  <div><cite>Pedro H.</cite><small>PC Gamer — Montagem sob medida</small></div>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+          <div class="slider__controls">
+            <button class="slider__btn" id="slider-prev" aria-label="Depoimento anterior">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <div class="slider__dots" id="slider-dots" role="tablist" aria-label="Escolher depoimento"></div>
+            <button class="slider__btn" id="slider-next" aria-label="Próximo depoimento">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head reveal">
+          <span class="section__tag">FAQ</span>
+          <h2 class="section__title">Perguntas <span class="gradient-text">frequentes</span></h2>
+        </div>
+
+        <div class="faq__list">
+          <details class="faq-item reveal">
+            <summary>
+              Quanto tempo demora uma formatação?
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__body">
+              <p>Na maioria dos casos, entregamos no mesmo dia. Formatações com backup de grande volume de arquivos podem levar até 24 horas. Você recebe o prazo exato junto com o orçamento.</p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>
+              Vou perder meus arquivos na formatação?
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__body">
+              <p>Não. Fazemos backup completo de fotos, documentos e programas antes de qualquer procedimento, e devolvemos tudo organizado no sistema novo.</p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>
+              O diagnóstico é realmente gratuito?
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__body">
+              <p>Sim. Avaliamos o equipamento e passamos o orçamento sem nenhum custo ou compromisso. Você só paga se aprovar o serviço.</p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>
+              Como funciona a garantia de 90 dias?
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__body">
+              <p>Todo serviço sai com garantia registrada. Se o mesmo problema voltar dentro de 90 dias, refazemos o reparo sem custo algum.</p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>
+              Vocês atendem a domicílio?
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__body">
+              <p>Sim, para instalações, redes e manutenções que podem ser feitas no local. Também oferecemos busca e entrega do equipamento na sua casa ou empresa.</p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>
+              Quais formas de pagamento vocês aceitam?
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="faq-item__body">
+              <p>Pix, dinheiro, débito e crédito em até 3x sem juros. Para montagem de PCs, parcelamos em mais vezes — consulte as condições.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="cta reveal">
+      <div class="container cta__inner">
+        <div>
+          <h2>Seu computador está pedindo socorro?</h2>
+          <p>Chame no WhatsApp agora e receba o diagnóstico gratuito ainda hoje.</p>
+        </div>
+        <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20um%20diagn%C3%B3stico%20gratuito." class="btn btn--white" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          Chamar no WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section class="section" id="contato">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Contato</span>
+          <h2 class="section__title">Peça seu <span class="gradient-text">orçamento gratuito</span></h2>
+          <p class="section__subtitle">Responderemos em até 1 hora dentro do horário comercial.</p>
+        </div>
+
+        <div class="contact__grid">
+          <form class="form reveal" id="contact-form" novalidate>
+            <div class="form__row">
+              <div class="form__group">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" placeholder="Seu nome" required autocomplete="name" />
+                <span class="form__error">Informe seu nome.</span>
+              </div>
+              <div class="form__group">
+                <label for="phone">WhatsApp</label>
+                <input type="tel" id="phone" name="phone" placeholder="(47) 99207-2891" required autocomplete="tel" inputmode="tel" />
+                <span class="form__error">Informe um telefone válido.</span>
+              </div>
+            </div>
+            <div class="form__group">
+              <label for="service">Serviço desejado</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Selecione um serviço</option>
+                <option>Formatação</option>
+                <option>Limpeza preventiva</option>
+                <option>Upgrade de hardware</option>
+                <option>Remoção de vírus</option>
+                <option>Montagem de PC</option>
+                <option>Recuperação de dados</option>
+                <option>Outro</option>
+              </select>
+              <span class="form__error">Escolha um serviço.</span>
+            </div>
+            <div class="form__group">
+              <label for="message">Descreva o problema</label>
+              <textarea id="message" name="message" rows="4" placeholder="Ex.: meu notebook está muito lento e esquentando..." required></textarea>
+              <span class="form__error">Descreva rapidamente o problema.</span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block">
+              Enviar pelo WhatsApp
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+            <p class="form__success" id="form-success" role="status" hidden>✓ Abrindo o WhatsApp com sua mensagem...</p>
+          </form>
+
+          <div class="contact__info reveal">
+            <div class="info-card">
+              <div class="info-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <h3>Endereço</h3>
+                <p>Rua Exemplo, 123 — Centro<br />Sua Cidade / UF</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <div>
+                <h3>Horário</h3>
+                <p>Seg a Sex — 8h às 18h<br />Sábado — 8h às 12h</p>
+              </div>
+            </div>
+            <div class="info-card">
+              <div class="info-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <h3>Telefone / WhatsApp</h3>
+                <p>(47) 99207-2891<br />edudiasr6@gmail.com</p>
+              </div>
+            </div>
+            <div class="map-placeholder" role="img" aria-label="Mapa da localização da loja">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <p>Espaço reservado para o mapa<br /><small>(Google Maps é integrado com o endereço real da loja)</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#inicio" class="logo">
+          <span class="logo__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+          </span>
+          Ctrl<b>Tec</b>
+        </a>
+        <p>Assistência técnica especializada em computadores e notebooks. Atendimento transparente e garantia de 90 dias.</p>
+      </div>
+      <nav class="footer__col" aria-label="Links do rodapé">
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#processo">Como funciona</a></li>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="footer__col">
+        <h3>Serviços</h3>
+        <ul>
+          <li><a href="#servicos">Formatação</a></li>
+          <li><a href="#servicos">Limpeza preventiva</a></li>
+          <li><a href="#servicos">Montagem de PC</a></li>
+          <li><a href="#servicos">Recuperação de dados</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3>Contato</h3>
+        <ul>
+          <li>(47) 99207-2891</li>
+          <li>edudiasr6@gmail.com</li>
+          <li>Rua Exemplo, 123 — Centro</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span id="year"></span> CtrlTec Informática. Todos os direitos reservados.</p>
+      <p>Projeto fictício para portfólio — desenvolvido com HTML, CSS e JavaScript.</p>
+    </div>
+  </footer>
+
+  <!-- ============ FLUTUANTES ============ -->
+  <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  </a>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

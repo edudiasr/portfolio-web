@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio — Desenvolvimento Web</title>
+  <meta name="description" content="Portfólio de projetos front-end: landing pages e sites profissionais com HTML, CSS e JavaScript." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #070b14;
+      --surface: #101828;
+      --border: rgba(148, 163, 184, 0.14);
+      --text: #e7ecf5;
+      --muted: #94a3b8;
+      --accent: #0ea5e9;
+      --gradient: linear-gradient(120deg, #22d3ee, #0ea5e9 45%, #6366f1);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      font-family: Inter, sans-serif;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(14, 165, 233, 0.25), transparent),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .wrap {
+      width: min(100% - 2.5rem, 880px);
+      margin: 0 auto;
+      padding: 5rem 0 4rem;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 0.35rem 0.9rem;
+      border-radius: 99px;
+      background: rgba(14, 165, 233, 0.12);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-family: Sora, sans-serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    h1 span {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .lead {
+      max-width: 52ch;
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 3rem;
+    }
+    .grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+    a.card {
+      display: block;
+      padding: 1.8rem;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--surface);
+      color: inherit;
+      text-decoration: none;
+      transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    a.card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(14, 165, 233, 0.45);
+      box-shadow: 0 20px 40px -20px rgba(2, 8, 20, 0.8);
+    }
+    .card h2 {
+      font-family: Sora, sans-serif;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+    .card p { color: var(--muted); font-size: 0.95rem; }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.1rem;
+    }
+    .tags span {
+      padding: 0.25rem 0.7rem;
+      border-radius: 99px;
+      border: 1px solid var(--border);
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+    footer {
+      margin-top: 3.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <span class="eyebrow">Portfólio · Front-end</span>
+    <h1>Sites profissionais<br /><span>feitos para converter.</span></h1>
+    <p class="lead">
+      Landing pages e sites institucionais com HTML, CSS e JavaScript.
+      Design moderno, código limpo e foco em negócios reais.
+    </p>
+
+    <div class="grid">
+      <a class="card" href="./site-informatica/">
+        <h2>CtrlTec — Assistência Técnica</h2>
+        <p>Site completo para loja de informática: serviços, planos, before/after, dark mode, formulário WhatsApp e mais.</p>
+        <div class="tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Dark Mode</span>
+          <span>Responsivo</span>
+        </div>
+      </a>
+    </div>
+
+    <footer>
+      <p>Novos projetos serão adicionados aqui. Cada pasta do repositório é um trabalho independente.</p>
+    </footer>
+  </main>
+</body>
+</html>
