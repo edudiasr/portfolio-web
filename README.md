@@ -13,6 +13,7 @@ Depois de ativar o GitHub Pages:
 - **Portfólio:** https://edudiasr.github.io/portfolio-web/
 - **CtrlTec (Informática):** https://edudiasr.github.io/portfolio-web/site-informatica/
 - **Ónix (Barbearia):** https://edudiasr.github.io/portfolio-web/landing-barbearia/
+- **Brasa (Hamburgueria):** https://edudiasr.github.io/portfolio-web/site-hamburgueria/
 
 ---
 
@@ -22,6 +23,7 @@ Depois de ativar o GitHub Pages:
 | ------- | --------- | ----- | ------ |
 | [`site-informatica`](./site-informatica) | Site completo para assistência técnica e loja de informática — dark mode, before/after, WhatsApp, animações, SEO | HTML · CSS · JS | ✅ Pronto |
 | [`landing-barbearia`](./landing-barbearia) | Landing page premium para barbearia — identidade charcoal/brass, equipe, preços, agendamento WhatsApp | HTML · CSS · JS | ✅ Pronto |
+| [`site-hamburgueria`](./site-hamburgueria) | Hamburgueria smash — cardápio filtrável, combos, carrinho e pedido via WhatsApp | HTML · CSS · JS | ✅ Pronto |
 
 ---
 

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brasa Burger — Smash Artesanal em Joinville</title>
+  <meta name="description" content="Hambúrguer smash artesanal no Centro de Joinville, SC. Combos, milkshakes e delivery pelo WhatsApp." />
+  <meta name="author" content="Brasa Burger" />
+  <meta property="og:title" content="Brasa Burger — Smash Artesanal" />
+  <meta property="og:description" content="Carne na chapa, pão brioche e molho da casa. Peça pelo WhatsApp." />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%231a0a06'/><text y='70' x='50' font-size='48' text-anchor='middle' fill='%23ff6b2c' font-family='sans-serif' font-weight='900'>B</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <span class="preloader__brand">BRASA</span>
+    <span class="preloader__bar"></span>
+  </div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Brasa Burger">
+        <span class="logo__flame" aria-hidden="true"></span>
+        BRASA<span>BURGER</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link active">Início</a></li>
+          <li><a href="#cardapio" class="nav__link">Cardápio</a></li>
+          <li><a href="#combos" class="nav__link">Combos</a></li>
+          <li><a href="#sobre" class="nav__link">Sobre</a></li>
+          <li><a href="#depoimentos" class="nav__link">Reviews</a></li>
+          <li><a href="#pedido" class="nav__link">Pedir</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#pedido" class="btn btn--fire btn--sm header__cta">Pedir agora</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero__media" aria-hidden="true">
+        <img src="assets/img/hero-bg.png" alt="" class="hero__photo" />
+        <div class="hero__veil"></div>
+      </div>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="hero__badge reveal">
+            <span class="pulse"></span>
+            Aberto agora · Centro de Joinville
+          </p>
+          <h1 class="hero__title reveal">
+            Smash na chapa.<br />
+            <span>Fome resolvida.</span>
+          </h1>
+          <p class="hero__text reveal">
+            Blend 180g, pão brioche tostado e molho secreto da casa.
+            Peça no WhatsApp e retire ou receba no Centro de Joinville, SC.
+          </p>
+          <div class="hero__actions reveal">
+            <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20pedir%20na%20Brasa%20Burger." class="btn btn--fire" target="_blank" rel="noopener">
+              Pedir no WhatsApp
+            </a>
+            <a href="#cardapio" class="btn btn--outline">Ver cardápio</a>
+          </div>
+          <dl class="hero__stats reveal">
+            <div>
+              <dt data-count="15">0</dt>
+              <dd>min média de preparo</dd>
+            </div>
+            <div>
+              <dt data-count="4" data-suffix=".8">0</dt>
+              <dd>nota dos clientes</dd>
+            </div>
+            <div>
+              <dt data-count="12">0</dt>
+              <dd>smashs no cardápio</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="burger-card">
+            <div class="burger-card__tag">Mais pedido</div>
+            <img src="assets/img/cardapio-4.png" alt="Brasa Duplo" class="burger-card__img" />
+            <div class="burger-card__info">
+              <strong>Brasa Duplo</strong>
+              <span>2 smashs · cheddar · molho da casa</span>
+              <em>R$ 32</em>
+            </div>
+          </div>
+          <div class="hero__chip hero__chip--1">🔥 180°C na chapa</div>
+          <div class="hero__chip hero__chip--2">⏱ Delivery 30–40 min</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Smash</span><span>·</span><span>Cheddar</span><span>·</span><span>Bacon</span><span>·</span>
+        <span>Onion Rings</span><span>·</span><span>Milkshake</span><span>·</span><span>Combo Fogo</span><span>·</span>
+        <span>Smash</span><span>·</span><span>Cheddar</span><span>·</span><span>Bacon</span><span>·</span>
+        <span>Onion Rings</span><span>·</span><span>Milkshake</span><span>·</span><span>Combo Fogo</span><span>·</span>
+      </div>
+    </div>
+
+    <section class="section" id="cardapio">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Cardápio</span>
+          <h2>O que tá <em>na brasa</em></h2>
+          <p>Smash fino e crocante na beirada. Escolhe o seu e manda no WhatsApp.</p>
+        </div>
+
+        <div class="menu-tabs reveal" role="tablist" aria-label="Categorias do cardápio">
+          <button class="menu-tab active" data-filter="all" role="tab" aria-selected="true">Tudo</button>
+          <button class="menu-tab" data-filter="smash" role="tab" aria-selected="false">Smash</button>
+          <button class="menu-tab" data-filter="side" role="tab" aria-selected="false">Acompanhamentos</button>
+          <button class="menu-tab" data-filter="drink" role="tab" aria-selected="false">Bebidas</button>
+        </div>
+
+        <div class="menu-grid" id="menu-grid">
+          <article class="menu-card reveal" data-cat="smash">
+            <div class="menu-card__visual">
+              <img src="assets/img/cardapio-3.png" alt="Clássico Brasa" loading="lazy" />
+            </div>
+            <div class="menu-card__body">
+              <h3>Clássico Brasa</h3>
+              <p>Smash 90g, cheddar, alface, tomate e molho da casa no brioche.</p>
+              <div class="menu-card__foot">
+                <strong>R$ 24</strong>
+                <button type="button" class="btn-add" data-item="Clássico Brasa" data-price="24">Adicionar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" data-cat="smash">
+            <div class="menu-card__visual">
+              <span class="menu-card__badge">Top</span>
+              <img src="assets/img/cardapio-4.png" alt="Brasa Duplo" loading="lazy" />
+            </div>
+            <div class="menu-card__body">
+              <h3>Brasa Duplo</h3>
+              <p>Dois smashs, cheddar duplo, cebola caramelizada e molho fogo.</p>
+              <div class="menu-card__foot">
+                <strong>R$ 32</strong>
+                <button type="button" class="btn-add" data-item="Brasa Duplo" data-price="32">Adicionar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" data-cat="smash">
+            <div class="menu-card__visual">
+              <img src="assets/img/cardapio-1.png" alt="Bacon Inferno" loading="lazy" />
+            </div>
+            <div class="menu-card__body">
+              <h3>Bacon Inferno</h3>
+              <p>Smash, bacon crocante, cheddar, picles e maionese defumada.</p>
+              <div class="menu-card__foot">
+                <strong>R$ 34</strong>
+                <button type="button" class="btn-add" data-item="Bacon Inferno" data-price="34">Adicionar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" data-cat="smash">
+            <div class="menu-card__visual">
+              <img src="assets/img/cardapio-2.png" alt="Smash Caramelizado" loading="lazy" />
+            </div>
+            <div class="menu-card__body">
+              <h3>Smash Caramelizado</h3>
+              <p>Smash, cheddar, cebola caramelizada, bacon e molho da casa.</p>
+              <div class="menu-card__foot">
+                <strong>R$ 33</strong>
+                <button type="button" class="btn-add" data-item="Smash Caramelizado" data-price="33">Adicionar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" data-cat="smash">
+            <div class="menu-card__visual">
+              <img src="assets/img/cardapio-3b.png" alt="Bacon Sesame" loading="lazy" />
+            </div>
+            <div class="menu-card__body">
+              <h3>Bacon Sesame</h3>
+              <p>Pão com gergelim, smash, cheddar, bacon crocante e cebola grelhada.</p>
+              <div class="menu-card__foot">
+                <strong>R$ 34</strong>
+                <button type="button" class="btn-add" data-item="Bacon Sesame" data-price="34">Adicionar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" data-cat="side">
+            <div class="menu-card__visual">
+              <img src="assets/img/batata-frita.png" alt="Batata Brasa" loading="lazy" />
+            </div>
+            <div class="menu-card__body">
+              <h3>Batata Brasa</h3>
+              <p>Porção crocante com páprica e molho da casa.</p>
+              <div class="menu-card__foot">
+                <strong>R$ 16</strong>
+                <button type="button" class="btn-add" data-item="Batata Brasa" data-price="16">Adicionar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" data-cat="side">
+            <div class="menu-card__visual">
+              <img src="assets/img/onion-rings.png" alt="Onion Rings" loading="lazy" />
+            </div>
+            <div class="menu-card__body">
+              <h3>Onion Rings</h3>
+              <p>Anéis empanados, crocantes, com barbecue.</p>
+              <div class="menu-card__foot">
+                <strong>R$ 18</strong>
+                <button type="button" class="btn-add" data-item="Onion Rings" data-price="18">Adicionar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" data-cat="drink">
+            <div class="menu-card__visual">
+              <img src="assets/img/milkshake.png" alt="Milkshake Brasa" loading="lazy" />
+            </div>
+            <div class="menu-card__body">
+              <h3>Milkshake Brasa</h3>
+              <p>Morango, chocolate ou caramelo — com chantilly.</p>
+              <div class="menu-card__foot">
+                <strong>R$ 18</strong>
+                <button type="button" class="btn-add" data-item="Milkshake Brasa" data-price="18">Adicionar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card reveal" data-cat="drink">
+            <div class="menu-card__visual">
+              <img src="assets/img/refri-lata.png" alt="Refrigerante lata" loading="lazy" />
+            </div>
+            <div class="menu-card__body">
+              <h3>Refrigerante lata</h3>
+              <p>Coca, Guaraná, Sprite ou Fanta — 350ml.</p>
+              <div class="menu-card__foot">
+                <strong>R$ 7</strong>
+                <button type="button" class="btn-add" data-item="Refrigerante lata" data-price="7">Adicionar</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="combos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Combos</span>
+          <h2>Monta o combo e <em>economiza</em></h2>
+        </div>
+        <div class="combos">
+          <article class="combo reveal">
+            <span class="combo__label">Combo Solo</span>
+            <h3>Smash + Batata + Refri</h3>
+            <p>Ideal pra quem tá com fome rápida e sem enrolação.</p>
+            <strong class="combo__price">R$ 39</strong>
+            <button type="button" class="btn btn--outline btn--block btn-add" data-item="Combo Solo" data-price="39">Quero este</button>
+          </article>
+          <article class="combo combo--featured reveal">
+            <span class="combo__label">Mais pedido</span>
+            <h3>Duplo + Batata + Shake</h3>
+            <p>O combo que derruba a fome. Brasa Duplo + batata + milkshake.</p>
+            <strong class="combo__price">R$ 55</strong>
+            <button type="button" class="btn btn--fire btn--block btn-add" data-item="Combo Duplo + Shake" data-price="55">Quero este</button>
+          </article>
+          <article class="combo reveal">
+            <span class="combo__label">Combo Casal</span>
+            <h3>2 Smashs + Batata G + 2 Refri</h3>
+            <p>Pra dividir (ou não). Porção generosa de batata.</p>
+            <strong class="combo__price">R$ 72</strong>
+            <button type="button" class="btn btn--outline btn--block btn-add" data-item="Combo Casal" data-price="72">Quero este</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container about">
+        <div class="about__text reveal">
+          <span class="section__tag">A casa</span>
+          <h2>Chapa quente, <em>pedido rápido</em></h2>
+          <p>
+            A Brasa nasceu no Centro de Joinville com uma ideia simples:
+            smash bem feito, sem fila eterna e sem app complicado.
+            Você monta o pedido aqui e finaliza no WhatsApp.
+          </p>
+          <ul class="about__list">
+            <li>Blend próprio, smash fino e crocante</li>
+            <li>Preparo médio de 15 minutos</li>
+            <li>Retirada no balcão ou delivery no Centro</li>
+            <li>Pix, débito e crédito</li>
+          </ul>
+        </div>
+        <div class="about__panel reveal">
+          <div class="about__stat">
+            <strong>2019</strong>
+            <span>ano de fundação</span>
+          </div>
+          <div class="about__stat">
+            <strong data-count="40" data-suffix="k+">0</strong>
+            <span>burgers servidos</span>
+          </div>
+          <div class="about__hours">
+            <h3>Horário</h3>
+            <p>Ter a Dom · 18h–23h30<br />Segunda · Fechado</p>
+            <h3>Endereço</h3>
+            <p>Centro de Joinville<br />Joinville — SC · Santa Catarina<br />Brasil</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="depoimentos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__tag">Reviews</span>
+          <h2>Quem pediu, <em>repetiu</em></h2>
+        </div>
+        <div class="reviews">
+          <blockquote class="review reveal">
+            <div class="review__stars" aria-label="5 estrelas">★★★★★</div>
+            <p>“O Duplo é absurdo. Cheddar derretendo e a batata no ponto. Pedi de novo no mesmo fim de semana.”</p>
+            <footer>Camila R. · Centro</footer>
+          </blockquote>
+          <blockquote class="review reveal">
+            <div class="review__stars" aria-label="5 estrelas">★★★★★</div>
+            <p>“WhatsApp rápido, burger quente e preço justo. Melhor smash que já comi em Joinville.”</p>
+            <footer>Bruno T. · América</footer>
+          </blockquote>
+          <blockquote class="review reveal">
+            <div class="review__stars" aria-label="5 estrelas">★★★★★</div>
+            <p>“Combo casal perfeito pra sexta. Onion rings viciantes — aviso de antemão.”</p>
+            <footer>Júlia &amp; Pedro</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pedido">
+      <div class="container order">
+        <div class="order__summary reveal">
+          <span class="section__tag">Seu pedido</span>
+          <h2>Fecha no <em>WhatsApp</em></h2>
+          <p>Adiciona itens no cardápio. A gente monta a mensagem e você só confirma.</p>
+          <ul class="cart" id="cart">
+            <li class="cart__empty" id="cart-empty">Nenhum item ainda. Escolhe no cardápio ↑</li>
+          </ul>
+          <div class="cart__total">
+            <span>Total</span>
+            <strong id="cart-total">R$ 0</strong>
+          </div>
+        </div>
+
+        <form class="form reveal" id="order-form" novalidate>
+          <h3>Dados do pedido</h3>
+          <label>
+            Nome
+            <input type="text" name="name" required placeholder="Seu nome" autocomplete="name" />
+            <span class="form__error">Informe seu nome.</span>
+          </label>
+          <label>
+            WhatsApp
+            <input type="tel" name="phone" required placeholder="(47) 99207-2891" autocomplete="tel" inputmode="tel" />
+            <span class="form__error">Informe um telefone válido.</span>
+          </label>
+          <label>
+            Tipo
+            <select name="type" required>
+              <option value="" disabled selected>Selecione</option>
+              <option>Retirada no balcão</option>
+              <option>Delivery — Centro de Joinville</option>
+            </select>
+            <span class="form__error">Escolha o tipo.</span>
+          </label>
+          <label>
+            Observações
+            <textarea name="notes" rows="3" placeholder="Sem cebola, ponto da carne, ponto de referência..."></textarea>
+          </label>
+          <button type="submit" class="btn btn--fire btn--block">Enviar pedido no WhatsApp</button>
+          <p class="form__ok" id="form-ok" hidden>✓ Abrindo o WhatsApp com seu pedido…</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="logo">
+        <span class="logo__flame" aria-hidden="true"></span>
+        BRASA<span>BURGER</span>
+      </a>
+      <p>Centro de Joinville · SC · Brasil</p>
+      <p>© <span id="year"></span> Brasa Burger · Portfólio</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20pedir%20na%20Brasa." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  </a>
+
+  <button class="to-top" id="to-top" aria-label="Voltar ao topo">↑</button>
+
+  <!-- Popup Anuncie conosco -->
+  <div class="ad-modal" id="ad-modal" hidden>
+    <div class="ad-modal__backdrop" data-close-ad></div>
+    <div class="ad-modal__panel" role="dialog" aria-modal="true" aria-labelledby="ad-title">
+      <button class="ad-modal__close" type="button" data-close-ad aria-label="Fechar">✕</button>
+      <span class="ad-modal__tag">Espaço publicitário</span>
+      <h2 id="ad-title">Anuncie conosco</h2>
+      <p>
+        Seu negócio pode aparecer aqui — banner, story do cardápio ou destaque na home.
+        Ideal pra marcas locais de Joinville que querem alcançar quem tem fome (e compra).
+      </p>
+      <ul class="ad-modal__perks">
+        <li>Público quente: gente pedindo comida agora</li>
+        <li>Pacotes semanal · mensal · mensal+</li>
+        <li>Criativo incluso sob consulta</li>
+      </ul>
+      <form id="ad-form" novalidate>
+        <label>
+          Nome / Empresa
+          <input type="text" name="brand" required placeholder="Ex.: Studio X / Marca Y" />
+        </label>
+        <label>
+          WhatsApp
+          <input type="tel" name="phone" required placeholder="(47) 90000-0000" />
+        </label>
+        <label>
+          O que quer anunciar?
+          <textarea name="pitch" rows="3" placeholder="Produto, promoção, parceria..."></textarea>
+        </label>
+        <button type="submit" class="btn btn--fire btn--block">Quero anunciar</button>
+      </form>
+      <button type="button" class="ad-modal__later" data-close-ad>Agora não</button>
+    </div>
+  </div>
+
+  <button class="ad-trigger" id="ad-trigger" type="button" aria-label="Anuncie conosco">
+    Anuncie
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
