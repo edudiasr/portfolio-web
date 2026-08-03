@@ -16,6 +16,7 @@ Depois de ativar o GitHub Pages:
 - **Brasa (Hamburgueria):** https://edudiasr.github.io/portfolio-web/site-hamburgueria/
 - **Áurea (Odontologia):** https://edudiasr.github.io/portfolio-web/site-clinica-dentista/
 - **Vértice (Imóveis):** https://edudiasr.github.io/portfolio-web/site-imobiliaria/
+- **Meridian (Advogados):** https://edudiasr.github.io/portfolio-web/site-advocacia/
 
 ---
 
@@ -28,13 +29,13 @@ Depois de ativar o GitHub Pages:
 | [`site-hamburgueria`](./site-hamburgueria) | Hamburgueria smash — cardápio, carrinho, fotos, WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-clinica-dentista`](./site-clinica-dentista) | Clínica odontológica — paleta azul, before/after, luxury UI | HTML · CSS · JS | ✅ Pronto |
 | [`site-imobiliaria`](./site-imobiliaria) | Imobiliária — filtros, listings, bairros, visita WhatsApp | HTML · CSS · JS | ✅ Pronto |
+| [`site-advocacia`](./site-advocacia) | Advocacia — charcoal/vinho, áreas, equipe, consulta WhatsApp | HTML · CSS · JS | ✅ Pronto |
 
 ### Próximos na fila
 
-1. Advocacia  
-2. Pet shop / vet  
-3. Energia solar  
-4. Academia
+1. Pet shop / vet  
+2. Energia solar  
+3. Academia
 
 ---
 
