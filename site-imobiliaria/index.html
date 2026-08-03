@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vértice Imóveis — Joinville, SC</title>
+  <meta name="description" content="Imobiliária em Joinville, SC. Casas, apartamentos e terrenos no Centro e região. Agende visita pelo WhatsApp." />
+  <meta name="author" content="Vértice Imóveis" />
+  <meta property="og:title" content="Vértice Imóveis — Joinville" />
+  <meta property="og:description" content="Encontre o imóvel certo com curadoria e atendimento humano." />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%230c1410'/><path d='M20 70 L50 25 L80 70 Z' fill='none' stroke='%237d9b76' stroke-width='6'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <span class="preloader__logo">Vértice</span>
+    <span class="preloader__bar"></span>
+  </div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Vértice Imóveis">
+        <span class="logo__mark" aria-hidden="true"></span>
+        Vértice<em>Imóveis</em>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link active">Início</a></li>
+          <li><a href="#imoveis" class="nav__link">Imóveis</a></li>
+          <li><a href="#bairros" class="nav__link">Bairros</a></li>
+          <li><a href="#como" class="nav__link">Como funciona</a></li>
+          <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#contato" class="btn btn--primary btn--sm header__cta">Falar com corretor</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero__media" aria-hidden="true">
+        <img src="assets/img/imovel-destaque.png" alt="" class="hero__photo" />
+        <div class="hero__veil"></div>
+      </div>
+      <div class="container hero__content">
+        <p class="hero__eyebrow reveal">Joinville · SC · Curadoria de imóveis</p>
+        <h1 class="hero__title reveal">
+          O endereço certo<br />
+          <em>muda tudo.</em>
+        </h1>
+        <p class="hero__text reveal">
+          Casas, apartamentos e terrenos selecionados no Centro de Joinville e região.
+          Sem lista infinita — só o que faz sentido pra você.
+        </p>
+
+        <form class="search reveal" id="hero-search" role="search">
+          <label class="search__field">
+            <span>Tipo</span>
+            <select name="tipo" id="filter-tipo">
+              <option value="all">Todos</option>
+              <option value="casa">Casa</option>
+              <option value="apto">Apartamento</option>
+              <option value="terreno">Terreno</option>
+              <option value="comercial">Comercial</option>
+            </select>
+          </label>
+          <label class="search__field">
+            <span>Negócio</span>
+            <select name="negocio" id="filter-negocio">
+              <option value="all">Venda e aluguel</option>
+              <option value="venda">Venda</option>
+              <option value="aluguel">Aluguel</option>
+            </select>
+          </label>
+          <label class="search__field">
+            <span>Faixa</span>
+            <select name="faixa" id="filter-faixa">
+              <option value="all">Qualquer valor</option>
+              <option value="low">Até R$ 400 mil</option>
+              <option value="mid">R$ 400–900 mil</option>
+              <option value="high">Acima de R$ 900 mil</option>
+              <option value="rent">Aluguel até R$ 4.500</option>
+            </select>
+          </label>
+          <button type="submit" class="btn btn--primary">Buscar imóveis</button>
+        </form>
+
+        <dl class="hero__stats reveal">
+          <div>
+            <dt data-count="120" data-suffix="+">0</dt>
+            <dd>imóveis ativos</dd>
+          </div>
+          <div>
+            <dt data-count="8">0</dt>
+            <dd>anos no mercado</dd>
+          </div>
+          <div>
+            <dt data-count="350" data-suffix="+">0</dt>
+            <dd>negócios fechados</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" id="imoveis">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Portfólio</span>
+          <h2>Imóveis em <em>destaque</em></h2>
+          <p>Filtre, favorite e agende visita pelo WhatsApp em um clique.</p>
+        </div>
+
+        <div class="toolbar reveal">
+          <p class="results-count" id="results-count">Mostrando todos os imóveis</p>
+          <div class="toolbar__actions">
+            <label class="toolbar__sort">
+              Ordenar
+              <select id="sort-listings">
+                <option value="featured">Destaques</option>
+                <option value="price-asc">Menor preço</option>
+                <option value="price-desc">Maior preço</option>
+              </select>
+            </label>
+            <button type="button" class="btn btn--ghost btn--sm" id="fav-only">♥ Favoritos (<span id="fav-count">0</span>)</button>
+          </div>
+        </div>
+
+        <div class="listings" id="listings">
+          <article class="listing reveal" data-id="1" data-tipo="apto" data-negocio="venda" data-faixa="mid" data-preco="620000" data-featured="2">
+            <div class="listing__media">
+              <img src="assets/img/imovel-destaque.png" alt="Apartamento 3 dorms América" loading="lazy" />
+              <span class="listing__badge">Venda</span>
+              <button type="button" class="listing__fav" aria-label="Favoritar" data-fav="1">♥</button>
+            </div>
+            <div class="listing__body">
+              <h3>Apartamento 3 dorms · América</h3>
+              <p class="listing__place">América · Joinville, SC</p>
+              <ul class="listing__meta"><li>98 m²</li><li>3 dorms</li><li>2 vagas</li></ul>
+              <div class="listing__foot">
+                <strong>R$ 620.000</strong>
+                <button type="button" class="btn btn--ghost btn--sm btn-visit" data-title="Apartamento 3 dorms · América" data-price="R$ 620.000">Quero visitar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="listing reveal" data-id="2" data-tipo="casa" data-negocio="venda" data-faixa="high" data-preco="1250000" data-featured="1">
+            <div class="listing__media">
+              <img src="assets/img/imovel-destaque.png" alt="Casa condomínio Atiradores" loading="lazy" />
+              <span class="listing__badge">Venda</span>
+              <span class="listing__badge listing__badge--alt">Destaque</span>
+              <button type="button" class="listing__fav" aria-label="Favoritar" data-fav="2">♥</button>
+            </div>
+            <div class="listing__body">
+              <h3>Casa duplex · Atiradores</h3>
+              <p class="listing__place">Atiradores · Joinville, SC</p>
+              <ul class="listing__meta"><li>240 m²</li><li>4 suítes</li><li>Pé-direito duplo</li></ul>
+              <div class="listing__foot">
+                <strong>R$ 1.250.000</strong>
+                <button type="button" class="btn btn--ghost btn--sm btn-visit" data-title="Casa duplex · Atiradores" data-price="R$ 1.250.000">Quero visitar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="listing reveal" data-id="3" data-tipo="apto" data-negocio="aluguel" data-faixa="rent" data-preco="2800" data-featured="5">
+            <div class="listing__media">
+              <img src="assets/img/imovel-destaque.png" alt="Studio mobiliado Centro" loading="lazy" />
+              <span class="listing__badge listing__badge--rent">Aluguel</span>
+              <button type="button" class="listing__fav" aria-label="Favoritar" data-fav="3">♥</button>
+            </div>
+            <div class="listing__body">
+              <h3>Studio mobiliado · Centro</h3>
+              <p class="listing__place">Centro · Joinville, SC</p>
+              <ul class="listing__meta"><li>42 m²</li><li>1 dorm</li><li>Mobiliado</li></ul>
+              <div class="listing__foot">
+                <strong>R$ 2.800<span>/mês</span></strong>
+                <button type="button" class="btn btn--ghost btn--sm btn-visit" data-title="Studio mobiliado · Centro" data-price="R$ 2.800/mês">Quero visitar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="listing reveal" data-id="4" data-tipo="casa" data-negocio="venda" data-faixa="mid" data-preco="780000" data-featured="4">
+            <div class="listing__media">
+              <img src="assets/img/imovel-destaque.png" alt="Sobrado Bucarein" loading="lazy" />
+              <span class="listing__badge">Venda</span>
+              <button type="button" class="listing__fav" aria-label="Favoritar" data-fav="4">♥</button>
+            </div>
+            <div class="listing__body">
+              <h3>Sobrado reformado · Bucarein</h3>
+              <p class="listing__place">Bucarein · Joinville, SC</p>
+              <ul class="listing__meta"><li>180 m²</li><li>3 dorms</li><li>Quintal</li></ul>
+              <div class="listing__foot">
+                <strong>R$ 780.000</strong>
+                <button type="button" class="btn btn--ghost btn--sm btn-visit" data-title="Sobrado reformado · Bucarein" data-price="R$ 780.000">Quero visitar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="listing reveal" data-id="5" data-tipo="terreno" data-negocio="venda" data-faixa="low" data-preco="320000" data-featured="8">
+            <div class="listing__media">
+              <img src="assets/img/imovel-destaque.png" alt="Terreno Costa e Silva" loading="lazy" />
+              <span class="listing__badge">Venda</span>
+              <button type="button" class="listing__fav" aria-label="Favoritar" data-fav="5">♥</button>
+            </div>
+            <div class="listing__body">
+              <h3>Terreno 360 m² · Costa e Silva</h3>
+              <p class="listing__place">Costa e Silva · Joinville, SC</p>
+              <ul class="listing__meta"><li>360 m²</li><li>Plano</li><li>Escriturado</li></ul>
+              <div class="listing__foot">
+                <strong>R$ 320.000</strong>
+                <button type="button" class="btn btn--ghost btn--sm btn-visit" data-title="Terreno 360 m² · Costa e Silva" data-price="R$ 320.000">Quero visitar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="listing reveal" data-id="6" data-tipo="comercial" data-negocio="aluguel" data-faixa="rent" data-preco="4500" data-featured="9">
+            <div class="listing__media">
+              <img src="assets/img/imovel-destaque.png" alt="Sala comercial Centro" loading="lazy" />
+              <span class="listing__badge listing__badge--rent">Aluguel</span>
+              <button type="button" class="listing__fav" aria-label="Favoritar" data-fav="6">♥</button>
+            </div>
+            <div class="listing__body">
+              <h3>Sala comercial · Centro</h3>
+              <p class="listing__place">Centro · Joinville, SC</p>
+              <ul class="listing__meta"><li>65 m²</li><li>2 banheiros</li><li>Recepção</li></ul>
+              <div class="listing__foot">
+                <strong>R$ 4.500<span>/mês</span></strong>
+                <button type="button" class="btn btn--ghost btn--sm btn-visit" data-title="Sala comercial · Centro" data-price="R$ 4.500/mês">Quero visitar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="listing reveal" data-id="7" data-tipo="apto" data-negocio="venda" data-faixa="high" data-preco="980000" data-featured="3">
+            <div class="listing__media">
+              <img src="assets/img/imovel-destaque.png" alt="Cobertura Anita Garibaldi" loading="lazy" />
+              <span class="listing__badge">Venda</span>
+              <span class="listing__badge listing__badge--alt">Novo</span>
+              <button type="button" class="listing__fav" aria-label="Favoritar" data-fav="7">♥</button>
+            </div>
+            <div class="listing__body">
+              <h3>Cobertura garden · Anita Garibaldi</h3>
+              <p class="listing__place">Anita Garibaldi · Joinville, SC</p>
+              <ul class="listing__meta"><li>210 m²</li><li>3 suítes</li><li>Terraço</li></ul>
+              <div class="listing__foot">
+                <strong>R$ 980.000</strong>
+                <button type="button" class="btn btn--ghost btn--sm btn-visit" data-title="Cobertura garden · Anita Garibaldi" data-price="R$ 980.000">Quero visitar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="listing reveal" data-id="8" data-tipo="casa" data-negocio="venda" data-faixa="high" data-preco="1680000" data-featured="6">
+            <div class="listing__media">
+              <img src="assets/img/imovel-destaque.png" alt="Residência Glória" loading="lazy" />
+              <span class="listing__badge">Venda</span>
+              <button type="button" class="listing__fav" aria-label="Favoritar" data-fav="8">♥</button>
+            </div>
+            <div class="listing__body">
+              <h3>Residência premium · Glória</h3>
+              <p class="listing__place">Glória · Joinville, SC</p>
+              <ul class="listing__meta"><li>320 m²</li><li>5 dorms</li><li>Home office</li></ul>
+              <div class="listing__foot">
+                <strong>R$ 1.680.000</strong>
+                <button type="button" class="btn btn--ghost btn--sm btn-visit" data-title="Residência premium · Glória" data-price="R$ 1.680.000">Quero visitar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="listing reveal" data-id="9" data-tipo="apto" data-negocio="aluguel" data-faixa="rent" data-preco="3500" data-featured="7">
+            <div class="listing__media">
+              <img src="assets/img/imovel-destaque.png" alt="Apartamento Saguaçu" loading="lazy" />
+              <span class="listing__badge listing__badge--rent">Aluguel</span>
+              <button type="button" class="listing__fav" aria-label="Favoritar" data-fav="9">♥</button>
+            </div>
+            <div class="listing__body">
+              <h3>Apto 2 suítes · Saguaçu</h3>
+              <p class="listing__place">Saguaçu · Joinville, SC</p>
+              <ul class="listing__meta"><li>86 m²</li><li>2 suítes</li><li>1 vaga</li></ul>
+              <div class="listing__foot">
+                <strong>R$ 3.500<span>/mês</span></strong>
+                <button type="button" class="btn btn--ghost btn--sm btn-visit" data-title="Apto 2 suítes · Saguaçu" data-price="R$ 3.500/mês">Quero visitar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="listing reveal" data-id="10" data-tipo="apto" data-negocio="venda" data-faixa="mid" data-preco="540000" data-featured="10">
+            <div class="listing__media">
+              <img src="assets/img/imovel-destaque.png" alt="Apartamento Bom Retiro" loading="lazy" />
+              <span class="listing__badge">Venda</span>
+              <button type="button" class="listing__fav" aria-label="Favoritar" data-fav="10">♥</button>
+            </div>
+            <div class="listing__body">
+              <h3>Apartamento claro · Bom Retiro</h3>
+              <p class="listing__place">Bom Retiro · Joinville, SC</p>
+              <ul class="listing__meta"><li>78 m²</li><li>2 dorms</li><li>Sacada</li></ul>
+              <div class="listing__foot">
+                <strong>R$ 540.000</strong>
+                <button type="button" class="btn btn--ghost btn--sm btn-visit" data-title="Apartamento claro · Bom Retiro" data-price="R$ 540.000">Quero visitar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="listing reveal" data-id="11" data-tipo="casa" data-negocio="aluguel" data-faixa="rent" data-preco="4200" data-featured="11">
+            <div class="listing__media">
+              <img src="assets/img/imovel-destaque.png" alt="Casa Jardim Sofia" loading="lazy" />
+              <span class="listing__badge listing__badge--rent">Aluguel</span>
+              <button type="button" class="listing__fav" aria-label="Favoritar" data-fav="11">♥</button>
+            </div>
+            <div class="listing__body">
+              <h3>Casa ampla · Jardim Sofia</h3>
+              <p class="listing__place">Jardim Sofia · Joinville, SC</p>
+              <ul class="listing__meta"><li>160 m²</li><li>3 dorms</li><li>Churrasqueira</li></ul>
+              <div class="listing__foot">
+                <strong>R$ 4.200<span>/mês</span></strong>
+                <button type="button" class="btn btn--ghost btn--sm btn-visit" data-title="Casa ampla · Jardim Sofia" data-price="R$ 4.200/mês">Quero visitar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="listing reveal" data-id="12" data-tipo="comercial" data-negocio="venda" data-faixa="mid" data-preco="890000" data-featured="12">
+            <div class="listing__media">
+              <img src="assets/img/imovel-destaque.png" alt="Loja América" loading="lazy" />
+              <span class="listing__badge">Venda</span>
+              <button type="button" class="listing__fav" aria-label="Favoritar" data-fav="12">♥</button>
+            </div>
+            <div class="listing__body">
+              <h3>Ponto comercial · América</h3>
+              <p class="listing__place">América · Joinville, SC</p>
+              <ul class="listing__meta"><li>120 m²</li><li>Vitrine</li><li>Estacionamento</li></ul>
+              <div class="listing__foot">
+                <strong>R$ 890.000</strong>
+                <button type="button" class="btn btn--ghost btn--sm btn-visit" data-title="Ponto comercial · América" data-price="R$ 890.000">Quero visitar</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="empty reveal" id="empty-state" hidden>Nenhum imóvel nessa combinação. Ajuste os filtros ou veja os favoritos.</p>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="bairros">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Região</span>
+          <h2>Bairros que <em>mais pedem</em></h2>
+        </div>
+        <div class="neighborhoods">
+          <article class="hood reveal">
+            <h3>Centro</h3>
+            <p>Vida urbana, serviços a pé e ótimo para investimento de aluguel.</p>
+          </article>
+          <article class="hood reveal">
+            <h3>América</h3>
+            <p>Residencial valorizado, escolas e fácil acesso às vias principais.</p>
+          </article>
+          <article class="hood reveal">
+            <h3>Atiradores</h3>
+            <p>Condomínios e casas de alto padrão com área verde.</p>
+          </article>
+          <article class="hood reveal">
+            <h3>Anita Garibaldi</h3>
+            <p>Equilíbrio entre comércio, moradia e infraestrutura completa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="como">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Processo</span>
+          <h2>Simples, claro e <em>sem pressão</em></h2>
+        </div>
+        <ol class="steps">
+          <li class="step reveal">
+            <span>01</span>
+            <h3>Conversa rápida</h3>
+            <p>Você conta orçamento, bairro e o que não abre mão.</p>
+          </li>
+          <li class="step reveal">
+            <span>02</span>
+            <h3>Seleção curada</h3>
+            <p>Enviamos opções reais — sem spam de lista genérica.</p>
+          </li>
+          <li class="step reveal">
+            <span>03</span>
+            <h3>Visitas</h3>
+            <p>Agendamos horários e acompanhamos cada imóvel.</p>
+          </li>
+          <li class="step reveal">
+            <span>04</span>
+            <h3>Fechamento</h3>
+            <p>Orientação em documentação e negociação transparente.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="depoimentos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Clientes</span>
+          <h2>Quem comprou, <em>indica</em></h2>
+        </div>
+        <div class="quotes">
+          <blockquote class="quote reveal">
+            <p>“Achei o apto em duas visitas. Sem enrolação e com transparência no valor do condomínio.”</p>
+            <footer>— Carla M. · América</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“Vendi minha casa com a Vértice. Anúncio caprichado e propostas sérias em poucas semanas.”</p>
+            <footer>— Roberto S. · Bucarein</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“Aluguei a sala no Centro pelo WhatsApp. Rápido, documentado e sem dor de cabeça.”</p>
+            <footer>— Studio Norte · Comercial</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta__inner reveal">
+        <div>
+          <h2>Quer anunciar seu imóvel?</h2>
+          <p>Avaliação gratuita e plano de divulgação sob medida.</p>
+        </div>
+        <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20anunciar%20meu%20im%C3%B3vel%20na%20V%C3%A9rtice." class="btn btn--light" target="_blank" rel="noopener">Anunciar no WhatsApp</a>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="container contact">
+        <div class="contact__info reveal">
+          <span class="tag">Contato</span>
+          <h2>Fale com a <em>Vértice</em></h2>
+          <ul class="contact__list">
+            <li>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/5547992072891">(47) 99207-2891</a>
+            </li>
+            <li>
+              <strong>E-mail</strong>
+              <a href="mailto:edudiasr6@gmail.com">edudiasr6@gmail.com</a>
+            </li>
+            <li>
+              <strong>Endereço</strong>
+              <span>Centro de Joinville<br />Joinville — SC · Santa Catarina<br />Brasil</span>
+            </li>
+            <li>
+              <strong>Horário</strong>
+              <span>Seg a Sex · 09h–18h<br />Sábado · 09h–13h</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contact-form" novalidate>
+          <h3>Agendar atendimento</h3>
+          <p class="form__lead">Compra, aluguel ou anúncio — responda e a gente retorna.</p>
+
+          <label>
+            Nome
+            <input type="text" name="name" required placeholder="Seu nome" autocomplete="name" />
+            <span class="form__error">Informe seu nome.</span>
+          </label>
+          <label>
+            WhatsApp
+            <input type="tel" name="phone" required placeholder="(47) 99207-2891" autocomplete="tel" inputmode="tel" />
+            <span class="form__error">Informe um telefone válido.</span>
+          </label>
+          <label>
+            Objetivo
+            <select name="goal" required>
+              <option value="" disabled selected>Selecione</option>
+              <option>Comprar</option>
+              <option>Alugar</option>
+              <option>Anunciar imóvel</option>
+              <option>Avaliação de mercado</option>
+            </select>
+            <span class="form__error">Escolha uma opção.</span>
+          </label>
+          <label>
+            Detalhes
+            <textarea name="message" rows="4" placeholder="Bairro, orçamento, tipo de imóvel..."></textarea>
+          </label>
+          <button type="submit" class="btn btn--primary btn--block">Enviar no WhatsApp</button>
+          <p class="form__ok" id="form-ok" hidden>✓ Abrindo o WhatsApp…</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="logo">
+        <span class="logo__mark" aria-hidden="true"></span>
+        Vértice<em>Imóveis</em>
+      </a>
+      <p>Centro de Joinville · SC · Brasil</p>
+      <p>© <span id="year"></span> Vértice Imóveis · Portfólio</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20V%C3%A9rtice%20Im%C3%B3veis." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  </a>
+
+  <button class="to-top" id="to-top" aria-label="Voltar ao topo">↑</button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -15,6 +15,7 @@ Depois de ativar o GitHub Pages:
 - **Ónix (Barbearia):** https://edudiasr.github.io/portfolio-web/landing-barbearia/
 - **Brasa (Hamburgueria):** https://edudiasr.github.io/portfolio-web/site-hamburgueria/
 - **Áurea (Odontologia):** https://edudiasr.github.io/portfolio-web/site-clinica-dentista/
+- **Vértice (Imóveis):** https://edudiasr.github.io/portfolio-web/site-imobiliaria/
 
 ---
 
@@ -22,10 +23,18 @@ Depois de ativar o GitHub Pages:
 
 | Projeto | Descrição | Stack | Status |
 | ------- | --------- | ----- | ------ |
-| [`site-informatica`](./site-informatica) | Site completo para assistência técnica e loja de informática — dark mode, before/after, WhatsApp, animações, SEO | HTML · CSS · JS | ✅ Pronto |
-| [`landing-barbearia`](./landing-barbearia) | Landing page premium para barbearia — identidade charcoal/brass, equipe, preços, agendamento WhatsApp | HTML · CSS · JS | ✅ Pronto |
-| [`site-hamburgueria`](./site-hamburgueria) | Hamburgueria smash — cardápio filtrável, combos, carrinho, fotos e pedido via WhatsApp | HTML · CSS · JS | ✅ Pronto |
-| [`site-clinica-dentista`](./site-clinica-dentista) | Clínica odontológica luxury — paleta azul, before/after, cursor custom, tilt 3D, agendamento | HTML · CSS · JS | ✅ Pronto |
+| [`site-informatica`](./site-informatica) | Assistência técnica — dark mode, before/after, WhatsApp | HTML · CSS · JS | ✅ Pronto |
+| [`landing-barbearia`](./landing-barbearia) | Barbearia premium — charcoal/brass, galeria, agendamento | HTML · CSS · JS | ✅ Pronto |
+| [`site-hamburgueria`](./site-hamburgueria) | Hamburgueria smash — cardápio, carrinho, fotos, WhatsApp | HTML · CSS · JS | ✅ Pronto |
+| [`site-clinica-dentista`](./site-clinica-dentista) | Clínica odontológica — paleta azul, before/after, luxury UI | HTML · CSS · JS | ✅ Pronto |
+| [`site-imobiliaria`](./site-imobiliaria) | Imobiliária — filtros, listings, bairros, visita WhatsApp | HTML · CSS · JS | ✅ Pronto |
+
+### Próximos na fila
+
+1. Advocacia  
+2. Pet shop / vet  
+3. Energia solar  
+4. Academia
 
 ---
 
