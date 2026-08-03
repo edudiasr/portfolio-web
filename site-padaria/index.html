@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Levain — Padaria &amp; Confeitaria em Joinville, SC</title>
+  <meta name="description" content="Padaria artesanal e confeitaria em Joinville. Pães do dia, doces, salgados e encomendas. Peça pelo WhatsApp." />
+  <meta name="author" content="Levain Padaria" />
+  <meta property="og:title" content="Levain — Padaria Joinville" />
+  <meta property="og:description" content="Farinha, tempo e aroma. Pães e doces artesanais no Centro." />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23150f0d'/><circle cx='50' cy='52' r='26' fill='%23e8c872'/><circle cx='50' cy='52' r='14' fill='%23150f0d'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <span class="ambient__glow ambient__glow--a"></span>
+    <span class="ambient__glow ambient__glow--b"></span>
+    <span class="ambient__dust" id="dust"></span>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <span class="cursor__dot"></span>
+    <span class="cursor__ring"></span>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Levain">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">Levain<em>Padaria</em></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link active">Início</a></li>
+          <li><a href="#cardapio" class="nav__link">Cardápio</a></li>
+          <li><a href="#encomendas" class="nav__link">Encomendas</a></li>
+          <li><a href="#historia" class="nav__link">História</a></li>
+          <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button type="button" class="cart-btn" id="cart-toggle" aria-label="Abrir pedido">
+          Pedido <span id="cart-count">0</span>
+        </button>
+        <a href="#contato" class="btn btn--butter btn--sm header__cta magnetic">Encomendar</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <aside class="drawer" id="cart-drawer" aria-hidden="true">
+    <div class="drawer__head">
+      <h2>Seu pedido</h2>
+      <button type="button" class="drawer__close" id="cart-close" aria-label="Fechar">×</button>
+    </div>
+    <ul class="drawer__list" id="cart-list"></ul>
+    <p class="drawer__empty" id="cart-empty">Nada por aqui ainda — escolha no cardápio.</p>
+    <div class="drawer__foot">
+      <div class="drawer__total">
+        <span>Total</span>
+        <strong id="cart-total">R$ 0</strong>
+      </div>
+      <button type="button" class="btn btn--butter btn--block" id="cart-wa">Pedir no WhatsApp</button>
+    </div>
+  </aside>
+  <div class="drawer-backdrop" id="cart-backdrop" hidden></div>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="hero__eyebrow reveal">
+            <span class="live"></span>
+            Joinville · SC · Forno artesanal
+          </p>
+          <h1 class="hero__title reveal">
+            Farinha, tempo<br />
+            e <em>aroma</em>.
+          </h1>
+          <p class="hero__text reveal">
+            Pães de fermentação lenta, doces de padaria e salgados quentes —
+            feitos no Centro de Joinville, do jeito que a manhã merece.
+          </p>
+          <div class="hero__actions reveal">
+            <a href="#cardapio" class="btn btn--butter magnetic">Ver cardápio do dia</a>
+            <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20fazer%20uma%20encomenda%20na%20Levain." class="btn btn--ghost magnetic" target="_blank" rel="noopener">
+              WhatsApp
+            </a>
+          </div>
+          <dl class="hero__stats reveal">
+            <div>
+              <dt data-count="6">0</dt>
+              <dd>anos de forno</dd>
+            </div>
+            <div>
+              <dt data-count="40" data-suffix="+">0</dt>
+              <dd>itens no dia</dd>
+            </div>
+            <div>
+              <dt data-count="5">0</dt>
+              <dd>h · abre cedo</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__stage reveal">
+          <div class="special tilt" data-tilt>
+            <div class="special__label">Do forno agora</div>
+            <div class="special__visual special__visual--bread" aria-hidden="true"></div>
+            <h2 id="special-name">Pão rústico de fermentação</h2>
+            <p id="special-desc">Crosta crocante, miolo alveolado. Sai às 7h.</p>
+            <div class="special__meta">
+              <strong id="special-price">R$ 18</strong>
+              <button type="button" class="btn btn--butter btn--sm" id="special-add">Adicionar</button>
+            </div>
+          </div>
+          <div class="hero__hours tilt" data-tilt>
+            <span>Horário de hoje</span>
+            <strong>05h30 — 19h30</strong>
+            <em>Forno ligado · fila amiga</em>
+          </div>
+        </div>
+      </div>
+      <a href="#cardapio" class="hero__scroll" aria-label="Rolar"><span></span></a>
+    </section>
+
+    <section class="strip" aria-hidden="true">
+      <div class="strip__track">
+        <p>PÃO DE FERMENTAÇÃO · CROISSANT · BRIOCHE · FOCACCIA · TORTA · CAFÉ · ENCOMENDAS · PÃO DE FERMENTAÇÃO · CROISSANT · BRIOCHE · FOCACCIA · TORTA · CAFÉ · ENCOMENDAS ·</p>
+        <p>PÃO DE FERMENTAÇÃO · CROISSANT · BRIOCHE · FOCACCIA · TORTA · CAFÉ · ENCOMENDAS · PÃO DE FERMENTAÇÃO · CROISSANT · BRIOCHE · FOCACCIA · TORTA · CAFÉ · ENCOMENDAS ·</p>
+      </div>
+    </section>
+
+    <section class="section" id="historia">
+      <div class="container about">
+        <div class="about__copy reveal">
+          <span class="tag">A Levain</span>
+          <h2 class="title">Massa viva. <em>Rotina quente.</em></h2>
+          <p>
+            Começamos pequenos, com um forno e a teimosia de fazer pão de verdade.
+            Hoje a Levain é ponto de manhã no Centro — e de encomendas que chegam cheirosas.
+          </p>
+          <ul class="checks">
+            <li>Fermentação lenta e ingredientes selecionados</li>
+            <li>Fornada contínua pela manhã</li>
+            <li>Encomendas com 48h de antecedência</li>
+            <li>Retirada no balcão ou combinamos entrega</li>
+          </ul>
+        </div>
+        <div class="about__tiles">
+          <article class="tile tilt reveal" data-tilt>
+            <span>01</span>
+            <h3>Padaria</h3>
+            <p>Pães, focaccia e torradas do dia.</p>
+          </article>
+          <article class="tile tilt reveal" data-tilt>
+            <span>02</span>
+            <h3>Confeitaria</h3>
+            <p>Doces, tortas e sobremesas de vitrine.</p>
+          </article>
+          <article class="tile tilt reveal" data-tilt>
+            <span>03</span>
+            <h3>Salgados</h3>
+            <p>Quentes, crocantes, pra comer agora.</p>
+          </article>
+          <article class="tile tilt reveal" data-tilt>
+            <span>04</span>
+            <h3>Café</h3>
+            <p>Espresso e bebidas pra acompanhar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="cardapio">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Cardápio</span>
+          <h2 class="title">O que sai do <em>forno</em></h2>
+          <p>Filtre, adicione ao pedido e finalize no WhatsApp.</p>
+        </div>
+
+        <div class="filters reveal">
+          <button class="chip active" data-filter="all">Tudo</button>
+          <button class="chip" data-filter="paes">Pães</button>
+          <button class="chip" data-filter="doces">Doces</button>
+          <button class="chip" data-filter="salgados">Salgados</button>
+          <button class="chip" data-filter="bebidas">Bebidas</button>
+        </div>
+
+        <div class="menu" id="menu">
+          <article class="item tilt reveal" data-tilt data-cat="paes" data-name="Pão rústico" data-price="18">
+            <div class="item__visual item__visual--a" aria-hidden="true"></div>
+            <div class="item__body">
+              <h3>Pão rústico</h3>
+              <p>Fermentação 24h · 600g</p>
+              <div class="item__meta">
+                <strong>R$ 18</strong>
+                <button type="button" class="add-btn">Adicionar</button>
+              </div>
+            </div>
+          </article>
+          <article class="item tilt reveal" data-tilt data-cat="paes" data-name="Ciabatta" data-price="14">
+            <div class="item__visual item__visual--b" aria-hidden="true"></div>
+            <div class="item__body">
+              <h3>Ciabatta</h3>
+              <p>Leve, alveolada · unidade</p>
+              <div class="item__meta">
+                <strong>R$ 14</strong>
+                <button type="button" class="add-btn">Adicionar</button>
+              </div>
+            </div>
+          </article>
+          <article class="item tilt reveal" data-tilt data-cat="paes" data-name="Focaccia alecrim" data-price="22">
+            <div class="item__visual item__visual--c" aria-hidden="true"></div>
+            <div class="item__body">
+              <h3>Focaccia alecrim</h3>
+              <p>Azeite e flor de sal · fatia generosa</p>
+              <div class="item__meta">
+                <strong>R$ 22</strong>
+                <button type="button" class="add-btn">Adicionar</button>
+              </div>
+            </div>
+          </article>
+          <article class="item tilt reveal" data-tilt data-cat="doces" data-name="Croissant de amêndoas" data-price="16">
+            <div class="item__visual item__visual--d" aria-hidden="true"></div>
+            <div class="item__body">
+              <h3>Croissant de amêndoas</h3>
+              <p>Massa folhada · creme</p>
+              <div class="item__meta">
+                <strong>R$ 16</strong>
+                <button type="button" class="add-btn">Adicionar</button>
+              </div>
+            </div>
+          </article>
+          <article class="item tilt reveal" data-tilt data-cat="doces" data-name="Brioche de chocolate" data-price="15">
+            <div class="item__visual item__visual--e" aria-hidden="true"></div>
+            <div class="item__body">
+              <h3>Brioche de chocolate</h3>
+              <p>Recheio intenso · unidade</p>
+              <div class="item__meta">
+                <strong>R$ 15</strong>
+                <button type="button" class="add-btn">Adicionar</button>
+              </div>
+            </div>
+          </article>
+          <article class="item tilt reveal" data-tilt data-cat="doces" data-name="Torta de limão" data-price="12">
+            <div class="item__visual item__visual--f" aria-hidden="true"></div>
+            <div class="item__body">
+              <h3>Torta de limão</h3>
+              <p>Fatia · merengue tostado</p>
+              <div class="item__meta">
+                <strong>R$ 12</strong>
+                <button type="button" class="add-btn">Adicionar</button>
+              </div>
+            </div>
+          </article>
+          <article class="item tilt reveal" data-tilt data-cat="salgados" data-name="Empada de frango" data-price="11">
+            <div class="item__visual item__visual--g" aria-hidden="true"></div>
+            <div class="item__body">
+              <h3>Empada de frango</h3>
+              <p>Massa amanteigada · unidade</p>
+              <div class="item__meta">
+                <strong>R$ 11</strong>
+                <button type="button" class="add-btn">Adicionar</button>
+              </div>
+            </div>
+          </article>
+          <article class="item tilt reveal" data-tilt data-cat="salgados" data-name="Quiche de alho-poró" data-price="14">
+            <div class="item__visual item__visual--h" aria-hidden="true"></div>
+            <div class="item__body">
+              <h3>Quiche de alho-poró</h3>
+              <p>Fatia · forno do dia</p>
+              <div class="item__meta">
+                <strong>R$ 14</strong>
+                <button type="button" class="add-btn">Adicionar</button>
+              </div>
+            </div>
+          </article>
+          <article class="item tilt reveal" data-tilt data-cat="bebidas" data-name="Espresso" data-price="7">
+            <div class="item__visual item__visual--i" aria-hidden="true"></div>
+            <div class="item__body">
+              <h3>Espresso</h3>
+              <p>Curto ou duplo</p>
+              <div class="item__meta">
+                <strong>R$ 7</strong>
+                <button type="button" class="add-btn">Adicionar</button>
+              </div>
+            </div>
+          </article>
+          <article class="item tilt reveal" data-tilt data-cat="bebidas" data-name="Cappuccino" data-price="12">
+            <div class="item__visual item__visual--j" aria-hidden="true"></div>
+            <div class="item__body">
+              <h3>Cappuccino</h3>
+              <p>Leite cremoso · 200ml</p>
+              <div class="item__meta">
+                <strong>R$ 12</strong>
+                <button type="button" class="add-btn">Adicionar</button>
+              </div>
+            </div>
+          </article>
+          <article class="item tilt reveal" data-tilt data-cat="bebidas" data-name="Chocolate quente" data-price="13">
+            <div class="item__visual item__visual--k" aria-hidden="true"></div>
+            <div class="item__body">
+              <h3>Chocolate quente</h3>
+              <p>70% cacau · xícara</p>
+              <div class="item__meta">
+                <strong>R$ 13</strong>
+                <button type="button" class="add-btn">Adicionar</button>
+              </div>
+            </div>
+          </article>
+          <article class="item tilt reveal" data-tilt data-cat="doces" data-name="Cookie de chocolate" data-price="9">
+            <div class="item__visual item__visual--l" aria-hidden="true"></div>
+            <div class="item__body">
+              <h3>Cookie de chocolate</h3>
+              <p>Centro derretido · unidade</p>
+              <div class="item__meta">
+                <strong>R$ 9</strong>
+                <button type="button" class="add-btn">Adicionar</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="encomendas">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Encomendas</span>
+          <h2 class="title">Para festa, café e <em>mesa posta</em></h2>
+          <p>Peça com 48h de antecedência. Montamos o kit com você.</p>
+        </div>
+        <div class="packs">
+          <article class="pack tilt reveal" data-tilt>
+            <h3>Kit Café da Manhã</h3>
+            <p class="pack__price">a partir de R$ 120</p>
+            <ul>
+              <li>Pães sortidos</li>
+              <li>Mini croissants</li>
+              <li>Geleia da casa</li>
+            </ul>
+            <button type="button" class="btn btn--ghost btn--block link-wa" data-wa="Kit Café da Manhã">Quero esse</button>
+          </article>
+          <article class="pack pack--featured tilt reveal" data-tilt>
+            <span class="pack__badge">Mais pedido</span>
+            <h3>Kit Festa Doce</h3>
+            <p class="pack__price">a partir de R$ 220</p>
+            <ul>
+              <li>Torta ou bolo</li>
+              <li>Docinhos sortidos</li>
+              <li>Cookies</li>
+            </ul>
+            <button type="button" class="btn btn--butter btn--block link-wa" data-wa="Kit Festa Doce">Quero esse</button>
+          </article>
+          <article class="pack tilt reveal" data-tilt>
+            <h3>Kit Corporativo</h3>
+            <p class="pack__price">a partir de R$ 180</p>
+            <ul>
+              <li>Salgados quentes</li>
+              <li>Mini sanduíches</li>
+              <li>Bebidas sob consulta</li>
+            </ul>
+            <button type="button" class="btn btn--ghost btn--block link-wa" data-wa="Kit Corporativo">Quero esse</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="equipe">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Equipe</span>
+          <h2 class="title">Quem coloca a mão na <em>massa</em></h2>
+        </div>
+        <div class="team">
+          <article class="team-card tilt reveal" data-tilt>
+            <div class="team-card__avatar" aria-hidden="true">ED</div>
+            <h3>Eduarda Dias</h3>
+            <p class="team-card__role">Confeiteira · Doces &amp; tortas</p>
+            <p>Vitrine doce com precisão e criatividade — cada fatia com assinatura.</p>
+          </article>
+          <article class="team-card tilt reveal" data-tilt>
+            <div class="team-card__avatar team-card__avatar--alt" aria-hidden="true">ED</div>
+            <h3>Eduardo Dias</h3>
+            <p class="team-card__role">Padeiro · Fermentação &amp; forno</p>
+            <p>Pães de longa fermentação e a rotina do forno que começa de madrugada.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="depoimentos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Clientes</span>
+          <h2 class="title">Quem já chega pelo <em>cheiro</em></h2>
+        </div>
+        <div class="quotes">
+          <blockquote class="quote reveal">
+            <p>“O rústico da Levain virou ritual de sábado. Crosta perfeita.”</p>
+            <footer>— Marina · América</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“Encomendei o kit festa e sobrou elogio. Doce no ponto.”</p>
+            <footer>— Pedro · Centro</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“Café + croissant de amêndoas. Melhor canto pra começar o dia.”</p>
+            <footer>— Lia · Costa e Silva</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head reveal">
+          <span class="tag">FAQ</span>
+          <h2 class="title">Dúvidas do <em>balcão</em></h2>
+        </div>
+        <div class="faq">
+          <details class="faq-item reveal">
+            <summary>Fazem entrega?<span></span></summary>
+            <p>Sim, sob consulta no Centro e bairros próximos. Combinamos taxa e horário no WhatsApp.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Com quanto tempo encomendar?<span></span></summary>
+            <p>Ideal: 48 horas. Kits grandes e bolos personalizados: até 72 horas.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Tem opções sem glúten / veganas?<span></span></summary>
+            <p>Algumas rotações da semana. Pergunte no balcão ou WhatsApp o que tem no dia.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Aceitam cartão?<span></span></summary>
+            <p>Sim — débito, crédito e Pix. Pedidos pelo site fecham no WhatsApp.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta__inner reveal">
+        <div>
+          <h2>Fome de forno quente?</h2>
+          <p>Monte o pedido ou fale de encomenda — a gente resolve.</p>
+        </div>
+        <button type="button" class="btn btn--dark magnetic" id="cta-cart">Abrir meu pedido</button>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="container contact">
+        <div class="contact__info reveal">
+          <span class="tag">Contato</span>
+          <h2 class="title">Fale com a <em>Levain</em></h2>
+          <ul class="contact__list">
+            <li>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/5547992072891">(47) 99207-2891</a>
+            </li>
+            <li>
+              <strong>E-mail</strong>
+              <a href="mailto:edudiasr6@gmail.com">edudiasr6@gmail.com</a>
+            </li>
+            <li>
+              <strong>Endereço</strong>
+              <span>Centro de Joinville<br />Joinville — SC · Brasil</span>
+            </li>
+            <li>
+              <strong>Horário</strong>
+              <span>Seg a Sáb · 05h30–19h30<br />Dom · 07h–13h</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contact-form" novalidate>
+          <h3>Pedido / encomenda</h3>
+          <p class="form__lead">Ou monte o carrinho no cardápio — os dois caminhos chegam no WhatsApp.</p>
+
+          <div class="form__row">
+            <label>
+              Nome
+              <input type="text" name="name" required placeholder="Seu nome" autocomplete="name" />
+              <span class="form__error">Informe seu nome.</span>
+            </label>
+            <label>
+              WhatsApp
+              <input type="tel" name="phone" required placeholder="(47) 99207-2891" autocomplete="tel" inputmode="tel" />
+              <span class="form__error">Informe um telefone válido.</span>
+            </label>
+          </div>
+          <label>
+            Tipo
+            <select name="type" required>
+              <option value="" disabled selected>Selecione</option>
+              <option>Pedido do dia</option>
+              <option>Encomenda / kit</option>
+              <option>Bolo / festa</option>
+              <option>Corporativo</option>
+            </select>
+            <span class="form__error">Escolha o tipo.</span>
+          </label>
+          <label>
+            Detalhes
+            <textarea name="message" rows="4" placeholder="Itens, data de retirada, quantidade..."></textarea>
+          </label>
+          <button type="submit" class="btn btn--butter btn--block">Enviar no WhatsApp</button>
+          <p class="form__ok" id="form-ok" hidden>✓ Abrindo o WhatsApp…</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="logo">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">Levain<em>Padaria</em></span>
+      </a>
+      <p>Centro de Joinville · SC · Brasil</p>
+      <p>© <span id="year"></span> Levain · Portfólio</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20Levain." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  </a>
+
+  <button class="to-top" id="to-top" aria-label="Voltar ao topo">↑</button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

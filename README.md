@@ -20,6 +20,7 @@ Depois de ativar o GitHub Pages:
 - **Amora Pet:** https://edudiasr.github.io/portfolio-web/site-petshop/
 - **Solara (Energia Solar):** https://edudiasr.github.io/portfolio-web/site-energia-solar/
 - **Pulse (Academia):** https://edudiasr.github.io/portfolio-web/site-academia/
+- **Levain (Padaria):** https://edudiasr.github.io/portfolio-web/site-padaria/
 
 ---
 
@@ -35,20 +36,21 @@ Depois de ativar o GitHub Pages:
 | [`site-advocacia`](./site-advocacia) | Advocacia — charcoal/vinho, áreas, equipe, consulta WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-petshop`](./site-petshop) | Pet shop / vet — coral/mint, filtros, planos, WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-energia-solar`](./site-energia-solar) | Energia solar — navy/dourado, simulador, projetos, WhatsApp | HTML · CSS · JS | ✅ Pronto |
-| [`site-academia`](./site-academia) | Academia — preto/volt, grade, planos, trial WhatsApp | HTML · CSS · JS | ✅ Pronto |
+| [`site-academia`](./site-academia) | Academia — preto/amarelo, foto, grade, trial WhatsApp | HTML · CSS · JS | ✅ Pronto |
+| [`site-padaria`](./site-padaria) | Padaria — espresso/manteiga, carrinho, encomendas WhatsApp | HTML · CSS · JS | ✅ Pronto |
 
-### Próximos na fila (ideias)
+### Próximos na fila
 
-1. Padaria / confeitaria  
-2. Salão de beleza / estética  
-3. Oficina mecânica / auto center  
-4. Contabilidade / escritório contábil  
-5. Escola de idiomas  
-6. Arquitetura / interiores  
-7. Delivery de açaí / cafeteria  
-8. Lavanderia / limpeza  
-9. Clínica de fisioterapia / pilates  
-10. Construtora / reformas
+1. Salão de beleza / estética  
+2. Oficina mecânica  
+3. Contabilidade  
+4. Escola de idiomas  
+5. Arquitetura / interiores  
+6. Cafeteria / açaí  
+7. Lavanderia  
+8. Fisioterapia / pilates  
+9. Construtora / reformas  
+10. Ótica · Hotel · Escola de música · Corretora de seguros
 
 ---
 
