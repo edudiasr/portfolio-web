@@ -28,6 +28,7 @@ Depois de ativar o GitHub Pages:
 - **Traço Studio (Arquitetura):** https://edudiasr.github.io/portfolio-web/site-arquitetura/
 - **Pulp (Café & Açaí):** https://edudiasr.github.io/portfolio-web/site-cafeteria/
 - **Ciclo (Lavanderia):** https://edudiasr.github.io/portfolio-web/site-lavanderia/
+- **Alinha (Fisio & Pilates):** https://edudiasr.github.io/portfolio-web/site-fisioterapia/
 
 ---
 
@@ -52,12 +53,12 @@ Depois de ativar o GitHub Pages:
 | [`site-arquitetura`](./site-arquitetura) | Arquitetura — charcoal/cobre, planta, antes/depois, mood, estimativa | HTML · CSS · JS | ✅ Pronto |
 | [`site-cafeteria`](./site-cafeteria) | Café & açaí — berry/lime, bowl builder, carrinho, pedido WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-lavanderia`](./site-lavanderia) | Lavanderia — slate/aqua, máquina ao vivo, calculadora, coleta WhatsApp | HTML · CSS · JS | ✅ Pronto |
+| [`site-fisioterapia`](./site-fisioterapia) | Fisio & pilates — ink/teal, mapa do corpo, grade, agenda WhatsApp | HTML · CSS · JS | ✅ Pronto |
 
 ### Próximos na fila
 
-1. Fisioterapia / pilates  
-2. Construtora / reformas  
-3. Ótica · Hotel · Escola de música · Corretora de seguros
+1. Construtora / reformas  
+2. Ótica · Hotel · Escola de música · Corretora de seguros
 
 ---
 
