@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexo Contábil — Contabilidade em Joinville, SC</title>
+  <meta name="description" content="Contabilidade para MEI, Simples e empresas em Joinville. Abertura, fiscal, folha e consultoria com clareza." />
+  <meta name="author" content="Nexo Contábil" />
+  <meta property="og:title" content="Nexo Contábil — Joinville" />
+  <meta property="og:description" content="Números organizados. Decisões mais leves." />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%06090f'/><path d='M28 62 V38 H48 V62 M52 62 V28 H72 V62' stroke='%232dd4a8' stroke-width='8' fill='none' stroke-linecap='round'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__balance" aria-hidden="true">
+      <span class="preloader__beam"></span>
+      <span class="preloader__pan preloader__pan--l"></span>
+      <span class="preloader__pan preloader__pan--r"></span>
+    </div>
+    <p class="preloader__label">Equilibrando os números…</p>
+  </div>
+
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__mesh"></div>
+    <div class="ambient__ledger"></div>
+    <span class="ambient__orb ambient__orb--a"></span>
+    <span class="ambient__orb ambient__orb--b"></span>
+    <span class="ambient__orb ambient__orb--c"></span>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <span class="cursor__dot"></span>
+    <span class="cursor__ring"></span>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Nexo Contábil">
+        <span class="logo__mark" aria-hidden="true">
+          <i></i><i></i>
+        </span>
+        <span class="logo__text">Nexo<em>Contábil</em></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link active">Início</a></li>
+          <li><a href="#servicos" class="nav__link">Serviços</a></li>
+          <li><a href="#regime" class="nav__link">Regime</a></li>
+          <li><a href="#prazos" class="nav__link">Prazos</a></li>
+          <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#contato" class="btn btn--mint btn--sm header__cta magnetic">Falar com o escritório</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="hero__eyebrow reveal">
+            <span class="pulse-dot"></span>
+            Joinville · SC · Contabilidade &amp; consultoria
+          </p>
+          <h1 class="hero__title reveal">
+            Números em ordem.<br />
+            <em>Negócio em paz.</em>
+          </h1>
+          <p class="hero__text reveal">
+            Abrimos, organizamos e acompanhamos sua empresa com linguagem clara —
+            do MEI ao crescimento. Sem surpresa no fechamento do mês.
+          </p>
+          <div class="hero__actions reveal">
+            <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20Nexo%20Cont%C3%A1bil." class="btn btn--mint magnetic" target="_blank" rel="noopener">
+              WhatsApp agora
+            </a>
+            <a href="#regime" class="btn btn--ghost magnetic">Simular regime</a>
+          </div>
+          <dl class="hero__stats reveal">
+            <div>
+              <dt data-count="18">0</dt>
+              <dd>anos de escritório</dd>
+            </div>
+            <div>
+              <dt data-count="640" data-suffix="+">0</dt>
+              <dd>clientes ativos</dd>
+            </div>
+            <div>
+              <dt data-count="99" data-suffix="%">0</dt>
+              <dd>entregas no prazo</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__stage reveal">
+          <div class="ledger tilt" data-tilt>
+            <div class="ledger__top">
+              <span class="ledger__badge">DASHBOARD FISCAL</span>
+              <span class="ledger__live"><i></i> Ao vivo</span>
+            </div>
+            <div class="ledger__chart" aria-hidden="true">
+              <svg viewBox="0 0 320 140" preserveAspectRatio="none" id="spark-svg">
+                <defs>
+                  <linearGradient id="sparkFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="rgba(45,212,168,0.35)" />
+                    <stop offset="100%" stop-color="rgba(45,212,168,0)" />
+                  </linearGradient>
+                </defs>
+                <path id="spark-area" fill="url(#sparkFill)" d="" />
+                <path id="spark-line" fill="none" stroke="#2dd4a8" stroke-width="2.5" stroke-linecap="round" d="" />
+              </svg>
+              <div class="ledger__meta">
+                <div>
+                  <span>Fluxo estimado</span>
+                  <strong id="flow-value">R$ 42.800</strong>
+                </div>
+                <div>
+                  <span>Variação</span>
+                  <strong class="up" id="flow-delta">+12,4%</strong>
+                </div>
+              </div>
+            </div>
+            <ul class="ledger__rows">
+              <li><span>DAS / Simples</span><em class="ok">Em dia</em></li>
+              <li><span>Folha</span><em class="ok">Fechada</em></li>
+              <li><span>Próx. obrigação</span><em class="warn" id="next-due">—</em></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>ABERTURA · MEI · SIMPLES NACIONAL · LUCRO PRESUMIDO · FOLHA · FISCAL · SOCIETÁRIO · BPO FINANCEIRO · CONSULTORIA ·</span>
+        <span>ABERTURA · MEI · SIMPLES NACIONAL · LUCRO PRESUMIDO · FOLHA · FISCAL · SOCIETÁRIO · BPO FINANCEIRO · CONSULTORIA ·</span>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container about">
+        <div class="about__copy reveal">
+          <span class="tag">O escritório</span>
+          <h2 class="title">Contabilidade que <em>traduz</em> o fisco</h2>
+          <p>
+            A Nexo existe para você decidir com dados, não com achismo.
+            Relatórios legíveis, alertas de prazo e um time que responde no WhatsApp
+            antes da obrigação virar dor de cabeça.
+          </p>
+          <div class="about__pills">
+            <span>CRC ativo</span>
+            <span>Atendimento digital</span>
+            <span>Joinville &amp; região</span>
+          </div>
+        </div>
+        <div class="about__cards">
+          <article class="glass tilt reveal" data-tilt>
+            <span>01</span>
+            <h3>Clareza</h3>
+            <p>Explicamos o “porquê” de cada obrigação — sem jargão inútil.</p>
+          </article>
+          <article class="glass tilt reveal" data-tilt>
+            <span>02</span>
+            <h3>Prazo</h3>
+            <p>Calendário fiscal monitorado. Você recebe o lembrete, nós entregamos.</p>
+          </article>
+          <article class="glass tilt reveal" data-tilt>
+            <span>03</span>
+            <h3>Crescimento</h3>
+            <p>Do MEI ao Lucro Presumido: migramos o regime na hora certa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="servicos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Serviços</span>
+          <h2 class="title">O que cuidamos <em>por você</em></h2>
+          <p>Filtre pelo momento da empresa.</p>
+        </div>
+
+        <div class="filters reveal" role="tablist" aria-label="Filtro de serviços">
+          <button class="chip active" data-filter="all" type="button">Todos</button>
+          <button class="chip" data-filter="abertura" type="button">Abertura</button>
+          <button class="chip" data-filter="mensal" type="button">Mensal</button>
+          <button class="chip" data-filter="consultoria" type="button">Consultoria</button>
+          <button class="chip" data-filter="pessoal" type="button">PF</button>
+        </div>
+
+        <div class="services">
+          <article class="service tilt reveal" data-tilt data-cat="abertura">
+            <div class="service__glow" aria-hidden="true"></div>
+            <span>01</span>
+            <h3>Abertura de empresa</h3>
+            <p>Contrato, CNPJ, alvarás e enquadramento tributário certo desde o dia 1.</p>
+            <button type="button" class="link-wa" data-wa="Abertura de empresa">Solicitar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="mensal">
+            <div class="service__glow" aria-hidden="true"></div>
+            <span>02</span>
+            <h3>Contabilidade mensal</h3>
+            <p>Escrituração, DAS/guias, balancetes e suporte contínuo.</p>
+            <button type="button" class="link-wa" data-wa="Contabilidade mensal">Solicitar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="mensal">
+            <div class="service__glow" aria-hidden="true"></div>
+            <span>03</span>
+            <h3>Folha de pagamento</h3>
+            <p>Admissões, férias, 13º, eSocial e obrigações acessórias.</p>
+            <button type="button" class="link-wa" data-wa="Folha de pagamento">Solicitar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="consultoria">
+            <div class="service__glow" aria-hidden="true"></div>
+            <span>04</span>
+            <h3>Planejamento tributário</h3>
+            <p>Comparativo de regimes e oportunidades legais de economia.</p>
+            <button type="button" class="link-wa" data-wa="Planejamento tributário">Solicitar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="abertura">
+            <div class="service__glow" aria-hidden="true"></div>
+            <span>05</span>
+            <h3>MEI → ME</h3>
+            <p>Migração segura quando o faturamento ou a operação pede escala.</p>
+            <button type="button" class="link-wa" data-wa="Migração MEI para ME">Solicitar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="pessoal">
+            <div class="service__glow" aria-hidden="true"></div>
+            <span>06</span>
+            <h3>Imposto de Renda PF</h3>
+            <p>Declaração completa, restituição e regularização de pendências.</p>
+            <button type="button" class="link-wa" data-wa="Imposto de Renda PF">Solicitar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="consultoria">
+            <div class="service__glow" aria-hidden="true"></div>
+            <span>07</span>
+            <h3>BPO financeiro</h3>
+            <p>Contas a pagar/receber, conciliação e visão de caixa.</p>
+            <button type="button" class="link-wa" data-wa="BPO financeiro">Solicitar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="mensal">
+            <div class="service__glow" aria-hidden="true"></div>
+            <span>08</span>
+            <h3>Societário &amp; alterações</h3>
+            <p>Entrada/saída de sócios, endereço, CNAE e certificados.</p>
+            <button type="button" class="link-wa" data-wa="Alteração societária">Solicitar</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="regime">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Simulador</span>
+          <h2 class="title">Qual regime faz <em>sentido</em>?</h2>
+          <p>Estimativa educativa — a análise final é personalizada.</p>
+        </div>
+
+        <div class="sim reveal">
+          <div class="sim__controls">
+            <label>
+              Faturamento mensal estimado
+              <div class="sim__range">
+                <input type="range" id="sim-revenue" min="1000" max="180000" step="1000" value="15000" />
+                <output id="sim-revenue-out">R$ 15.000</output>
+              </div>
+            </label>
+            <label>
+              Tipo de atividade
+              <select id="sim-activity">
+                <option value="comercio">Comércio</option>
+                <option value="servico" selected>Serviços</option>
+                <option value="industria">Indústria / misto</option>
+              </select>
+            </label>
+            <label>
+              Tem funcionários?
+              <select id="sim-staff">
+                <option value="0" selected>Não</option>
+                <option value="1">1 a 3</option>
+                <option value="2">4 ou mais</option>
+              </select>
+            </label>
+            <p class="sim__note">Valores ilustrativos para comparação rápida em Joinville.</p>
+          </div>
+
+          <div class="sim__result tilt" data-tilt>
+            <span class="sim__eyebrow">Sugestão preliminar</span>
+            <strong id="sim-regime">Simples Nacional</strong>
+            <p id="sim-reason">Bom equilíbrio entre carga e burocracia para o seu porte atual.</p>
+            <div class="sim__meter" aria-hidden="true">
+              <div class="sim__meter-bar"><i id="sim-bar"></i></div>
+              <div class="sim__meter-labels">
+                <span>MEI</span><span>Simples</span><span>Presumido</span>
+              </div>
+            </div>
+            <ul class="sim__bullets" id="sim-bullets"></ul>
+            <button type="button" class="btn btn--mint btn--block" id="sim-wa">Pedir análise real</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="checklist">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Checklist</span>
+          <h2 class="title">Abrir empresa: o que <em>reunir</em></h2>
+          <p>Marque o que já tem — geramos a lista pro WhatsApp.</p>
+        </div>
+
+        <div class="checkgrid reveal">
+          <div class="checkgrid__list" id="check-list">
+            <label class="check"><input type="checkbox" value="RG e CPF dos sócios" /><span>RG e CPF dos sócios</span></label>
+            <label class="check"><input type="checkbox" value="Comprovante de endereço" /><span>Comprovante de endereço</span></label>
+            <label class="check"><input type="checkbox" value="IPTU / contrato do imóvel" /><span>IPTU / contrato do imóvel</span></label>
+            <label class="check"><input type="checkbox" value="Nome fantasia desejado" /><span>Nome fantasia desejado</span></label>
+            <label class="check"><input type="checkbox" value="Atividade / CNAE definido" /><span>Atividade / CNAE definido</span></label>
+            <label class="check"><input type="checkbox" value="Capital social definido" /><span>Capital social definido</span></label>
+            <label class="check"><input type="checkbox" value="Certificado digital (se houver)" /><span>Certificado digital</span></label>
+            <label class="check"><input type="checkbox" value="Conta bancária PJ (se houver)" /><span>Conta PJ</span></label>
+          </div>
+          <aside class="checkgrid__side">
+            <div class="checkgrid__ring" aria-hidden="true">
+              <svg viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="52" class="ring-bg" />
+                <circle cx="60" cy="60" r="52" class="ring-fg" id="check-ring" />
+              </svg>
+              <strong id="check-pct">0%</strong>
+            </div>
+            <p id="check-hint">Nenhum item marcado ainda.</p>
+            <button type="button" class="btn btn--mint btn--block" id="check-send">Enviar checklist</button>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="prazos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Calendário</span>
+          <h2 class="title">Próximos <em>prazos</em> fiscais</h2>
+          <p>Referência educativa — confirme sempre com o escritório.</p>
+        </div>
+
+        <div class="deadlines reveal">
+          <article class="deadline tilt" data-tilt>
+            <div class="deadline__count" data-deadline="das"><strong>—</strong><span>dias</span></div>
+            <h3>DAS · Simples</h3>
+            <p>Guia mensal do Simples Nacional (vencimento típico dia 20).</p>
+          </article>
+          <article class="deadline tilt" data-tilt>
+            <div class="deadline__count" data-deadline="folha"><strong>—</strong><span>dias</span></div>
+            <h3>Folha / FGTS</h3>
+            <p>Fechamento e recolhimentos do mês vigente.</p>
+          </article>
+          <article class="deadline tilt" data-tilt>
+            <div class="deadline__count" data-deadline="dctf"><strong>—</strong><span>dias</span></div>
+            <h3>Obrigações acessórias</h3>
+            <p>Entregas periódicas conforme o regime da empresa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="fluxo">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Como funciona</span>
+          <h2 class="title">Do primeiro contato à <em>rotina</em></h2>
+        </div>
+        <ol class="flow">
+          <li class="reveal"><span>01</span><div><h3>Diagnóstico</h3><p>Entendemos porte, atividade e dores atuais.</p></div></li>
+          <li class="reveal"><span>02</span><div><h3>Proposta</h3><p>Escopo, honorários e prazos transparentes.</p></div></li>
+          <li class="reveal"><span>03</span><div><h3>Onboarding</h3><p>Documentos, acessos e checklist inicial.</p></div></li>
+          <li class="reveal"><span>04</span><div><h3>Rotina</h3><p>Mensalidades, alertas e canal direto.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="equipe">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Equipe</span>
+          <h2 class="title">Quem assina os <em>números</em></h2>
+        </div>
+        <div class="team">
+          <article class="team-card tilt reveal" data-tilt>
+            <div class="team-card__bar"></div>
+            <div class="team-card__avatar">ED</div>
+            <p class="team-card__role">CRC · Sócio técnico</p>
+            <h3>Eduardo Dias</h3>
+            <p>Especialista em regimes tributários, fiscal e migração de porte.</p>
+          </article>
+          <article class="team-card tilt reveal" data-tilt>
+            <div class="team-card__bar team-card__bar--alt"></div>
+            <div class="team-card__avatar team-card__avatar--alt">ED</div>
+            <p class="team-card__role">Atendimento · Relacionamento</p>
+            <h3>Eduarda Dias</h3>
+            <p>Onboarding, prazos e a ponte clara entre você e o escritório.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="depoimentos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Clientes</span>
+          <h2 class="title">Quem já <em>respira</em> melhor</h2>
+        </div>
+        <div class="quotes">
+          <blockquote class="quote reveal">
+            <p>“Saí do MEI sem susto. Explicaram cada guia e o custo real.”</p>
+            <footer>— Camila · Studio de design · América</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“Folha e DAS no automático. Eu só aprovo no WhatsApp.”</p>
+            <footer>— Rafael · Comércio · Centro</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“Planejamento que pagou o honorário no primeiro trimestre.”</p>
+            <footer>— Juliana · Serviços · Anita Garibaldi</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head reveal">
+          <span class="tag">FAQ</span>
+          <h2 class="title">Perguntas <em>frequentes</em></h2>
+        </div>
+        <div class="faq">
+          <details class="faq-item reveal">
+            <summary>Atendem só Joinville?<span></span></summary>
+            <p>Presencial no Centro e 100% digital para o restante de SC e Brasil.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Quanto custa a mensalidade?<span></span></summary>
+            <p>Depende do regime, faturamento e se há folha. Enviamos proposta após um diagnóstico rápido.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Posso migrar de outro escritório?<span></span></summary>
+            <p>Sim. Cuidamos da transição de documentos e acessos com checklist.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Fazem só Imposto de Renda?<span></span></summary>
+            <p>Sim — PF avulsa na temporada, ou pacote anual com acompanhamento.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta__inner reveal">
+        <div>
+          <h2>Pronto para organizar a casa fiscal?</h2>
+          <p>Conte o momento da empresa — devolvemos o próximo passo.</p>
+        </div>
+        <a href="#contato" class="btn btn--dark magnetic">Agendar conversa</a>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="container contact">
+        <div class="contact__info reveal">
+          <span class="tag">Contato</span>
+          <h2 class="title">Fale com a <em>Nexo</em></h2>
+          <ul class="contact__list">
+            <li>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/5547992072891">(47) 99207-2891</a>
+            </li>
+            <li>
+              <strong>E-mail</strong>
+              <a href="mailto:edudiasr6@gmail.com">edudiasr6@gmail.com</a>
+            </li>
+            <li>
+              <strong>Endereço</strong>
+              <span>Centro de Joinville<br />Joinville — SC · Brasil</span>
+            </li>
+            <li>
+              <strong>Horário</strong>
+              <span>Seg a Sex · 08h30–18h<br />Sáb · sob agendamento</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contact-form" novalidate>
+          <h3>Solicitar proposta</h3>
+          <p class="form__lead">Quanto mais contexto, mais precisa a resposta.</p>
+
+          <div class="form__row">
+            <label>
+              Nome
+              <input type="text" name="name" required placeholder="Seu nome" autocomplete="name" />
+              <span class="form__error">Informe seu nome.</span>
+            </label>
+            <label>
+              WhatsApp
+              <input type="tel" name="phone" required placeholder="(47) 99207-2891" autocomplete="tel" inputmode="tel" />
+              <span class="form__error">Informe um telefone válido.</span>
+            </label>
+          </div>
+          <div class="form__row">
+            <label>
+              Empresa / CPF
+              <input type="text" name="company" required placeholder="Razão social ou seu nome" />
+              <span class="form__error">Informe a empresa ou CPF.</span>
+            </label>
+            <label>
+              Interesse
+              <select name="interest" required>
+                <option value="" disabled selected>Selecione</option>
+                <option>Abertura de empresa</option>
+                <option>Troca de contador</option>
+                <option>Contabilidade mensal</option>
+                <option>Planejamento tributário</option>
+                <option>Imposto de Renda PF</option>
+                <option>Outro</option>
+              </select>
+              <span class="form__error">Escolha o interesse.</span>
+            </label>
+          </div>
+          <label>
+            Mensagem
+            <textarea name="message" rows="3" placeholder="Faturamento aproximado, regime atual, urgência..."></textarea>
+          </label>
+          <button type="submit" class="btn btn--mint btn--block">Enviar no WhatsApp</button>
+          <p class="form__ok" id="form-ok" hidden>Abrindo o WhatsApp…</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="logo">
+        <span class="logo__mark" aria-hidden="true"><i></i><i></i></span>
+        <span class="logo__text">Nexo<em>Contábil</em></span>
+      </a>
+      <p>Centro de Joinville · SC · Brasil</p>
+      <p>© <span id="year"></span> Nexo Contábil · Portfólio</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20Nexo%20Cont%C3%A1bil." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  </a>
+
+  <button class="to-top" id="to-top" aria-label="Voltar ao topo">↑</button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -23,6 +23,7 @@ Depois de ativar o GitHub Pages:
 - **Levain (Padaria):** https://edudiasr.github.io/portfolio-web/site-padaria/
 - **Opaline (Estética):** https://edudiasr.github.io/portfolio-web/site-salao/
 - **Torque Auto (Oficina):** https://edudiasr.github.io/portfolio-web/site-oficina/
+- **Nexo Contábil:** https://edudiasr.github.io/portfolio-web/site-contabilidade/
 
 ---
 
@@ -42,17 +43,17 @@ Depois de ativar o GitHub Pages:
 | [`site-padaria`](./site-padaria) | Padaria — espresso/manteiga, carrinho, encomendas WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-salao`](./site-salao) | Estética — plum/champagne, ritual, pacotes, agenda WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-oficina`](./site-oficina) | Oficina — asphalt/âmbar, HUD, diagnóstico, orçamento WhatsApp | HTML · CSS · JS | ✅ Pronto |
+| [`site-contabilidade`](./site-contabilidade) | Contábil — ink/esmeralda, simulador de regime, checklist WhatsApp | HTML · CSS · JS | ✅ Pronto |
 
 ### Próximos na fila
 
-1. Contabilidade  
-2. Escola de idiomas  
-3. Arquitetura / interiores  
-4. Cafeteria / açaí  
-5. Lavanderia  
-6. Fisioterapia / pilates  
-7. Construtora / reformas  
-8. Ótica · Hotel · Escola de música · Corretora de seguros
+1. Escola de idiomas  
+2. Arquitetura / interiores  
+3. Cafeteria / açaí  
+4. Lavanderia  
+5. Fisioterapia / pilates  
+6. Construtora / reformas  
+7. Ótica · Hotel · Escola de música · Corretora de seguros
 
 ---
 
