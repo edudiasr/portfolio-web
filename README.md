@@ -1,8 +1,18 @@
-# 🖥️ Portfólio Web — Sites & Landing Pages
+# 🖥️ Portfólio Web — Eduardo Dias do Rosario
 
 Portfólio de desenvolvimento front-end focado em **sites profissionais para negócios reais**: assistência técnica, comércios, prestadores de serviço e landing pages de alta conversão.
 
+**Eduardo Dias do Rosario** · Engenharia de Software (Católica SC — Joinville) · formação e **14 conclusões de cursos** pela [Alura](https://www.alura.com.br/)
+
 > Código limpo · Design moderno · 100% responsivo · Sem frameworks obrigatórios
+
+### Contato & redes
+- Instagram: [@edudiasr_](https://www.instagram.com/edudiasr_/)
+- GitHub: [edudiasr](https://github.com/edudiasr)
+- WhatsApp: [(47) 99207-2891](https://wa.me/5547992072891)
+- E-mail: edudiasr6@gmail.com
+
+A capa (`index.html`) traz hero com sobre, filtros por stack/tipo, balão de cor de cada projeto, sorteio de destaques (sempre inclui a imobiliária Vértice) e dock de redes.
 
 ---
 
@@ -109,8 +119,11 @@ Não precisa de `npm install`. Não precisa de build.
 
 ## 📬 Contato
 
-- **WhatsApp:** +55 47 99207-2891
+- **WhatsApp:** [(47) 99207-2891](https://wa.me/5547992072891)
+- **Instagram:** [@edudiasr_](https://www.instagram.com/edudiasr_/)
+- **GitHub:** [edudiasr](https://github.com/edudiasr)
 - **E-mail:** edudiasr6@gmail.com
+- **Alura:** [alura.com.br](https://www.alura.com.br/)
 
 ---
 

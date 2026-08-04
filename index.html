@@ -3,372 +3,389 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio — Desenvolvimento Web</title>
-  <meta name="description" content="Portfólio de projetos front-end: landing pages e sites profissionais com HTML, CSS e JavaScript." />
+  <title>Eduardo Dias do Rosario — Portfólio Front-end</title>
+  <meta name="description" content="Portfólio de Eduardo Dias do Rosario: sites e landing pages em HTML, CSS e JavaScript. Cursando Engenharia de Software na Católica SC — Joinville." />
+  <meta name="author" content="Eduardo Dias do Rosario" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg: #070b14;
-      --surface: #101828;
-      --border: rgba(148, 163, 184, 0.14);
-      --text: #e7ecf5;
-      --muted: #94a3b8;
-      --accent: #0ea5e9;
-      --gradient: linear-gradient(120deg, #22d3ee, #0ea5e9 45%, #6366f1);
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      min-height: 100vh;
-      font-family: Inter, sans-serif;
-      background:
-        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(14, 165, 233, 0.25), transparent),
-        var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    .wrap {
-      width: min(100% - 2.5rem, 880px);
-      margin: 0 auto;
-      padding: 5rem 0 4rem;
-    }
-    .eyebrow {
-      display: inline-block;
-      padding: 0.35rem 0.9rem;
-      border-radius: 99px;
-      background: rgba(14, 165, 233, 0.12);
-      color: var(--accent);
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-    h1 {
-      font-family: Sora, sans-serif;
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.1;
-      margin-bottom: 1rem;
-    }
-    h1 span {
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-    .lead {
-      max-width: 52ch;
-      color: var(--muted);
-      font-size: 1.05rem;
-      margin-bottom: 3rem;
-    }
-    .grid {
-      display: grid;
-      gap: 1.25rem;
-    }
-    a.card {
-      display: block;
-      padding: 1.8rem;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      background: var(--surface);
-      color: inherit;
-      text-decoration: none;
-      transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    a.card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(14, 165, 233, 0.45);
-      box-shadow: 0 20px 40px -20px rgba(2, 8, 20, 0.8);
-    }
-    .card h2 {
-      font-family: Sora, sans-serif;
-      font-size: 1.25rem;
-      margin-bottom: 0.5rem;
-    }
-    .card p { color: var(--muted); font-size: 0.95rem; }
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 1.1rem;
-    }
-    .tags span {
-      padding: 0.25rem 0.7rem;
-      border-radius: 99px;
-      border: 1px solid var(--border);
-      font-size: 0.75rem;
-      color: var(--muted);
-    }
-    footer {
-      margin-top: 3.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 0.85rem;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/portfolio.css" />
 </head>
 <body>
-  <main class="wrap">
-    <span class="eyebrow">Portfólio · Front-end</span>
-    <h1>Sites profissionais<br /><span>feitos para converter.</span></h1>
-    <p class="lead">
-      Landing pages e sites institucionais com HTML, CSS e JavaScript.
-      Design moderno, código limpo e foco em negócios reais.
-    </p>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="ambient" aria-hidden="true"></div>
 
-    <div class="grid">
-      <a class="card" href="./site-informatica/">
-        <h2>CtrlTec — Assistência Técnica</h2>
-        <p>Site completo para loja de informática: serviços, planos, before/after, dark mode, formulário WhatsApp e mais.</p>
-        <div class="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Dark Mode</span>
-          <span>Responsivo</span>
-        </div>
+  <header class="topbar">
+    <a class="brand" href="#topo">
+      <span class="brand__mark"></span>
+      <span class="brand__text">EDR<span>.</span></span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#destaques">Destaques</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <div class="social-dock" aria-label="Redes sociais">
+      <a class="social-btn" href="https://www.instagram.com/edudiasr_/" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
       </a>
-      <a class="card" href="./landing-barbearia/">
-        <h2>Ónix — Barbearia</h2>
-        <p>Landing page premium: corte, barba, equipe, tabela de preços e agendamento direto no WhatsApp.</p>
-        <div class="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Landing Page</span>
-          <span>Responsivo</span>
-        </div>
+      <a class="social-btn" href="https://github.com/edudiasr" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.84 9.71.5.1.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 6.84c.85 0 1.71.12 2.51.35 1.91-1.32 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg>
       </a>
-      <a class="card" href="./site-hamburgueria/">
-        <h2>Brasa — Hamburgueria</h2>
-        <p>Site smash com cardápio filtrável, combos, carrinho e pedido completo pelo WhatsApp.</p>
-        <div class="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Cardápio</span>
-          <span>Responsivo</span>
-        </div>
-      </a>
-      <a class="card" href="./site-clinica-dentista/">
-        <h2>Áurea — Odontologia</h2>
-        <p>Clínica premium: estética, implantes, before/after, cursor custom e agendamento WhatsApp.</p>
-        <div class="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Luxury UI</span>
-          <span>Responsivo</span>
-        </div>
-      </a>
-      <a class="card" href="./site-imobiliaria/">
-        <h2>Vértice — Imóveis</h2>
-        <p>Imobiliária com filtros, cards de imóveis, bairros de Joinville e visita pelo WhatsApp.</p>
-        <div class="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Filtros</span>
-          <span>Responsivo</span>
-        </div>
-      </a>
-      <a class="card" href="./site-advocacia/">
-        <h2>Meridian — Advogados</h2>
-        <p>Escritório institucional: áreas de atuação, equipe, FAQ e consulta reservada pelo WhatsApp.</p>
-        <div class="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Institucional</span>
-          <span>Responsivo</span>
-        </div>
-      </a>
-      <a class="card" href="./site-petshop/">
-        <h2>Amora Pet — Clínica & Pet Shop</h2>
-        <p>Veterinária e pet shop: filtros de serviços, planos, hotelzinho e agendamento WhatsApp.</p>
-        <div class="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Pet Care</span>
-          <span>Responsivo</span>
-        </div>
-      </a>
-      <a class="card" href="./site-energia-solar/">
-        <h2>Solara — Energia Solar</h2>
-        <p>Fotovoltaica com simulador de economia, projetos filtráveis e proposta via WhatsApp.</p>
-        <div class="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Simulador</span>
-          <span>Responsivo</span>
-        </div>
-      </a>
-      <a class="card" href="./site-academia/">
-        <h2>Pulse — Academia</h2>
-        <p>Fitness com modalidades, planos, grade semanal e trial de 7 dias no WhatsApp.</p>
-        <div class="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Fitness</span>
-          <span>Responsivo</span>
-        </div>
-      </a>
-      <a class="card" href="./site-padaria/">
-        <h2>Levain — Padaria</h2>
-        <p>Padaria artesanal: cardápio com carrinho, kits de encomenda e pedido no WhatsApp.</p>
-        <div class="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Carrinho</span>
-          <span>Responsivo</span>
-        </div>
-      </a>
-      <a class="card" href="./site-salao/">
-        <h2>Opaline — Estética</h2>
-        <p>Salão de beleza: serviços, ritual, pacotes e agenda com visual champagne.</p>
-        <div class="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Luxury UI</span>
-          <span>Responsivo</span>
-        </div>
-      </a>
-      <a class="card" href="./site-oficina/">
-        <h2>Torque Auto — Oficina</h2>
-        <p>Oficina mecânica HUD: diagnóstico por sintomas, orçamento estimado e chamado WhatsApp.</p>
-        <div class="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>HUD / Industrial</span>
-          <span>Responsivo</span>
-        </div>
-      </a>
-      <a class="card" href="./site-contabilidade/">
-        <h2>Nexo Contábil — Contabilidade</h2>
-        <p>Escritório fiscal: simulador de regime, checklist de abertura e prazos ao vivo.</p>
-        <div class="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Simulador</span>
-          <span>Responsivo</span>
-        </div>
-      </a>
-      <a class="card" href="./site-idiomas/">
-        <h2>Echo Idiomas — Escola</h2>
-        <p>Escola de idiomas: chat ao vivo, teste CEFR, aula experimental e cursos filtráveis.</p>
-        <div class="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Quiz CEFR</span>
-          <span>Responsivo</span>
-        </div>
-      </a>
-      <a class="card" href="./site-arquitetura/">
-        <h2>Traço Studio — Arquitetura</h2>
-        <p>Arquitetura e interiores: planta ao vivo, antes/depois, mood de materiais e estimativa.</p>
-        <div class="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Mood board</span>
-          <span>Responsivo</span>
-        </div>
-      </a>
-      <a class="card" href="./site-cafeteria/">
-        <h2>Pulp — Café & Açaí</h2>
-        <p>Cafeteria: builder de bowl, carrinho drawer, cardápio filtrável e pedido WhatsApp.</p>
-        <div class="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Bowl builder</span>
-          <span>Responsivo</span>
-        </div>
-      </a>
-      <a class="card" href="./site-lavanderia/">
-        <h2>Ciclo — Lavanderia</h2>
-        <p>Lavanderia: máquina ao vivo, calculadora por kg, status do pedido e coleta WhatsApp.</p>
-        <div class="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Calculadora</span>
-          <span>Responsivo</span>
-        </div>
-      </a>
-      <a class="card" href="./site-fisioterapia/">
-        <h2>Alinha — Fisio & Pilates</h2>
-        <p>Clínica: mapa do corpo, grade de aulas, planos e agendamento WhatsApp.</p>
-        <div class="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Body map</span>
-          <span>Responsivo</span>
-        </div>
-      </a>
-      <a class="card" href="./site-construtora/">
-        <h2>Base — Construtora</h2>
-        <p>Construção e reformas: canteiro ao vivo, estimativa m², cronograma e briefing WhatsApp.</p>
-        <div class="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Estimativa</span>
-          <span>Responsivo</span>
-        </div>
-      </a>
-      <a class="card" href="./site-hotel/">
-        <h2>Alba Hotel — Pousada</h2>
-        <p>Boutique urbana: quartos filtráveis, reserva por datas e hospitalidade WhatsApp.</p>
-        <div class="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Reserva</span>
-          <span>Responsivo</span>
-        </div>
-      </a>
-      <a class="card" href="./site-otica/">
-        <h2>Iris Ótica — Ótica</h2>
-        <p>Ótica premium: lente interativa, filtros de serviços, provador de aros e exame via WhatsApp.</p>
-        <div class="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Provador</span>
-          <span>Responsivo</span>
-        </div>
-      </a>
-      <a class="card" href="./site-seguros/">
-        <h2>Aegis — Corretora de Seguros</h2>
-        <p>Seguros com simulador de cotação, quiz de cobertura, produtos filtráveis e WhatsApp.</p>
-        <div class="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Simulador</span>
-          <span>Responsivo</span>
-        </div>
+      <a class="social-btn social-btn--wa" href="https://wa.me/5547992072891?text=Ol%C3%A1%20Eduardo!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20conversar." target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.43-9.91 9.88 0 1.74.46 3.44 1.34 4.94L2 22l5.33-1.4a9.9 9.9 0 0 0 4.71 1.2h.01c5.46 0 9.91-4.43 9.91-9.88C21.96 6.43 17.5 2 12.04 2zm5.77 14.06c-.24.68-1.41 1.25-1.95 1.33-.5.07-1.13.1-1.83-.11-.42-.13-.97-.32-1.67-.62-2.94-1.27-4.85-4.23-5-4.42-.14-.19-1.19-1.58-1.19-3.02 0-1.43.75-2.14 1.02-2.43.27-.29.59-.36.79-.36h.57c.18 0 .42-.07.66.5.24.58.82 2 .89 2.15.07.14.12.32.02.51-.1.2-.15.32-.3.49-.14.17-.31.38-.44.51-.14.14-.29.29-.12.57.16.28.73 1.2 1.56 1.95 1.08.96 1.98 1.26 2.26 1.4.28.14.44.12.61-.07.16-.19.7-.81.89-1.09.18-.28.37-.23.62-.14.25.1 1.58.74 1.85.88.27.13.45.2.52.31.07.11.07.64-.17 1.32z"/></svg>
       </a>
     </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
 
-    <footer>
-      <p>Novos projetos serão adicionados aqui. Cada pasta do repositório é um trabalho independente.</p>
-    </footer>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <a href="#sobre">Sobre</a>
+    <a href="#destaques">Destaques</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+    <div class="mobile-menu__social">
+      <a href="https://www.instagram.com/edudiasr_/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://github.com/edudiasr" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://wa.me/5547992072891" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+
+  <main id="topo">
+    <section class="hero">
+      <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
+      <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
+      <p class="eyebrow reveal">Portfólio · Front-end · Joinville/SC</p>
+      <h1 class="reveal">
+        <span class="hero__name">Eduardo Dias<br />do Rosario</span>
+        <span class="hero__tagline">Sites que convertem.<br />Interfaces que ficam na memória.</span>
+      </h1>
+      <p class="hero__lead reveal">
+        Cursando <strong>Engenharia de Software</strong> na Católica SC — Joinville.
+        Formação e <strong>14 conclusões de cursos</strong> pela
+        <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>.
+        HTML, CSS e JavaScript vanilla para negócios reais.
+      </p>
+      <div class="hero__cta reveal">
+        <a class="btn btn--primary magnetic" href="#projetos">Ver projetos</a>
+        <a class="btn btn--ghost magnetic" href="https://wa.me/5547992072891?text=Ol%C3%A1%20Eduardo!%20Quero%20um%20site." target="_blank" rel="noopener">Falar no WhatsApp</a>
+      </div>
+      <div class="hero__stats reveal" aria-label="Números">
+        <div class="stat">
+          <span class="stat__n" data-count="22">0</span>
+          <span class="stat__l">projetos</span>
+        </div>
+        <div class="stat">
+          <span class="stat__n" data-count="14">0</span>
+          <span class="stat__l">cursos Alura</span>
+        </div>
+        <div class="stat">
+          <span class="stat__n" data-count="100">0</span>
+          <span class="stat__l">% responsivo</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section" id="sobre">
+      <div class="section__head reveal">
+        <p class="eyebrow">Sobre mim</p>
+        <h2>Quem faz os sites</h2>
+      </div>
+      <div class="about__grid">
+        <article class="about__card reveal tilt">
+          <h3>Eduardo Dias do Rosario</h3>
+          <p>
+            Desenvolvedor front-end em formação, focado em landing pages e sites
+            institucionais com visual premium, interação e conversão via WhatsApp.
+          </p>
+          <ul class="about__list">
+            <li><strong>Engenharia de Software</strong> — Católica SC, Joinville</li>
+            <li><strong>14 conclusões</strong> de cursos na
+              <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>
+            </li>
+            <li>Stack: <strong>HTML · CSS · JavaScript</strong> (vanilla)</li>
+            <li>Base: Centro de Joinville, SC · Brasil</li>
+          </ul>
+        </article>
+        <article class="about__card about__card--skills reveal tilt">
+          <h3>O que entrega cada demo</h3>
+          <div class="skill-chips">
+            <span>UI dark/premium</span>
+            <span>Microinterações</span>
+            <span>Filtros &amp; simuladores</span>
+            <span>Mobile-first</span>
+            <span>CTAs WhatsApp</span>
+            <span>SEO semântico</span>
+            <span>Acessibilidade</span>
+            <span>Código limpo</span>
+          </div>
+          <p class="about__note">
+            Cada pasta do repositório é um projeto independente — abra, explore e teste no celular.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="featured section" id="destaques">
+      <div class="section__head reveal">
+        <p class="eyebrow">Em alta</p>
+        <h2>Projetos em destaque</h2>
+        <p class="section__sub">
+          Sorteio de 3 demos entre os lançamentos recentes — a imobiliária
+          <strong>Vértice</strong> sempre entra na seleção.
+        </p>
+      </div>
+      <div class="featured__toolbar reveal">
+        <button type="button" class="btn btn--ghost magnetic" id="raffleBtn">
+          <span class="raffle-icon" aria-hidden="true">✦</span>
+          Sortear destaques
+        </button>
+        <p class="featured__hint" id="raffleHint">Clique para girar a seleção</p>
+      </div>
+      <div class="featured__grid" id="featuredGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="projects section" id="projetos">
+      <div class="section__head reveal">
+        <p class="eyebrow">Todos os trabalhos</p>
+        <h2>Projetos</h2>
+        <p class="section__sub">Mais recentes no topo. Filtre por tecnologia ou tipo de entrega.</p>
+      </div>
+
+      <div class="filters reveal" id="filters" role="toolbar" aria-label="Filtrar projetos">
+        <button type="button" class="filter is-active" data-filter="all">Todos</button>
+        <button type="button" class="filter" data-filter="html">HTML</button>
+        <button type="button" class="filter" data-filter="css">CSS</button>
+        <button type="button" class="filter" data-filter="javascript">JavaScript</button>
+        <button type="button" class="filter" data-filter="ui">UI</button>
+        <button type="button" class="filter" data-filter="responsivo">Responsivo</button>
+        <button type="button" class="filter" data-filter="simulador">Simulador</button>
+        <button type="button" class="filter" data-filter="landing">Landing</button>
+        <button type="button" class="filter" data-filter="interativo">Interativo</button>
+        <button type="button" class="filter" data-filter="carrinho">Carrinho</button>
+      </div>
+      <p class="filter-count reveal" id="filterCount"></p>
+
+      <div class="grid" id="projectGrid">
+        <!-- newest first -->
+        <a class="card tilt" href="./site-seguros/" data-tags="html css javascript ui responsivo simulador interativo" data-color="#4d8bff" data-id="seguros" data-title="Aegis — Corretora" data-desc="Simulador de cotação, quiz de cobertura e produtos filtráveis." data-new="1">
+          <span class="card__glow" style="--c:#4d8bff"></span>
+          <span class="card__balloon" style="--c:#4d8bff" title="Cor do projeto"></span>
+          <span class="card__badge">Novo</span>
+          <h3>Aegis — Corretora de Seguros</h3>
+          <p>Navy/mint: cotação, quiz de cobertura e WhatsApp.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Simulador</span><span>UI</span></div>
+        </a>
+
+        <a class="card tilt" href="./site-otica/" data-tags="html css javascript ui responsivo interativo" data-color="#7dd3fc" data-id="otica" data-title="Iris — Ótica" data-desc="Lente interativa, provador de aros e exame via WhatsApp." data-new="1">
+          <span class="card__glow" style="--c:#7dd3fc"></span>
+          <span class="card__balloon" style="--c:#7dd3fc"></span>
+          <span class="card__badge">Novo</span>
+          <h3>Iris Ótica — Ótica</h3>
+          <p>Midnight/cyan: lente, filtros e provador de aros.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI</span><span>Interativo</span></div>
+        </a>
+
+        <a class="card tilt" href="./site-hotel/" data-tags="html css javascript ui responsivo interativo" data-color="#e8d5b5" data-id="hotel" data-title="Alba — Hotel" data-desc="Boutique urbana com quartos filtráveis e reserva por datas." data-new="1">
+          <span class="card__glow" style="--c:#e8d5b5"></span>
+          <span class="card__balloon" style="--c:#e8d5b5"></span>
+          <span class="card__badge">Novo</span>
+          <h3>Alba Hotel — Pousada</h3>
+          <p>Espresso/champagne: quartos, datas e hospitalidade WA.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI</span><span>Responsivo</span></div>
+        </a>
+
+        <a class="card tilt" href="./site-construtora/" data-tags="html css javascript ui responsivo simulador interativo" data-color="#ff6b2c" data-id="construtora" data-title="Base — Construtora" data-desc="Canteiro ao vivo, estimativa m² e briefing WhatsApp." data-new="1">
+          <span class="card__glow" style="--c:#ff6b2c"></span>
+          <span class="card__balloon" style="--c:#ff6b2c"></span>
+          <h3>Base — Construtora</h3>
+          <p>Concreto/laranja: canteiro, m² e cronograma.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Simulador</span></div>
+        </a>
+
+        <a class="card tilt" href="./site-fisioterapia/" data-tags="html css javascript ui responsivo interativo" data-color="#6ec5b8" data-id="fisio" data-title="Alinha — Fisio" data-desc="Mapa do corpo, grade de aulas e agendamento WhatsApp.">
+          <span class="card__glow" style="--c:#6ec5b8"></span>
+          <span class="card__balloon" style="--c:#6ec5b8"></span>
+          <h3>Alinha — Fisio &amp; Pilates</h3>
+          <p>Ink/teal: body map, planos e agenda.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Interativo</span></div>
+        </a>
+
+        <a class="card tilt" href="./site-lavanderia/" data-tags="html css javascript ui responsivo simulador interativo" data-color="#3ecfcf" data-id="lavanderia" data-title="Ciclo — Lavanderia" data-desc="Máquina ao vivo, calculadora por kg e coleta WhatsApp.">
+          <span class="card__glow" style="--c:#3ecfcf"></span>
+          <span class="card__balloon" style="--c:#3ecfcf"></span>
+          <h3>Ciclo — Lavanderia</h3>
+          <p>Slate/aqua: máquina, calculadora e status.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Simulador</span></div>
+        </a>
+
+        <a class="card tilt" href="./site-cafeteria/" data-tags="html css javascript ui responsivo carrinho interativo" data-color="#b8f154" data-id="cafeteria" data-title="Pulp — Café & Açaí" data-desc="Bowl builder, carrinho drawer e pedido WhatsApp.">
+          <span class="card__glow" style="--c:#b8f154"></span>
+          <span class="card__balloon" style="--c:#b8f154"></span>
+          <h3>Pulp — Café &amp; Açaí</h3>
+          <p>Berry/lime: builder de bowl e carrinho.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Carrinho</span></div>
+        </a>
+
+        <a class="card tilt" href="./site-arquitetura/" data-tags="html css javascript ui responsivo simulador interativo" data-color="#c9895a" data-id="arquitetura" data-title="Traço — Arquitetura" data-desc="Planta ao vivo, mood de materiais e estimativa.">
+          <span class="card__glow" style="--c:#c9895a"></span>
+          <span class="card__balloon" style="--c:#c9895a"></span>
+          <h3>Traço Studio — Arquitetura</h3>
+          <p>Charcoal/cobre: planta, antes/depois e mood.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI</span></div>
+        </a>
+
+        <a class="card tilt" href="./site-idiomas/" data-tags="html css javascript ui responsivo interativo" data-color="#58a6ff" data-id="idiomas" data-title="Echo — Idiomas" data-desc="Chat ao vivo, teste CEFR e aula experimental.">
+          <span class="card__glow" style="--c:#58a6ff"></span>
+          <span class="card__balloon" style="--c:#58a6ff"></span>
+          <h3>Echo Idiomas — Escola</h3>
+          <p>Night/sky: chat, quiz CEFR e cursos.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Interativo</span></div>
+        </a>
+
+        <a class="card tilt" href="./site-contabilidade/" data-tags="html css javascript ui responsivo simulador interativo" data-color="#2dd4a8" data-id="contabilidade" data-title="Nexo — Contábil" data-desc="Simulador de regime, checklist e prazos ao vivo.">
+          <span class="card__glow" style="--c:#2dd4a8"></span>
+          <span class="card__balloon" style="--c:#2dd4a8"></span>
+          <h3>Nexo Contábil</h3>
+          <p>Ink/esmeralda: regime fiscal e checklist.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Simulador</span></div>
+        </a>
+
+        <a class="card tilt" href="./site-oficina/" data-tags="html css javascript ui responsivo simulador interativo" data-color="#ffb020" data-id="oficina" data-title="Torque — Oficina" data-desc="HUD industrial, diagnóstico e orçamento WhatsApp.">
+          <span class="card__glow" style="--c:#ffb020"></span>
+          <span class="card__balloon" style="--c:#ffb020"></span>
+          <h3>Torque Auto — Oficina</h3>
+          <p>Asphalt/âmbar: HUD e diagnóstico por sintomas.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI</span></div>
+        </a>
+
+        <a class="card tilt" href="./site-salao/" data-tags="html css javascript ui responsivo landing" data-color="#e8cfc0" data-id="salao" data-title="Opaline — Estética" data-desc="Ritual, pacotes e agenda com visual champagne.">
+          <span class="card__glow" style="--c:#e8cfc0"></span>
+          <span class="card__balloon" style="--c:#e8cfc0"></span>
+          <h3>Opaline — Estética</h3>
+          <p>Plum/champagne: serviços, ritual e pacotes.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI</span><span>Landing</span></div>
+        </a>
+
+        <a class="card tilt" href="./site-padaria/" data-tags="html css javascript ui responsivo carrinho" data-color="#e8c872" data-id="padaria" data-title="Levain — Padaria" data-desc="Cardápio com carrinho e encomendas WhatsApp.">
+          <span class="card__glow" style="--c:#e8c872"></span>
+          <span class="card__balloon" style="--c:#e8c872"></span>
+          <h3>Levain — Padaria</h3>
+          <p>Espresso/manteiga: carrinho e kits.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Carrinho</span></div>
+        </a>
+
+        <a class="card tilt" href="./site-academia/" data-tags="html css javascript ui responsivo landing" data-color="#ffe600" data-id="academia" data-title="Pulse — Academia" data-desc="Modalidades, planos, grade e trial WhatsApp.">
+          <span class="card__glow" style="--c:#ffe600"></span>
+          <span class="card__balloon" style="--c:#ffe600"></span>
+          <h3>Pulse — Academia</h3>
+          <p>Preto/amarelo: modalidades e trial de 7 dias.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Landing</span></div>
+        </a>
+
+        <a class="card tilt" href="./site-energia-solar/" data-tags="html css javascript ui responsivo simulador" data-color="#f5b942" data-id="solar" data-title="Solara — Energia Solar" data-desc="Simulador de economia e proposta WhatsApp.">
+          <span class="card__glow" style="--c:#f5b942"></span>
+          <span class="card__balloon" style="--c:#f5b942"></span>
+          <h3>Solara — Energia Solar</h3>
+          <p>Navy/dourado: economia e projetos filtráveis.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Simulador</span></div>
+        </a>
+
+        <a class="card tilt" href="./site-petshop/" data-tags="html css javascript ui responsivo" data-color="#ff7a59" data-id="petshop" data-title="Amora Pet" data-desc="Vet e pet shop com planos e hotelzinho.">
+          <span class="card__glow" style="--c:#ff7a59"></span>
+          <span class="card__balloon" style="--c:#ff7a59"></span>
+          <h3>Amora Pet — Clínica &amp; Pet Shop</h3>
+          <p>Coral/mint: serviços, planos e hotelzinho.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI</span></div>
+        </a>
+
+        <a class="card tilt" href="./site-advocacia/" data-tags="html css javascript ui responsivo landing" data-color="#9b2d3a" data-id="advocacia" data-title="Meridian — Advogados" data-desc="Áreas, equipe e consulta reservada WhatsApp.">
+          <span class="card__glow" style="--c:#9b2d3a"></span>
+          <span class="card__balloon" style="--c:#9b2d3a"></span>
+          <h3>Meridian — Advogados</h3>
+          <p>Charcoal/vinho: institucional e consulta WA.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Landing</span></div>
+        </a>
+
+        <a class="card tilt" href="./site-imobiliaria/" data-tags="html css javascript ui responsivo interativo" data-color="#7d9b76" data-id="imobiliaria" data-title="Vértice — Imóveis" data-desc="Filtros, listings e visita pelos bairros de Joinville." data-featured-lock="1">
+          <span class="card__glow" style="--c:#7d9b76"></span>
+          <span class="card__balloon" style="--c:#7d9b76"></span>
+          <h3>Vértice — Imóveis</h3>
+          <p>Charcoal/sage: filtros, cards e visita WhatsApp.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Interativo</span></div>
+        </a>
+
+        <a class="card tilt" href="./site-clinica-dentista/" data-tags="html css javascript ui responsivo landing" data-color="#60a5fa" data-id="dentista" data-title="Áurea — Odontologia" data-desc="Estética, implantes, before/after e agenda.">
+          <span class="card__glow" style="--c:#60a5fa"></span>
+          <span class="card__balloon" style="--c:#60a5fa"></span>
+          <h3>Áurea — Odontologia</h3>
+          <p>Azul premium: before/after e luxury UI.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI</span><span>Landing</span></div>
+        </a>
+
+        <a class="card tilt" href="./site-hamburgueria/" data-tags="html css javascript ui responsivo carrinho" data-color="#ff6b2c" data-id="burger" data-title="Brasa — Hamburgueria" data-desc="Cardápio filtrável, combos e pedido WhatsApp.">
+          <span class="card__glow" style="--c:#ff6b2c"></span>
+          <span class="card__balloon" style="--c:#ff6b2c"></span>
+          <h3>Brasa — Hamburgueria</h3>
+          <p>Charcoal/fogo: cardápio, combos e carrinho.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Carrinho</span></div>
+        </a>
+
+        <a class="card tilt" href="./landing-barbearia/" data-tags="html css javascript ui responsivo landing" data-color="#c4a574" data-id="barbearia" data-title="Ónix — Barbearia" data-desc="Landing premium com preços e agendamento WhatsApp.">
+          <span class="card__glow" style="--c:#c4a574"></span>
+          <span class="card__balloon" style="--c:#c4a574"></span>
+          <h3>Ónix — Barbearia</h3>
+          <p>Charcoal/brass: corte, barba e agenda WA.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Landing</span></div>
+        </a>
+
+        <a class="card tilt" href="./site-informatica/" data-tags="html css javascript ui responsivo" data-color="#0ea5e9" data-id="informatica" data-title="CtrlTec — Informática" data-desc="Assistência técnica com dark mode e WhatsApp.">
+          <span class="card__glow" style="--c:#0ea5e9"></span>
+          <span class="card__balloon" style="--c:#0ea5e9"></span>
+          <h3>CtrlTec — Assistência Técnica</h3>
+          <p>Sky/indigo: serviços, planos e dark mode.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI</span></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="contact section" id="contato">
+      <div class="contact__panel reveal tilt">
+        <p class="eyebrow">Contato</p>
+        <h2>Vamos conversar sobre o seu site</h2>
+        <p>
+          Ideias, orçamentos ou só um oi — me chama no WhatsApp, Instagram ou GitHub.
+        </p>
+        <div class="contact__links">
+          <a class="btn btn--primary magnetic" href="https://wa.me/5547992072891?text=Ol%C3%A1%20Eduardo!" target="_blank" rel="noopener">WhatsApp (47) 99207-2891</a>
+          <a class="btn btn--ghost magnetic" href="https://www.instagram.com/edudiasr_/" target="_blank" rel="noopener">Instagram @edudiasr_</a>
+          <a class="btn btn--ghost magnetic" href="https://github.com/edudiasr" target="_blank" rel="noopener">github.com/edudiasr</a>
+          <a class="btn btn--ghost magnetic" href="mailto:edudiasr6@gmail.com">edudiasr6@gmail.com</a>
+        </div>
+        <p class="contact__meta">Centro de Joinville, SC · Brasil</p>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Eduardo Dias do Rosario · Portfólio front-end</p>
+    <p>
+      Formação com
+      <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>
+      · Católica SC Joinville
+    </p>
+  </footer>
+
+  <a class="to-top" id="toTop" href="#topo" aria-label="Voltar ao topo">↑</a>
+  <a class="float-wa" href="https://wa.me/5547992072891?text=Ol%C3%A1%20Eduardo!%20Vi%20seu%20portf%C3%B3lio." target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M12.04 2c-5.46 0-9.91 4.43-9.91 9.88 0 1.74.46 3.44 1.34 4.94L2 22l5.33-1.4a9.9 9.9 0 0 0 4.71 1.2h.01c5.46 0 9.91-4.43 9.91-9.88C21.96 6.43 17.5 2 12.04 2zm5.77 14.06c-.24.68-1.41 1.25-1.95 1.33-.5.07-1.13.1-1.83-.11-.42-.13-.97-.32-1.67-.62-2.94-1.27-4.85-4.23-5-4.42-.14-.19-1.19-1.58-1.19-3.02 0-1.43.75-2.14 1.02-2.43.27-.29.59-.36.79-.36h.57c.18 0 .42-.07.66.5.24.58.82 2 .89 2.15.07.14.12.32.02.51-.1.2-.15.32-.3.49-.14.17-.31.38-.44.51-.14.14-.29.29-.12.57.16.28.73 1.2 1.56 1.95 1.08.96 1.98 1.26 2.26 1.4.28.14.44.12.61-.07.16-.19.7-.81.89-1.09.18-.28.37-.23.62-.14.25.1 1.58.74 1.85.88.27.13.45.2.52.31.07.11.07.64-.17 1.32z"/></svg>
+  </a>
+
+  <script src="./assets/js/portfolio.js"></script>
 </body>
 </html>
