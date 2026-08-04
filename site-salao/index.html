@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opaline — Estética &amp; Beleza em Joinville, SC</title>
+  <meta name="description" content="Salão de beleza e estética em Joinville. Cabelo, pele, unhas e bem-estar. Agende pelo WhatsApp." />
+  <meta name="author" content="Opaline Estética" />
+  <meta property="og:title" content="Opaline — Estética Joinville" />
+  <meta property="og:description" content="Beleza com leveza, método e presença." />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='50' fill='%23110f14'/><circle cx='50' cy='50' r='22' fill='none' stroke='%23d4b59e' stroke-width='4'/><circle cx='50' cy='50' r='8' fill='%23e8cfc0'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <span class="preloader__orb"></span>
+    <span class="preloader__name">Opaline</span>
+  </div>
+
+  <div class="ambient" aria-hidden="true">
+    <span class="orb orb--1"></span>
+    <span class="orb orb--2"></span>
+    <span class="orb orb--3"></span>
+    <span class="grain"></span>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <span class="cursor__dot"></span>
+    <span class="cursor__ring"></span>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Opaline">
+        <span class="logo__pearl" aria-hidden="true"></span>
+        <span class="logo__text">Opaline</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link active">Início</a></li>
+          <li><a href="#servicos" class="nav__link">Serviços</a></li>
+          <li><a href="#ritual" class="nav__link">Ritual</a></li>
+          <li><a href="#equipe" class="nav__link">Equipe</a></li>
+          <li><a href="#agenda" class="nav__link">Agenda</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#agenda" class="btn btn--pearl btn--sm header__cta magnetic">Agendar</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero__frame" aria-hidden="true">
+        <span class="hero__shine"></span>
+      </div>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="hero__eyebrow reveal">
+            <span class="dot"></span>
+            Joinville · SC · Estética &amp; Beleza
+          </p>
+          <h1 class="hero__title reveal">
+            Beleza com<br />
+            <em>leveza</em>.
+          </h1>
+          <p class="hero__text reveal">
+            Cabelo, pele e bem-estar num ateliê calmo —
+            onde cada detalhe é pensado para você sair diferente, sem exagero.
+          </p>
+          <div class="hero__actions reveal">
+            <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20agendar%20na%20Opaline." class="btn btn--pearl magnetic" target="_blank" rel="noopener">
+              Agendar no WhatsApp
+            </a>
+            <a href="#servicos" class="btn btn--ghost magnetic">Explorar serviços</a>
+          </div>
+        </div>
+
+        <aside class="hero__card reveal" data-tilt>
+          <div class="hero__card-top">
+            <span>Próximos horários</span>
+            <em id="slot-day">Hoje</em>
+          </div>
+          <ul class="slots" id="slots">
+            <li class="is-active"><strong>10h00</strong><span>Coloração · Eduarda</span></li>
+            <li><strong>11h30</strong><span>Corte &amp; finalização</span></li>
+            <li><strong>14h00</strong><span>Skin care · facial</span></li>
+            <li><strong>16h30</strong><span>Design de sobrancelha</span></li>
+          </ul>
+          <div class="hero__meters">
+            <div>
+              <span>Agenda</span>
+              <div class="meter"><i style="width:72%"></i></div>
+            </div>
+            <div>
+              <span>Relax</span>
+              <div class="meter meter--soft"><i style="width:88%"></i></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="hero__marquee" aria-hidden="true">
+        <div class="hero__marquee-track">
+          <span>Cabelo</span><span>·</span><span>Pele</span><span>·</span><span>Unhas</span><span>·</span><span>Sobrancelha</span><span>·</span><span>Bem-estar</span><span>·</span>
+          <span>Cabelo</span><span>·</span><span>Pele</span><span>·</span><span>Unhas</span><span>·</span><span>Sobrancelha</span><span>·</span><span>Bem-estar</span><span>·</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="assinatura">
+      <div class="container signature">
+        <div class="signature__copy reveal">
+          <span class="tag">A Opaline</span>
+          <h2 class="title">Um ateliê para quem prefere <em>presença</em> a pressa</h2>
+          <p>
+            Luz baixa, música suave, produtos selecionados e profissionais que escutam
+            antes de começar. A Opaline é estética com método — e resultado que respira naturalidade.
+          </p>
+        </div>
+        <div class="signature__grid">
+          <article class="sig tilt reveal" data-tilt>
+            <span>01</span>
+            <h3>Consulta sensorial</h3>
+            <p>Entendemos cabelo, pele e rotina antes de qualquer procedimento.</p>
+          </article>
+          <article class="sig tilt reveal" data-tilt>
+            <span>02</span>
+            <h3>Técnica delicada</h3>
+            <p>Protocolos atualizados, sem agressão desnecessária.</p>
+          </article>
+          <article class="sig tilt reveal" data-tilt>
+            <span>03</span>
+            <h3>Acabamento limpo</h3>
+            <p>Finalização que dura — e conversa com o seu dia a dia.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--veil" id="servicos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Serviços</span>
+          <h2 class="title">O que cuidamos <em>de você</em></h2>
+          <p>Toque uma categoria e escolha o ritual.</p>
+        </div>
+
+        <div class="filters reveal" role="tablist">
+          <button class="chip active" data-filter="all">Todos</button>
+          <button class="chip" data-filter="cabelo">Cabelo</button>
+          <button class="chip" data-filter="pele">Pele</button>
+          <button class="chip" data-filter="unhas">Unhas</button>
+          <button class="chip" data-filter="olhar">Olhar</button>
+        </div>
+
+        <div class="services">
+          <article class="service tilt reveal" data-tilt data-cat="cabelo">
+            <div class="service__glow" aria-hidden="true"></div>
+            <span class="service__num">01</span>
+            <h3>Corte &amp; finalização</h3>
+            <p>Leitura do rosto, movimento e textura — acabamento impecável.</p>
+            <div class="service__foot">
+              <strong>a partir de R$ 90</strong>
+              <button type="button" class="text-link" data-wa="Corte e finalização">Agendar</button>
+            </div>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="cabelo">
+            <div class="service__glow service__glow--2" aria-hidden="true"></div>
+            <span class="service__num">02</span>
+            <h3>Coloração &amp; mechas</h3>
+            <p>Tons luminosos, transição suave e saúde do fio em primeiro lugar.</p>
+            <div class="service__foot">
+              <strong>sob consulta</strong>
+              <button type="button" class="text-link" data-wa="Coloração e mechas">Agendar</button>
+            </div>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="cabelo">
+            <div class="service__glow" aria-hidden="true"></div>
+            <span class="service__num">03</span>
+            <h3>Tratamento capilar</h3>
+            <p>Hidratação profunda, reconstrução e cronograma personalizado.</p>
+            <div class="service__foot">
+              <strong>a partir de R$ 120</strong>
+              <button type="button" class="text-link" data-wa="Tratamento capilar">Agendar</button>
+            </div>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="pele">
+            <div class="service__glow service__glow--3" aria-hidden="true"></div>
+            <span class="service__num">04</span>
+            <h3>Limpeza de pele</h3>
+            <p>Protocolo calmo, extração cuidadosa e máscara sob medida.</p>
+            <div class="service__foot">
+              <strong>a partir de R$ 150</strong>
+              <button type="button" class="text-link" data-wa="Limpeza de pele">Agendar</button>
+            </div>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="pele">
+            <div class="service__glow service__glow--2" aria-hidden="true"></div>
+            <span class="service__num">05</span>
+            <h3>Skin care facial</h3>
+            <p>Luminosidade, textura e rotina caseira alinhada ao seu tipo de pele.</p>
+            <div class="service__foot">
+              <strong>a partir de R$ 180</strong>
+              <button type="button" class="text-link" data-wa="Skin care facial">Agendar</button>
+            </div>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="olhar">
+            <div class="service__glow" aria-hidden="true"></div>
+            <span class="service__num">06</span>
+            <h3>Design de sobrancelha</h3>
+            <p>Simetria, limpeza e harmonia com o olhar — sem exagero.</p>
+            <div class="service__foot">
+              <strong>a partir de R$ 55</strong>
+              <button type="button" class="text-link" data-wa="Design de sobrancelha">Agendar</button>
+            </div>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="unhas">
+            <div class="service__glow service__glow--3" aria-hidden="true"></div>
+            <span class="service__num">07</span>
+            <h3>Manicure &amp; pedicure</h3>
+            <p>Cutilagem delicada, esmaltação limpa e cuidado com cutículas.</p>
+            <div class="service__foot">
+              <strong>a partir de R$ 45</strong>
+              <button type="button" class="text-link" data-wa="Manicure e pedicure">Agendar</button>
+            </div>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="unhas">
+            <div class="service__glow service__glow--2" aria-hidden="true"></div>
+            <span class="service__num">08</span>
+            <h3>Alongamento / gel</h3>
+            <p>Formato elegante, brilho controlado e manutenção guiada.</p>
+            <div class="service__foot">
+              <strong>a partir de R$ 140</strong>
+              <button type="button" class="text-link" data-wa="Alongamento em gel">Agendar</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ritual">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Ritual</span>
+          <h2 class="title">Como flui o <em>seu tempo</em> aqui</h2>
+        </div>
+        <ol class="ritual">
+          <li class="ritual__step reveal">
+            <span>I</span>
+            <div>
+              <h3>Chegada</h3>
+              <p>Chá, conversa breve e alinhamento do que você espera sentir ao sair.</p>
+            </div>
+          </li>
+          <li class="ritual__step reveal">
+            <span>II</span>
+            <div>
+              <h3>Diagnóstico</h3>
+              <p>Observamos fio, pele ou unhas — e montamos o caminho do dia.</p>
+            </div>
+          </li>
+          <li class="ritual__step reveal">
+            <span>III</span>
+            <div>
+              <h3>Cuidado</h3>
+              <p>Execução com calma, técnica e pausas quando o corpo pede.</p>
+            </div>
+          </li>
+          <li class="ritual__step reveal">
+            <span>IV</span>
+            <div>
+              <h3>Encerramento</h3>
+              <p>Orientações de manutenção e, se quiser, próxima agenda marcada.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--veil" id="pacotes">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Pacotes</span>
+          <h2 class="title">Combinações que <em>fazem sentido</em></h2>
+        </div>
+        <div class="packs">
+          <article class="pack tilt reveal" data-tilt>
+            <h3>Glow Day</h3>
+            <p class="pack__price">R$ 280</p>
+            <ul>
+              <li>Limpeza de pele</li>
+              <li>Design de sobrancelha</li>
+              <li>Finalização express</li>
+            </ul>
+            <button type="button" class="btn btn--ghost btn--block text-link" data-wa="Pacote Glow Day">Quero esse</button>
+          </article>
+          <article class="pack pack--featured tilt reveal" data-tilt>
+            <span class="pack__badge">Assinatura</span>
+            <h3>Opaline Club</h3>
+            <p class="pack__price">R$ 390<span>/mês</span></p>
+            <ul>
+              <li>1 ritual capilar / mês</li>
+              <li>1 facial / mês</li>
+              <li>15% off em coloração</li>
+              <li>Prioridade na agenda</li>
+            </ul>
+            <button type="button" class="btn btn--pearl btn--block text-link" data-wa="Opaline Club">Quero esse</button>
+          </article>
+          <article class="pack tilt reveal" data-tilt>
+            <h3>Noiva / Evento</h3>
+            <p class="pack__price">sob consulta</p>
+            <ul>
+              <li>Teste de penteado</li>
+              <li>Make &amp; cabelo</li>
+              <li>Acompanhamento no dia</li>
+            </ul>
+            <button type="button" class="btn btn--ghost btn--block text-link" data-wa="Pacote Noiva / Evento">Quero esse</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="equipe">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Equipe</span>
+          <h2 class="title">Mãos que <em>entendem</em></h2>
+        </div>
+        <div class="team">
+          <article class="team-card tilt reveal" data-tilt>
+            <div class="team-card__aura" aria-hidden="true"></div>
+            <div class="team-card__initials">ED</div>
+            <h3>Eduarda Dias</h3>
+            <p class="team-card__role">Esteticista · Pele &amp; olhar</p>
+            <p>Protocolos faciais, sobrancelha e skin care com toque clínico e acolhedor.</p>
+          </article>
+          <article class="team-card tilt reveal" data-tilt>
+            <div class="team-card__aura team-card__aura--alt" aria-hidden="true"></div>
+            <div class="team-card__initials">ED</div>
+            <h3>Eduardo Dias</h3>
+            <p class="team-card__role">Cabeleireiro · Cor &amp; corte</p>
+            <p>Colorimetria, cortes contemporâneos e finalização que valoriza o movimento natural.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--veil" id="depoimentos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Clientes</span>
+          <h2 class="title">Quem já respira <em>Opaline</em></h2>
+        </div>
+        <div class="quotes">
+          <blockquote class="quote reveal">
+            <p>“Saí com o cabelo leve e a pele calma. Parece spa, mas com resultado de verdade.”</p>
+            <footer>— Helena · Centro</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“A Eduarda entendeu minha pele em cinco minutos. Nunca mais volto a ‘receita pronta’.”</p>
+            <footer>— Sofia · América</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“Corte do Eduardo mudou meu visual sem me deixar irreconhecível. Perfeito.”</p>
+            <footer>— Camila · Costa e Silva</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head reveal">
+          <span class="tag">FAQ</span>
+          <h2 class="title">Perguntas <em>sutis</em></h2>
+        </div>
+        <div class="faq">
+          <details class="faq-item reveal">
+            <summary>Preciso agendar?<span></span></summary>
+            <p>Sim. Trabalhamos com hora marcada para manter o ritmo calmo e o atendimento exclusivo.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Atendem pele sensível / fio danificado?<span></span></summary>
+            <p>Sim. Ajustamos o protocolo no diagnóstico — priorizamos saúde antes de estética agressiva.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Tem estacionamento?<span></span></summary>
+            <p>Convênio no quarteirão e orientação pelo WhatsApp na hora do agendamento.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Fazem atendimento para eventos?<span></span></summary>
+            <p>Sim — noiva, formatura e ensaios. Ideal marcar teste com antecedência.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="cta__veil" aria-hidden="true"></div>
+      <div class="container cta__inner reveal">
+        <div>
+          <h2>Reserve seu tempo na Opaline</h2>
+          <p>Agenda limitada — qualidade acima de volume.</p>
+        </div>
+        <a href="#agenda" class="btn btn--dark magnetic">Quero agendar</a>
+      </div>
+    </section>
+
+    <section class="section section--veil" id="agenda">
+      <div class="container contact">
+        <div class="contact__info reveal">
+          <span class="tag">Agenda</span>
+          <h2 class="title">Fale com a <em>Opaline</em></h2>
+          <ul class="contact__list">
+            <li>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/5547992072891">(47) 99207-2891</a>
+            </li>
+            <li>
+              <strong>E-mail</strong>
+              <a href="mailto:edudiasr6@gmail.com">edudiasr6@gmail.com</a>
+            </li>
+            <li>
+              <strong>Endereço</strong>
+              <span>Centro de Joinville<br />Joinville — SC · Brasil</span>
+            </li>
+            <li>
+              <strong>Horário</strong>
+              <span>Ter a Sáb · 09h–19h<br />Segunda: fechado</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contact-form" novalidate>
+          <h3>Agendar horário</h3>
+          <p class="form__lead">Retorno em horário comercial com opções de agenda.</p>
+
+          <div class="form__row">
+            <label>
+              Nome
+              <input type="text" name="name" required placeholder="Seu nome" autocomplete="name" />
+              <span class="form__error">Informe seu nome.</span>
+            </label>
+            <label>
+              WhatsApp
+              <input type="tel" name="phone" required placeholder="(47) 99207-2891" autocomplete="tel" inputmode="tel" />
+              <span class="form__error">Informe um telefone válido.</span>
+            </label>
+          </div>
+          <label>
+            Serviço
+            <select name="service" required>
+              <option value="" disabled selected>Selecione</option>
+              <option>Corte &amp; finalização</option>
+              <option>Coloração / mechas</option>
+              <option>Tratamento capilar</option>
+              <option>Limpeza de pele</option>
+              <option>Skin care facial</option>
+              <option>Design de sobrancelha</option>
+              <option>Manicure / pedicure</option>
+              <option>Alongamento / gel</option>
+              <option>Pacote Glow Day</option>
+              <option>Opaline Club</option>
+              <option>Noiva / evento</option>
+            </select>
+            <span class="form__error">Escolha um serviço.</span>
+          </label>
+          <label>
+            Preferência de dia / horário
+            <input type="text" name="when" placeholder="Ex.: quinta à tarde" />
+          </label>
+          <label>
+            Observações
+            <textarea name="message" rows="3" placeholder="Primeira visita, alergias, referência de visual..."></textarea>
+          </label>
+          <button type="submit" class="btn btn--pearl btn--block">Enviar no WhatsApp</button>
+          <p class="form__ok" id="form-ok" hidden>Abrindo o WhatsApp…</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="logo">
+        <span class="logo__pearl" aria-hidden="true"></span>
+        <span class="logo__text">Opaline</span>
+      </a>
+      <p>Centro de Joinville · SC · Brasil</p>
+      <p>© <span id="year"></span> Opaline · Portfólio</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20Opaline." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  </a>
+
+  <button class="to-top" id="to-top" aria-label="Voltar ao topo">↑</button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

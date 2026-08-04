@@ -21,6 +21,7 @@ Depois de ativar o GitHub Pages:
 - **Solara (Energia Solar):** https://edudiasr.github.io/portfolio-web/site-energia-solar/
 - **Pulse (Academia):** https://edudiasr.github.io/portfolio-web/site-academia/
 - **Levain (Padaria):** https://edudiasr.github.io/portfolio-web/site-padaria/
+- **Opaline (Estética):** https://edudiasr.github.io/portfolio-web/site-salao/
 
 ---
 
@@ -38,19 +39,19 @@ Depois de ativar o GitHub Pages:
 | [`site-energia-solar`](./site-energia-solar) | Energia solar — navy/dourado, simulador, projetos, WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-academia`](./site-academia) | Academia — preto/amarelo, foto, grade, trial WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-padaria`](./site-padaria) | Padaria — espresso/manteiga, carrinho, encomendas WhatsApp | HTML · CSS · JS | ✅ Pronto |
+| [`site-salao`](./site-salao) | Estética — plum/champagne, ritual, pacotes, agenda WhatsApp | HTML · CSS · JS | ✅ Pronto |
 
 ### Próximos na fila
 
-1. Salão de beleza / estética  
-2. Oficina mecânica  
-3. Contabilidade  
-4. Escola de idiomas  
-5. Arquitetura / interiores  
-6. Cafeteria / açaí  
-7. Lavanderia  
-8. Fisioterapia / pilates  
-9. Construtora / reformas  
-10. Ótica · Hotel · Escola de música · Corretora de seguros
+1. Oficina mecânica  
+2. Contabilidade  
+3. Escola de idiomas  
+4. Arquitetura / interiores  
+5. Cafeteria / açaí  
+6. Lavanderia  
+7. Fisioterapia / pilates  
+8. Construtora / reformas  
+9. Ótica · Hotel · Escola de música · Corretora de seguros
 
 ---
 
