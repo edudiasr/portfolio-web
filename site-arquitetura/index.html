@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Traço — Arquitetura & Interiores em Joinville, SC</title>
+  <meta name="description" content="Escritório de arquitetura e interiores em Joinville. Projetos residenciais, comerciais e reforma com acompanhamento completo." />
+  <meta name="author" content="Traço Arquitetura" />
+  <meta property="og:title" content="Traço — Arquitetura & Interiores" />
+  <meta property="og:description" content="Espaços pensados com rigor, luz e matéria." />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%0a0b0d'/><path d='M20 78 L50 22 L80 78' stroke='%23c9895a' stroke-width='6' fill='none' stroke-linejoin='round'/><path d='M35 78 L50 48 L65 78' stroke='%23a8a297' stroke-width='4' fill='none'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600;6..96,700&family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <svg class="preloader__draw" viewBox="0 0 120 80" aria-hidden="true">
+      <path id="draw-path" d="M10 70 L40 20 L70 70 M40 20 L100 20 L100 70" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <p class="preloader__label">Desenhando o espaço…</p>
+  </div>
+
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__grid"></div>
+    <div class="ambient__wash ambient__wash--a"></div>
+    <div class="ambient__wash ambient__wash--b"></div>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <span class="cursor__dot"></span>
+    <span class="cursor__ring"></span>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Traço Arquitetura">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">Traço<em>Studio</em></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link active">Início</a></li>
+          <li><a href="#projetos" class="nav__link">Projetos</a></li>
+          <li><a href="#materiais" class="nav__link">Matéria</a></li>
+          <li><a href="#escopo" class="nav__link">Escopo</a></li>
+          <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#contato" class="btn btn--copper btn--sm header__cta magnetic">Briefing</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="hero__eyebrow reveal">
+            <span class="line"></span>
+            Joinville · SC · Arquitetura &amp; interiores
+          </p>
+          <h1 class="hero__title reveal">
+            Espaço com<br />
+            <em>intenção.</em>
+          </h1>
+          <p class="hero__text reveal">
+            Projetos residenciais e comerciais onde luz, proporção e matéria
+            trabalham juntos — do conceito à obra acompanhada.
+          </p>
+          <div class="hero__actions reveal">
+            <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20falar%20com%20o%20Tra%C3%A7o%20Studio." class="btn btn--copper magnetic" target="_blank" rel="noopener">
+              WhatsApp do studio
+            </a>
+            <a href="#projetos" class="btn btn--ghost magnetic">Ver projetos</a>
+          </div>
+          <dl class="hero__stats reveal">
+            <div>
+              <dt data-count="11">0</dt>
+              <dd>anos de prática</dd>
+            </div>
+            <div>
+              <dt data-count="180" data-suffix="+">0</dt>
+              <dd>projetos entregues</dd>
+            </div>
+            <div>
+              <dt data-count="42">0</dt>
+              <dd>obras em Joinville</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__stage reveal">
+          <div class="blueprint tilt" data-tilt>
+            <div class="blueprint__top">
+              <span>PLANTA · ESTUDO 03</span>
+              <span id="bp-scale">1 : 100</span>
+            </div>
+            <div class="blueprint__canvas" aria-hidden="true">
+              <svg viewBox="0 0 360 260" class="blueprint__svg">
+                <rect class="bp-room" x="40" y="40" width="180" height="140" />
+                <rect class="bp-room bp-room--alt" x="220" y="40" width="100" height="80" />
+                <rect class="bp-room" x="220" y="120" width="100" height="60" />
+                <line class="bp-dim" x1="40" y1="200" x2="220" y2="200" />
+                <line class="bp-dim" x1="40" y1="195" x2="40" y2="205" />
+                <line class="bp-dim" x1="220" y1="195" x2="220" y2="205" />
+                <circle class="bp-node" cx="40" cy="40" r="3" />
+                <circle class="bp-node" cx="220" cy="40" r="3" />
+                <circle class="bp-node" cx="320" cy="40" r="3" />
+                <circle class="bp-node" cx="320" cy="180" r="3" />
+                <path class="bp-door" d="M130 180 Q130 155 155 155" />
+                <text x="100" y="115" class="bp-label">ESTAR</text>
+                <text x="245" y="85" class="bp-label">COZ</text>
+                <text x="245" y="155" class="bp-label">WC</text>
+              </svg>
+              <div class="blueprint__scan"></div>
+            </div>
+            <div class="blueprint__meta">
+              <div>
+                <span>Área</span>
+                <strong id="bp-area">86 m²</strong>
+              </div>
+              <div>
+                <span>Programa</span>
+                <strong>Loft · Centro</strong>
+              </div>
+              <div>
+                <span>Status</span>
+                <strong class="ok">Em estudo</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>RESIDENCIAL · COMERCIAL · INTERIORES · REFORMA · PAISAGISMO · CONSULTORIA · RESIDENCIAL · COMERCIAL · INTERIORES · REFORMA ·</span>
+        <span>RESIDENCIAL · COMERCIAL · INTERIORES · REFORMA · PAISAGISMO · CONSULTORIA · RESIDENCIAL · COMERCIAL · INTERIORES · REFORMA ·</span>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container about">
+        <div class="about__copy reveal">
+          <span class="tag">O studio</span>
+          <h2 class="title">Arquitetura que <em>habita</em> bem</h2>
+          <p>
+            O Traço une rigor técnico e sensibilidade espacial.
+            Cada projeto nasce de um briefing claro, estudos de luz e
+            uma execução acompanhada — sem surpresa na obra.
+          </p>
+          <div class="about__pills">
+            <span>CAU ativo</span>
+            <span>Obra assistida</span>
+            <span>Joinville &amp; região</span>
+          </div>
+        </div>
+        <div class="about__cards">
+          <article class="glass tilt reveal" data-tilt>
+            <span>01</span>
+            <h3>Escuta</h3>
+            <p>Rotina, orçamento e desejo — o programa vem antes do desenho.</p>
+          </article>
+          <article class="glass tilt reveal" data-tilt>
+            <span>02</span>
+            <h3>Desenho</h3>
+            <p>Plantas, volumes e materiais em diálogo com o terreno.</p>
+          </article>
+          <article class="glass tilt reveal" data-tilt>
+            <span>03</span>
+            <h3>Obra</h3>
+            <p>Detalhamento e visitas para o projeto virar espaço real.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="projetos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Portfólio</span>
+          <h2 class="title">Projetos selecionados</h2>
+          <p>Filtre por tipologia e peça um estudo semelhante.</p>
+        </div>
+
+        <div class="filters reveal">
+          <button class="chip active" type="button" data-filter="all">Todos</button>
+          <button class="chip" type="button" data-filter="residencial">Residencial</button>
+          <button class="chip" type="button" data-filter="comercial">Comercial</button>
+          <button class="chip" type="button" data-filter="interiores">Interiores</button>
+          <button class="chip" type="button" data-filter="reforma">Reforma</button>
+        </div>
+
+        <div class="projects">
+          <article class="project tilt reveal" data-tilt data-cat="residencial">
+            <div class="project__visual project__visual--a" aria-hidden="true">
+              <span></span><span></span>
+            </div>
+            <div class="project__body">
+              <span>01 · Residencial</span>
+              <h3>Casa Norte</h3>
+              <p>220 m² · luz norte · pátio interno</p>
+              <button type="button" class="link-wa" data-wa="projeto semelhante à Casa Norte">Quero algo assim</button>
+            </div>
+          </article>
+          <article class="project tilt reveal" data-tilt data-cat="interiores">
+            <div class="project__visual project__visual--b" aria-hidden="true">
+              <span></span><span></span>
+            </div>
+            <div class="project__body">
+              <span>02 · Interiores</span>
+              <h3>Loft América</h3>
+              <p>86 m² · concreto aparente · carpintaria</p>
+              <button type="button" class="link-wa" data-wa="projeto semelhante ao Loft América">Quero algo assim</button>
+            </div>
+          </article>
+          <article class="project tilt reveal" data-tilt data-cat="comercial">
+            <div class="project__visual project__visual--c" aria-hidden="true">
+              <span></span><span></span>
+            </div>
+            <div class="project__body">
+              <span>03 · Comercial</span>
+              <h3>Café Anita</h3>
+              <p>120 m² · fluxo · identidade visual espacial</p>
+              <button type="button" class="link-wa" data-wa="projeto semelhante ao Café Anita">Quero algo assim</button>
+            </div>
+          </article>
+          <article class="project tilt reveal" data-tilt data-cat="reforma">
+            <div class="project__visual project__visual--d" aria-hidden="true">
+              <span></span><span></span>
+            </div>
+            <div class="project__body">
+              <span>04 · Reforma</span>
+              <h3>Apartamento Centro</h3>
+              <p>98 m² · demolição seletiva · novo layout</p>
+              <button type="button" class="link-wa" data-wa="reforma semelhante ao Apartamento Centro">Quero algo assim</button>
+            </div>
+          </article>
+          <article class="project tilt reveal" data-tilt data-cat="residencial">
+            <div class="project__visual project__visual--e" aria-hidden="true">
+              <span></span><span></span>
+            </div>
+            <div class="project__body">
+              <span>05 · Residencial</span>
+              <h3>Casa Pátio</h3>
+              <p>310 m² · jardim · brises de madeira</p>
+              <button type="button" class="link-wa" data-wa="projeto semelhante à Casa Pátio">Quero algo assim</button>
+            </div>
+          </article>
+          <article class="project tilt reveal" data-tilt data-cat="interiores">
+            <div class="project__visual project__visual--f" aria-hidden="true">
+              <span></span><span></span>
+            </div>
+            <div class="project__body">
+              <span>06 · Interiores</span>
+              <h3>Studio Costa</h3>
+              <p>45 m² · multifuncional · paleta mineral</p>
+              <button type="button" class="link-wa" data-wa="projeto semelhante ao Studio Costa">Quero algo assim</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="antes">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Transformação</span>
+          <h2 class="title">Antes &amp; <em>depois</em></h2>
+          <p>Arraste para comparar o estudo de reforma.</p>
+        </div>
+
+        <div class="ba reveal">
+          <div class="ba__frame" id="ba-frame">
+            <div class="ba__after" aria-hidden="true">
+              <div class="ba__scene ba__scene--after">
+                <span class="ba__label">Depois</span>
+              </div>
+            </div>
+            <div class="ba__before" id="ba-before" aria-hidden="true">
+              <div class="ba__scene ba__scene--before">
+                <span class="ba__label">Antes</span>
+              </div>
+            </div>
+            <div class="ba__handle" id="ba-handle" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Comparar antes e depois" tabindex="0">
+              <i></i>
+            </div>
+          </div>
+          <p class="ba__note">Ilustração esquemática · reforma de estar + cozinha integrada</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="materiais">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Matéria</span>
+          <h2 class="title">Paleta que <em>define</em> o espaço</h2>
+          <p>Toque nas amostras — montamos um mood preliminar.</p>
+        </div>
+
+        <div class="materials reveal">
+          <div class="swatches" id="swatches">
+            <button type="button" class="swatch is-on" data-name="Concreto" data-hex="#6b6e74" style="--sw:#6b6e74"></button>
+            <button type="button" class="swatch" data-name="Carvalho" data-hex="#8b6914" style="--sw:#8b6914"></button>
+            <button type="button" class="swatch" data-name="Travertino" data-hex="#c2b4a0" style="--sw:#c2b4a0"></button>
+            <button type="button" class="swatch" data-name="Verde musgo" data-hex="#3d4f3f" style="--sw:#3d4f3f"></button>
+            <button type="button" class="swatch" data-name="Cobre" data-hex="#c9895a" style="--sw:#c9895a"></button>
+            <button type="button" class="swatch" data-name="Grafite" data-hex="#2a2c31" style="--sw:#2a2c31"></button>
+          </div>
+          <aside class="mood tilt" data-tilt>
+            <span>Mood board</span>
+            <div class="mood__chips" id="mood-chips"></div>
+            <p id="mood-hint">Selecione até 4 materiais.</p>
+            <button type="button" class="btn btn--copper btn--block" id="mood-wa">Enviar paleta</button>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="escopo">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Estimativa</span>
+          <h2 class="title">Faixa de <em>investimento</em></h2>
+          <p>Referência educativa para Joinville — proposta formal após visita.</p>
+        </div>
+
+        <div class="scope reveal">
+          <div class="scope__controls">
+            <label>
+              Tipo de projeto
+              <select id="scope-type">
+                <option value="180">Interiores (apt / loft)</option>
+                <option value="280" selected>Residencial completo</option>
+                <option value="220">Comercial / café / loja</option>
+                <option value="150">Reforma parcial</option>
+                <option value="320">Casa sob medida</option>
+              </select>
+            </label>
+            <label>
+              Área aproximada (m²)
+              <div class="scope__range">
+                <input type="range" id="scope-area" min="40" max="400" step="10" value="120" />
+                <output id="scope-area-out">120 m²</output>
+              </div>
+            </label>
+            <label>
+              Nível de detalhamento
+              <input type="range" id="scope-detail" min="0" max="2" step="1" value="1" />
+              <output id="scope-detail-out">Projeto executivo</output>
+            </label>
+          </div>
+          <div class="scope__result tilt" data-tilt>
+            <span>Honorários estimados*</span>
+            <strong id="scope-range">R$ —</strong>
+            <em id="scope-label">Residencial · 120 m²</em>
+            <p class="scope__disclaimer">*Não inclui obra/materiais. Valores de referência.</p>
+            <button type="button" class="btn btn--copper btn--block" id="scope-wa">Pedir proposta</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="processo">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Processo</span>
+          <h2 class="title">Do briefing à <em>entrega</em></h2>
+        </div>
+        <ol class="flow">
+          <li class="reveal"><span>01</span><div><h3>Briefing</h3><p>Visita ou call — programa, orçamento e prazos.</p></div></li>
+          <li class="reveal"><span>02</span><div><h3>Estudo</h3><p>Opções de layout, volume e linguagem.</p></div></li>
+          <li class="reveal"><span>03</span><div><h3>Executivo</h3><p>Plantas, detalhes e especificação de materiais.</p></div></li>
+          <li class="reveal"><span>04</span><div><h3>Obra</h3><p>Acompanhamento e ajustes finos na entrega.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="equipe">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Equipe</span>
+          <h2 class="title">Quem desenha o <em>Traço</em></h2>
+        </div>
+        <div class="team">
+          <article class="team-card tilt reveal" data-tilt>
+            <div class="team-card__avatar">ED</div>
+            <p class="team-card__role">Arq. · CAU · Sócio</p>
+            <h3>Eduardo Dias</h3>
+            <p>Projeto arquitetônico, volumetria e coordenação de obra.</p>
+          </article>
+          <article class="team-card tilt reveal" data-tilt>
+            <div class="team-card__avatar team-card__avatar--alt">ED</div>
+            <p class="team-card__role">Arq. · Interiores</p>
+            <h3>Eduarda Dias</h3>
+            <p>Interiores, especificação de materiais e ambientação.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="depoimentos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Clientes</span>
+          <h2 class="title">Quem já <em>habita</em> o projeto</h2>
+        </div>
+        <div class="quotes">
+          <blockquote class="quote reveal">
+            <p>“O loft ficou exatamente como o estudo. Luz e marcenaria impecáveis.”</p>
+            <footer>— Carla · América</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“Acompanharam a obra de verdade. Zero improvisação no canteiro.”</p>
+            <footer>— Renato · Centro</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“Café com identidade. Fluxo de clientes melhorou no primeiro mês.”</p>
+            <footer>— Sofia · Anita Garibaldi</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head reveal">
+          <span class="tag">FAQ</span>
+          <h2 class="title">Perguntas <em>frequentes</em></h2>
+        </div>
+        <div class="faq">
+          <details class="faq-item reveal">
+            <summary>Atendem fora de Joinville?<span></span></summary>
+            <p>Sim — região e SC. Viagens e visitas sob acordo no briefing.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Fazem só interiores?<span></span></summary>
+            <p>Sim. Também arquitetura completa e reformas com projeto executivo.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Indicam empreiteiros?<span></span></summary>
+            <p>Trabalhamos com parceiros de confiança e também com a equipe que você indicar.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Quanto tempo leva um projeto?<span></span></summary>
+            <p>Depende do escopo — tipicamente 4 a 12 semanas até o executivo.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta__inner reveal">
+        <div>
+          <h2>Tem um espaço esperando desenho?</h2>
+          <p>Envie o briefing — respondemos com o próximo passo.</p>
+        </div>
+        <a href="#contato" class="btn btn--dark magnetic">Abrir briefing</a>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="container contact">
+        <div class="contact__info reveal">
+          <span class="tag">Contato</span>
+          <h2 class="title">Fale com o <em>Traço</em></h2>
+          <ul class="contact__list">
+            <li>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/5547992072891">(47) 99207-2891</a>
+            </li>
+            <li>
+              <strong>E-mail</strong>
+              <a href="mailto:edudiasr6@gmail.com">edudiasr6@gmail.com</a>
+            </li>
+            <li>
+              <strong>Endereço</strong>
+              <span>Centro de Joinville<br />Joinville — SC · Brasil</span>
+            </li>
+            <li>
+              <strong>Horário</strong>
+              <span>Seg a Sex · 09h–18h<br />Visitas sob agendamento</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contact-form" novalidate>
+          <h3>Briefing rápido</h3>
+          <p class="form__lead">Quanto mais contexto, mais precisa a proposta.</p>
+
+          <div class="form__row">
+            <label>
+              Nome
+              <input type="text" name="name" required placeholder="Seu nome" autocomplete="name" />
+              <span class="form__error">Informe seu nome.</span>
+            </label>
+            <label>
+              WhatsApp
+              <input type="tel" name="phone" required placeholder="(47) 99207-2891" autocomplete="tel" inputmode="tel" />
+              <span class="form__error">Informe um telefone válido.</span>
+            </label>
+          </div>
+          <div class="form__row">
+            <label>
+              Tipo
+              <select name="type" required>
+                <option value="" disabled selected>Selecione</option>
+                <option>Residencial</option>
+                <option>Interiores</option>
+                <option>Comercial</option>
+                <option>Reforma</option>
+                <option>Consultoria</option>
+              </select>
+              <span class="form__error">Escolha o tipo.</span>
+            </label>
+            <label>
+              Área aprox. (m²)
+              <input type="number" name="area" min="10" max="2000" placeholder="Ex.: 120" />
+            </label>
+          </div>
+          <label>
+            Descreva o espaço / desejo
+            <textarea name="message" rows="3" placeholder="Bairro, prazo, estilo, orçamento aproximado..."></textarea>
+          </label>
+          <button type="submit" class="btn btn--copper btn--block">Enviar no WhatsApp</button>
+          <p class="form__ok" id="form-ok" hidden>Abrindo o WhatsApp…</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="logo">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">Traço<em>Studio</em></span>
+      </a>
+      <p>Centro de Joinville · SC · Brasil</p>
+      <p>© <span id="year"></span> Traço Studio · Portfólio</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20falar%20com%20o%20Tra%C3%A7o%20Studio." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  </a>
+
+  <button class="to-top" id="to-top" aria-label="Voltar ao topo">↑</button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

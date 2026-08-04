@@ -25,6 +25,7 @@ Depois de ativar o GitHub Pages:
 - **Torque Auto (Oficina):** https://edudiasr.github.io/portfolio-web/site-oficina/
 - **Nexo Contábil:** https://edudiasr.github.io/portfolio-web/site-contabilidade/
 - **Echo Idiomas:** https://edudiasr.github.io/portfolio-web/site-idiomas/
+- **Traço Studio (Arquitetura):** https://edudiasr.github.io/portfolio-web/site-arquitetura/
 
 ---
 
@@ -46,15 +47,15 @@ Depois de ativar o GitHub Pages:
 | [`site-oficina`](./site-oficina) | Oficina — asphalt/âmbar, HUD, diagnóstico, orçamento WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-contabilidade`](./site-contabilidade) | Contábil — ink/esmeralda, simulador de regime, checklist WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-idiomas`](./site-idiomas) | Idiomas — night/sky, chat EN/ES/DE, quiz CEFR, experimental WhatsApp | HTML · CSS · JS | ✅ Pronto |
+| [`site-arquitetura`](./site-arquitetura) | Arquitetura — charcoal/cobre, planta, antes/depois, mood, estimativa | HTML · CSS · JS | ✅ Pronto |
 
 ### Próximos na fila
 
-1. Arquitetura / interiores  
-2. Cafeteria / açaí  
-3. Lavanderia  
-4. Fisioterapia / pilates  
-5. Construtora / reformas  
-6. Ótica · Hotel · Escola de música · Corretora de seguros
+1. Cafeteria / açaí  
+2. Lavanderia  
+3. Fisioterapia / pilates  
+4. Construtora / reformas  
+5. Ótica · Hotel · Escola de música · Corretora de seguros
 
 ---
 
