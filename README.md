@@ -30,6 +30,9 @@ Depois de ativar o GitHub Pages:
 - **Ciclo (Lavanderia):** https://edudiasr.github.io/portfolio-web/site-lavanderia/
 - **Alinha (Fisio & Pilates):** https://edudiasr.github.io/portfolio-web/site-fisioterapia/
 - **Base (Construtora):** https://edudiasr.github.io/portfolio-web/site-construtora/
+- **Alba Hotel (Pousada):** https://edudiasr.github.io/portfolio-web/site-hotel/
+- **Aegis (Seguros):** https://edudiasr.github.io/portfolio-web/site-seguros/
+- **Iris Ótica:** https://edudiasr.github.io/portfolio-web/site-otica/
 
 ---
 
@@ -56,13 +59,13 @@ Depois de ativar o GitHub Pages:
 | [`site-lavanderia`](./site-lavanderia) | Lavanderia — slate/aqua, máquina ao vivo, calculadora, coleta WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-fisioterapia`](./site-fisioterapia) | Fisio & pilates — ink/teal, mapa do corpo, grade, agenda WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-construtora`](./site-construtora) | Construtora — concreto/laranja, canteiro, estimativa m², briefing WA | HTML · CSS · JS | ✅ Pronto |
+| [`site-hotel`](./site-hotel) | Hotel / pousada — espresso/champagne, quartos, datas → WhatsApp | HTML · CSS · JS | ✅ Pronto |
+| [`site-otica`](./site-otica) | Ótica — midnight/cyan, lente interativa, provador de aros, exame WA | HTML · CSS · JS | ✅ Pronto |
+| [`site-seguros`](./site-seguros) | Seguros — navy/mint, simulador, quiz cobertura, filtros, WhatsApp | HTML · CSS · JS | ✅ Pronto |
 
 ### Próximos na fila
 
-1. Ótica  
-2. Hotel / pousada  
-3. Escola de música  
-4. Corretora de seguros
+1. Escola de música
 
 ---
 

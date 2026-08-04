@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alba Hotel — Boutique &amp; Pousada Urbana · Joinville, SC</title>
+  <meta name="description" content="Alba Hotel: pousada boutique no Centro de Joinville. Suítes acolhedoras, hospitalidade pessoal e reserva pelo WhatsApp." />
+  <meta name="author" content="Alba Hotel" />
+  <meta property="og:title" content="Alba Hotel — Joinville" />
+  <meta property="og:description" content="Hospitalidade íntima no centro da cidade. Reserve sua estadia." />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230e0c0b'/><circle cx='50' cy='42' r='18' fill='none' stroke='%23e8d5b5' stroke-width='4'/><path d='M32 72h36' stroke='%23c9a08a' stroke-width='4' stroke-linecap='round'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__mark" aria-hidden="true">
+      <span class="preloader__ring"></span>
+      <span class="preloader__line"></span>
+    </div>
+    <p class="preloader__brand">Alba</p>
+    <p class="preloader__label">Preparando sua chegada…</p>
+  </div>
+
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__wash ambient__wash--a"></div>
+    <div class="ambient__wash ambient__wash--b"></div>
+    <div class="ambient__grain"></div>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <span class="cursor__dot"></span>
+    <span class="cursor__ring"></span>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Alba Hotel">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">Alba<em>Hotel</em></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link active">Início</a></li>
+          <li><a href="#quartos" class="nav__link">Quartos</a></li>
+          <li><a href="#reservar" class="nav__link">Reservar</a></li>
+          <li><a href="#experiencias" class="nav__link">Experiências</a></li>
+          <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#reservar" class="btn btn--champagne btn--sm header__cta magnetic">Reservar</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero__atmosphere" aria-hidden="true">
+        <div class="room">
+          <div class="room__wall"></div>
+          <div class="room__curtain room__curtain--l"></div>
+          <div class="room__curtain room__curtain--r"></div>
+          <div class="room__window">
+            <span class="room__pane"></span>
+            <span class="room__glow"></span>
+          </div>
+          <div class="room__bed">
+            <span class="room__headboard"></span>
+            <span class="room__mattress"></span>
+            <span class="room__pillow room__pillow--a"></span>
+            <span class="room__pillow room__pillow--b"></span>
+            <span class="room__throw"></span>
+          </div>
+          <div class="room__lamp">
+            <span class="room__shade"></span>
+            <span class="room__stem"></span>
+            <span class="room__pool"></span>
+          </div>
+          <div class="room__floor"></div>
+        </div>
+      </div>
+      <div class="container hero__content">
+        <p class="hero__eyebrow reveal">Joinville · SC · Boutique urbana</p>
+        <h1 class="hero__title reveal">
+          <span class="hero__brand">Alba</span>
+          <span class="hero__sub">Onde a cidade descansa.</span>
+        </h1>
+        <p class="hero__text reveal">
+          Pousada íntima no Centro — suítes com luz suave, café da manhã acolhedor
+          e hospitalidade de verdade.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#reservar" class="btn btn--champagne magnetic">Reservar estadia</a>
+          <a href="#quartos" class="btn btn--ghost magnetic">Ver quartos</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--amenities" id="comodidades">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Comodidades</span>
+          <h2>Detalhes que <em>fazem a noite</em></h2>
+          <p>Pequenos luxos pensados para quem viaja a trabalho ou a lazer.</p>
+        </div>
+        <ul class="amenities">
+          <li class="amenity reveal" data-tilt>
+            <span class="amenity__icon" aria-hidden="true">◈</span>
+            <h3>Café da casa</h3>
+            <p>Pães frescos, frutas da estação e espresso no jardim interno.</p>
+          </li>
+          <li class="amenity reveal" data-tilt>
+            <span class="amenity__icon" aria-hidden="true">◇</span>
+            <h3>Wi-Fi fiber</h3>
+            <p>Conexão estável em todos os andares — ideal para remote work.</p>
+          </li>
+          <li class="amenity reveal" data-tilt>
+            <span class="amenity__icon" aria-hidden="true">○</span>
+            <h3>Check-in flex</h3>
+            <p>Chegada a partir das 14h; early check-in sob disponibilidade.</p>
+          </li>
+          <li class="amenity reveal" data-tilt>
+            <span class="amenity__icon" aria-hidden="true">△</span>
+            <h3>Centro a pé</h3>
+            <p>Teatro, cafés e comércio a poucos minutos caminhando.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="quartos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Acomodações</span>
+          <h2>Quartos com <em>alma</em></h2>
+          <p>Filtre por tipo e reserve direto pelo WhatsApp.</p>
+        </div>
+
+        <div class="filters reveal" role="group" aria-label="Filtrar quartos">
+          <button type="button" class="chip active" data-filter="all">Todos</button>
+          <button type="button" class="chip" data-filter="suite">Suíte</button>
+          <button type="button" class="chip" data-filter="duplo">Duplo</button>
+          <button type="button" class="chip" data-filter="loft">Loft</button>
+          <button type="button" class="chip" data-filter="standard">Standard</button>
+        </div>
+
+        <div class="rooms" id="rooms">
+          <article class="room-card reveal" data-cat="suite" data-tilt>
+            <div class="room-card__media room-card__media--suite" aria-hidden="true"></div>
+            <div class="room-card__body">
+              <span class="room-card__type">Suíte</span>
+              <h3>Suíte Alba</h3>
+              <p>Cama king, banheira freestanding e vista para o pátio interno.</p>
+              <ul class="room-card__meta">
+                <li>2 hóspedes</li>
+                <li>38 m²</li>
+                <li>café incluso</li>
+              </ul>
+              <div class="room-card__foot">
+                <p class="room-card__price">a partir de <strong>R$ 420</strong>/noite</p>
+                <button type="button" class="btn btn--ghost btn--sm magnetic book-room" data-room="Suíte Alba">Reservar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="room-card reveal" data-cat="duplo" data-tilt>
+            <div class="room-card__media room-card__media--duplo" aria-hidden="true"></div>
+            <div class="room-card__body">
+              <span class="room-card__type">Duplo</span>
+              <h3>Quarto Névoa</h3>
+              <p>Duas camas twin ou queen sob consulta. Luz filtrada e linho natural.</p>
+              <ul class="room-card__meta">
+                <li>2 hóspedes</li>
+                <li>24 m²</li>
+                <li>ar-condicionado</li>
+              </ul>
+              <div class="room-card__foot">
+                <p class="room-card__price">a partir de <strong>R$ 280</strong>/noite</p>
+                <button type="button" class="btn btn--ghost btn--sm magnetic book-room" data-room="Quarto Névoa">Reservar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="room-card reveal" data-cat="loft" data-tilt>
+            <div class="room-card__media room-card__media--loft" aria-hidden="true"></div>
+            <div class="room-card__body">
+              <span class="room-card__type">Loft</span>
+              <h3>Loft Urbano</h3>
+              <p>Pé-direito alto, home office discreto e mesa de trabalho dedicada.</p>
+              <ul class="room-card__meta">
+                <li>2 hóspedes</li>
+                <li>42 m²</li>
+                <li>desk + monitor</li>
+              </ul>
+              <div class="room-card__foot">
+                <p class="room-card__price">a partir de <strong>R$ 390</strong>/noite</p>
+                <button type="button" class="btn btn--ghost btn--sm magnetic book-room" data-room="Loft Urbano">Reservar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="room-card reveal" data-cat="suite" data-tilt>
+            <div class="room-card__media room-card__media--terrace" aria-hidden="true"></div>
+            <div class="room-card__body">
+              <span class="room-card__type">Suíte</span>
+              <h3>Suíte Terraço</h3>
+              <p>Terraço privativo com poltronas e café ao entardecer.</p>
+              <ul class="room-card__meta">
+                <li>2 hóspedes</li>
+                <li>45 m²</li>
+                <li>terraço</li>
+              </ul>
+              <div class="room-card__foot">
+                <p class="room-card__price">a partir de <strong>R$ 480</strong>/noite</p>
+                <button type="button" class="btn btn--ghost btn--sm magnetic book-room" data-room="Suíte Terraço">Reservar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="room-card reveal" data-cat="standard" data-tilt>
+            <div class="room-card__media room-card__media--standard" aria-hidden="true"></div>
+            <div class="room-card__body">
+              <span class="room-card__type">Standard</span>
+              <h3>Quarto Aurora</h3>
+              <p>Compacto e acolhedor — perfeito para estadias curtas no centro.</p>
+              <ul class="room-card__meta">
+                <li>2 hóspedes</li>
+                <li>18 m²</li>
+                <li>smart TV</li>
+              </ul>
+              <div class="room-card__foot">
+                <p class="room-card__price">a partir de <strong>R$ 220</strong>/noite</p>
+                <button type="button" class="btn btn--ghost btn--sm magnetic book-room" data-room="Quarto Aurora">Reservar</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="room-card reveal" data-cat="suite" data-tilt>
+            <div class="room-card__media room-card__media--family" aria-hidden="true"></div>
+            <div class="room-card__body">
+              <span class="room-card__type">Suíte</span>
+              <h3>Suíte Família</h3>
+              <p>Sala anexada, sofá-cama e espaço para duas crianças.</p>
+              <ul class="room-card__meta">
+                <li>até 4</li>
+                <li>52 m²</li>
+                <li>berço sob pedido</li>
+              </ul>
+              <div class="room-card__foot">
+                <p class="room-card__price">a partir de <strong>R$ 520</strong>/noite</p>
+                <button type="button" class="btn btn--ghost btn--sm magnetic book-room" data-room="Suíte Família">Reservar</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="rooms-empty" id="rooms-empty" hidden>Nenhum quarto neste filtro.</p>
+      </div>
+    </section>
+
+    <section class="section section--book" id="reservar">
+      <div class="container book">
+        <div class="book__copy reveal">
+          <span class="tag">Reserva</span>
+          <h2>Escolha suas <em>datas</em></h2>
+          <p>Informe check-in, check-out e hóspedes. Enviamos a confirmação pelo WhatsApp.</p>
+        </div>
+        <form class="book__form reveal" id="stay-form" novalidate>
+          <label class="field">
+            <span>Check-in</span>
+            <input type="date" name="checkin" id="checkin" required />
+          </label>
+          <label class="field">
+            <span>Check-out</span>
+            <input type="date" name="checkout" id="checkout" required />
+          </label>
+          <label class="field">
+            <span>Hóspedes</span>
+            <select name="guests" id="guests">
+              <option value="1">1 hóspede</option>
+              <option value="2" selected>2 hóspedes</option>
+              <option value="3">3 hóspedes</option>
+              <option value="4">4 hóspedes</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Quarto (opcional)</span>
+            <select name="room" id="stay-room">
+              <option value="">Indiferente</option>
+              <option>Suíte Alba</option>
+              <option>Quarto Névoa</option>
+              <option>Loft Urbano</option>
+              <option>Suíte Terraço</option>
+              <option>Quarto Aurora</option>
+              <option>Suíte Família</option>
+            </select>
+          </label>
+          <label class="field field--full">
+            <span>Nome</span>
+            <input type="text" name="name" id="stay-name" placeholder="Seu nome" autocomplete="name" required />
+          </label>
+          <p class="form-hint" id="stay-hint" hidden>Preencha datas válidas e seu nome.</p>
+          <button type="submit" class="btn btn--champagne magnetic field--full">Pedir reserva no WhatsApp</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="experiencias">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Experiências</span>
+          <h2>Além do <em>quarto</em></h2>
+          <p>Momentos curados para quem quer sentir Joinville com calma.</p>
+        </div>
+        <div class="experiences">
+          <article class="exp reveal" data-tilt>
+            <span class="exp__num">01</span>
+            <h3>Café no pátio</h3>
+            <p>Manhãs lentas com torradas, geleia da casa e luz dourada.</p>
+          </article>
+          <article class="exp reveal" data-tilt>
+            <span class="exp__num">02</span>
+            <h3>Rota do centro</h3>
+            <p>Mapa secreto de cafés, livrarias e praças a 10 minutos a pé.</p>
+          </article>
+          <article class="exp reveal" data-tilt>
+            <span class="exp__num">03</span>
+            <h3>Late checkout</h3>
+            <p>Até 14h sob disponibilidade — para não apressar a despedida.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--team" id="equipe">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Quem recebe</span>
+          <h2>Hospitalidade <em>com nome</em></h2>
+          <p>Uma casa pequena, gente presente.</p>
+        </div>
+        <div class="team">
+          <article class="team-card reveal" data-tilt>
+            <div class="team-card__avatar" aria-hidden="true">ED</div>
+            <h3>Eduardo Dias</h3>
+            <p class="team-card__role">Anfitrião</p>
+            <p>Cuida da casa, das chaves e de cada check-in com atenção pessoal.</p>
+          </article>
+          <article class="team-card reveal" data-tilt>
+            <div class="team-card__avatar team-card__avatar--alt" aria-hidden="true">ED</div>
+            <h3>Eduarda Dias</h3>
+            <p class="team-card__role">Hospitalidade</p>
+            <p>Café da manhã, detalhes do quarto e o jeito de fazer o hóspede sentir-se em casa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="depoimentos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Hóspedes</span>
+          <h2>Noites que <em>ficam</em></h2>
+        </div>
+        <div class="testimonials">
+          <blockquote class="quote reveal" data-tilt>
+            <p>“Silêncio no centro, lençóis impecáveis e o café mais gostoso da viagem.”</p>
+            <footer>— Marina · Florianópolis</footer>
+          </blockquote>
+          <blockquote class="quote reveal" data-tilt>
+            <p>“Trabalhei três dias no loft e me senti em um apartamento de amigo — com serviço de hotel.”</p>
+            <footer>— Rafael · Curitiba</footer>
+          </blockquote>
+          <blockquote class="quote reveal" data-tilt>
+            <p>“A Eduarda lembrou do leite sem lactose. Detalhes assim não têm preço.”</p>
+            <footer>— Camila · São Paulo</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--faq" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head reveal">
+          <span class="tag">Dúvidas</span>
+          <h2>Perguntas <em>frequentes</em></h2>
+        </div>
+        <div class="faq reveal">
+          <details class="faq__item" open>
+            <summary>Qual o horário de check-in e check-out?</summary>
+            <p>Check-in a partir das 14h · check-out até 11h. Early/late sob disponibilidade — peça no WhatsApp.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Aceitam pets?</summary>
+            <p>Cães de pequeno porte em alguns quartos, com aviso prévio. Consulte a equipe antes de reservar.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Tem estacionamento?</summary>
+            <p>Vagas parceiras a 2 minutos a pé. Indicamos o endereço na confirmação da reserva.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Como cancelar?</summary>
+            <p>Cancelamento gratuito até 48h antes. Após esse prazo, cobramos a primeira diária.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--contact" id="contato">
+      <div class="container contact">
+        <div class="contact__copy reveal">
+          <span class="tag">Contato</span>
+          <h2>Fale com a <em>Alba</em></h2>
+          <p>Centro de Joinville, SC · Brasil</p>
+          <ul class="contact__list">
+            <li>
+              <a href="https://wa.me/5547992072891" target="_blank" rel="noopener">WhatsApp (47) 99207-2891</a>
+            </li>
+            <li>
+              <a href="mailto:edudiasr6@gmail.com">edudiasr6@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+        <form class="contact__form reveal" id="contact-form" novalidate>
+          <label class="field">
+            <span>Nome</span>
+            <input type="text" name="name" placeholder="Seu nome" autocomplete="name" required />
+          </label>
+          <label class="field">
+            <span>WhatsApp</span>
+            <input type="tel" name="phone" placeholder="(47) 90000-0000" autocomplete="tel" required />
+          </label>
+          <label class="field field--full">
+            <span>Mensagem</span>
+            <textarea name="message" rows="4" placeholder="Como podemos ajudar?" required></textarea>
+          </label>
+          <p class="form-ok" id="form-ok" hidden>Abrindo o WhatsApp…</p>
+          <button type="submit" class="btn btn--champagne magnetic">Enviar no WhatsApp</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="logo logo--footer">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">Alba<em>Hotel</em></span>
+      </a>
+      <p>© <span id="year"></span> Alba Hotel · Joinville, SC · Projeto de portfólio</p>
+    </div>
+  </footer>
+
+  <a
+    class="float-wa magnetic"
+    href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Alba%20Hotel."
+    target="_blank"
+    rel="noopener"
+    aria-label="WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="currentColor">
+      <path d="M20.5 3.5A11 11 0 0 0 2.1 16.8L1 23l6.4-1.1A11 11 0 0 0 20.5 3.5zm-8.6 17a9 9 0 0 1-4.6-1.3l-.3-.2-3.8.7.7-3.7-.2-.3a9 9 0 1 1 8.2 4.8zm5-6.7c-.3-.1-1.6-.8-1.9-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6.1a7.4 7.4 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5.3-.4c.1-.2 0-.3 0-.5l-.9-2.1c-.2-.6-.5-.5-.6-.5h-.5c-.2 0-.5.1-.7.3s-1 1-1 2.4 1 2.8 1.2 3a10.5 10.5 0 0 0 4 3.5c.6.2 1 .4 1.4.5.6.2 1.1.2 1.5.1.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.2-1.3s-.2-.2-.5-.3z"/>
+    </svg>
+  </a>
+
+  <button type="button" class="to-top" id="to-top" aria-label="Voltar ao topo">↑</button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iris Ótica — Visão com precisão em Joinville</title>
+  <meta name="description" content="Iris Ótica no Centro de Joinville, SC. Óculos de grau, solar, lentes e exame de vista. Atendimento com Eduardo Dias e Eduarda Dias." />
+  <meta name="author" content="Iris Ótica" />
+  <meta property="og:title" content="Iris Ótica — Joinville, SC" />
+  <meta property="og:description" content="Ótica premium: grau, solar, lentes e exame. Agende pelo WhatsApp." />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='50' fill='%23070a12'/><circle cx='50' cy='50' r='28' fill='none' stroke='%237dd3fc' stroke-width='4'/><circle cx='50' cy='50' r='10' fill='%23a8e8ff'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__lens">
+      <span class="preloader__ring preloader__ring--outer"></span>
+      <span class="preloader__ring preloader__ring--mid"></span>
+      <span class="preloader__ring preloader__ring--inner"></span>
+      <span class="preloader__core"></span>
+    </div>
+    <p class="preloader__label">Iris Ótica</p>
+  </div>
+
+  <div class="progress" id="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-hidden="true"></div>
+
+  <div class="ambient" aria-hidden="true">
+    <span class="ambient__glow ambient__glow--1"></span>
+    <span class="ambient__glow ambient__glow--2"></span>
+    <span class="ambient__glow ambient__glow--3"></span>
+    <span class="ambient__grid"></span>
+  </div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Iris Ótica">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">Iris<em>Ótica</em></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link active">Início</a></li>
+          <li><a href="#servicos" class="nav__link">Serviços</a></li>
+          <li><a href="#provar" class="nav__link">Provar</a></li>
+          <li><a href="#exame" class="nav__link">Exame</a></li>
+          <li><a href="#equipe" class="nav__link">Equipe</a></li>
+          <li><a href="#faq" class="nav__link">FAQ</a></li>
+          <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a
+          href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20atendimento%20na%20Iris%20%C3%93tica."
+          class="btn btn--cyan btn--sm magnetic"
+          target="_blank"
+          rel="noopener"
+        >WhatsApp</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero__lens" id="hero-lens" aria-hidden="true">
+        <div class="hero__lens-glass">
+          <div class="hero__lens-refract"></div>
+          <div class="hero__lens-iris"></div>
+          <div class="hero__lens-glare"></div>
+          <div class="hero__lens-rim"></div>
+        </div>
+        <div class="hero__lens-beams">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <div class="container hero__content">
+        <p class="hero__brand reveal">Iris Ótica</p>
+        <h1 class="hero__title reveal">Clareza que<br />define o olhar.</h1>
+        <p class="hero__text reveal">
+          Ótica premium no Centro de Joinville — grau, solar, lentes e exame com precisão óptica.
+        </p>
+        <div class="hero__actions reveal">
+          <a
+            href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20agendar%20um%20exame%20de%20vista%20na%20Iris%20%C3%93tica."
+            class="btn btn--cyan magnetic"
+            target="_blank"
+            rel="noopener"
+          >Agendar exame</a>
+          <a href="#provar" class="btn btn--ghost magnetic">Provar armações</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Óculos de grau</span><span>·</span>
+        <span>Solar UV400</span><span>·</span>
+        <span>Lentes premium</span><span>·</span>
+        <span>Exame de vista</span><span>·</span>
+        <span>Ajuste fino</span><span>·</span>
+        <span>Joinville SC</span><span>·</span>
+        <span>Óculos de grau</span><span>·</span>
+        <span>Solar UV400</span><span>·</span>
+        <span>Lentes premium</span><span>·</span>
+        <span>Exame de vista</span><span>·</span>
+        <span>Ajuste fino</span><span>·</span>
+        <span>Joinville SC</span><span>·</span>
+      </div>
+    </div>
+
+    <!-- SOBRE -->
+    <section class="section" id="sobre">
+      <div class="container sobre">
+        <div class="sobre__copy reveal">
+          <span class="eyebrow">A ótica</span>
+          <h2 class="title">Luz, foco e <em>precisão.</em></h2>
+          <p>
+            A Iris nasceu para quem trata a visão como parte da identidade.
+            Orientamos a escolha da armação, calibramos lentes e conduzimos o exame
+            com tempo e clareza — do primeiro contato ao ajuste final.
+          </p>
+          <ul class="checklist">
+            <li>Exame de vista com acompanhamento óptico</li>
+            <li>Lentes antirreflexo, blue light e progressivas</li>
+            <li>Solar com proteção UV400 e estilos atuais</li>
+            <li>Ajuste e manutenção no Centro de Joinville</li>
+          </ul>
+        </div>
+        <div class="sobre__stats reveal">
+          <article class="stat-tile tilt" data-tilt>
+            <strong data-count="14">0</strong>
+            <span>anos de óptica</span>
+          </article>
+          <article class="stat-tile tilt" data-tilt>
+            <strong data-count="3200" data-suffix="+">0</strong>
+            <span>clientes atendidos</span>
+          </article>
+          <article class="stat-tile tilt" data-tilt>
+            <strong data-count="98" data-suffix="%">0</strong>
+            <span>satisfação</span>
+          </article>
+          <article class="stat-tile tilt" data-tilt>
+            <strong data-count="450" data-suffix="+">0</strong>
+            <span>modelos em loja</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section class="section section--alt" id="servicos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Serviços</span>
+          <h2 class="title">O que a Iris <em>entrega.</em></h2>
+          <p class="section__lead">Filtre por categoria e fale conosco no WhatsApp com a mensagem pronta.</p>
+        </div>
+
+        <div class="filters reveal" role="tablist" aria-label="Filtrar serviços">
+          <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+          <button class="filter" data-filter="grau" role="tab" aria-selected="false">Óculos grau</button>
+          <button class="filter" data-filter="solar" role="tab" aria-selected="false">Solar</button>
+          <button class="filter" data-filter="lentes" role="tab" aria-selected="false">Lentes</button>
+          <button class="filter" data-filter="exame" role="tab" aria-selected="false">Exame</button>
+        </div>
+
+        <div class="services" id="services-grid">
+          <article class="service tilt reveal" data-tilt data-cat="grau">
+            <span class="service__icon" aria-hidden="true">⌀</span>
+            <h3>Óculos de grau</h3>
+            <p>Armações leves e resistentes com montagem precisa da sua receita.</p>
+            <a
+              class="service__link"
+              href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20%C3%B3culos%20de%20grau%20na%20Iris%20%C3%93tica."
+              target="_blank"
+              rel="noopener"
+            >Pedir no WhatsApp →</a>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="solar">
+            <span class="service__icon" aria-hidden="true">☀</span>
+            <h3>Óculos solar</h3>
+            <p>Proteção UV400 com lentes polarizadas e estilos aviador, redondo e quadrado.</p>
+            <a
+              class="service__link"
+              href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20ver%20op%C3%A7%C3%B5es%20de%20%C3%B3culos%20solar%20na%20Iris%20%C3%93tica."
+              target="_blank"
+              rel="noopener"
+            >Pedir no WhatsApp →</a>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="lentes">
+            <span class="service__icon" aria-hidden="true">◎</span>
+            <h3>Lentes premium</h3>
+            <p>Antirreflexo, blue light, fotossensíveis e progressivas de alta definição.</p>
+            <a
+              class="service__link"
+              href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20orienta%C3%A7%C3%A3o%20sobre%20lentes%20premium%20na%20Iris%20%C3%93tica."
+              target="_blank"
+              rel="noopener"
+            >Pedir no WhatsApp →</a>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="exame">
+            <span class="service__icon" aria-hidden="true">✦</span>
+            <h3>Exame de vista</h3>
+            <p>Avaliação visual completa com indicação clara de grau e opções de lentes.</p>
+            <a
+              class="service__link"
+              href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20agendar%20exame%20de%20vista%20na%20Iris%20%C3%93tica."
+              target="_blank"
+              rel="noopener"
+            >Agendar exame →</a>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="grau">
+            <span class="service__icon" aria-hidden="true">◇</span>
+            <h3>Armações design</h3>
+            <p>Curadoria de aros em acetato, metal e titanium — do clássico ao minimal.</p>
+            <a
+              class="service__link"
+              href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20conhecer%20arma%C3%A7%C3%B5es%20design%20na%20Iris%20%C3%93tica."
+              target="_blank"
+              rel="noopener"
+            >Pedir no WhatsApp →</a>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="lentes">
+            <span class="service__icon" aria-hidden="true">⬡</span>
+            <h3>Troca de lentes</h3>
+            <p>Atualize o grau nas suas armações favoritas com montagem cuidadosa.</p>
+            <a
+              class="service__link"
+              href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20trocar%20as%20lentes%20das%20minhas%20arma%C3%A7%C3%B5es%20na%20Iris%20%C3%93tica."
+              target="_blank"
+              rel="noopener"
+            >Pedir no WhatsApp →</a>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="solar">
+            <span class="service__icon" aria-hidden="true">◐</span>
+            <h3>Clip-on magnético</h3>
+            <p>Solução prática: grau + solar em um só conjunto com encaixe magnético.</p>
+            <a
+              class="service__link"
+              href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20saber%20sobre%20clip-on%20magn%C3%A9tico%20na%20Iris%20%C3%93tica."
+              target="_blank"
+              rel="noopener"
+            >Pedir no WhatsApp →</a>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="exame">
+            <span class="service__icon" aria-hidden="true">▣</span>
+            <h3>Ajuste & manutenção</h3>
+            <p>Alinhamento de hastes, limpeza ultrassônica e troca de plaquetas.</p>
+            <a
+              class="service__link"
+              href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Preciso%20de%20ajuste%20ou%20manuten%C3%A7%C3%A3o%20na%20Iris%20%C3%93tica."
+              target="_blank"
+              rel="noopener"
+            >Pedir no WhatsApp →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROVAR / FRAME PICKER -->
+    <section class="section" id="provar">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Provador virtual</span>
+          <h2 class="title">Escolha o <em>estilo do aro.</em></h2>
+          <p class="section__lead">Selecione o formato, veja o preview e envie a preferência pelo WhatsApp.</p>
+        </div>
+
+        <div class="tryon reveal">
+          <div class="tryon__preview" id="frame-preview" data-style="redondo">
+            <div class="tryon__face" aria-hidden="true">
+              <div class="tryon__face-oval"></div>
+              <div class="tryon__frames" id="tryon-frames">
+                <span class="tryon__lens tryon__lens--l"></span>
+                <span class="tryon__bridge"></span>
+                <span class="tryon__lens tryon__lens--r"></span>
+              </div>
+            </div>
+            <p class="tryon__label" id="frame-label">Estilo: Redondo</p>
+          </div>
+
+          <div class="tryon__controls">
+            <fieldset class="tryon__styles">
+              <legend>Estilo do aro</legend>
+              <label class="tryon__option">
+                <input type="radio" name="frame-style" value="redondo" checked />
+                <span>Redondo</span>
+              </label>
+              <label class="tryon__option">
+                <input type="radio" name="frame-style" value="quadrado" />
+                <span>Quadrado</span>
+              </label>
+              <label class="tryon__option">
+                <input type="radio" name="frame-style" value="aviador" />
+                <span>Aviador</span>
+              </label>
+            </fieldset>
+
+            <fieldset class="tryon__colors">
+              <legend>Acabamento</legend>
+              <label class="tryon__swatch" title="Prata">
+                <input type="radio" name="frame-color" value="prata" checked />
+                <span style="--sw: #c8d0dc"></span>
+              </label>
+              <label class="tryon__swatch" title="Preto">
+                <input type="radio" name="frame-color" value="preto" />
+                <span style="--sw: #1a1f2a"></span>
+              </label>
+              <label class="tryon__swatch" title="Champagne">
+                <input type="radio" name="frame-color" value="champagne" />
+                <span style="--sw: #d4b896"></span>
+              </label>
+              <label class="tryon__swatch" title="Cyan ice">
+                <input type="radio" name="frame-color" value="cyan" />
+                <span style="--sw: #7dd3fc"></span>
+              </label>
+            </fieldset>
+
+            <p class="tryon__hint" id="frame-hint">
+              Armação redonda em prata — equilíbrio clássico e leve.
+            </p>
+
+            <a
+              id="frame-wa"
+              class="btn btn--cyan magnetic"
+              href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Tenho%20interesse%20em%20arma%C3%A7%C3%A3o%20estilo%20redondo%20(prata)%20na%20Iris%20%C3%93tica."
+              target="_blank"
+              rel="noopener"
+            >Enviar preferência no WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="section section--alt" id="depoimentos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Depoimentos</span>
+          <h2 class="title">Quem enxerga <em>melhor.</em></h2>
+        </div>
+
+        <div class="testimonials">
+          <blockquote class="quote tilt reveal" data-tilt>
+            <p>“O exame foi cuidadoso e a montagem saiu impecável. Meus óculos de grau ficaram leves e sem reflexo.”</p>
+            <footer>— Marina S.</footer>
+          </blockquote>
+          <blockquote class="quote tilt reveal" data-tilt>
+            <p>“Escolhi um aviador solar com orientação da Eduarda. Atendimento claro e sem pressão.”</p>
+            <footer>— Rafael T.</footer>
+          </blockquote>
+          <blockquote class="quote tilt reveal" data-tilt>
+            <p>“Troquei só as lentes nas armações antigas. Eduardo acertou o grau e o ajuste no mesmo dia.”</p>
+            <footer>— Camila R.</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- EQUIPE -->
+    <section class="section" id="equipe">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Equipe</span>
+          <h2 class="title">Quem cuida do <em>seu olhar.</em></h2>
+        </div>
+
+        <div class="team">
+          <article class="team-card tilt reveal" data-tilt>
+            <div class="team-card__avatar" aria-hidden="true">
+              <span>ED</span>
+              <i class="team-card__ring"></i>
+            </div>
+            <h3>Eduardo Dias</h3>
+            <p class="team-card__role">Óptico</p>
+            <p>Especialista em montagem, lentes progressivas e ajuste fino de armações.</p>
+            <a
+              class="btn btn--ghost btn--sm"
+              href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20o%20%C3%B3ptico%20Eduardo%20Dias%20na%20Iris%20%C3%93tica."
+              target="_blank"
+              rel="noopener"
+            >Falar com Eduardo</a>
+          </article>
+          <article class="team-card tilt reveal" data-tilt>
+            <div class="team-card__avatar team-card__avatar--alt" aria-hidden="true">
+              <span>ED</span>
+              <i class="team-card__ring"></i>
+            </div>
+            <h3>Eduarda Dias</h3>
+            <p class="team-card__role">Atendimento</p>
+            <p>Curadoria de estilos, agendamento de exames e acompanhamento pós-venda.</p>
+            <a
+              class="btn btn--ghost btn--sm"
+              href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20Eduarda%20Dias%20no%20atendimento%20da%20Iris%20%C3%93tica."
+              target="_blank"
+              rel="noopener"
+            >Falar com Eduarda</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXAME / FORM -->
+    <section class="section section--alt" id="exame">
+      <div class="container exame">
+        <div class="exame__copy reveal">
+          <span class="eyebrow">Agendar exame</span>
+          <h2 class="title">Reserve seu <em>horário.</em></h2>
+          <p>
+            Preencha os dados e enviaremos a solicitação direto para o WhatsApp da Iris.
+            Confirmamos disponibilidade em poucos minutos.
+          </p>
+          <ul class="checklist">
+            <li>Duração média: 30–40 minutos</li>
+            <li>Leve sua receita anterior, se tiver</li>
+            <li>Centro de Joinville — SC</li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="exam-form" novalidate>
+          <div class="form__row">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" autocomplete="name" required placeholder="Seu nome completo" />
+          </div>
+          <div class="form__row">
+            <label for="telefone">WhatsApp</label>
+            <input type="tel" id="telefone" name="telefone" autocomplete="tel" required placeholder="(47) 9xxxx-xxxx" />
+          </div>
+          <div class="form__grid">
+            <div class="form__row">
+              <label for="data">Preferência de data</label>
+              <input type="date" id="data" name="data" required />
+            </div>
+            <div class="form__row">
+              <label for="periodo">Período</label>
+              <select id="periodo" name="periodo" required>
+                <option value="">Selecione</option>
+                <option value="Manhã">Manhã</option>
+                <option value="Tarde">Tarde</option>
+                <option value="Noite">Noite</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__row">
+            <label for="motivo">Motivo</label>
+            <select id="motivo" name="motivo" required>
+              <option value="">Selecione</option>
+              <option value="Primeiro exame">Primeiro exame</option>
+              <option value="Atualizar grau">Atualizar grau</option>
+              <option value="Dor de cabeça / visão embaçada">Dor de cabeça / visão embaçada</option>
+              <option value="Troca de lentes">Troca de lentes</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+          <div class="form__row">
+            <label for="obs">Observações</label>
+            <textarea id="obs" name="obs" rows="3" placeholder="Ex.: prefiro armação leve, tenho receita antiga…"></textarea>
+          </div>
+          <button type="submit" class="btn btn--cyan magnetic btn--full">Enviar para o WhatsApp</button>
+          <p class="form__note">Você será redirecionado ao WhatsApp com a mensagem montada.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container faq">
+        <div class="section__head reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2 class="title">Perguntas <em>frequentes.</em></h2>
+        </div>
+
+        <div class="accordion reveal">
+          <details class="acc">
+            <summary>Quanto tempo demora o exame de vista?</summary>
+            <p>Em média 30 a 40 minutos, incluindo conversa sobre hábitos visuais e indicação de lentes.</p>
+          </details>
+          <details class="acc">
+            <summary>Vocês montam óculos com receita de outro local?</summary>
+            <p>Sim. Traga a receita válida e orientamos armação, lentes e prazo de entrega.</p>
+          </details>
+          <details class="acc">
+            <summary>Qual a diferença entre antirreflexo e blue light?</summary>
+            <p>Antirreflexo reduz reflexos e melhora contraste. Blue light filtra parte da luz azul de telas — podem ser combinados.</p>
+          </details>
+          <details class="acc">
+            <summary>Fazem ajuste e manutenção?</summary>
+            <p>Sim. Alinhamos hastes, trocamos plaquetas e realizamos limpeza — agende pelo WhatsApp.</p>
+          </details>
+          <details class="acc">
+            <summary>Onde fica a Iris Ótica?</summary>
+            <p>Centro de Joinville, SC · Brasil. Confirme o endereço exato no WhatsApp ao agendar.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="section section--alt" id="contato">
+      <div class="container contato reveal">
+        <div class="contato__card">
+          <span class="eyebrow">Contato</span>
+          <h2 class="title">Vamos <em>ajustar o foco.</em></h2>
+          <p>Fale com a equipe Iris — Eduardo Dias (óptico) e Eduarda Dias (atendimento).</p>
+
+          <ul class="contato__list">
+            <li>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Iris%20%C3%93tica." target="_blank" rel="noopener">(47) 99207-2891</a>
+            </li>
+            <li>
+              <strong>E-mail</strong>
+              <a href="mailto:edudiasr6@gmail.com">edudiasr6@gmail.com</a>
+            </li>
+            <li>
+              <strong>Endereço</strong>
+              <span>Centro de Joinville, SC · Brasil</span>
+            </li>
+          </ul>
+
+          <div class="contato__actions">
+            <a
+              class="btn btn--cyan magnetic"
+              href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Gostaria%20de%20atendimento%20na%20Iris%20%C3%93tica."
+              target="_blank"
+              rel="noopener"
+            >Abrir WhatsApp</a>
+            <a class="btn btn--ghost magnetic" href="mailto:edudiasr6@gmail.com">Enviar e-mail</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="logo logo--sm">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">Iris<em>Ótica</em></span>
+      </a>
+      <p>© <span id="year"></span> Iris Ótica · Joinville, SC · Projeto de portfólio</p>
+    </div>
+  </footer>
+
+  <a
+    class="float-wa"
+    href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Iris%20%C3%93tica%20e%20quero%20atendimento."
+    target="_blank"
+    rel="noopener"
+    aria-label="WhatsApp Iris Ótica"
+  >
+    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" fill="currentColor">
+      <path d="M20.52 3.48A11.86 11.86 0 0 0 12.06 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.15 1.6 5.96L0 24l6.3-1.65a11.9 11.9 0 0 0 5.76 1.47h.01c6.55 0 11.9-5.34 11.9-11.9 0-3.18-1.24-6.17-3.45-8.44ZM12.06 21.15h-.01a9.24 9.24 0 0 1-4.71-1.29l-.34-.2-3.74.98 1-3.65-.22-.37a9.23 9.23 0 0 1-1.42-4.92c0-5.1 4.15-9.25 9.26-9.25a9.2 9.2 0 0 1 6.55 2.71 9.2 9.2 0 0 1 2.71 6.55c0 5.1-4.15 9.24-9.24 9.24Zm5.07-6.92c-.28-.14-1.64-.81-1.9-.9-.25-.1-.44-.14-.62.14-.18.27-.71.9-.87 1.08-.16.18-.32.2-.6.07-.28-.14-1.17-.43-2.23-1.37-.82-.73-1.38-1.64-1.54-1.92-.16-.27-.02-.42.12-.55.13-.13.28-.32.42-.48.14-.16.18-.27.28-.45.09-.18.05-.34-.02-.48-.07-.14-.62-1.5-.85-2.05-.22-.53-.45-.46-.62-.47h-.53c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.3s.98 2.67 1.12 2.85c.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.57.65.21 1.25.18 1.72.11.52-.08 1.64-.67 1.87-1.32.23-.65.23-1.2.16-1.32-.07-.11-.25-.18-.53-.32Z"/>
+    </svg>
+  </a>
+
+  <button class="to-top" id="to-top" aria-label="Voltar ao topo" type="button">↑</button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
