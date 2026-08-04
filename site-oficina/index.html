@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Torque Auto — Oficina em Joinville, SC</title>
+  <meta name="description" content="Oficina mecânica e auto center em Joinville. Diagnóstico, revisão, freios, suspensão e orçamento pelo WhatsApp." />
+  <meta name="author" content="Torque Auto" />
+  <meta property="og:title" content="Torque Auto — Oficina Joinville" />
+  <meta property="og:description" content="Mecânica precisa, comunicação clara, carro de volta na estrada." />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%080a0e'/><path d='M25 55 L40 30 L55 55 L70 35 L80 55' stroke='%23ffb020' stroke-width='8' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__gauge">
+      <i id="boot-bar"></i>
+    </div>
+    <span class="preloader__text">TORQUE</span>
+  </div>
+
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__grid"></div>
+    <div class="ambient__scan"></div>
+    <span class="ambient__glow ambient__glow--a"></span>
+    <span class="ambient__glow ambient__glow--b"></span>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <span class="cursor__dot"></span>
+    <span class="cursor__ring"></span>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Torque Auto">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">TORQUE<em>AUTO</em></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link active">Início</a></li>
+          <li><a href="#servicos" class="nav__link">Serviços</a></li>
+          <li><a href="#diagnostico" class="nav__link">Diagnóstico</a></li>
+          <li><a href="#orcamento" class="nav__link">Orçamento</a></li>
+          <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#orcamento" class="btn btn--signal btn--sm header__cta magnetic">Orçar agora</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="hero__eyebrow reveal">
+            <span class="live"></span>
+            Joinville · SC · Oficina &amp; Auto Center
+          </p>
+          <h1 class="hero__title reveal">
+            MECÂNICA<br />
+            <em>PRECISA.</em>
+          </h1>
+          <p class="hero__text reveal">
+            Diagnóstico eletrônico, revisão completa e reparos com comunicação clara —
+            você entende o que está sendo feito no seu carro.
+          </p>
+          <div class="hero__actions reveal">
+            <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Preciso%20de%20or%C3%A7amento%20na%20Torque%20Auto." class="btn btn--signal magnetic" target="_blank" rel="noopener">
+              WhatsApp oficina
+            </a>
+            <a href="#diagnostico" class="btn btn--ghost magnetic">Rodar diagnóstico</a>
+          </div>
+          <dl class="hero__stats reveal">
+            <div>
+              <dt data-count="12">0</dt>
+              <dd>anos de pista</dd>
+            </div>
+            <div>
+              <dt data-count="4800" data-suffix="+">0</dt>
+              <dd>carros atendidos</dd>
+            </div>
+            <div>
+              <dt data-count="98" data-suffix="%">0</dt>
+              <dd>no prazo*</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__stage reveal">
+          <div class="hud tilt" data-tilt>
+            <div class="hud__top">
+              <span class="hud__badge">BOX 01 · AO VIVO</span>
+              <span class="hud__clock" id="hud-clock">--:--</span>
+            </div>
+            <div class="hud__screen">
+              <div class="hud__car" aria-hidden="true">
+                <span class="hud__chassis"></span>
+                <span class="hud__wheel hud__wheel--l"></span>
+                <span class="hud__wheel hud__wheel--r"></span>
+                <span class="hud__scanline"></span>
+              </div>
+              <ul class="hud__readings" id="hud-readings">
+                <li class="is-on"><strong>SCAN</strong><span>OBD-II ok</span></li>
+                <li><strong>FREIOS</strong><span>inspeção</span></li>
+                <li><strong>ÓLEO</strong><span>troca agendada</span></li>
+              </ul>
+            </div>
+            <div class="hud__bars">
+              <div>
+                <span>Carga do dia</span>
+                <div class="bar"><i id="load-bar" style="width:68%"></i></div>
+              </div>
+              <div>
+                <span>Boxes livres</span>
+                <strong id="boxes-free">2 / 5</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>DIAGNÓSTICO · REVISÃO · FREIOS · SUSPENSÃO · ARREFECIMENTO · INJEÇÃO · ALINHAMENTO · BALANCEAMENTO ·</span>
+        <span>DIAGNÓSTICO · REVISÃO · FREIOS · SUSPENSÃO · ARREFECIMENTO · INJEÇÃO · ALINHAMENTO · BALANCEAMENTO ·</span>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container about">
+        <div class="about__copy reveal">
+          <span class="tag">A Torque</span>
+          <h2 class="title">Oficina que fala a <em>língua do motorista</em></h2>
+          <p>
+            Sem mistério, sem peça trocada “porque sim”. A Torque mapeia o problema,
+            mostra o caminho e executa com ferramenta certa e prazo alinhado.
+          </p>
+          <ul class="checks">
+            <li>Orçamento antes de qualquer intervenção</li>
+            <li>Fotos e vídeos do problema no WhatsApp</li>
+            <li>Peças originais ou equivalentes aprovados</li>
+            <li>Garantia do serviço por escrito</li>
+          </ul>
+        </div>
+        <div class="about__panels">
+          <article class="panel tilt reveal" data-tilt>
+            <span>01</span>
+            <h3>Leitura</h3>
+            <p>Scanner + inspeção visual e de estrada quando preciso.</p>
+          </article>
+          <article class="panel tilt reveal" data-tilt>
+            <span>02</span>
+            <h3>Plano</h3>
+            <p>Prioridades, custo e prazo — você decide o que fazer agora.</p>
+          </article>
+          <article class="panel tilt reveal" data-tilt>
+            <span>03</span>
+            <h3>Execução</h3>
+            <p>Box organizado, torque certo, teste final.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--deck" id="servicos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Serviços</span>
+          <h2 class="title">O que roda na <em>oficina</em></h2>
+          <p>Filtre e peça orçamento direto.</p>
+        </div>
+
+        <div class="filters reveal">
+          <button class="chip active" data-filter="all">Todos</button>
+          <button class="chip" data-filter="preventiva">Preventiva</button>
+          <button class="chip" data-filter="corretiva">Corretiva</button>
+          <button class="chip" data-filter="eletrica">Elétrica</button>
+          <button class="chip" data-filter="estetica">Estética auto</button>
+        </div>
+
+        <div class="services">
+          <article class="service tilt reveal" data-tilt data-cat="preventiva">
+            <div class="service__led" aria-hidden="true"></div>
+            <span>01</span>
+            <h3>Revisão completa</h3>
+            <p>Checklist por km, fluidos, filtros e itens de segurança.</p>
+            <button type="button" class="link-wa" data-wa="Revisão completa">Orçar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="corretiva">
+            <div class="service__led" aria-hidden="true"></div>
+            <span>02</span>
+            <h3>Freios</h3>
+            <p>Pastilhas, discos, fluido e teste de frenagem.</p>
+            <button type="button" class="link-wa" data-wa="Serviço de freios">Orçar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="corretiva">
+            <div class="service__led" aria-hidden="true"></div>
+            <span>03</span>
+            <h3>Suspensão</h3>
+            <p>Amortecedores, bandejas, pivôs e geometria.</p>
+            <button type="button" class="link-wa" data-wa="Suspensão">Orçar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="eletrica">
+            <div class="service__led" aria-hidden="true"></div>
+            <span>04</span>
+            <h3>Diagnóstico OBD</h3>
+            <p>Leitura de falhas, sensores e injeção eletrônica.</p>
+            <button type="button" class="link-wa" data-wa="Diagnóstico OBD">Orçar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="preventiva">
+            <div class="service__led" aria-hidden="true"></div>
+            <span>05</span>
+            <h3>Troca de óleo</h3>
+            <p>Óleo certo pro motor + filtro e inspeção rápida.</p>
+            <button type="button" class="link-wa" data-wa="Troca de óleo">Orçar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="eletrica">
+            <div class="service__led" aria-hidden="true"></div>
+            <span>06</span>
+            <h3>Partida &amp; bateria</h3>
+            <p>Teste de carga, alternador e sistema elétrico.</p>
+            <button type="button" class="link-wa" data-wa="Partida e bateria">Orçar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="estetica">
+            <div class="service__led" aria-hidden="true"></div>
+            <span>07</span>
+            <h3>Alinhamento</h3>
+            <p>Geometria computadorizada e balanceamento.</p>
+            <button type="button" class="link-wa" data-wa="Alinhamento e balanceamento">Orçar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="corretiva">
+            <div class="service__led" aria-hidden="true"></div>
+            <span>08</span>
+            <h3>Arrefecimento</h3>
+            <p>Radiador, bomba d’água, mangueiras e fluido.</p>
+            <button type="button" class="link-wa" data-wa="Sistema de arrefecimento">Orçar</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="diagnostico">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Diagnóstico rápido</span>
+          <h2 class="title">Marque o que o carro <em>está sentindo</em></h2>
+          <p>Gera uma mensagem pronta pro WhatsApp com os sintomas.</p>
+        </div>
+
+        <div class="diag reveal">
+          <div class="diag__grid" id="diag-grid">
+            <label class="diag__item"><input type="checkbox" value="Luz do motor acesa" /><span>Luz do motor</span></label>
+            <label class="diag__item"><input type="checkbox" value="Barulho na suspensão" /><span>Barulho suspensão</span></label>
+            <label class="diag__item"><input type="checkbox" value="Freio baixo / chiando" /><span>Freio estranho</span></label>
+            <label class="diag__item"><input type="checkbox" value="Superaquecimento" /><span>Superaquecimento</span></label>
+            <label class="diag__item"><input type="checkbox" value="Dificuldade na partida" /><span>Partida difícil</span></label>
+            <label class="diag__item"><input type="checkbox" value="Vibração em alta" /><span>Vibração</span></label>
+            <label class="diag__item"><input type="checkbox" value="Consumo alto" /><span>Consumo alto</span></label>
+            <label class="diag__item"><input type="checkbox" value="Revisão por km" /><span>Revisão por km</span></label>
+          </div>
+          <div class="diag__side">
+            <div class="diag__radar" aria-hidden="true">
+              <span></span><span></span><span></span>
+              <i id="radar-sweep"></i>
+            </div>
+            <p class="diag__hint" id="diag-hint">Selecione os sintomas para montar o chamado.</p>
+            <button type="button" class="btn btn--signal btn--block" id="diag-send">Enviar diagnóstico</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--deck" id="orcamento">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Orçamento</span>
+          <h2 class="title">Estimativa <em>inteligente</em></h2>
+          <p>Simulação educativa — o valor final sai após inspeção.</p>
+        </div>
+
+        <div class="calc reveal">
+          <div class="calc__controls">
+            <label>
+              Serviço principal
+              <select id="calc-service">
+                <option value="280">Revisão completa</option>
+                <option value="450">Freios (eixo)</option>
+                <option value="650">Suspensão (parcial)</option>
+                <option value="180">Diagnóstico OBD</option>
+                <option value="220">Troca de óleo + filtros</option>
+                <option value="160">Alinhamento + balanceamento</option>
+              </select>
+            </label>
+            <label>
+              Urgência
+              <input type="range" id="calc-urgency" min="0" max="2" step="1" value="1" />
+              <output id="calc-urgency-out">Normal</output>
+            </label>
+            <label>
+              Ano do veículo (aprox.)
+              <input type="number" id="calc-year" min="1995" max="2026" value="2018" />
+            </label>
+            <p class="calc__note">Valores de referência pra Joinville. Peças sob consulta.</p>
+          </div>
+          <div class="calc__result tilt" data-tilt>
+            <span>Faixa estimada</span>
+            <strong id="calc-range">R$ 280 — R$ 360</strong>
+            <em id="calc-label">Revisão · prazo padrão</em>
+            <button type="button" class="btn btn--signal btn--block" id="calc-wa">Pedir orçamento real</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="fluxo">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Fluxo</span>
+          <h2 class="title">Do chamado à <em>entrega</em></h2>
+        </div>
+        <ol class="flow">
+          <li class="reveal"><span>01</span><div><h3>Intake</h3><p>Você descreve o sintoma — ou traz o carro direto.</p></div></li>
+          <li class="reveal"><span>02</span><div><h3>Scan</h3><p>Diagnóstico e inspeção com registro visual.</p></div></li>
+          <li class="reveal"><span>03</span><div><h3>OK</h3><p>Orçamento aprovado, prazo travado.</p></div></li>
+          <li class="reveal"><span>04</span><div><h3>Go</h3><p>Execução, teste e entrega com checklist.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--deck" id="equipe">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Equipe</span>
+          <h2 class="title">Quem coloca a <em>mão na massa</em></h2>
+        </div>
+        <div class="team">
+          <article class="team-card tilt reveal" data-tilt>
+            <div class="team-card__badge">BOX LEAD</div>
+            <div class="team-card__avatar">ED</div>
+            <h3>Eduardo Dias</h3>
+            <p class="team-card__role">Mecânico · Diagnóstico &amp; motor</p>
+            <p>Especialista em injeção, ruídos e diagnósticos que outros pulam.</p>
+          </article>
+          <article class="team-card tilt reveal" data-tilt>
+            <div class="team-card__badge team-card__badge--alt">CLIENT DESK</div>
+            <div class="team-card__avatar team-card__avatar--alt">ED</div>
+            <h3>Eduarda Dias</h3>
+            <p class="team-card__role">Atendimento · Orçamentos &amp; prazo</p>
+            <p>Traduz o técnico pro motorista e mantém você no loop do WhatsApp.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="depoimentos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Clientes</span>
+          <h2 class="title">Quem já passou no <em>box</em></h2>
+        </div>
+        <div class="quotes">
+          <blockquote class="quote reveal">
+            <p>“Achei o barulho, mandaram vídeo da peça e o preço antes de trocar. Raro.”</p>
+            <footer>— André · Gol · Centro</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“Revisão no prazo. Checklist no celular. Virei cliente fixo.”</p>
+            <footer>— Renata · Corolla · América</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“Diagnóstico acertou de primeira. Economizei troca errada.”</p>
+            <footer>— Lucas · HB20 · Costa e Silva</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--deck" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head reveal">
+          <span class="tag">FAQ</span>
+          <h2 class="title">Dúvidas da <em>pista</em></h2>
+        </div>
+        <div class="faq">
+          <details class="faq-item reveal">
+            <summary>Preciso agendar?<span></span></summary>
+            <p>Recomendado. Encaixes no mesmo dia dependem da fila dos boxes.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Vocês fornecem peça?<span></span></summary>
+            <p>Sim — ou trabalhamos com peça que você trouxer, com alinhamento prévio.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Tem garantia?<span></span></summary>
+            <p>Serviço com garantia por escrito. Prazo varia conforme o tipo de reparo.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Fazem carro de passeio e utilitário?<span></span></summary>
+            <p>Sim. Leves e utilitários pequenos. Consulte para vans e frotas.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta__inner reveal">
+        <div>
+          <h2>Seu carro pedindo socorro?</h2>
+          <p>Manda o sintoma agora — a gente responde com o próximo passo.</p>
+        </div>
+        <a href="#contato" class="btn btn--dark magnetic">Abrir chamado</a>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="container contact">
+        <div class="contact__info reveal">
+          <span class="tag">Contato</span>
+          <h2 class="title">Fale com a <em>Torque</em></h2>
+          <ul class="contact__list">
+            <li>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/5547992072891">(47) 99207-2891</a>
+            </li>
+            <li>
+              <strong>E-mail</strong>
+              <a href="mailto:edudiasr6@gmail.com">edudiasr6@gmail.com</a>
+            </li>
+            <li>
+              <strong>Endereço</strong>
+              <span>Centro de Joinville<br />Joinville — SC · Brasil</span>
+            </li>
+            <li>
+              <strong>Horário</strong>
+              <span>Seg a Sex · 08h–18h<br />Sáb · 08h–12h</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contact-form" novalidate>
+          <h3>Abrir chamado</h3>
+          <p class="form__lead">Quanto mais detalhe, mais rápido o diagnóstico.</p>
+
+          <div class="form__row">
+            <label>
+              Nome
+              <input type="text" name="name" required placeholder="Seu nome" autocomplete="name" />
+              <span class="form__error">Informe seu nome.</span>
+            </label>
+            <label>
+              WhatsApp
+              <input type="tel" name="phone" required placeholder="(47) 99207-2891" autocomplete="tel" inputmode="tel" />
+              <span class="form__error">Informe um telefone válido.</span>
+            </label>
+          </div>
+          <div class="form__row">
+            <label>
+              Veículo
+              <input type="text" name="car" required placeholder="Ex.: Onix 2020" />
+              <span class="form__error">Informe o veículo.</span>
+            </label>
+            <label>
+              Serviço
+              <select name="service" required>
+                <option value="" disabled selected>Selecione</option>
+                <option>Diagnóstico</option>
+                <option>Revisão</option>
+                <option>Freios</option>
+                <option>Suspensão</option>
+                <option>Óleo</option>
+                <option>Elétrica</option>
+                <option>Outro</option>
+              </select>
+              <span class="form__error">Escolha o serviço.</span>
+            </label>
+          </div>
+          <label>
+            Sintoma / observação
+            <textarea name="message" rows="3" placeholder="Quando acontece, barulho, luz no painel..."></textarea>
+          </label>
+          <button type="submit" class="btn btn--signal btn--block">Enviar no WhatsApp</button>
+          <p class="form__ok" id="form-ok" hidden>Abrindo o WhatsApp…</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="logo">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">TORQUE<em>AUTO</em></span>
+      </a>
+      <p>Centro de Joinville · SC · Brasil</p>
+      <p>© <span id="year"></span> Torque Auto · Portfólio</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20Torque%20Auto." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  </a>
+
+  <button class="to-top" id="to-top" aria-label="Voltar ao topo">↑</button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

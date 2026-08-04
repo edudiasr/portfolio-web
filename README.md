@@ -22,6 +22,7 @@ Depois de ativar o GitHub Pages:
 - **Pulse (Academia):** https://edudiasr.github.io/portfolio-web/site-academia/
 - **Levain (Padaria):** https://edudiasr.github.io/portfolio-web/site-padaria/
 - **Opaline (Estética):** https://edudiasr.github.io/portfolio-web/site-salao/
+- **Torque Auto (Oficina):** https://edudiasr.github.io/portfolio-web/site-oficina/
 
 ---
 
@@ -40,18 +41,18 @@ Depois de ativar o GitHub Pages:
 | [`site-academia`](./site-academia) | Academia — preto/amarelo, foto, grade, trial WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-padaria`](./site-padaria) | Padaria — espresso/manteiga, carrinho, encomendas WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-salao`](./site-salao) | Estética — plum/champagne, ritual, pacotes, agenda WhatsApp | HTML · CSS · JS | ✅ Pronto |
+| [`site-oficina`](./site-oficina) | Oficina — asphalt/âmbar, HUD, diagnóstico, orçamento WhatsApp | HTML · CSS · JS | ✅ Pronto |
 
 ### Próximos na fila
 
-1. Oficina mecânica  
-2. Contabilidade  
-3. Escola de idiomas  
-4. Arquitetura / interiores  
-5. Cafeteria / açaí  
-6. Lavanderia  
-7. Fisioterapia / pilates  
-8. Construtora / reformas  
-9. Ótica · Hotel · Escola de música · Corretora de seguros
+1. Contabilidade  
+2. Escola de idiomas  
+3. Arquitetura / interiores  
+4. Cafeteria / açaí  
+5. Lavanderia  
+6. Fisioterapia / pilates  
+7. Construtora / reformas  
+8. Ótica · Hotel · Escola de música · Corretora de seguros
 
 ---
 
