@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ciclo — Lavanderia em Joinville, SC</title>
+  <meta name="description" content="Lavanderia self-service e com atendimento em Joinville. Lavagem, secagem, passagem e coleta pelo WhatsApp." />
+  <meta name="author" content="Ciclo Lavanderia" />
+  <meta property="og:title" content="Ciclo — Lavanderia Joinville" />
+  <meta property="og:description" content="Roupa limpa, no prazo, sem stress." />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%080e12'/><circle cx='50' cy='50' r='28' fill='none' stroke='%233ecfcf' stroke-width='8'/><circle cx='50' cy='50' r='10' fill='%237dd3fc'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__drum" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+    <p class="preloader__label">Iniciando ciclo…</p>
+  </div>
+
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__wash ambient__wash--a"></div>
+    <div class="ambient__wash ambient__wash--b"></div>
+    <div class="ambient__steam" id="steam"></div>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <span class="cursor__dot"></span>
+    <span class="cursor__ring"></span>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Ciclo Lavanderia">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">Ciclo<em>lavanderia</em></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link active">Início</a></li>
+          <li><a href="#servicos" class="nav__link">Serviços</a></li>
+          <li><a href="#calcular" class="nav__link">Calcular</a></li>
+          <li><a href="#coleta" class="nav__link">Coleta</a></li>
+          <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#coleta" class="btn btn--aqua btn--sm header__cta magnetic">Agendar coleta</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="hero__eyebrow reveal">
+            <span class="live"></span>
+            Joinville · SC · Self-service &amp; full service
+          </p>
+          <h1 class="hero__title reveal">
+            Roupa limpa.<br />
+            <em>Ciclo fechado.</em>
+          </h1>
+          <p class="hero__text reveal">
+            Lavagem, secagem e passagem com prazo claro —
+            você deixa, a gente devolve cheiroso. Ou usa as máquinas no self.
+          </p>
+          <div class="hero__actions reveal">
+            <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20Ciclo." class="btn btn--aqua magnetic" target="_blank" rel="noopener">
+              WhatsApp
+            </a>
+            <a href="#calcular" class="btn btn--ghost magnetic">Calcular preço</a>
+          </div>
+          <dl class="hero__stats reveal">
+            <div>
+              <dt data-count="8">0</dt>
+              <dd>anos no Centro</dd>
+            </div>
+            <div>
+              <dt data-count="24">0</dt>
+              <dd>máquinas ativas</dd>
+            </div>
+            <div>
+              <dt data-count="98" data-suffix="%">0</dt>
+              <dd>no prazo</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__stage reveal">
+          <div class="machine tilt" data-tilt>
+            <div class="machine__top">
+              <span class="machine__badge">UNIDADE 04 · AO VIVO</span>
+              <span class="machine__timer" id="machine-timer">32:14</span>
+            </div>
+            <div class="machine__drum" aria-hidden="true">
+              <div class="machine__glass">
+                <div class="machine__spin" id="machine-spin">
+                  <i></i><i></i><i></i><i></i>
+                </div>
+                <div class="machine__bubbles">
+                  <span></span><span></span><span></span><span></span><span></span>
+                </div>
+              </div>
+            </div>
+            <div class="machine__bars">
+              <div>
+                <span>Ciclo</span>
+                <div class="bar"><i id="cycle-bar" style="width:64%"></i></div>
+              </div>
+              <div>
+                <span>Status</span>
+                <strong id="cycle-status">Centrifugando</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>LAVAR · SECAR · PASSAR · EDREDOM · TAPETE · UNIFORME · COLETA · ENTREGA · SELF-SERVICE · FULL SERVICE ·</span>
+        <span>LAVAR · SECAR · PASSAR · EDREDOM · TAPETE · UNIFORME · COLETA · ENTREGA · SELF-SERVICE · FULL SERVICE ·</span>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container about">
+        <div class="about__copy reveal">
+          <span class="tag">A Ciclo</span>
+          <h2 class="title">Menos fila. Mais <em>frescor</em>.</h2>
+          <p>
+            Ambiente climatizado, detergente incluso no self e equipe pra
+            quem prefere deixar tudo conosco. Coleta no Centro sob agendamento.
+          </p>
+          <ul class="checks">
+            <li>Self 7h–22h · todos os dias</li>
+            <li>Full service com prazo combinado</li>
+            <li>Detergente e amaciante inclusos</li>
+            <li>Pix, cartão e WhatsApp</li>
+          </ul>
+        </div>
+        <div class="about__cards">
+          <article class="glass tilt reveal" data-tilt>
+            <span>01</span>
+            <h3>Self</h3>
+            <p>Você lava e seca no seu ritmo — tokens e Pix na hora.</p>
+          </article>
+          <article class="glass tilt reveal" data-tilt>
+            <span>02</span>
+            <h3>Full</h3>
+            <p>Deixa o saco, a gente lava, seca e passa se pedir.</p>
+          </article>
+          <article class="glass tilt reveal" data-tilt>
+            <span>03</span>
+            <h3>Coleta</h3>
+            <p>Buscamos e devolvemos no endereço no Centro.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="servicos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Serviços</span>
+          <h2 class="title">O que a gente <em>roda</em></h2>
+          <p>Filtre e peça orçamento no Zap.</p>
+        </div>
+
+        <div class="filters reveal">
+          <button class="chip active" type="button" data-filter="all">Todos</button>
+          <button class="chip" type="button" data-filter="self">Self</button>
+          <button class="chip" type="button" data-filter="full">Full service</button>
+          <button class="chip" type="button" data-filter="especial">Especiais</button>
+        </div>
+
+        <div class="services">
+          <article class="service tilt reveal" data-tilt data-cat="self">
+            <span>01</span>
+            <h3>Lavagem self</h3>
+            <p>Máquinas 10–18 kg · ciclo rápido ou delicado.</p>
+            <button type="button" class="link-wa" data-wa="Lavagem self-service">Consultar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="self">
+            <span>02</span>
+            <h3>Secagem self</h3>
+            <p>Secadoras potentes · tempo por ciclo.</p>
+            <button type="button" class="link-wa" data-wa="Secagem self-service">Consultar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="full">
+            <span>03</span>
+            <h3>Lavagem + secagem</h3>
+            <p>Por kg · prazo 24–48h conforme volume.</p>
+            <button type="button" class="link-wa" data-wa="Lavagem e secagem full">Consultar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="full">
+            <span>04</span>
+            <h3>Passadoria</h3>
+            <p>Camisas, sociais e uniformes com capricho.</p>
+            <button type="button" class="link-wa" data-wa="Passadoria">Consultar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="especial">
+            <span>05</span>
+            <h3>Edredom &amp; cobertor</h3>
+            <p>Máquinas grandes · secagem controlada.</p>
+            <button type="button" class="link-wa" data-wa="Edredom e cobertor">Consultar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="especial">
+            <span>06</span>
+            <h3>Tapete</h3>
+            <p>Lavagem profunda e secagem ao ar/máquina.</p>
+            <button type="button" class="link-wa" data-wa="Lavagem de tapete">Consultar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="full">
+            <span>07</span>
+            <h3>Uniformes</h3>
+            <p>Pacotes semanais pra empresas e clínicas.</p>
+            <button type="button" class="link-wa" data-wa="Uniformes empresariais">Consultar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="especial">
+            <span>08</span>
+            <h3>Tênis &amp; bolsa</h3>
+            <p>Limpeza cuidadosa sob avaliação.</p>
+            <button type="button" class="link-wa" data-wa="Tênis e bolsa">Consultar</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="calcular">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Simulador</span>
+          <h2 class="title">Calcule o <em>ciclo</em></h2>
+          <p>Estimativa rápida — valor final na balança.</p>
+        </div>
+
+        <div class="calc reveal">
+          <div class="calc__controls">
+            <label>
+              Serviço
+              <select id="calc-service">
+                <option value="12" data-label="Lavagem + secagem (kg)">Lavagem + secagem</option>
+                <option value="8" data-label="Só lavagem (kg)">Só lavagem</option>
+                <option value="18" data-label="Lavagem + secagem + passagem (kg)">Com passadoria</option>
+                <option value="45" data-label="Edredom (unidade)">Edredom (un.)</option>
+                <option value="35" data-label="Tapete pequeno (un.)">Tapete pequeno</option>
+              </select>
+            </label>
+            <label>
+              Quantidade <span id="calc-unit">(kg)</span>
+              <div class="calc__range">
+                <input type="range" id="calc-qty" min="1" max="30" step="1" value="5" />
+                <output id="calc-qty-out">5 kg</output>
+              </div>
+            </label>
+            <label>
+              Urgência
+              <input type="range" id="calc-urgency" min="0" max="2" step="1" value="1" />
+              <output id="calc-urgency-out">Padrão 24–48h</output>
+            </label>
+            <p class="calc__note">Self-service tem tabela fixa por máquina — consulte no balcão.</p>
+          </div>
+          <div class="calc__result tilt" data-tilt>
+            <span>Estimativa</span>
+            <strong id="calc-total">R$ 60</strong>
+            <em id="calc-label">Lavagem + secagem · 5 kg</em>
+            <button type="button" class="btn btn--aqua btn--block" id="calc-wa">Pedir orçamento real</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="status">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Acompanhar</span>
+          <h2 class="title">Status do <em>pedido</em> demo</h2>
+          <p>Assim você vê o andamento — peça real via WhatsApp.</p>
+        </div>
+        <div class="track reveal">
+          <ol class="track__steps" id="track-steps">
+            <li class="is-done"><span>01</span><div><h3>Recebido</h3><p>Saco etiquetado</p></div></li>
+            <li class="is-done"><span>02</span><div><h3>Lavando</h3><p>Ciclo em andamento</p></div></li>
+            <li class="is-on"><span>03</span><div><h3>Secando</h3><p>Quase lá</p></div></li>
+            <li><span>04</span><div><h3>Pronto</h3><p>Pode retirar</p></div></li>
+          </ol>
+          <button type="button" class="btn btn--ghost" id="track-next">Avançar demo</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="coleta">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Coleta</span>
+          <h2 class="title">Agende a <em>busca</em></h2>
+          <p>Centro de Joinville · montamos a mensagem pro Zap.</p>
+        </div>
+
+        <div class="pickup reveal">
+          <div class="pickup__controls">
+            <label>
+              Tipo
+              <select id="pick-type">
+                <option>Lavagem + secagem</option>
+                <option>Com passadoria</option>
+                <option>Edredom / cobertor</option>
+                <option>Uniformes</option>
+                <option>Outro</option>
+              </select>
+            </label>
+            <label>
+              Dia preferido
+              <select id="pick-day">
+                <option>Hoje</option>
+                <option selected>Amanhã</option>
+                <option>Esta semana</option>
+              </select>
+            </label>
+            <label>
+              Janela
+              <div class="seg" id="pick-slot">
+                <button type="button" class="active" data-slot="Manhã">Manhã</button>
+                <button type="button" data-slot="Tarde">Tarde</button>
+                <button type="button" data-slot="Noite">Noite</button>
+              </div>
+            </label>
+            <label>
+              Bairro / referência
+              <input type="text" id="pick-area" placeholder="Ex.: Centro, perto da praça" />
+            </label>
+          </div>
+          <div class="pickup__card tilt" data-tilt>
+            <span>Resumo</span>
+            <strong id="pick-summary">Lavagem + secagem · Amanhã · Manhã</strong>
+            <p>Confirmamos disponibilidade e valor no WhatsApp.</p>
+            <button type="button" class="btn btn--aqua btn--block" id="pick-wa">Agendar no WhatsApp</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="precos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Self</span>
+          <h2 class="title">Tabela <em>rápida</em> self</h2>
+        </div>
+        <div class="price-grid">
+          <article class="price tilt reveal" data-tilt>
+            <h3>Lavadora 10 kg</h3>
+            <strong>R$ 18</strong>
+            <p>Ciclo completo · detergente incluso</p>
+          </article>
+          <article class="price tilt reveal" data-tilt>
+            <h3>Lavadora 18 kg</h3>
+            <strong>R$ 28</strong>
+            <p>Ideal pra volume / edredom fino</p>
+          </article>
+          <article class="price tilt reveal" data-tilt>
+            <h3>Secadora</h3>
+            <strong>R$ 14</strong>
+            <p>Por ciclo · tempo na máquina</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="equipe">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Equipe</span>
+          <h2 class="title">Quem mantém o <em>ciclo</em></h2>
+        </div>
+        <div class="team">
+          <article class="team-card tilt reveal" data-tilt>
+            <div class="team-card__avatar">ED</div>
+            <p class="team-card__role">Operação · Full service</p>
+            <h3>Eduardo Dias</h3>
+            <p>Máquinas, prazos e o fluxo do full pra nada atrasar.</p>
+          </article>
+          <article class="team-card tilt reveal" data-tilt>
+            <div class="team-card__avatar team-card__avatar--alt">ED</div>
+            <p class="team-card__role">Atendimento · Coletas</p>
+            <h3>Eduarda Dias</h3>
+            <p>WhatsApp, agendamentos e o sorriso na entrega.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="depoimentos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Clientes</span>
+          <h2 class="title">Quem já <em>tirou</em> o peso da cesta</h2>
+        </div>
+        <div class="quotes">
+          <blockquote class="quote reveal">
+            <p>“Self limpo, rápido e com wi-fi. Virei cliente fixo.”</p>
+            <footer>— Ana · Centro</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“Coleta na terça, roupa de volta na quinta. Perfeito.”</p>
+            <footer>— Marcos · América</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“Edredom ficou impecável. Preço justo.”</p>
+            <footer>— Paula · Anita</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head reveal">
+          <span class="tag">FAQ</span>
+          <h2 class="title">Dúvidas <em>comuns</em></h2>
+        </div>
+        <div class="faq">
+          <details class="faq-item reveal">
+            <summary>Preciso levar sabão no self?<span></span></summary>
+            <p>Não — detergente e amaciante já estão inclusos nas máquinas.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Qual o prazo do full service?<span></span></summary>
+            <p>Em geral 24–48h. Express sob consulta e disponibilidade.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Coleta fora do Centro?<span></span></summary>
+            <p>Priorizamos o Centro; outros bairros sob avaliação no WhatsApp.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Aceitam peças delicadas?<span></span></summary>
+            <p>Sim, com ciclo delicado e avaliação prévia de riscos.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta__inner reveal">
+        <div>
+          <h2>Cesta cheia demais?</h2>
+          <p>Agenda a coleta ou calcula o full agora.</p>
+        </div>
+        <a href="#coleta" class="btn btn--dark magnetic">Agendar coleta</a>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="container contact">
+        <div class="contact__info reveal">
+          <span class="tag">Contato</span>
+          <h2 class="title">Fale com a <em>Ciclo</em></h2>
+          <ul class="contact__list">
+            <li>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/5547992072891">(47) 99207-2891</a>
+            </li>
+            <li>
+              <strong>E-mail</strong>
+              <a href="mailto:edudiasr6@gmail.com">edudiasr6@gmail.com</a>
+            </li>
+            <li>
+              <strong>Endereço</strong>
+              <span>Centro de Joinville<br />Joinville — SC · Brasil</span>
+            </li>
+            <li>
+              <strong>Horário</strong>
+              <span>Self · 07h–22h todos os dias<br />Balcão · Seg a Sáb 08h–20h</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contact-form" novalidate>
+          <h3>Mensagem</h3>
+          <p class="form__lead">Orçamento, coleta ou dúvida rápida.</p>
+
+          <div class="form__row">
+            <label>
+              Nome
+              <input type="text" name="name" required placeholder="Seu nome" autocomplete="name" />
+              <span class="form__error">Informe seu nome.</span>
+            </label>
+            <label>
+              WhatsApp
+              <input type="tel" name="phone" required placeholder="(47) 99207-2891" autocomplete="tel" inputmode="tel" />
+              <span class="form__error">Informe um telefone válido.</span>
+            </label>
+          </div>
+          <label>
+            Interesse
+            <select name="interest" required>
+              <option value="" disabled selected>Selecione</option>
+              <option>Full service</option>
+              <option>Coleta / entrega</option>
+              <option>Edredom / tapete</option>
+              <option>Uniformes</option>
+              <option>Self-service</option>
+              <option>Outro</option>
+            </select>
+            <span class="form__error">Escolha o interesse.</span>
+          </label>
+          <label>
+            Mensagem
+            <textarea name="message" rows="3" placeholder="Volume aproximado, prazo, endereço..."></textarea>
+          </label>
+          <button type="submit" class="btn btn--aqua btn--block">Enviar no WhatsApp</button>
+          <p class="form__ok" id="form-ok" hidden>Abrindo o WhatsApp…</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="logo">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">Ciclo<em>lavanderia</em></span>
+      </a>
+      <p>Centro de Joinville · SC · Brasil</p>
+      <p>© <span id="year"></span> Ciclo · Portfólio</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20falar%20com%20a%20Ciclo." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  </a>
+
+  <button class="to-top" id="to-top" aria-label="Voltar ao topo">↑</button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

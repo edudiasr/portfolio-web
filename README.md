@@ -27,6 +27,7 @@ Depois de ativar o GitHub Pages:
 - **Echo Idiomas:** https://edudiasr.github.io/portfolio-web/site-idiomas/
 - **Traço Studio (Arquitetura):** https://edudiasr.github.io/portfolio-web/site-arquitetura/
 - **Pulp (Café & Açaí):** https://edudiasr.github.io/portfolio-web/site-cafeteria/
+- **Ciclo (Lavanderia):** https://edudiasr.github.io/portfolio-web/site-lavanderia/
 
 ---
 
@@ -50,13 +51,13 @@ Depois de ativar o GitHub Pages:
 | [`site-idiomas`](./site-idiomas) | Idiomas — night/sky, chat EN/ES/DE, quiz CEFR, experimental WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-arquitetura`](./site-arquitetura) | Arquitetura — charcoal/cobre, planta, antes/depois, mood, estimativa | HTML · CSS · JS | ✅ Pronto |
 | [`site-cafeteria`](./site-cafeteria) | Café & açaí — berry/lime, bowl builder, carrinho, pedido WhatsApp | HTML · CSS · JS | ✅ Pronto |
+| [`site-lavanderia`](./site-lavanderia) | Lavanderia — slate/aqua, máquina ao vivo, calculadora, coleta WhatsApp | HTML · CSS · JS | ✅ Pronto |
 
 ### Próximos na fila
 
-1. Lavanderia  
-2. Fisioterapia / pilates  
-3. Construtora / reformas  
-4. Ótica · Hotel · Escola de música · Corretora de seguros
+1. Fisioterapia / pilates  
+2. Construtora / reformas  
+3. Ótica · Hotel · Escola de música · Corretora de seguros
 
 ---
 
