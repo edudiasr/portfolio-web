@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Echo Idiomas — Escola em Joinville, SC</title>
+  <meta name="description" content="Escola de idiomas em Joinville. Inglês, espanhol e mais — aulas presenciais e online, teste de nível e aula experimental." />
+  <meta name="author" content="Echo Idiomas" />
+  <meta property="og:title" content="Echo Idiomas — Joinville" />
+  <meta property="og:description" content="Fale com confiança. Estude com método." />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%080b14'/><path d='M22 50 Q38 28 50 50 Q62 72 78 50' stroke='%2358a6ff' stroke-width='8' fill='none' stroke-linecap='round'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600;7..72,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <p class="preloader__type" id="boot-type">Hello</p>
+    <div class="preloader__wave" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+  </div>
+
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__glow ambient__glow--a"></div>
+    <div class="ambient__glow ambient__glow--b"></div>
+    <div class="ambient__dots"></div>
+    <div class="ambient__waves"></div>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <span class="cursor__dot"></span>
+    <span class="cursor__ring"></span>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Echo Idiomas">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">Echo<em>Idiomas</em></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link active">Início</a></li>
+          <li><a href="#cursos" class="nav__link">Cursos</a></li>
+          <li><a href="#nivel" class="nav__link">Nível</a></li>
+          <li><a href="#metodo" class="nav__link">Método</a></li>
+          <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#aula" class="btn btn--sky btn--sm header__cta magnetic">Aula experimental</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="hero__eyebrow reveal">
+            <span class="live"></span>
+            Joinville · SC · Presencial &amp; online
+          </p>
+          <h1 class="hero__title reveal">
+            Fale com<br />
+            <em id="hero-word">confiança.</em>
+          </h1>
+          <p class="hero__text reveal">
+            Inglês, espanhol e outros idiomas com foco em conversação real —
+            turmas pequenas, feedback constante e progresso que você sente.
+          </p>
+          <div class="hero__actions reveal">
+            <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20conhecer%20a%20Echo%20Idiomas." class="btn btn--sky magnetic" target="_blank" rel="noopener">
+              WhatsApp da escola
+            </a>
+            <a href="#nivel" class="btn btn--ghost magnetic">Testar meu nível</a>
+          </div>
+          <dl class="hero__stats reveal">
+            <div>
+              <dt data-count="14">0</dt>
+              <dd>anos formando fluentes</dd>
+            </div>
+            <div>
+              <dt data-count="1200" data-suffix="+">0</dt>
+              <dd>alunos formados</dd>
+            </div>
+            <div>
+              <dt data-count="8">0</dt>
+              <dd>idiomas ativos</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__stage reveal">
+          <div class="console tilt" data-tilt>
+            <div class="console__top">
+              <span class="console__badge">LIVE CLASS</span>
+              <div class="console__langs" id="lang-switch" role="tablist" aria-label="Idioma da demo">
+                <button type="button" class="active" data-lang="en">EN</button>
+                <button type="button" data-lang="es">ES</button>
+                <button type="button" data-lang="de">DE</button>
+              </div>
+            </div>
+            <div class="console__chat" id="demo-chat" aria-live="polite"></div>
+            <div class="console__wave" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="console__foot">
+              <span>Turma A2 · Conversação</span>
+              <strong id="console-level">Speaking · 78%</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>HELLO · HOLA · HALLO · BONJOUR · CIAO · OLÁ · こんにちは · 你好 · HELLO · HOLA · HALLO · BONJOUR · CIAO · OLÁ ·</span>
+        <span>HELLO · HOLA · HALLO · BONJOUR · CIAO · OLÁ · こんにちは · 你好 · HELLO · HOLA · HALLO · BONJOUR · CIAO · OLÁ ·</span>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container about">
+        <div class="about__copy reveal">
+          <span class="tag">A Echo</span>
+          <h2 class="title">Idioma não é prova. É <em>voz.</em></h2>
+          <p>
+            Menos decorar regra solta, mais praticar o que você vai usar —
+            entrevista, viagem, cliente internacional ou o próximo passo da carreira.
+          </p>
+          <ul class="bullets">
+            <li>Turmas de até 8 alunos</li>
+            <li>Professores nativos e bilíngues</li>
+            <li>Material digital incluso</li>
+            <li>Repos de nível gratuito</li>
+          </ul>
+        </div>
+        <div class="about__cards">
+          <article class="glass tilt reveal" data-tilt>
+            <span>01</span>
+            <h3>Ouvir</h3>
+            <p>Input rico: áudio, vídeo e contextos reais desde a primeira semana.</p>
+          </article>
+          <article class="glass tilt reveal" data-tilt>
+            <span>02</span>
+            <h3>Falar</h3>
+            <p>Role-plays, debates e correção gentil — erro faz parte do treino.</p>
+          </article>
+          <article class="glass tilt reveal" data-tilt>
+            <span>03</span>
+            <h3>Dominar</h3>
+            <p>Metas CEFR claras e simulados de certificação quando fizer sentido.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="cursos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Cursos</span>
+          <h2 class="title">Escolha o idioma. A gente <em>guia</em> o caminho.</h2>
+          <p>Filtre e peça uma aula experimental.</p>
+        </div>
+
+        <div class="filters reveal">
+          <button class="chip active" type="button" data-filter="all">Todos</button>
+          <button class="chip" type="button" data-filter="en">Inglês</button>
+          <button class="chip" type="button" data-filter="es">Espanhol</button>
+          <button class="chip" type="button" data-filter="other">Outros</button>
+          <button class="chip" type="button" data-filter="kids">Kids</button>
+        </div>
+
+        <div class="courses">
+          <article class="course tilt reveal" data-tilt data-cat="en">
+            <div class="course__flag">EN</div>
+            <h3>Inglês Geral</h3>
+            <p>A1 → C1 com foco em conversação e gramática aplicada.</p>
+            <ul>
+              <li>2x por semana</li>
+              <li>Presencial ou online</li>
+            </ul>
+            <button type="button" class="link-wa" data-wa="Inglês Geral — aula experimental">Experimentar</button>
+          </article>
+          <article class="course tilt reveal" data-tilt data-cat="en">
+            <div class="course__flag">EN</div>
+            <h3>Business English</h3>
+            <p>Reuniões, e-mails, pitches e vocabulário corporativo.</p>
+            <ul>
+              <li>Turmas noturnas</li>
+              <li>In company sob consulta</li>
+            </ul>
+            <button type="button" class="link-wa" data-wa="Business English — aula experimental">Experimentar</button>
+          </article>
+          <article class="course tilt reveal" data-tilt data-cat="es">
+            <div class="course__flag course__flag--es">ES</div>
+            <h3>Español Comunicativo</h3>
+            <p>Do zero à fluência com ênfase em latam e Espanha.</p>
+            <ul>
+              <li>Conversação intensa</li>
+              <li>Cultura inclusa</li>
+            </ul>
+            <button type="button" class="link-wa" data-wa="Espanhol — aula experimental">Experimentar</button>
+          </article>
+          <article class="course tilt reveal" data-tilt data-cat="other">
+            <div class="course__flag course__flag--de">DE</div>
+            <h3>Alemão</h3>
+            <p>Base sólida para estudo, trabalho e certificação Goethe.</p>
+            <ul>
+              <li>Turmas A1–B1</li>
+              <li>Grupos reduzidos</li>
+            </ul>
+            <button type="button" class="link-wa" data-wa="Alemão — aula experimental">Experimentar</button>
+          </article>
+          <article class="course tilt reveal" data-tilt data-cat="other">
+            <div class="course__flag course__flag--fr">FR</div>
+            <h3>Français</h3>
+            <p>Pronúncia, conversação e preparação DELF.</p>
+            <ul>
+              <li>Presencial</li>
+              <li>Material próprio</li>
+            </ul>
+            <button type="button" class="link-wa" data-wa="Francês — aula experimental">Experimentar</button>
+          </article>
+          <article class="course tilt reveal" data-tilt data-cat="kids">
+            <div class="course__flag course__flag--kids">KIDS</div>
+            <h3>Kids &amp; Teens</h3>
+            <p>Inglês lúdico 6–15 anos — jogos, stories e confiança.</p>
+            <ul>
+              <li>Sábados</li>
+              <li>Relatório aos pais</li>
+            </ul>
+            <button type="button" class="link-wa" data-wa="Kids &amp; Teens — aula experimental">Experimentar</button>
+          </article>
+          <article class="course tilt reveal" data-tilt data-cat="en">
+            <div class="course__flag">EN</div>
+            <h3>Conversação Club</h3>
+            <p>Só speaking — temas da semana, debates e fluência.</p>
+            <ul>
+              <li>Nível B1+</li>
+              <li>1x por semana</li>
+            </ul>
+            <button type="button" class="link-wa" data-wa="Conversação Club — aula experimental">Experimentar</button>
+          </article>
+          <article class="course tilt reveal" data-tilt data-cat="other">
+            <div class="course__flag course__flag--it">IT</div>
+            <h3>Italiano</h3>
+            <p>Para viagem, cultura e paixão pela língua.</p>
+            <ul>
+              <li>Turmas matinais</li>
+              <li>Grupos intimistas</li>
+            </ul>
+            <button type="button" class="link-wa" data-wa="Italiano — aula experimental">Experimentar</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="nivel">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Teste rápido</span>
+          <h2 class="title">Qual seu nível <em>aproximado</em>?</h2>
+          <p>3 perguntas · estimativa CEFR · sem compromisso.</p>
+        </div>
+
+        <div class="quiz reveal">
+          <div class="quiz__progress" aria-hidden="true">
+            <i id="quiz-bar"></i>
+          </div>
+          <p class="quiz__step" id="quiz-step">Pergunta 1 de 3</p>
+          <h3 class="quiz__q" id="quiz-q"></h3>
+          <div class="quiz__opts" id="quiz-opts"></div>
+          <div class="quiz__result" id="quiz-result" hidden>
+            <span>Estimativa</span>
+            <strong id="quiz-level">A2</strong>
+            <p id="quiz-desc"></p>
+            <button type="button" class="btn btn--sky" id="quiz-wa">Agendar teste completo</button>
+            <button type="button" class="btn btn--ghost" id="quiz-restart">Refazer</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="metodo">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Método</span>
+          <h2 class="title">O caminho até a <em>fluência</em></h2>
+        </div>
+        <ol class="path">
+          <li class="reveal"><span>01</span><div><h3>Diagnóstico</h3><p>Teste + conversa para mapear nível e objetivo.</p></div></li>
+          <li class="reveal"><span>02</span><div><h3>Plano</h3><p>Trilha CEFR, ritmo e modalidade (presencial/online).</p></div></li>
+          <li class="reveal"><span>03</span><div><h3>Prática</h3><p>Aulas vivas, tarefas leves e feedback semanal.</p></div></li>
+          <li class="reveal"><span>04</span><div><h3>Fluência</h3><p>Simulados, clubes de conversa e certificação opcional.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="aula">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Experimental</span>
+          <h2 class="title">Monte sua <em>aula grátis</em></h2>
+          <p>Escolha idioma, modalidade e horário — abrimos o WhatsApp pronto.</p>
+        </div>
+
+        <div class="book reveal">
+          <div class="book__controls">
+            <label>
+              Idioma
+              <select id="book-lang">
+                <option>Inglês</option>
+                <option>Espanhol</option>
+                <option>Alemão</option>
+                <option>Francês</option>
+                <option>Italiano</option>
+                <option>Kids Inglês</option>
+              </select>
+            </label>
+            <label>
+              Modalidade
+              <div class="seg" id="book-mode" role="group">
+                <button type="button" class="active" data-mode="Presencial">Presencial</button>
+                <button type="button" data-mode="Online">Online</button>
+              </div>
+            </label>
+            <label>
+              Preferência de horário
+              <select id="book-slot">
+                <option>Manhã</option>
+                <option selected>Tarde</option>
+                <option>Noite</option>
+                <option>Sábado</option>
+              </select>
+            </label>
+            <label>
+              Objetivo
+              <select id="book-goal">
+                <option>Conversação</option>
+                <option>Trabalho / business</option>
+                <option>Viagem</option>
+                <option>Prova / certificação</option>
+                <option>Kids</option>
+              </select>
+            </label>
+          </div>
+          <div class="book__card tilt" data-tilt>
+            <span>Resumo</span>
+            <strong id="book-summary">Inglês · Presencial · Tarde</strong>
+            <p>Aula experimental de 40 min · sem custo · vagas limitadas.</p>
+            <button type="button" class="btn btn--sky btn--block" id="book-wa">Reservar no WhatsApp</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="equipe">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Equipe</span>
+          <h2 class="title">Quem conduz a <em>conversa</em></h2>
+        </div>
+        <div class="team">
+          <article class="team-card tilt reveal" data-tilt>
+            <div class="team-card__avatar">ED</div>
+            <p class="team-card__role">Coordenador pedagógico · Inglês</p>
+            <h3>Eduardo Dias</h3>
+            <p>CELTA · anos em sala e em empresas — método claro, feedback preciso.</p>
+          </article>
+          <article class="team-card tilt reveal" data-tilt>
+            <div class="team-card__avatar team-card__avatar--alt">ED</div>
+            <p class="team-card__role">Atendimento &amp; Espanhol</p>
+            <h3>Eduarda Dias</h3>
+            <p>Onboarding de alunos, turmas kids e a ponte amigável com as famílias.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="depoimentos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Alunos</span>
+          <h2 class="title">Quem já <em>encontrou</em> a voz</h2>
+        </div>
+        <div class="quotes">
+          <blockquote class="quote reveal">
+            <p>“Em 4 meses parei de travar em call. A Echo treina de verdade.”</p>
+            <footer>— Marina · B1 Inglês · Centro</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“Meu filho ama o sábado. Relatório claro pra gente acompanhar.”</p>
+            <footer>— Paulo · Kids · América</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“Espanhol pra viagem — em 3 meses pedi comida sem Google.”</p>
+            <footer>— Letícia · A2 Español · Anita</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head reveal">
+          <span class="tag">FAQ</span>
+          <h2 class="title">Dúvidas <em>comuns</em></h2>
+        </div>
+        <div class="faq">
+          <details class="faq-item reveal">
+            <summary>A aula experimental é mesmo grátis?<span></span></summary>
+            <p>Sim — 40 minutos para conhecer o método e receber indicação de nível.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Posso estudar só online?<span></span></summary>
+            <p>Sim. Turmas 100% online ao vivo e híbridas conforme o curso.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Qual a idade mínima?<span></span></summary>
+            <p>Kids a partir de 6 anos. Adultos e teens em turmas separadas.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Preparam para TOEFL / IELTS / DELE?<span></span></summary>
+            <p>Sim, em módulos específicos após avaliação de nível.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta__inner reveal">
+        <div>
+          <h2>Pronto para a primeira frase?</h2>
+          <p>Marque a experimental — a gente cuida do resto.</p>
+        </div>
+        <a href="#contato" class="btn btn--dark magnetic">Falar com a Echo</a>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="container contact">
+        <div class="contact__info reveal">
+          <span class="tag">Contato</span>
+          <h2 class="title">Fale com a <em>Echo</em></h2>
+          <ul class="contact__list">
+            <li>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/5547992072891">(47) 99207-2891</a>
+            </li>
+            <li>
+              <strong>E-mail</strong>
+              <a href="mailto:edudiasr6@gmail.com">edudiasr6@gmail.com</a>
+            </li>
+            <li>
+              <strong>Endereço</strong>
+              <span>Centro de Joinville<br />Joinville — SC · Brasil</span>
+            </li>
+            <li>
+              <strong>Horário</strong>
+              <span>Seg a Sex · 08h–21h<br />Sáb · 08h–13h</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contact-form" novalidate>
+          <h3>Quero começar</h3>
+          <p class="form__lead">Respondemos com horários e próximo passo.</p>
+
+          <div class="form__row">
+            <label>
+              Nome
+              <input type="text" name="name" required placeholder="Seu nome" autocomplete="name" />
+              <span class="form__error">Informe seu nome.</span>
+            </label>
+            <label>
+              WhatsApp
+              <input type="tel" name="phone" required placeholder="(47) 99207-2891" autocomplete="tel" inputmode="tel" />
+              <span class="form__error">Informe um telefone válido.</span>
+            </label>
+          </div>
+          <div class="form__row">
+            <label>
+              Idioma de interesse
+              <select name="lang" required>
+                <option value="" disabled selected>Selecione</option>
+                <option>Inglês</option>
+                <option>Espanhol</option>
+                <option>Alemão</option>
+                <option>Francês</option>
+                <option>Italiano</option>
+                <option>Kids</option>
+              </select>
+              <span class="form__error">Escolha o idioma.</span>
+            </label>
+            <label>
+              Nível aproximado
+              <select name="level">
+                <option>Não sei / quero testar</option>
+                <option>Iniciante (A1)</option>
+                <option>Básico (A2)</option>
+                <option>Intermediário (B1–B2)</option>
+                <option>Avançado (C1)</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            Mensagem
+            <textarea name="message" rows="3" placeholder="Objetivo, disponibilidade, dúvidas..."></textarea>
+          </label>
+          <button type="submit" class="btn btn--sky btn--block">Enviar no WhatsApp</button>
+          <p class="form__ok" id="form-ok" hidden>Abrindo o WhatsApp…</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="logo">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">Echo<em>Idiomas</em></span>
+      </a>
+      <p>Centro de Joinville · SC · Brasil</p>
+      <p>© <span id="year"></span> Echo Idiomas · Portfólio</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20conhecer%20a%20Echo%20Idiomas." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  </a>
+
+  <button class="to-top" id="to-top" aria-label="Voltar ao topo">↑</button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

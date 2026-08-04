@@ -24,6 +24,7 @@ Depois de ativar o GitHub Pages:
 - **Opaline (Estética):** https://edudiasr.github.io/portfolio-web/site-salao/
 - **Torque Auto (Oficina):** https://edudiasr.github.io/portfolio-web/site-oficina/
 - **Nexo Contábil:** https://edudiasr.github.io/portfolio-web/site-contabilidade/
+- **Echo Idiomas:** https://edudiasr.github.io/portfolio-web/site-idiomas/
 
 ---
 
@@ -44,16 +45,16 @@ Depois de ativar o GitHub Pages:
 | [`site-salao`](./site-salao) | Estética — plum/champagne, ritual, pacotes, agenda WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-oficina`](./site-oficina) | Oficina — asphalt/âmbar, HUD, diagnóstico, orçamento WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-contabilidade`](./site-contabilidade) | Contábil — ink/esmeralda, simulador de regime, checklist WhatsApp | HTML · CSS · JS | ✅ Pronto |
+| [`site-idiomas`](./site-idiomas) | Idiomas — night/sky, chat EN/ES/DE, quiz CEFR, experimental WhatsApp | HTML · CSS · JS | ✅ Pronto |
 
 ### Próximos na fila
 
-1. Escola de idiomas  
-2. Arquitetura / interiores  
-3. Cafeteria / açaí  
-4. Lavanderia  
-5. Fisioterapia / pilates  
-6. Construtora / reformas  
-7. Ótica · Hotel · Escola de música · Corretora de seguros
+1. Arquitetura / interiores  
+2. Cafeteria / açaí  
+3. Lavanderia  
+4. Fisioterapia / pilates  
+5. Construtora / reformas  
+6. Ótica · Hotel · Escola de música · Corretora de seguros
 
 ---
 
