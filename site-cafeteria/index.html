@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulp — Café & Açaí em Joinville, SC</title>
+  <meta name="description" content="Café, açaí e bowls em Joinville. Monte o seu, peça pelo WhatsApp e retire no Centro." />
+  <meta name="author" content="Pulp Café & Açaí" />
+  <meta property="og:title" content="Pulp — Café & Açaí Joinville" />
+  <meta property="og:description" content="Açaí cremoso, café especial e bowls que você monta." />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%0c0a0b'/><circle cx='50' cy='42' r='22' fill='%239b3db5'/><path d='M28 62 Q50 88 72 62' fill='%23b8f154'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__bowl" aria-hidden="true">
+      <span class="preloader__drip"></span>
+      <span class="preloader__drip preloader__drip--2"></span>
+      <span class="preloader__cup"></span>
+    </div>
+    <p class="preloader__label">Batendo o açaí…</p>
+  </div>
+
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__blob ambient__blob--a"></div>
+    <div class="ambient__blob ambient__blob--b"></div>
+    <div class="ambient__blob ambient__blob--c"></div>
+    <div class="ambient__noise"></div>
+    <canvas id="berry-canvas" class="ambient__canvas"></canvas>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <span class="cursor__dot"></span>
+    <span class="cursor__ring"></span>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Pulp Café & Açaí">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">Pulp<em>café & açaí</em></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link active">Início</a></li>
+          <li><a href="#cardapio" class="nav__link">Cardápio</a></li>
+          <li><a href="#montar" class="nav__link">Montar</a></li>
+          <li><a href="#combo" class="nav__link">Combos</a></li>
+          <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button type="button" class="cart-btn magnetic" id="cart-open" aria-label="Abrir carrinho">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.2"/><circle cx="17" cy="20" r="1.2"/><path d="M6 6L5 3H2"/></svg>
+          <span class="cart-btn__count" id="cart-count">0</span>
+        </button>
+        <a href="#montar" class="btn btn--berry btn--sm header__cta magnetic">Montar bowl</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <aside class="drawer" id="cart-drawer" aria-hidden="true" aria-label="Carrinho">
+    <div class="drawer__backdrop" id="cart-close-bg"></div>
+    <div class="drawer__panel">
+      <div class="drawer__head">
+        <h2>Seu pedido</h2>
+        <button type="button" class="drawer__x" id="cart-close" aria-label="Fechar">×</button>
+      </div>
+      <ul class="drawer__list" id="cart-list"></ul>
+      <p class="drawer__empty" id="cart-empty">Carrinho vazio — monte um bowl ou escolha no cardápio.</p>
+      <div class="drawer__foot">
+        <div class="drawer__total">
+          <span>Total</span>
+          <strong id="cart-total">R$ 0</strong>
+        </div>
+        <button type="button" class="btn btn--lime btn--block" id="cart-wa">Pedir no WhatsApp</button>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="hero__eyebrow reveal">
+            <span class="pill" id="day-pill">Boa tarde · açaí time</span>
+            Joinville · Centro
+          </p>
+          <h1 class="hero__title reveal">
+            Açaí no ponto.<br />
+            <em>Café no vibe.</em>
+          </h1>
+          <p class="hero__text reveal">
+            Bowls cremosos, espresso especial e combos pra matar a fome —
+            monte o seu ou pegue o favorito da casa.
+          </p>
+          <div class="hero__actions reveal">
+            <a href="#montar" class="btn btn--berry magnetic">Quero montar</a>
+            <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20pedir%20na%20Pulp." class="btn btn--ghost magnetic" target="_blank" rel="noopener">
+              WhatsApp
+            </a>
+          </div>
+          <dl class="hero__stats reveal">
+            <div>
+              <dt data-count="6">0</dt>
+              <dd>anos batendo açaí</dd>
+            </div>
+            <div>
+              <dt data-count="40" data-suffix="+">0</dt>
+              <dd>toppings</dd>
+            </div>
+            <div>
+              <dt data-count="4.9" data-decimals="1">0</dt>
+              <dd>nota média</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__stage reveal">
+          <div class="bowl-stage tilt" data-tilt>
+            <div class="bowl-stage__glow" aria-hidden="true"></div>
+            <div class="bowl-visual" id="hero-bowl" aria-hidden="true">
+              <div class="bowl-visual__rim"></div>
+              <div class="bowl-visual__fill" id="hero-fill"></div>
+              <div class="bowl-visual__tops" id="hero-tops">
+                <i style="--x:18%;--y:28%"></i>
+                <i style="--x:42%;--y:18%"></i>
+                <i style="--x:62%;--y:30%"></i>
+                <i style="--x:30%;--y:42%"></i>
+                <i style="--x:55%;--y:48%"></i>
+                <i style="--x:72%;--y:40%"></i>
+              </div>
+            </div>
+            <div class="bowl-stage__card">
+              <span class="bowl-stage__tag">HOUSE FAVORITE</span>
+              <strong>Bowl Pulp Clássico</strong>
+              <p>Açaí · banana · granola · mel · leite ninho</p>
+              <div class="bowl-stage__row">
+                <em>R$ 28</em>
+                <button type="button" class="btn btn--lime btn--sm" data-add='{"id":"fav-classico","name":"Bowl Pulp Clássico","price":28}'>Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>AÇAÍ · CAFÉ · BOWL · SMOOTHIE · PANQUECA · TAPIOCA · GRANOLA · WHEY · HONEY · BANANA · NINHO · AÇAÍ · CAFÉ · BOWL ·</span>
+        <span>AÇAÍ · CAFÉ · BOWL · SMOOTHIE · PANQUECA · TAPIOCA · GRANOLA · WHEY · HONEY · BANANA · NINHO · AÇAÍ · CAFÉ · BOWL ·</span>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container about">
+        <div class="about__copy reveal">
+          <span class="tag">A Pulp</span>
+          <h2 class="title">Cremoso, fresco, <em>sem enrolação</em></h2>
+          <p>
+            Açaí batido na hora, café de grão selecionado e uma bancada de toppings
+            que dá vontade de voltar amanhã. Retire no balcão ou peça no WhatsApp.
+          </p>
+          <ul class="checks">
+            <li>Açaí 100% fruta · sem xarope</li>
+            <li>Leite vegetal sob pedido</li>
+            <li>Opções proteicas e kids</li>
+            <li>Wi-fi · cantinho pra trabalhar</li>
+          </ul>
+        </div>
+        <div class="about__cards">
+          <article class="glass tilt reveal" data-tilt>
+            <span>01</span>
+            <h3>Manhã</h3>
+            <p>Espresso, cappuccino e tapioca pra começar o dia.</p>
+          </article>
+          <article class="glass tilt reveal" data-tilt>
+            <span>02</span>
+            <h3>Tarde</h3>
+            <p>Bowls, smoothies e o happy hour do açaí.</p>
+          </article>
+          <article class="glass tilt reveal" data-tilt>
+            <span>03</span>
+            <h3>Noite</h3>
+            <p>Combos pós-treino até o fechamento.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="cardapio">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Cardápio</span>
+          <h2 class="title">O que tá <em>rolando</em></h2>
+          <p>Filtre, adicione ao carrinho e feche no WhatsApp.</p>
+        </div>
+
+        <div class="filters reveal">
+          <button class="chip active" type="button" data-filter="all">Tudo</button>
+          <button class="chip" type="button" data-filter="acai">Açaí</button>
+          <button class="chip" type="button" data-filter="cafe">Café</button>
+          <button class="chip" type="button" data-filter="comida">Comida</button>
+          <button class="chip" type="button" data-filter="drink">Drinks</button>
+        </div>
+
+        <div class="menu">
+          <article class="menu-card tilt reveal" data-tilt data-cat="acai">
+            <div class="menu-card__media menu-card__media--berry" aria-hidden="true"></div>
+            <div class="menu-card__body">
+              <span>Açaí</span>
+              <h3>Bowl Tradicional</h3>
+              <p>300ml · banana · granola · mel</p>
+              <div class="menu-card__row">
+                <strong>R$ 22</strong>
+                <button type="button" class="add" data-add='{"id":"bowl-trad","name":"Bowl Tradicional","price":22}'>+</button>
+              </div>
+            </div>
+          </article>
+          <article class="menu-card tilt reveal" data-tilt data-cat="acai">
+            <div class="menu-card__media menu-card__media--berry2" aria-hidden="true"></div>
+            <div class="menu-card__body">
+              <span>Açaí</span>
+              <h3>Bowl Proteico</h3>
+              <p>Whey · pasta de amendoim · granola</p>
+              <div class="menu-card__row">
+                <strong>R$ 32</strong>
+                <button type="button" class="add" data-add='{"id":"bowl-prot","name":"Bowl Proteico","price":32}'>+</button>
+              </div>
+            </div>
+          </article>
+          <article class="menu-card tilt reveal" data-tilt data-cat="acai">
+            <div class="menu-card__media menu-card__media--berry3" aria-hidden="true"></div>
+            <div class="menu-card__body">
+              <span>Açaí</span>
+              <h3>Bowl Kids</h3>
+              <p>200ml · leite ninho · confete · morango</p>
+              <div class="menu-card__row">
+                <strong>R$ 18</strong>
+                <button type="button" class="add" data-add='{"id":"bowl-kids","name":"Bowl Kids","price":18}'>+</button>
+              </div>
+            </div>
+          </article>
+          <article class="menu-card tilt reveal" data-tilt data-cat="cafe">
+            <div class="menu-card__media menu-card__media--coffee" aria-hidden="true"></div>
+            <div class="menu-card__body">
+              <span>Café</span>
+              <h3>Espresso</h3>
+              <p>Grão especial · shot limpo</p>
+              <div class="menu-card__row">
+                <strong>R$ 8</strong>
+                <button type="button" class="add" data-add='{"id":"esp","name":"Espresso","price":8}'>+</button>
+              </div>
+            </div>
+          </article>
+          <article class="menu-card tilt reveal" data-tilt data-cat="cafe">
+            <div class="menu-card__media menu-card__media--coffee2" aria-hidden="true"></div>
+            <div class="menu-card__body">
+              <span>Café</span>
+              <h3>Cappuccino</h3>
+              <p>Leite vaporizado · crema aveludada</p>
+              <div class="menu-card__row">
+                <strong>R$ 14</strong>
+                <button type="button" class="add" data-add='{"id":"cap","name":"Cappuccino","price":14}'>+</button>
+              </div>
+            </div>
+          </article>
+          <article class="menu-card tilt reveal" data-tilt data-cat="cafe">
+            <div class="menu-card__media menu-card__media--coffee3" aria-hidden="true"></div>
+            <div class="menu-card__body">
+              <span>Café</span>
+              <h3>Latte Gelado</h3>
+              <p>Espresso · leite · gelo · baunilha</p>
+              <div class="menu-card__row">
+                <strong>R$ 16</strong>
+                <button type="button" class="add" data-add='{"id":"latte","name":"Latte Gelado","price":16}'>+</button>
+              </div>
+            </div>
+          </article>
+          <article class="menu-card tilt reveal" data-tilt data-cat="comida">
+            <div class="menu-card__media menu-card__media--food" aria-hidden="true"></div>
+            <div class="menu-card__body">
+              <span>Comida</span>
+              <h3>Tapioca Caprese</h3>
+              <p>Mussarela · tomate · manjericão</p>
+              <div class="menu-card__row">
+                <strong>R$ 18</strong>
+                <button type="button" class="add" data-add='{"id":"tapi","name":"Tapioca Caprese","price":18}'>+</button>
+              </div>
+            </div>
+          </article>
+          <article class="menu-card tilt reveal" data-tilt data-cat="comida">
+            <div class="menu-card__media menu-card__media--food2" aria-hidden="true"></div>
+            <div class="menu-card__body">
+              <span>Comida</span>
+              <h3>Panqueca Banana</h3>
+              <p>Massa leve · mel · granola</p>
+              <div class="menu-card__row">
+                <strong>R$ 20</strong>
+                <button type="button" class="add" data-add='{"id":"panq","name":"Panqueca Banana","price":20}'>+</button>
+              </div>
+            </div>
+          </article>
+          <article class="menu-card tilt reveal" data-tilt data-cat="drink">
+            <div class="menu-card__media menu-card__media--drink" aria-hidden="true"></div>
+            <div class="menu-card__body">
+              <span>Drink</span>
+              <h3>Smoothie Berry</h3>
+              <p>Morango · banana · iogurte</p>
+              <div class="menu-card__row">
+                <strong>R$ 19</strong>
+                <button type="button" class="add" data-add='{"id":"smooth","name":"Smoothie Berry","price":19}'>+</button>
+              </div>
+            </div>
+          </article>
+          <article class="menu-card tilt reveal" data-tilt data-cat="drink">
+            <div class="menu-card__media menu-card__media--drink2" aria-hidden="true"></div>
+            <div class="menu-card__body">
+              <span>Drink</span>
+              <h3>Suco Detox</h3>
+              <p>Couve · limão · gengibre · maçã</p>
+              <div class="menu-card__row">
+                <strong>R$ 15</strong>
+                <button type="button" class="add" data-add='{"id":"detox","name":"Suco Detox","price":15}'>+</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="montar">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Builder</span>
+          <h2 class="title">Monte o <em>seu</em> bowl</h2>
+          <p>Base, tamanho e até 5 toppings — o preço atualiza na hora.</p>
+        </div>
+
+        <div class="builder reveal">
+          <div class="builder__preview tilt" data-tilt>
+            <div class="builder__bowl" id="builder-bowl" aria-hidden="true">
+              <div class="builder__rim"></div>
+              <div class="builder__fill" id="builder-fill"></div>
+              <div class="builder__tops" id="builder-tops"></div>
+            </div>
+            <div class="builder__price">
+              <span>Seu bowl</span>
+              <strong id="builder-price">R$ 18</strong>
+              <em id="builder-summary">Açaí · 300ml</em>
+            </div>
+          </div>
+
+          <div class="builder__controls">
+            <fieldset>
+              <legend>Base</legend>
+              <div class="seg" id="base-seg">
+                <button type="button" class="active" data-base="acai" data-color="#9b3db5">Açaí</button>
+                <button type="button" data-base="cupuacu" data-color="#f0e6a8">Cupuaçu</button>
+                <button type="button" data-base="mix" data-color="#c44dff">Mix</button>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Tamanho</legend>
+              <div class="seg" id="size-seg">
+                <button type="button" data-size="200" data-price="16">200ml</button>
+                <button type="button" class="active" data-size="300" data-price="22">300ml</button>
+                <button type="button" data-size="500" data-price="30">500ml</button>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Toppings <small id="top-count">(0/5)</small></legend>
+              <div class="tops" id="top-grid">
+                <button type="button" data-top="Banana" data-extra="3">Banana</button>
+                <button type="button" data-top="Morango" data-extra="4">Morango</button>
+                <button type="button" data-top="Granola" data-extra="3">Granola</button>
+                <button type="button" data-top="Mel" data-extra="2">Mel</button>
+                <button type="button" data-top="Leite Ninho" data-extra="3">Ninho</button>
+                <button type="button" data-top="Paçoca" data-extra="3">Paçoca</button>
+                <button type="button" data-top="Pasta amendoim" data-extra="4">Amendoim</button>
+                <button type="button" data-top="Whey" data-extra="6">Whey</button>
+                <button type="button" data-top="Chocolate" data-extra="3">Chocolate</button>
+                <button type="button" data-top="Kiwi" data-extra="4">Kiwi</button>
+              </div>
+            </fieldset>
+
+            <button type="button" class="btn btn--berry btn--block" id="builder-add">Adicionar ao carrinho</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="combo">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Combos</span>
+          <h2 class="title">Combos que <em>fecham</em> o dia</h2>
+        </div>
+        <div class="combos">
+          <article class="combo tilt reveal" data-tilt>
+            <span>MANHÃ</span>
+            <h3>Wake Up</h3>
+            <p>Cappuccino + tapioca caprese</p>
+            <div class="combo__row">
+              <strong>R$ 28</strong>
+              <button type="button" class="btn btn--lime btn--sm" data-add='{"id":"combo-wake","name":"Combo Wake Up","price":28}'>Add</button>
+            </div>
+          </article>
+          <article class="combo tilt reveal" data-tilt>
+            <span>TREINO</span>
+            <h3>Post Workout</h3>
+            <p>Bowl proteico + suco detox</p>
+            <div class="combo__row">
+              <strong>R$ 42</strong>
+              <button type="button" class="btn btn--lime btn--sm" data-add='{"id":"combo-pw","name":"Combo Post Workout","price":42}'>Add</button>
+            </div>
+          </article>
+          <article class="combo tilt reveal" data-tilt>
+            <span>DOCE</span>
+            <h3>Sweet Hour</h3>
+            <p>Bowl clássico + latte gelado</p>
+            <div class="combo__row">
+              <strong>R$ 38</strong>
+              <button type="button" class="btn btn--lime btn--sm" data-add='{"id":"combo-sweet","name":"Combo Sweet Hour","price":38}'>Add</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="fidelidade">
+      <div class="container loyalty reveal">
+        <div>
+          <span class="tag">Fidelidade</span>
+          <h2 class="title">10 bowls = <em>1 grátis</em></h2>
+          <p>Peça pelo WhatsApp com seu nome — a gente carimba o cartão digital.</p>
+        </div>
+        <div class="stamps" aria-hidden="true" id="stamps">
+          <i></i><i></i><i></i><i></i><i></i>
+          <i></i><i></i><i class="is-on"></i><i></i><i></i>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="equipe">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Equipe</span>
+          <h2 class="title">Quem faz o <em>Pulp</em></h2>
+        </div>
+        <div class="team">
+          <article class="team-card tilt reveal" data-tilt>
+            <div class="team-card__avatar">ED</div>
+            <p class="team-card__role">Barista · Café especial</p>
+            <h3>Eduardo Dias</h3>
+            <p>Extrai o espresso e cuida do grão — doze em pontos de torra.</p>
+          </article>
+          <article class="team-card tilt reveal" data-tilt>
+            <div class="team-card__avatar team-card__avatar--alt">ED</div>
+            <p class="team-card__role">Bowls · Atendimento</p>
+            <h3>Eduarda Dias</h3>
+            <p>Monta os bowls, sugere toppings e deixa o WhatsApp em dia.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="depoimentos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Clientes</span>
+          <h2 class="title">Quem já <em>voltou</em> amanhã</h2>
+        </div>
+        <div class="quotes">
+          <blockquote class="quote reveal">
+            <p>“Açaí cremoso de verdade. O builder no site é perfeito pra pedir.”</p>
+            <footer>— Júlia · Centro</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“Cappuccino top + wi-fi. Meu cantinho de trabalho da tarde.”</p>
+            <footer>— Bruno · América</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“Bowl kids salvou o sábado com a criançada. Voltamos toda semana.”</p>
+            <footer>— Fernanda · Anita</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head reveal">
+          <span class="tag">FAQ</span>
+          <h2 class="title">Dúvidas <em>rápidas</em></h2>
+        </div>
+        <div class="faq">
+          <details class="faq-item reveal">
+            <summary>Fazem delivery?<span></span></summary>
+            <p>Retirada no balcão e delivery via parceiros — confirme no WhatsApp.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Tem opção sem lactose?<span></span></summary>
+            <p>Sim — leite vegetal e bases sem leite. Avise na montagem.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Aceitam vale-refeição?<span></span></summary>
+            <p>Cartão, Pix e vale no balcão. Pedido online fecha no WhatsApp.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Posso reservar mesa?<span></span></summary>
+            <p>Grupos maiores: manda mensagem que a gente separa.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta__inner reveal">
+        <div>
+          <h2>Fome de açaí agora?</h2>
+          <p>Monta o bowl ou manda o pedido direto no Zap.</p>
+        </div>
+        <a href="#montar" class="btn btn--dark magnetic">Montar agora</a>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="container contact">
+        <div class="contact__info reveal">
+          <span class="tag">Contato</span>
+          <h2 class="title">Passe na <em>Pulp</em></h2>
+          <ul class="contact__list">
+            <li>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/5547992072891">(47) 99207-2891</a>
+            </li>
+            <li>
+              <strong>E-mail</strong>
+              <a href="mailto:edudiasr6@gmail.com">edudiasr6@gmail.com</a>
+            </li>
+            <li>
+              <strong>Endereço</strong>
+              <span>Centro de Joinville<br />Joinville — SC · Brasil</span>
+            </li>
+            <li>
+              <strong>Horário</strong>
+              <span>Seg a Sáb · 08h–21h<br />Dom · 09h–18h</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contact-form" novalidate>
+          <h3>Mensagem rápida</h3>
+          <p class="form__lead">Dúvida, reserva ou pedido especial.</p>
+
+          <div class="form__row">
+            <label>
+              Nome
+              <input type="text" name="name" required placeholder="Seu nome" autocomplete="name" />
+              <span class="form__error">Informe seu nome.</span>
+            </label>
+            <label>
+              WhatsApp
+              <input type="tel" name="phone" required placeholder="(47) 99207-2891" autocomplete="tel" inputmode="tel" />
+              <span class="form__error">Informe um telefone válido.</span>
+            </label>
+          </div>
+          <label>
+            Mensagem
+            <textarea name="message" rows="3" required placeholder="Quero reservar / alergia / horário..."></textarea>
+            <span class="form__error">Escreva uma mensagem.</span>
+          </label>
+          <button type="submit" class="btn btn--berry btn--block">Enviar no WhatsApp</button>
+          <p class="form__ok" id="form-ok" hidden>Abrindo o WhatsApp…</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="logo">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">Pulp<em>café & açaí</em></span>
+      </a>
+      <p>Centro de Joinville · SC · Brasil</p>
+      <p>© <span id="year"></span> Pulp · Portfólio</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20pedir%20na%20Pulp." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  </a>
+
+  <button class="to-top" id="to-top" aria-label="Voltar ao topo">↑</button>
+
+  <div class="toast" id="toast" hidden>Adicionado ao carrinho</div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

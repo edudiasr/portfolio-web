@@ -26,6 +26,7 @@ Depois de ativar o GitHub Pages:
 - **Nexo Contábil:** https://edudiasr.github.io/portfolio-web/site-contabilidade/
 - **Echo Idiomas:** https://edudiasr.github.io/portfolio-web/site-idiomas/
 - **Traço Studio (Arquitetura):** https://edudiasr.github.io/portfolio-web/site-arquitetura/
+- **Pulp (Café & Açaí):** https://edudiasr.github.io/portfolio-web/site-cafeteria/
 
 ---
 
@@ -48,14 +49,14 @@ Depois de ativar o GitHub Pages:
 | [`site-contabilidade`](./site-contabilidade) | Contábil — ink/esmeralda, simulador de regime, checklist WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-idiomas`](./site-idiomas) | Idiomas — night/sky, chat EN/ES/DE, quiz CEFR, experimental WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-arquitetura`](./site-arquitetura) | Arquitetura — charcoal/cobre, planta, antes/depois, mood, estimativa | HTML · CSS · JS | ✅ Pronto |
+| [`site-cafeteria`](./site-cafeteria) | Café & açaí — berry/lime, bowl builder, carrinho, pedido WhatsApp | HTML · CSS · JS | ✅ Pronto |
 
 ### Próximos na fila
 
-1. Cafeteria / açaí  
-2. Lavanderia  
-3. Fisioterapia / pilates  
-4. Construtora / reformas  
-5. Ótica · Hotel · Escola de música · Corretora de seguros
+1. Lavanderia  
+2. Fisioterapia / pilates  
+3. Construtora / reformas  
+4. Ótica · Hotel · Escola de música · Corretora de seguros
 
 ---
 
