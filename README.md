@@ -29,6 +29,7 @@ Depois de ativar o GitHub Pages:
 - **Pulp (Café & Açaí):** https://edudiasr.github.io/portfolio-web/site-cafeteria/
 - **Ciclo (Lavanderia):** https://edudiasr.github.io/portfolio-web/site-lavanderia/
 - **Alinha (Fisio & Pilates):** https://edudiasr.github.io/portfolio-web/site-fisioterapia/
+- **Base (Construtora):** https://edudiasr.github.io/portfolio-web/site-construtora/
 
 ---
 
@@ -54,11 +55,14 @@ Depois de ativar o GitHub Pages:
 | [`site-cafeteria`](./site-cafeteria) | Café & açaí — berry/lime, bowl builder, carrinho, pedido WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-lavanderia`](./site-lavanderia) | Lavanderia — slate/aqua, máquina ao vivo, calculadora, coleta WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-fisioterapia`](./site-fisioterapia) | Fisio & pilates — ink/teal, mapa do corpo, grade, agenda WhatsApp | HTML · CSS · JS | ✅ Pronto |
+| [`site-construtora`](./site-construtora) | Construtora — concreto/laranja, canteiro, estimativa m², briefing WA | HTML · CSS · JS | ✅ Pronto |
 
 ### Próximos na fila
 
-1. Construtora / reformas  
-2. Ótica · Hotel · Escola de música · Corretora de seguros
+1. Ótica  
+2. Hotel / pousada  
+3. Escola de música  
+4. Corretora de seguros
 
 ---
 

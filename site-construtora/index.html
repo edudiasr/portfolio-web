@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Base — Construtora & Reformas em Joinville, SC</title>
+  <meta name="description" content="Construtora e reformas em Joinville. Residencial, comercial, cronograma claro e orçamento pelo WhatsApp." />
+  <meta name="author" content="Base Construtora" />
+  <meta property="og:title" content="Base — Construtora Joinville" />
+  <meta property="og:description" content="Obra com prazo, custo e acompanhamento de verdade." />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%0c0d0f'/><path d='M20 78 V42 L50 22 L80 42 V78' stroke='%23ff6b2c' stroke-width='8' fill='none' stroke-linejoin='round'/><rect x='42' y='52' width='16' height='26' fill='%239aa3ad'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__crane" aria-hidden="true">
+      <span class="preloader__arm"></span>
+      <span class="preloader__hook"></span>
+    </div>
+    <p class="preloader__label">Montando a estrutura…</p>
+  </div>
+
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient__grid"></div>
+    <div class="ambient__glow ambient__glow--a"></div>
+    <div class="ambient__glow ambient__glow--b"></div>
+  </div>
+
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <span class="cursor__dot"></span>
+    <span class="cursor__ring"></span>
+  </div>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo" aria-label="Base Construtora">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">BASE<em>construtora</em></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link active">Início</a></li>
+          <li><a href="#obras" class="nav__link">Obras</a></li>
+          <li><a href="#orcamento" class="nav__link">Orçamento</a></li>
+          <li><a href="#cronograma" class="nav__link">Cronograma</a></li>
+          <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#orcamento" class="btn btn--orange btn--sm header__cta magnetic">Orçar obra</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="hero__eyebrow reveal">
+            <span class="live"></span>
+            Joinville · SC · Construção &amp; reforma
+          </p>
+          <h1 class="hero__title reveal">
+            OBRA COM<br />
+            <em>BASE SÓLIDA.</em>
+          </h1>
+          <p class="hero__text reveal">
+            Residencial, comercial e reforma completa —
+            cronograma transparente, medição clara e equipe no canteiro.
+          </p>
+          <div class="hero__actions reveal">
+            <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20or%C3%A7ar%20com%20a%20Base." class="btn btn--orange magnetic" target="_blank" rel="noopener">
+              WhatsApp obra
+            </a>
+            <a href="#obras" class="btn btn--ghost magnetic">Ver obras</a>
+          </div>
+          <dl class="hero__stats reveal">
+            <div>
+              <dt data-count="15">0</dt>
+              <dd>anos de canteiro</dd>
+            </div>
+            <div>
+              <dt data-count="210" data-suffix="+">0</dt>
+              <dd>obras entregues</dd>
+            </div>
+            <div>
+              <dt data-count="94" data-suffix="%">0</dt>
+              <dd>no prazo acordado</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__stage reveal">
+          <div class="site tilt" data-tilt>
+            <div class="site__top">
+              <span class="site__badge">CANTEIRO · AO VIVO</span>
+              <span class="site__day" id="site-day">Dia 42 / 90</span>
+            </div>
+            <div class="site__build" aria-hidden="true">
+              <div class="site__scaffold">
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <div class="site__block site__block--1"></div>
+              <div class="site__block site__block--2"></div>
+              <div class="site__block site__block--3"></div>
+              <div class="site__crane">
+                <i></i><b></b>
+              </div>
+            </div>
+            <div class="site__bars">
+              <div>
+                <span>Avanço físico</span>
+                <div class="bar"><i id="obra-bar" style="width:47%"></i></div>
+              </div>
+              <div>
+                <span>Fase</span>
+                <strong id="obra-fase">Alvenaria</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <span>FUNDAÇÃO · ESTRUTURA · ALVENARIA · INSTALAÇÕES · ACABAMENTO · REFORMA · AMPLIAÇÃO · LAJE · TELHADO ·</span>
+        <span>FUNDAÇÃO · ESTRUTURA · ALVENARIA · INSTALAÇÕES · ACABAMENTO · REFORMA · AMPLIAÇÃO · LAJE · TELHADO ·</span>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container about">
+        <div class="about__copy reveal">
+          <span class="tag">A Base</span>
+          <h2 class="title">Construir sem <em>surpresa</em> no meio</h2>
+          <p>
+            Do briefing ao habite-se: projeto alinhado, orçamento por etapa
+            e visitas de obra com registro pra você acompanhar.
+          </p>
+          <ul class="checks">
+            <li>CREA / responsáveis técnicos</li>
+            <li>Cronograma com marcos claros</li>
+            <li>Medições e aditivos transparentes</li>
+            <li>Joinville e região</li>
+          </ul>
+        </div>
+        <div class="about__cards">
+          <article class="glass tilt reveal" data-tilt>
+            <span>01</span>
+            <h3>Planejar</h3>
+            <p>Escopo, custo e prazo antes de abrir o canteiro.</p>
+          </article>
+          <article class="glass tilt reveal" data-tilt>
+            <span>02</span>
+            <h3>Executar</h3>
+            <p>Equipe própria + parceiros fiscalizados no dia a dia.</p>
+          </article>
+          <article class="glass tilt reveal" data-tilt>
+            <span>03</span>
+            <h3>Entregar</h3>
+            <p>Checklist final, garantia e pós-obra.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="servicos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Serviços</span>
+          <h2 class="title">O que a Base <em>levanta</em></h2>
+        </div>
+        <div class="filters reveal">
+          <button class="chip active" type="button" data-filter="all">Todos</button>
+          <button class="chip" type="button" data-filter="construir">Construir</button>
+          <button class="chip" type="button" data-filter="reformar">Reformar</button>
+          <button class="chip" type="button" data-filter="comercial">Comercial</button>
+        </div>
+        <div class="services">
+          <article class="service tilt reveal" data-tilt data-cat="construir">
+            <span>01</span>
+            <h3>Casa do zero</h3>
+            <p>Projeto + execução residencial completa.</p>
+            <button type="button" class="link-wa" data-wa="Construção residencial do zero">Orçar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="reformar">
+            <span>02</span>
+            <h3>Reforma completa</h3>
+            <p>Demolição seletiva, layout novo e acabamento.</p>
+            <button type="button" class="link-wa" data-wa="Reforma completa">Orçar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="reformar">
+            <span>03</span>
+            <h3>Ampliação</h3>
+            <p>Pavimento extra, varanda, suite ou área gourmet.</p>
+            <button type="button" class="link-wa" data-wa="Ampliação">Orçar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="comercial">
+            <span>04</span>
+            <h3>Loja &amp; escritório</h3>
+            <p>Fit-out comercial com prazo de inauguração.</p>
+            <button type="button" class="link-wa" data-wa="Obra comercial / fit-out">Orçar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="construir">
+            <span>05</span>
+            <h3>Estrutura &amp; laje</h3>
+            <p>Concreto armado, metalica e supervisão técnica.</p>
+            <button type="button" class="link-wa" data-wa="Estrutura e laje">Orçar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="reformar">
+            <span>06</span>
+            <h3>Telhado &amp; impermeabilização</h3>
+            <p>Troca, reforço e soluções contra infiltração.</p>
+            <button type="button" class="link-wa" data-wa="Telhado e impermeabilização">Orçar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="comercial">
+            <span>07</span>
+            <h3>Galpão / depósito</h3>
+            <p>Estruturas leves e áreas industriais.</p>
+            <button type="button" class="link-wa" data-wa="Galpão / depósito">Orçar</button>
+          </article>
+          <article class="service tilt reveal" data-tilt data-cat="construir">
+            <span>08</span>
+            <h3>Acabamento premium</h3>
+            <p>Pisos, gesso, pintura e marcenaria coordenada.</p>
+            <button type="button" class="link-wa" data-wa="Acabamento premium">Orçar</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="obras">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Portfólio</span>
+          <h2 class="title">Obras <em>selecionadas</em></h2>
+        </div>
+        <div class="obras">
+          <article class="obra tilt reveal" data-tilt>
+            <div class="obra__visual obra__visual--a" aria-hidden="true"></div>
+            <div class="obra__body">
+              <span>Residencial</span>
+              <h3>Casa Norte</h3>
+              <p>280 m² · 11 meses · América</p>
+              <div class="obra__pct"><i style="width:100%"></i><em>100%</em></div>
+            </div>
+          </article>
+          <article class="obra tilt reveal" data-tilt>
+            <div class="obra__visual obra__visual--b" aria-hidden="true"></div>
+            <div class="obra__body">
+              <span>Reforma</span>
+              <h3>Apto Centro</h3>
+              <p>110 m² · 4 meses · layout novo</p>
+              <div class="obra__pct"><i style="width:100%"></i><em>100%</em></div>
+            </div>
+          </article>
+          <article class="obra tilt reveal" data-tilt>
+            <div class="obra__visual obra__visual--c" aria-hidden="true"></div>
+            <div class="obra__body">
+              <span>Comercial</span>
+              <h3>Loja Anita</h3>
+              <p>180 m² · fit-out · 75 dias</p>
+              <div class="obra__pct"><i style="width:100%"></i><em>100%</em></div>
+            </div>
+          </article>
+          <article class="obra tilt reveal" data-tilt>
+            <div class="obra__visual obra__visual--d" aria-hidden="true"></div>
+            <div class="obra__body">
+              <span>Em andamento</span>
+              <h3>Sobrado Costa</h3>
+              <p>320 m² · fase estrutura</p>
+              <div class="obra__pct"><i style="width:38%"></i><em>38%</em></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="orcamento">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Estimativa</span>
+          <h2 class="title">Faixa de <em>investimento</em></h2>
+          <p>Referência educativa — proposta formal após visita técnica.</p>
+        </div>
+        <div class="calc reveal">
+          <div class="calc__controls">
+            <label>
+              Tipo de obra
+              <select id="calc-type">
+                <option value="2800">Casa do zero (padrão)</option>
+                <option value="3800">Casa do zero (alto padrão)</option>
+                <option value="1600" selected>Reforma completa</option>
+                <option value="2200">Ampliação</option>
+                <option value="1900">Fit-out comercial</option>
+              </select>
+            </label>
+            <label>
+              Área (m²)
+              <div class="calc__range">
+                <input type="range" id="calc-area" min="40" max="500" step="10" value="120" />
+                <output id="calc-area-out">120 m²</output>
+              </div>
+            </label>
+            <label>
+              Complexidade
+              <input type="range" id="calc-level" min="0" max="2" step="1" value="1" />
+              <output id="calc-level-out">Média</output>
+            </label>
+            <p class="calc__note">Não inclui terreno, taxas e projetos complementares.</p>
+          </div>
+          <div class="calc__result tilt" data-tilt>
+            <span>Faixa estimada*</span>
+            <strong id="calc-total">R$ —</strong>
+            <em id="calc-label">Reforma · 120 m²</em>
+            <button type="button" class="btn btn--orange btn--block" id="calc-wa">Pedir proposta</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cronograma">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Método</span>
+          <h2 class="title">Cronograma tipo <em>residencial</em></h2>
+          <p>Toque nas fases — enviamos um briefing parecido no Zap.</p>
+        </div>
+        <ol class="phases reveal" id="phases">
+          <li class="is-on" data-phase="Briefing &amp; orçamento"><span>01</span><div><h3>Briefing</h3><p>Escopo, visita e proposta.</p></div></li>
+          <li data-phase="Projeto e aprovações"><span>02</span><div><h3>Projeto</h3><p>Arquitetônico / estrutural.</p></div></li>
+          <li data-phase="Fundação e estrutura"><span>03</span><div><h3>Estrutura</h3><p>Fundação, pilares, lajes.</p></div></li>
+          <li data-phase="Alvenaria e instalações"><span>04</span><div><h3>Vedação</h3><p>Alvenaria e shafts.</p></div></li>
+          <li data-phase="Acabamento e entrega"><span>05</span><div><h3>Acabamento</h3><p>Revestimentos e entrega.</p></div></li>
+        </ol>
+        <button type="button" class="btn btn--ghost" id="phase-wa">Quero este fluxo</button>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="checklist">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Checklist</span>
+          <h2 class="title">Antes de <em>começar</em></h2>
+        </div>
+        <div class="checkgrid reveal">
+          <div class="checkgrid__list" id="check-list">
+            <label class="check"><input type="checkbox" value="Terreno / imóvel definido" /><span>Terreno ou imóvel definido</span></label>
+            <label class="check"><input type="checkbox" value="Orçamento aproximado" /><span>Faixa de orçamento</span></label>
+            <label class="check"><input type="checkbox" value="Projeto existente (se houver)" /><span>Projeto (se houver)</span></label>
+            <label class="check"><input type="checkbox" value="Prazo desejado" /><span>Prazo desejado</span></label>
+            <label class="check"><input type="checkbox" value="Referências de estilo" /><span>Referências de estilo</span></label>
+            <label class="check"><input type="checkbox" value="Acesso à obra" /><span>Acesso / restrições do local</span></label>
+          </div>
+          <aside class="checkgrid__side">
+            <strong id="check-pct">0/6</strong>
+            <p id="check-hint">Marque o que já tem.</p>
+            <button type="button" class="btn btn--orange btn--block" id="check-wa">Enviar checklist</button>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="equipe">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Equipe</span>
+          <h2 class="title">Quem segura a <em>obra</em></h2>
+        </div>
+        <div class="team">
+          <article class="team-card tilt reveal" data-tilt>
+            <div class="team-card__avatar">ED</div>
+            <p class="team-card__role">Eng. Civil · CREA · Obra</p>
+            <h3>Eduardo Dias</h3>
+            <p>Planejamento, estrutura e coordenação de canteiro.</p>
+          </article>
+          <article class="team-card tilt reveal" data-tilt>
+            <div class="team-card__avatar team-card__avatar--alt">ED</div>
+            <p class="team-card__role">Atendimento · Orçamentos</p>
+            <h3>Eduarda Dias</h3>
+            <p>Briefing, propostas e o canal direto com o cliente.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="depoimentos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="tag">Clientes</span>
+          <h2 class="title">Quem já <em>entregou</em> as chaves</h2>
+        </div>
+        <div class="quotes">
+          <blockquote class="quote reveal">
+            <p>“Cronograma cumprido. Sem surpresa de aditivo escondido.”</p>
+            <footer>— Roberto · América</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“Reforma do apto no prazo. Acabamento caprichado.”</p>
+            <footer>— Marina · Centro</footer>
+          </blockquote>
+          <blockquote class="quote reveal">
+            <p>“Fit-out da loja em 75 dias. Abrimos na data da campanha.”</p>
+            <footer>— Felipe · Anita</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head reveal">
+          <span class="tag">FAQ</span>
+          <h2 class="title">Dúvidas da <em>obra</em></h2>
+        </div>
+        <div class="faq">
+          <details class="faq-item reveal">
+            <summary>Vocês fazem só execução?<span></span></summary>
+            <p>Fazemos execução e também coordenamos com arquitetos parceiros.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Como funciona o pagamento?<span></span></summary>
+            <p>Por etapas/medições conforme o contrato — sem valor “fechado no escuro”.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Atendem fora de Joinville?<span></span></summary>
+            <p>Região metropolitana e SC sob análise de logística.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Dão garantia?<span></span></summary>
+            <p>Sim, conforme o tipo de serviço e normas aplicáveis.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta__inner reveal">
+        <div>
+          <h2>Tem um projeto pra tirar do papel?</h2>
+          <p>Manda o briefing — a gente responde com o próximo passo.</p>
+        </div>
+        <a href="#contato" class="btn btn--dark magnetic">Falar com a Base</a>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="container contact">
+        <div class="contact__info reveal">
+          <span class="tag">Contato</span>
+          <h2 class="title">Fale com a <em>Base</em></h2>
+          <ul class="contact__list">
+            <li>
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/5547992072891">(47) 99207-2891</a>
+            </li>
+            <li>
+              <strong>E-mail</strong>
+              <a href="mailto:edudiasr6@gmail.com">edudiasr6@gmail.com</a>
+            </li>
+            <li>
+              <strong>Endereço</strong>
+              <span>Centro de Joinville<br />Joinville — SC · Brasil</span>
+            </li>
+            <li>
+              <strong>Horário</strong>
+              <span>Seg a Sex · 08h–18h<br />Visitas de obra sob agenda</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contact-form" novalidate>
+          <h3>Briefing de obra</h3>
+          <p class="form__lead">Quanto mais detalhe, mais precisa a proposta.</p>
+
+          <div class="form__row">
+            <label>
+              Nome
+              <input type="text" name="name" required placeholder="Seu nome" autocomplete="name" />
+              <span class="form__error">Informe seu nome.</span>
+            </label>
+            <label>
+              WhatsApp
+              <input type="tel" name="phone" required placeholder="(47) 99207-2891" autocomplete="tel" inputmode="tel" />
+              <span class="form__error">Informe um telefone válido.</span>
+            </label>
+          </div>
+          <div class="form__row">
+            <label>
+              Tipo
+              <select name="type" required>
+                <option value="" disabled selected>Selecione</option>
+                <option>Casa do zero</option>
+                <option>Reforma</option>
+                <option>Ampliação</option>
+                <option>Comercial</option>
+                <option>Outro</option>
+              </select>
+              <span class="form__error">Escolha o tipo.</span>
+            </label>
+            <label>
+              Área aprox. (m²)
+              <input type="number" name="area" min="10" max="5000" placeholder="Ex.: 150" />
+            </label>
+          </div>
+          <label>
+            Descreva a obra
+            <textarea name="message" rows="3" placeholder="Bairro, prazo, orçamento, se já tem projeto..."></textarea>
+          </label>
+          <button type="submit" class="btn btn--orange btn--block">Enviar no WhatsApp</button>
+          <p class="form__ok" id="form-ok" hidden>Abrindo o WhatsApp…</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="logo">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">BASE<em>construtora</em></span>
+      </a>
+      <p>Centro de Joinville · SC · Brasil</p>
+      <p>© <span id="year"></span> Base · Portfólio</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5547992072891?text=Ol%C3%A1!%20Quero%20or%C3%A7ar%20com%20a%20Base." class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  </a>
+
+  <button class="to-top" id="to-top" aria-label="Voltar ao topo">↑</button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
