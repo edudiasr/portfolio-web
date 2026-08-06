@@ -187,6 +187,8 @@ strong {
 }
 
 .lang {
+  position: relative;
+  z-index: 60;
   display: inline-flex;
   align-items: center;
   gap: 0.2rem;
@@ -213,6 +215,9 @@ strong {
   padding: 0.42rem 0.58rem;
   border-radius: 9px;
   cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+  z-index: 61;
   transition: 0.25s var(--ease);
 }
 
