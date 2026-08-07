@@ -92,20 +92,35 @@
           <span class="stat__l" data-i18n="statProjects">projetos</span>
         </div>
         <div class="stat">
-          <span class="stat__n" data-count="20" data-prefix="+">0</span>
+          <span class="stat__n"><span class="stat__fix" aria-hidden="true">+</span><span data-count="20">0</span></span>
           <span class="stat__l" data-i18n="statCourses">certificados</span>
         </div>
         <div class="stat stat--accent">
           <span class="stat__n" data-count="1">0</span>
           <span class="stat__l" data-i18n="statTrack">formação Alura</span>
         </div>
-        <a class="stat stat--ring" href="#sobre" style="--p:0" data-progress="25" data-i18n-aria="statCampusAria" aria-label="25% da graduação na Católica SC">
-          <span class="stat__ring" aria-hidden="true"></span>
-          <span class="stat__n"><span data-count="25" data-suffix="%">0</span></span>
+        <a
+          class="stat stat--journey"
+          href="#sobre"
+          style="--p:0"
+          data-progress="25"
+          data-i18n-aria="statCampusAria"
+          aria-label="25% da graduação na Católica SC — em andamento"
+        >
+          <span class="stat__n"><span data-count="25">0</span><span class="stat__pct" aria-hidden="true">%</span></span>
           <span class="stat__l" data-i18n="statCampus">Católica SC</span>
+          <span class="stat__status" data-i18n="statCampusStatus">em andamento</span>
+          <span class="stat__expand" aria-hidden="true">
+            <span class="stat__trail">
+              <span class="stat__trail-track"></span>
+              <span class="stat__trail-fill"></span>
+              <span class="stat__runner"></span>
+            </span>
+            <span class="stat__expand-copy" data-i18n="statCampusExpand">2/8 · trilha em curso · concluindo…</span>
+          </span>
         </a>
         <div class="stat">
-          <span class="stat__n" data-count="100" data-suffix="%">0</span>
+          <span class="stat__n"><span data-count="100">0</span><span class="stat__pct" aria-hidden="true">%</span></span>
           <span class="stat__l" data-i18n="statResponsive">responsivo</span>
         </div>
       </div>
