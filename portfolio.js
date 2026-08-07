@@ -23,11 +23,18 @@ window.EDR_I18N = {
     aboutBio:
       "Desenvolvedor front-end em formação, focado em landing pages e sites institucionais com visual premium, interação e conversão via WhatsApp.",
     aboutEdu:
-      '<strong>Engenharia de Software</strong> — <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a>, Joinville',
+      '<strong>Engenharia de Software</strong> — <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a>, Joinville · <strong>2/8</strong>',
     aboutAlura:
       '<strong>14 conclusões</strong> de cursos na <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>',
     aboutStack: "Stack: <strong>HTML · CSS · JavaScript</strong> (vanilla)",
     aboutBase: "Base: Centro de Joinville, SC · Brasil",
+    campusEyebrow: "Formação",
+    campusTitle: "Engenharia de Software",
+    campusLead:
+      'Cursando na <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — campus Joinville.',
+    campusSemesterLabel: "2º semestre",
+    campusSemesterAria: "Semestre 2 de 8",
+    campusAddress: "R. Visc. de Taunay, 427 — Centro, Joinville/SC",
     skillsTitle: "O que entrega cada demo",
     skill1: "UI dark/premium",
     skill2: "Microinterações",
@@ -231,11 +238,18 @@ window.EDR_I18N = {
     aboutBio:
       "Front-end developer in training, focused on landing pages and institutional sites with premium visuals, interaction and WhatsApp conversion.",
     aboutEdu:
-      '<strong>Software Engineering</strong> — <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a>, Joinville',
+      '<strong>Software Engineering</strong> — <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a>, Joinville · <strong>2/8</strong>',
     aboutAlura:
       '<strong>14 completed courses</strong> at <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>',
     aboutStack: "Stack: <strong>HTML · CSS · JavaScript</strong> (vanilla)",
     aboutBase: "Based in downtown Joinville, SC · Brazil",
+    campusEyebrow: "Education",
+    campusTitle: "Software Engineering",
+    campusLead:
+      'Studying at <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville campus.',
+    campusSemesterLabel: "2nd semester",
+    campusSemesterAria: "Semester 2 of 8",
+    campusAddress: "R. Visc. de Taunay, 427 — Downtown Joinville/SC",
     skillsTitle: "What each demo delivers",
     skill1: "Dark/premium UI",
     skill2: "Micro-interactions",
@@ -439,11 +453,18 @@ window.EDR_I18N = {
     aboutBio:
       "Desarrollador front-end en formación, enfocado en landing pages y sitios institucionales con visual premium, interacción y conversión por WhatsApp.",
     aboutEdu:
-      '<strong>Ingeniería de Software</strong> — <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a>, Joinville',
+      '<strong>Ingeniería de Software</strong> — <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a>, Joinville · <strong>2/8</strong>',
     aboutAlura:
       '<strong>14 cursos concluidos</strong> en <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>',
     aboutStack: "Stack: <strong>HTML · CSS · JavaScript</strong> (vanilla)",
     aboutBase: "Base: Centro de Joinville, SC · Brasil",
+    campusEyebrow: "Formación",
+    campusTitle: "Ingeniería de Software",
+    campusLead:
+      'Cursando en <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — campus Joinville.',
+    campusSemesterLabel: "2.º semestre",
+    campusSemesterAria: "Semestre 2 de 8",
+    campusAddress: "R. Visc. de Taunay, 427 — Centro, Joinville/SC",
     skillsTitle: "Lo que entrega cada demo",
     skill1: "UI dark/premium",
     skill2: "Microinteracciones",
