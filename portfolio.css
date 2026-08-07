@@ -16,6 +16,9 @@
   --accent: #38bdf8;
   --accent-2: #22d3ee;
   --ok: #34d399;
+  --wine: #9b2d4a;
+  --wine-soft: rgba(155, 45, 74, 0.18);
+  --wine-glow: rgba(155, 45, 74, 0.45);
   --wa: #25d366;
   --font: "Outfit", system-ui, sans-serif;
   --display: "Syne", system-ui, sans-serif;
@@ -438,6 +441,8 @@ main {
 
 .stat {
   position: relative;
+  align-self: start;
+  height: auto;
   padding: 1rem 0.7rem 0.9rem;
   border-radius: 16px;
   border: 1px solid var(--border);
@@ -461,7 +466,7 @@ main {
   color: var(--ok);
 }
 
-.stat__fix,
+.stat__prefix,
 .stat__pct {
   font-family: inherit;
   font-weight: inherit;
@@ -486,169 +491,95 @@ main {
   line-height: 1.25;
 }
 
-.stat__status {
-  display: inline-block;
-  margin-top: 0.35rem;
-  padding: 0.18rem 0.5rem;
-  border-radius: 999px;
-  border: 1px solid rgba(56, 189, 248, 0.28);
-  background: rgba(56, 189, 248, 0.1);
-  color: var(--accent-2);
-  font-size: 0.62rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
-
-/* Journey card — Católica SC */
+/* Journey card — Católica SC (wine) */
 .stat--journey {
   color: inherit;
   text-decoration: none;
   display: block;
   z-index: 2;
   overflow: hidden;
-  background:
-    linear-gradient(165deg, rgba(56, 189, 248, 0.1), var(--surface) 58%),
-    var(--surface);
+  border-color: rgba(155, 45, 74, 0.42);
+  background: linear-gradient(165deg, var(--wine-soft), var(--surface) 58%);
+}
+
+.stat--journey .stat__n {
+  color: var(--wine);
+}
+
+.stat--journey .stat__l {
+  color: rgba(232, 180, 196, 0.82);
+  font-weight: 500;
 }
 
 .stat--journey:hover,
 .stat--journey:focus-visible {
   color: inherit;
   z-index: 6;
-  transform: translateY(-4px) scale(1.03);
-  border-color: rgba(56, 189, 248, 0.55);
+  transform: translateY(-4px) scale(1.04);
+  border-color: rgba(155, 45, 74, 0.72);
   box-shadow:
-    0 18px 40px -18px rgba(56, 189, 248, 0.55),
-    0 0 0 1px rgba(56, 189, 248, 0.12);
-  overflow: visible;
+    0 18px 40px -16px var(--wine-glow),
+    0 0 0 1px rgba(155, 45, 74, 0.22);
+  background: linear-gradient(165deg, rgba(155, 45, 74, 0.28), var(--surface) 60%);
 }
 
 .stat--journey .stat__expand {
-  display: grid;
-  gap: 0.45rem;
+  display: block;
   max-height: 0;
   opacity: 0;
   margin-top: 0;
-  transform: translateY(6px);
+  overflow: hidden;
+  transform: translateY(8px);
   pointer-events: none;
   transition:
-    max-height 0.45s var(--ease),
-    opacity 0.35s var(--ease),
-    margin-top 0.35s var(--ease),
+    max-height 0.4s var(--ease),
+    opacity 0.3s var(--ease),
+    margin-top 0.3s var(--ease),
     transform 0.35s var(--ease);
 }
 
 .stat--journey:hover .stat__expand,
 .stat--journey:focus-visible .stat__expand {
-  max-height: 72px;
+  max-height: 3.5rem;
   opacity: 1;
-  margin-top: 0.7rem;
+  margin-top: 0.55rem;
   transform: none;
-}
-
-.stat__trail {
-  position: relative;
-  height: 0.42rem;
-  border-radius: 999px;
-}
-
-.stat__trail-track {
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: rgba(148, 163, 184, 0.18);
-}
-
-.stat__trail-fill {
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 0%;
-  border-radius: inherit;
-  background: linear-gradient(90deg, #22d3ee, #38bdf8 55%, #818cf8);
-  box-shadow: 0 0 14px rgba(56, 189, 248, 0.55);
-}
-
-.stat--journey:hover .stat__trail-fill,
-.stat--journey:focus-visible .stat__trail-fill {
-  animation: journeyFill 1.15s var(--ease) forwards;
-}
-
-.stat__runner {
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  width: 0.7rem;
-  height: 0.7rem;
-  margin-top: -0.35rem;
-  margin-left: -0.35rem;
-  border-radius: 50%;
-  background: #e8eef8;
-  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.35), 0 0 12px rgba(34, 211, 238, 0.8);
-  opacity: 0;
-}
-
-.stat--journey:hover .stat__runner,
-.stat--journey:focus-visible .stat__runner {
-  opacity: 1;
-  animation: journeyRun 1.15s var(--ease) forwards;
 }
 
 .stat__expand-copy {
   display: block;
-  font-size: 0.64rem;
-  color: var(--muted);
+  padding: 0.4rem 0.45rem;
+  border-radius: 10px;
+  border: 1px solid rgba(155, 45, 74, 0.35);
+  background: rgba(155, 45, 74, 0.16);
+  font-size: 0.66rem;
+  font-weight: 600;
+  color: #f0c4d0;
   line-height: 1.35;
 }
 
-.stat--journey:hover .stat__status,
-.stat--journey:focus-visible .stat__status {
-  animation: statusPulse 1.4s var(--ease) infinite alternate;
+.stat--journey:hover .stat__expand-copy,
+.stat--journey:focus-visible .stat__expand-copy {
+  animation: wineReveal 0.55s var(--ease) both;
 }
 
-@keyframes journeyFill {
-  0% {
-    width: 0%;
-  }
-  70% {
-    width: 25%;
-  }
-  85% {
-    width: 22%;
-  }
-  100% {
-    width: 25%;
-  }
+.stat--journey:hover .stat__l,
+.stat--journey:focus-visible .stat__l {
+  opacity: 0.55;
 }
 
-@keyframes journeyRun {
-  0% {
-    left: 0%;
-    opacity: 0;
-  }
-  12% {
-    opacity: 1;
-  }
-  70% {
-    left: 25%;
-  }
-  85% {
-    left: 22%;
-  }
-  100% {
-    left: 25%;
-    opacity: 1;
-  }
-}
-
-@keyframes statusPulse {
+@keyframes wineReveal {
   from {
-    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.15);
+    opacity: 0;
+    letter-spacing: 0.08em;
+    filter: blur(2px);
   }
   to {
-    box-shadow: 0 0 0 6px rgba(56, 189, 248, 0);
+    opacity: 1;
+    letter-spacing: 0.01em;
+    filter: none;
   }
 }
-
 /* Buttons */
 .btn {
   display: inline-flex;
@@ -748,106 +679,39 @@ main {
   min-height: 100%;
 }
 
-.about__card--campus .eyebrow {
-  margin-bottom: 0.45rem;
-}
-
 .about__card--campus h3 {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.55rem;
 }
 
 .campus__lead {
-  margin-bottom: 1rem;
+  margin-bottom: 0.85rem;
   font-size: 0.95rem;
+  color: var(--text);
 }
 
 .campus__lead a {
-  font-weight: 600;
-}
-
-.campus__meta {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  margin-bottom: 0.85rem;
-}
-
-.campus__semester {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.05rem;
-  padding: 0.45rem 0.75rem;
-  border-radius: 12px;
-  border: 1px solid rgba(56, 189, 248, 0.28);
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.14), rgba(34, 211, 238, 0.06));
-  line-height: 1;
-}
-
-.campus__semester-n {
-  font-family: var(--display);
-  font-size: 1.55rem;
-  font-weight: 800;
-  color: var(--accent-2);
-}
-
-.campus__semester-sep {
-  font-family: var(--display);
-  font-size: 1rem;
   font-weight: 700;
-  color: var(--muted);
+  color: var(--wine);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(155, 45, 74, 0.45);
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-.campus__semester-label {
-  font-size: 0.88rem;
-  color: var(--muted);
-  font-weight: 500;
+.campus__lead a:hover {
+  color: #c44768;
+  border-bottom-color: rgba(196, 71, 104, 0.7);
 }
 
-.campus__progress {
+.campus__muted {
+  margin: 0 0 0.35rem;
+  font-size: 0.86rem;
+  color: var(--muted);
+  opacity: 0.55;
+  line-height: 1.45;
+}
+
+.campus__muted:last-of-type {
   margin-bottom: 1rem;
-  padding: 0.85rem 0.9rem;
-  border-radius: 14px;
-  border: 1px solid rgba(56, 189, 248, 0.18);
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.08), rgba(6, 8, 15, 0.35));
-}
-
-.campus__progress-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  margin-bottom: 0.55rem;
-  font-size: 0.82rem;
-  color: var(--muted);
-}
-
-.campus__progress-head strong {
-  font-family: var(--display);
-  font-size: 1rem;
-  color: var(--accent-2);
-}
-
-.campus__progress-bar {
-  height: 0.45rem;
-  border-radius: 999px;
-  background: rgba(148, 163, 184, 0.16);
-  overflow: hidden;
-}
-
-.campus__progress-fill {
-  display: block;
-  height: 100%;
-  width: calc(var(--p, 0) * 1%);
-  border-radius: inherit;
-  background: linear-gradient(90deg, #22d3ee, #38bdf8 55%, #818cf8);
-  box-shadow: 0 0 18px rgba(56, 189, 248, 0.45);
-  transition: width 1.2s var(--ease);
-}
-
-.campus__progress-hint {
-  margin: 0.55rem 0 0;
-  font-size: 0.75rem;
-  color: var(--muted);
 }
 
 .campus__map {
@@ -896,11 +760,10 @@ main {
 }
 
 .campus__map-pin:hover {
-  color: var(--accent-2);
-  border-color: rgba(56, 189, 248, 0.45);
+  color: #f0c4d0;
+  border-color: rgba(155, 45, 74, 0.55);
   background: rgba(16, 24, 40, 0.92);
 }
-
 .skill-chips {
   display: flex;
   flex-wrap: wrap;
