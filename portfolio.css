@@ -436,25 +436,34 @@ main {
   gap: 0.65rem;
   margin-top: 2.75rem;
   max-width: 760px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .stat {
   position: relative;
-  align-self: start;
-  height: auto;
-  padding: 1rem 0.7rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 6.4rem;
+  padding: 1rem 0.7rem 0.95rem;
   border-radius: 16px;
   border: 1px solid var(--border);
   background: var(--surface);
   text-align: center;
   overflow: hidden;
-  transition: border-color 0.3s var(--ease), transform 0.3s var(--ease), background 0.3s var(--ease), box-shadow 0.35s var(--ease);
+  transition:
+    border-color 0.3s var(--ease),
+    transform 0.3s var(--ease),
+    background 0.3s var(--ease),
+    box-shadow 0.35s var(--ease);
 }
 
 .stat:hover {
-  border-color: rgba(56, 189, 248, 0.35);
-  transform: translateY(-2px);
+  border-color: rgba(56, 189, 248, 0.4);
+  transform: translateY(-4px);
+  background: rgba(20, 28, 44, 0.9);
+  box-shadow: 0 14px 28px -18px rgba(56, 189, 248, 0.45);
 }
 
 .stat--accent {
@@ -464,6 +473,11 @@ main {
 
 .stat--accent .stat__n {
   color: var(--ok);
+}
+
+.stat--accent:hover {
+  border-color: rgba(52, 211, 153, 0.5);
+  box-shadow: 0 14px 28px -18px rgba(52, 211, 153, 0.4);
 }
 
 .stat__prefix,
@@ -485,20 +499,26 @@ main {
 
 .stat__l {
   display: block;
-  margin-top: 0.2rem;
+  margin-top: 0.25rem;
   font-size: 0.68rem;
   color: var(--muted);
   line-height: 1.25;
 }
 
-/* Journey card — Católica SC (wine) */
+.stat__soft {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.62rem;
+  color: var(--muted);
+  opacity: 0.38;
+  line-height: 1.2;
+}
+
+/* Journey card — Católica SC (wine only) */
 .stat--journey {
   color: inherit;
   text-decoration: none;
-  display: block;
-  z-index: 2;
-  overflow: hidden;
-  border-color: rgba(155, 45, 74, 0.42);
+  border-color: rgba(155, 45, 74, 0.45);
   background: linear-gradient(165deg, var(--wine-soft), var(--surface) 58%);
 }
 
@@ -507,78 +527,22 @@ main {
 }
 
 .stat--journey .stat__l {
-  color: rgba(232, 180, 196, 0.82);
-  font-weight: 500;
+  color: rgba(232, 180, 196, 0.88);
+  font-weight: 600;
+}
+
+.stat--journey .stat__soft {
+  color: rgba(232, 180, 196, 0.9);
+  opacity: 0.32;
 }
 
 .stat--journey:hover,
 .stat--journey:focus-visible {
   color: inherit;
-  z-index: 6;
-  transform: translateY(-4px) scale(1.04);
-  border-color: rgba(155, 45, 74, 0.72);
-  box-shadow:
-    0 18px 40px -16px var(--wine-glow),
-    0 0 0 1px rgba(155, 45, 74, 0.22);
+  transform: translateY(-4px);
+  border-color: rgba(155, 45, 74, 0.75);
   background: linear-gradient(165deg, rgba(155, 45, 74, 0.28), var(--surface) 60%);
-}
-
-.stat--journey .stat__expand {
-  display: block;
-  max-height: 0;
-  opacity: 0;
-  margin-top: 0;
-  overflow: hidden;
-  transform: translateY(8px);
-  pointer-events: none;
-  transition:
-    max-height 0.4s var(--ease),
-    opacity 0.3s var(--ease),
-    margin-top 0.3s var(--ease),
-    transform 0.35s var(--ease);
-}
-
-.stat--journey:hover .stat__expand,
-.stat--journey:focus-visible .stat__expand {
-  max-height: 3.5rem;
-  opacity: 1;
-  margin-top: 0.55rem;
-  transform: none;
-}
-
-.stat__expand-copy {
-  display: block;
-  padding: 0.4rem 0.45rem;
-  border-radius: 10px;
-  border: 1px solid rgba(155, 45, 74, 0.35);
-  background: rgba(155, 45, 74, 0.16);
-  font-size: 0.66rem;
-  font-weight: 600;
-  color: #f0c4d0;
-  line-height: 1.35;
-}
-
-.stat--journey:hover .stat__expand-copy,
-.stat--journey:focus-visible .stat__expand-copy {
-  animation: wineReveal 0.55s var(--ease) both;
-}
-
-.stat--journey:hover .stat__l,
-.stat--journey:focus-visible .stat__l {
-  opacity: 0.55;
-}
-
-@keyframes wineReveal {
-  from {
-    opacity: 0;
-    letter-spacing: 0.08em;
-    filter: blur(2px);
-  }
-  to {
-    opacity: 1;
-    letter-spacing: 0.01em;
-    filter: none;
-  }
+  box-shadow: 0 16px 32px -16px var(--wine-glow);
 }
 /* Buttons */
 .btn {
@@ -700,18 +664,6 @@ main {
 .campus__lead a:hover {
   color: #c44768;
   border-bottom-color: rgba(196, 71, 104, 0.7);
-}
-
-.campus__muted {
-  margin: 0 0 0.35rem;
-  font-size: 0.86rem;
-  color: var(--muted);
-  opacity: 0.55;
-  line-height: 1.45;
-}
-
-.campus__muted:last-of-type {
-  margin-bottom: 1rem;
 }
 
 .campus__map {
@@ -1241,7 +1193,7 @@ main {
   }
 
   .stat--journey {
-    grid-column: 1 / -1;
+    grid-column: auto;
   }
 }
 
