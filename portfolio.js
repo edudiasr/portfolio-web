@@ -2,7 +2,7 @@ window.EDR_I18N = {
   pt: {
     metaTitle: "Eduardo Dias do Rosario — Portfólio Front-end",
     metaDesc:
-      "Portfólio de Eduardo Dias do Rosario: sites e landing pages em HTML, CSS e JavaScript. Cursando Engenharia de Software na Católica SC — Joinville.",
+      "Portfólio de Eduardo Dias do Rosario: sites e landing pages em HTML, CSS e JavaScript. +20 certificados e 1 formação Alura. Engenharia de Software na Católica SC — Joinville.",
     navAbout: "Sobre",
     navFeatured: "Destaques",
     navProjects: "Projetos",
@@ -12,29 +12,36 @@ window.EDR_I18N = {
     heroEyebrow: "Portfólio · Front-end · Joinville/SC",
     heroTagline: "Sites que convertem.<br />Interfaces que ficam na memória.",
     heroLead:
-      'Cursando <strong>Engenharia de Software</strong> na <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville. Formação e <strong>14 conclusões de cursos</strong> pela <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>. HTML, CSS e JavaScript vanilla para negócios reais.',
+      'Cursando <strong>Engenharia de Software</strong> na <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville. Na <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>: <strong>+20 certificados</strong> de conclusão (front-end) e <strong>1 formação</strong> em Programação. HTML, CSS e JavaScript vanilla para negócios reais.',
     ctaProjects: "Ver projetos",
     ctaWhatsApp: "Falar no WhatsApp",
     statProjects: "projetos",
-    statCourses: "cursos Alura",
-    statResponsive: "% responsivo",
+    statCourses: "certificados",
+    statTrack: "formação Alura",
+    statCampus: "Católica SC",
+    statCampusAria: "25% da graduação na Católica SC",
+    statResponsive: "responsivo",
     aboutEyebrow: "Sobre mim",
     aboutTitle: "Quem faz os sites",
     aboutBio:
       "Desenvolvedor front-end em formação, focado em landing pages e sites institucionais com visual premium, interação e conversão via WhatsApp.",
     aboutEdu:
-      '<strong>Engenharia de Software</strong> — <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a>, Joinville · <strong>2/8</strong>',
+      '<strong>Engenharia de Software</strong> — <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a>, Joinville · <strong>2/8</strong> · <strong>25%</strong>',
     aboutAlura:
-      '<strong>14 conclusões</strong> de cursos na <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>',
+      '<strong>+20 certificados</strong> (front-end) + <strong>1 formação</strong> em Programação na <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>',
     aboutStack: "Stack: <strong>HTML · CSS · JavaScript</strong> (vanilla)",
     aboutBase: "Base: Centro de Joinville, SC · Brasil",
-    campusEyebrow: "Formação",
+    campusEyebrow: "Graduação",
     campusTitle: "Engenharia de Software",
     campusLead:
       'Cursando na <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — campus Joinville.',
     campusSemesterLabel: "2º semestre",
     campusSemesterAria: "Semestre 2 de 8",
-    campusAddress: "R. Visc. de Taunay, 427 — Centro, Joinville/SC",
+    campusProgressLabel: "Trilha da graduação",
+    campusProgressHint: "2 de 8 semestres · em andamento",
+    campusProgressAria: "25% concluído na Católica SC",
+    campusMapCta: "Maps",
+    campusMapAria: "Abrir Católica SC no Google Maps",
     skillsTitle: "O que entrega cada demo",
     skill1: "UI dark/premium",
     skill2: "Microinterações",
@@ -217,7 +224,7 @@ window.EDR_I18N = {
   en: {
     metaTitle: "Eduardo Dias do Rosario — Front-end Portfolio",
     metaDesc:
-      "Portfolio by Eduardo Dias do Rosario: websites and landing pages in HTML, CSS and JavaScript. Studying Software Engineering at Católica SC — Joinville.",
+      "Portfolio by Eduardo Dias do Rosario: websites and landing pages in HTML, CSS and JavaScript. +20 certificates and 1 Alura track. Software Engineering at Católica SC — Joinville.",
     navAbout: "About",
     navFeatured: "Featured",
     navProjects: "Projects",
@@ -227,29 +234,36 @@ window.EDR_I18N = {
     heroEyebrow: "Portfolio · Front-end · Joinville/SC",
     heroTagline: "Sites that convert.<br />Interfaces you remember.",
     heroLead:
-      'Studying <strong>Software Engineering</strong> at <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville. Training and <strong>14 completed courses</strong> via <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>. Vanilla HTML, CSS and JavaScript for real businesses.',
+      'Studying <strong>Software Engineering</strong> at <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville. At <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>: <strong>+20 completion certificates</strong> (front-end) and <strong>1 career track</strong> in Programming. Vanilla HTML, CSS and JavaScript for real businesses.',
     ctaProjects: "View projects",
     ctaWhatsApp: "Chat on WhatsApp",
     statProjects: "projects",
-    statCourses: "Alura courses",
-    statResponsive: "% responsive",
+    statCourses: "certificates",
+    statTrack: "Alura track",
+    statCampus: "Católica SC",
+    statCampusAria: "25% of the degree at Católica SC",
+    statResponsive: "responsive",
     aboutEyebrow: "About me",
     aboutTitle: "Who builds the sites",
     aboutBio:
       "Front-end developer in training, focused on landing pages and institutional sites with premium visuals, interaction and WhatsApp conversion.",
     aboutEdu:
-      '<strong>Software Engineering</strong> — <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a>, Joinville · <strong>2/8</strong>',
+      '<strong>Software Engineering</strong> — <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a>, Joinville · <strong>2/8</strong> · <strong>25%</strong>',
     aboutAlura:
-      '<strong>14 completed courses</strong> at <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>',
+      '<strong>+20 certificates</strong> (front-end) + <strong>1 career track</strong> in Programming at <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>',
     aboutStack: "Stack: <strong>HTML · CSS · JavaScript</strong> (vanilla)",
     aboutBase: "Based in downtown Joinville, SC · Brazil",
-    campusEyebrow: "Education",
+    campusEyebrow: "Degree",
     campusTitle: "Software Engineering",
     campusLead:
       'Studying at <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville campus.',
     campusSemesterLabel: "2nd semester",
     campusSemesterAria: "Semester 2 of 8",
-    campusAddress: "R. Visc. de Taunay, 427 — Downtown Joinville/SC",
+    campusProgressLabel: "Degree progress",
+    campusProgressHint: "2 of 8 semesters · in progress",
+    campusProgressAria: "25% completed at Católica SC",
+    campusMapCta: "Maps",
+    campusMapAria: "Open Católica SC on Google Maps",
     skillsTitle: "What each demo delivers",
     skill1: "Dark/premium UI",
     skill2: "Micro-interactions",
@@ -432,7 +446,7 @@ window.EDR_I18N = {
   es: {
     metaTitle: "Eduardo Dias do Rosario — Portafolio Front-end",
     metaDesc:
-      "Portafolio de Eduardo Dias do Rosario: sitios y landing pages en HTML, CSS y JavaScript. Cursando Ingeniería de Software en Católica SC — Joinville.",
+      "Portafolio de Eduardo Dias do Rosario: sitios y landing pages en HTML, CSS y JavaScript. +20 certificados y 1 formación Alura. Ingeniería de Software en Católica SC — Joinville.",
     navAbout: "Sobre mí",
     navFeatured: "Destacados",
     navProjects: "Proyectos",
@@ -442,29 +456,36 @@ window.EDR_I18N = {
     heroEyebrow: "Portafolio · Front-end · Joinville/SC",
     heroTagline: "Sitios que convierten.<br />Interfaces que se recuerdan.",
     heroLead:
-      'Cursando <strong>Ingeniería de Software</strong> en <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville. Formación y <strong>14 cursos concluidos</strong> en <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>. HTML, CSS y JavaScript vanilla para negocios reales.',
+      'Cursando <strong>Ingeniería de Software</strong> en <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville. En <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>: <strong>+20 certificados</strong> de conclusión (front-end) y <strong>1 formación</strong> en Programación. HTML, CSS y JavaScript vanilla para negocios reales.',
     ctaProjects: "Ver proyectos",
     ctaWhatsApp: "Hablar por WhatsApp",
     statProjects: "proyectos",
-    statCourses: "cursos Alura",
-    statResponsive: "% responsivo",
+    statCourses: "certificados",
+    statTrack: "formación Alura",
+    statCampus: "Católica SC",
+    statCampusAria: "25% de la carrera en Católica SC",
+    statResponsive: "responsivo",
     aboutEyebrow: "Sobre mí",
     aboutTitle: "Quién hace los sitios",
     aboutBio:
       "Desarrollador front-end en formación, enfocado en landing pages y sitios institucionales con visual premium, interacción y conversión por WhatsApp.",
     aboutEdu:
-      '<strong>Ingeniería de Software</strong> — <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a>, Joinville · <strong>2/8</strong>',
+      '<strong>Ingeniería de Software</strong> — <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a>, Joinville · <strong>2/8</strong> · <strong>25%</strong>',
     aboutAlura:
-      '<strong>14 cursos concluidos</strong> en <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>',
+      '<strong>+20 certificados</strong> (front-end) + <strong>1 formación</strong> en Programación en <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>',
     aboutStack: "Stack: <strong>HTML · CSS · JavaScript</strong> (vanilla)",
     aboutBase: "Base: Centro de Joinville, SC · Brasil",
-    campusEyebrow: "Formación",
+    campusEyebrow: "Carrera",
     campusTitle: "Ingeniería de Software",
     campusLead:
       'Cursando en <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — campus Joinville.',
     campusSemesterLabel: "2.º semestre",
     campusSemesterAria: "Semestre 2 de 8",
-    campusAddress: "R. Visc. de Taunay, 427 — Centro, Joinville/SC",
+    campusProgressLabel: "Ruta de la carrera",
+    campusProgressHint: "2 de 8 semestres · en curso",
+    campusProgressAria: "25% completado en Católica SC",
+    campusMapCta: "Maps",
+    campusMapAria: "Abrir Católica SC en Google Maps",
     skillsTitle: "Lo que entrega cada demo",
     skill1: "UI dark/premium",
     skill2: "Microinteracciones",
@@ -711,12 +732,17 @@ window.EDR_I18N = {
     reveals.forEach((el) => el.classList.add("is-visible"));
   }
 
-  /* Counters */
+  /* Counters + progress rings */
   const counters = document.querySelectorAll("[data-count]");
+  const formatCount = (el, value) => {
+    const prefix = el.dataset.prefix || "";
+    const suffix = el.dataset.suffix || "";
+    el.textContent = `${prefix}${value}${suffix}`;
+  };
   const animateCount = (el) => {
     const target = Number(el.dataset.count || 0);
     if (reduce) {
-      el.textContent = String(target);
+      formatCount(el, target);
       return;
     }
     const start = performance.now();
@@ -724,26 +750,37 @@ window.EDR_I18N = {
     const tick = (now) => {
       const p = Math.min(1, (now - start) / dur);
       const eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = String(Math.round(target * eased));
+      formatCount(el, Math.round(target * eased));
       if (p < 1) requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
+  };
+  const animateProgress = (el) => {
+    const target = Number(el.dataset.progress || 0);
+    if (reduce) {
+      el.style.setProperty("--p", String(target));
+      return;
+    }
+    requestAnimationFrame(() => el.style.setProperty("--p", String(target)));
   };
   if ("IntersectionObserver" in window) {
     const cio = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
           if (e.isIntersecting) {
-            animateCount(e.target);
+            if (e.target.hasAttribute("data-count")) animateCount(e.target);
+            if (e.target.hasAttribute("data-progress")) animateProgress(e.target);
             cio.unobserve(e.target);
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.35 }
     );
     counters.forEach((c) => cio.observe(c));
+    document.querySelectorAll("[data-progress]").forEach((el) => cio.observe(el));
   } else {
     counters.forEach(animateCount);
+    document.querySelectorAll("[data-progress]").forEach(animateProgress);
   }
 
   /* Custom cursor */
