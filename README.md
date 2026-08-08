@@ -12,7 +12,7 @@ Portfólio de desenvolvimento front-end focado em **sites profissionais para neg
 - WhatsApp: [(47) 99207-2891](https://wa.me/5547992072891)
 - E-mail: edudiasr6@gmail.com
 
-A capa (`index.html`) traz hero com sobre, filtros por stack/tipo, balão de cor de cada projeto, sorteio de destaques (sempre inclui a imobiliária Vértice) e dock de redes.
+A capa (`index.html`) traz hero com sobre, tradução PT/EN/ES, filtros por stack/tipo, balão de cor de cada projeto, sorteio aleatório de destaques e dock de redes.
 
 ---
 
@@ -72,6 +72,8 @@ Depois de ativar o GitHub Pages:
 | [`site-hotel`](./site-hotel) | Hotel / pousada — espresso/champagne, quartos, datas → WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-otica`](./site-otica) | Ótica — midnight/cyan, lente interativa, provador de aros, exame WA | HTML · CSS · JS | ✅ Pronto |
 | [`site-seguros`](./site-seguros) | Seguros — navy/mint, simulador, quiz cobertura, filtros, WhatsApp | HTML · CSS · JS | ✅ Pronto |
+
+> Portfólio em expansão contínua — novos nichos e demos são adicionados regularmente.
 
 ---
 
