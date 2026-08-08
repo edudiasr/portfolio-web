@@ -2,7 +2,7 @@
 
 Portfólio de desenvolvimento front-end focado em **sites profissionais para negócios reais**: assistência técnica, comércios, prestadores de serviço e landing pages de alta conversão.
 
-**Eduardo Dias do Rosario** · Engenharia de Software (Católica SC — Joinville) · formação e **14 conclusões de cursos** pela [Alura](https://www.alura.com.br/)
+**Eduardo Dias do Rosario** · Engenharia de Software ([Católica SC](https://www.catolicasc.org.br) — Joinville) · **+20 certificados** e **1 formação** em Programação pela [Alura](https://www.alura.com.br/)
 
 > Código limpo · Design moderno · 100% responsivo · Sem frameworks obrigatórios
 
@@ -72,10 +72,6 @@ Depois de ativar o GitHub Pages:
 | [`site-hotel`](./site-hotel) | Hotel / pousada — espresso/champagne, quartos, datas → WhatsApp | HTML · CSS · JS | ✅ Pronto |
 | [`site-otica`](./site-otica) | Ótica — midnight/cyan, lente interativa, provador de aros, exame WA | HTML · CSS · JS | ✅ Pronto |
 | [`site-seguros`](./site-seguros) | Seguros — navy/mint, simulador, quiz cobertura, filtros, WhatsApp | HTML · CSS · JS | ✅ Pronto |
-
-### Próximos na fila
-
-1. Escola de música
 
 ---
 

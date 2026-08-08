@@ -2,7 +2,7 @@ window.EDR_I18N = {
   pt: {
     metaTitle: "Eduardo Dias do Rosario — Portfólio Front-end",
     metaDesc:
-      "Portfólio de Eduardo Dias do Rosario: sites e landing pages em HTML, CSS e JavaScript. +20 certificados e 1 formação Alura. Engenharia de Software na Católica SC — Joinville.",
+      "Portfólio de Eduardo Dias do Rosario: sites e landing pages em HTML, CSS e JavaScript. Cursando Engenharia de Software na Católica SC — Joinville.",
     navAbout: "Sobre",
     navFeatured: "Destaques",
     navProjects: "Projetos",
@@ -20,7 +20,7 @@ window.EDR_I18N = {
     statTrack: "formação Alura",
     statCampus: "Católica SC",
     statCampusStatus: "em andamento",
-    statCampusAria: "25% da graduação na Católica SC — em andamento",
+    statCampusAria: "25% da graduação na Católica SC",
     statResponsive: "responsivo",
     aboutEyebrow: "Sobre mim",
     aboutTitle: "Quem faz os sites",
@@ -51,11 +51,11 @@ window.EDR_I18N = {
     featuredEyebrow: "Em alta",
     featuredTitle: "Projetos em destaque",
     featuredSub:
-      "Sorteio de 3 demos entre os lançamentos recentes — a imobiliária <strong>Vértice</strong> sempre entra na seleção.",
+      "Seleção aleatória de 3 demos do portfólio. Clique para sortear de novo.",
     raffleBtn: "Sortear destaques",
     raffleHint: "Clique para girar a seleção",
     raffleNow: "Agora:",
-    featLocked: "Destaque fixo",
+    featLocked: "Destaque",
     featPicked: "Sorteado",
     featOpen: "Abrir demo →",
     projectsEyebrow: "Todos os trabalhos",
@@ -219,7 +219,7 @@ window.EDR_I18N = {
   en: {
     metaTitle: "Eduardo Dias do Rosario — Front-end Portfolio",
     metaDesc:
-      "Portfolio by Eduardo Dias do Rosario: websites and landing pages in HTML, CSS and JavaScript. +20 certificates and 1 Alura track. Software Engineering at Católica SC — Joinville.",
+      "Portfolio by Eduardo Dias do Rosario: websites and landing pages in HTML, CSS and JavaScript. Studying Software Engineering at Católica SC — Joinville.",
     navAbout: "About",
     navFeatured: "Featured",
     navProjects: "Projects",
@@ -229,15 +229,11 @@ window.EDR_I18N = {
     heroEyebrow: "Portfolio · Front-end · Joinville/SC",
     heroTagline: "Sites that convert.<br />Interfaces you remember.",
     heroLead:
-      'Studying <strong>Software Engineering</strong> at <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville. At <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>: <strong>+20 completion certificates</strong> (front-end) and <strong>1 career track</strong> in Programming. Vanilla HTML, CSS and JavaScript for real businesses.',
+      'Studying <strong>Software Engineering</strong> at <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville. At <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>: <strong>+20 certificates</strong> (front-end) and <strong>1 learning track</strong> in Programming. Vanilla HTML, CSS and JavaScript for real businesses.',
     ctaProjects: "View projects",
     ctaWhatsApp: "Chat on WhatsApp",
     statProjects: "projects",
     statCourses: "certificates",
-    statTrack: "Alura track",
-    statCampus: "Católica SC",
-    statCampusStatus: "in progress",
-    statCampusAria: "25% of the degree at Católica SC — in progress",
     statResponsive: "responsive",
     aboutEyebrow: "About me",
     aboutTitle: "Who builds the sites",
@@ -246,14 +242,9 @@ window.EDR_I18N = {
     aboutEdu:
       '<strong>Software Engineering</strong> — <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a>, Joinville · <strong>2/8</strong> · <strong>25%</strong>',
     aboutAlura:
-      '<strong>+20 certificates</strong> (front-end) + <strong>1 career track</strong> in Programming at <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>',
+      '<strong>+20 certificates</strong> (front-end) + <strong>1 learning track</strong> in Programming at <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>',
     aboutStack: "Stack: <strong>HTML · CSS · JavaScript</strong> (vanilla)",
     aboutBase: "Based in downtown Joinville, SC · Brazil",
-    campusTitle: "Software Engineering",
-    campusLead:
-      'Studying at <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville campus.',
-    campusMapCta: "Maps",
-    campusMapAria: "Open Católica SC on Google Maps",
     skillsTitle: "What each demo delivers",
     skill1: "Dark/premium UI",
     skill2: "Micro-interactions",
@@ -268,11 +259,11 @@ window.EDR_I18N = {
     featuredEyebrow: "Trending",
     featuredTitle: "Featured projects",
     featuredSub:
-      "A raffle of 3 demos from recent launches — the real-estate brand <strong>Vértice</strong> is always included.",
+      "Random selection of 3 demos from the portfolio. Click to shuffle again.",
     raffleBtn: "Shuffle featured",
     raffleHint: "Click to reshuffle the selection",
     raffleNow: "Now:",
-    featLocked: "Always featured",
+    featLocked: "Featured",
     featPicked: "Picked",
     featOpen: "Open demo →",
     projectsEyebrow: "All work",
@@ -297,6 +288,15 @@ window.EDR_I18N = {
     footerEdu:
       'Trained with <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a> · <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> Joinville',
     toTop: "Back to top",
+    campusTitle: "Software Engineering",
+    campusLead:
+      'Studying at <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville campus.',
+    campusMapCta: "Maps",
+    campusMapAria: "Open Católica SC on Google Maps",
+    statTrack: "Alura track",
+    statCampus: "Católica SC",
+    statCampusStatus: "in progress",
+    statCampusAria: "25% of the degree at Católica SC",
     projects: {
       seguros: {
         title: "Aegis — Insurance Broker",
@@ -436,7 +436,7 @@ window.EDR_I18N = {
   es: {
     metaTitle: "Eduardo Dias do Rosario — Portafolio Front-end",
     metaDesc:
-      "Portafolio de Eduardo Dias do Rosario: sitios y landing pages en HTML, CSS y JavaScript. +20 certificados y 1 formación Alura. Ingeniería de Software en Católica SC — Joinville.",
+      "Portafolio de Eduardo Dias do Rosario: sitios y landing pages en HTML, CSS y JavaScript. Cursando Ingeniería de Software en Católica SC — Joinville.",
     navAbout: "Sobre mí",
     navFeatured: "Destacados",
     navProjects: "Proyectos",
@@ -446,15 +446,11 @@ window.EDR_I18N = {
     heroEyebrow: "Portafolio · Front-end · Joinville/SC",
     heroTagline: "Sitios que convierten.<br />Interfaces que se recuerdan.",
     heroLead:
-      'Cursando <strong>Ingeniería de Software</strong> en <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville. En <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>: <strong>+20 certificados</strong> de conclusión (front-end) y <strong>1 formación</strong> en Programación. HTML, CSS y JavaScript vanilla para negocios reales.',
+      'Cursando <strong>Ingeniería de Software</strong> en <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville. En <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>: <strong>+20 certificados</strong> (front-end) y <strong>1 formación</strong> en Programación. HTML, CSS y JavaScript vanilla para negocios reales.',
     ctaProjects: "Ver proyectos",
     ctaWhatsApp: "Hablar por WhatsApp",
     statProjects: "proyectos",
     statCourses: "certificados",
-    statTrack: "formación Alura",
-    statCampus: "Católica SC",
-    statCampusStatus: "en curso",
-    statCampusAria: "25% de la carrera en Católica SC — en curso",
     statResponsive: "responsivo",
     aboutEyebrow: "Sobre mí",
     aboutTitle: "Quién hace los sitios",
@@ -466,11 +462,6 @@ window.EDR_I18N = {
       '<strong>+20 certificados</strong> (front-end) + <strong>1 formación</strong> en Programación en <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>',
     aboutStack: "Stack: <strong>HTML · CSS · JavaScript</strong> (vanilla)",
     aboutBase: "Base: Centro de Joinville, SC · Brasil",
-    campusTitle: "Ingeniería de Software",
-    campusLead:
-      'Cursando en <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — campus Joinville.',
-    campusMapCta: "Maps",
-    campusMapAria: "Abrir Católica SC en Google Maps",
     skillsTitle: "Lo que entrega cada demo",
     skill1: "UI dark/premium",
     skill2: "Microinteracciones",
@@ -485,11 +476,11 @@ window.EDR_I18N = {
     featuredEyebrow: "En tendencia",
     featuredTitle: "Proyectos destacados",
     featuredSub:
-      "Sorteo de 3 demos entre los lanzamientos recientes — la inmobiliaria <strong>Vértice</strong> siempre entra en la selección.",
+      "Selección aleatoria de 3 demos del portafolio. Haz clic para volver a sortear.",
     raffleBtn: "Sortear destacados",
     raffleHint: "Haz clic para girar la selección",
     raffleNow: "Ahora:",
-    featLocked: "Destacado fijo",
+    featLocked: "Destacado",
     featPicked: "Sorteado",
     featOpen: "Abrir demo →",
     projectsEyebrow: "Todos los trabajos",
@@ -514,6 +505,15 @@ window.EDR_I18N = {
     footerEdu:
       'Formación con <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a> · <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> Joinville',
     toTop: "Volver arriba",
+    campusTitle: "Ingeniería de Software",
+    campusLead:
+      'Cursando en <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — campus Joinville.',
+    campusMapCta: "Maps",
+    campusMapAria: "Abrir Católica SC en Google Maps",
+    statTrack: "formación Alura",
+    statCampus: "Católica SC",
+    statCampusStatus: "en curso",
+    statCampusAria: "25% de la graduación en Católica SC",
     projects: {
       seguros: {
         title: "Aegis — Corredora de Seguros",
@@ -717,17 +717,12 @@ window.EDR_I18N = {
     reveals.forEach((el) => el.classList.add("is-visible"));
   }
 
-  /* Counters + progress rings */
+  /* Counters */
   const counters = document.querySelectorAll("[data-count]");
-  const formatCount = (el, value) => {
-    const prefix = el.dataset.prefix || "";
-    const suffix = el.dataset.suffix || "";
-    el.textContent = `${prefix}${value}${suffix}`;
-  };
   const animateCount = (el) => {
     const target = Number(el.dataset.count || 0);
     if (reduce) {
-      formatCount(el, target);
+      el.textContent = String(target);
       return;
     }
     const start = performance.now();
@@ -735,37 +730,26 @@ window.EDR_I18N = {
     const tick = (now) => {
       const p = Math.min(1, (now - start) / dur);
       const eased = 1 - Math.pow(1 - p, 3);
-      formatCount(el, Math.round(target * eased));
+      el.textContent = String(Math.round(target * eased));
       if (p < 1) requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
-  };
-  const animateProgress = (el) => {
-    const target = Number(el.dataset.progress || 0);
-    if (reduce) {
-      el.style.setProperty("--p", String(target));
-      return;
-    }
-    requestAnimationFrame(() => el.style.setProperty("--p", String(target)));
   };
   if ("IntersectionObserver" in window) {
     const cio = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
           if (e.isIntersecting) {
-            if (e.target.hasAttribute("data-count")) animateCount(e.target);
-            if (e.target.hasAttribute("data-progress")) animateProgress(e.target);
+            animateCount(e.target);
             cio.unobserve(e.target);
           }
         });
       },
-      { threshold: 0.35 }
+      { threshold: 0.5 }
     );
     counters.forEach((c) => cio.observe(c));
-    document.querySelectorAll("[data-progress]").forEach((el) => cio.observe(el));
   } else {
     counters.forEach(animateCount);
-    document.querySelectorAll("[data-progress]").forEach(animateProgress);
   }
 
   /* Custom cursor */
@@ -913,25 +897,7 @@ window.EDR_I18N = {
     return a;
   };
 
-  const pickFeatured = () => {
-    const all = projectData();
-    const locked = all.find((p) => p.id === "imobiliaria");
-    const recentPool = all.filter(
-      (p) => p.id !== "imobiliaria" && (p.isNew || all.indexOf(p) < 10)
-    );
-    let hits = {};
-    try {
-      hits = JSON.parse(localStorage.getItem("edr_hits") || "{}");
-    } catch (_) {}
-
-    const weighted = shuffle(recentPool).sort((a, b) => {
-      const ha = hits[a.id] || 0;
-      const hb = hits[b.id] || 0;
-      return hb - ha || Math.random() - 0.5;
-    });
-
-    return shuffle([locked, ...weighted.slice(0, 2)].filter(Boolean));
-  };
+  const pickFeatured = () => shuffle(projectData()).slice(0, 3);
 
   const renderFeatured = (animate, keepSelection) => {
     if (!featuredGrid) return;
@@ -952,10 +918,10 @@ window.EDR_I18N = {
     featuredGrid.innerHTML = picks
       .map(
         (p, i) => `
-      <a class="feat-card${p.locked ? " is-locked" : ""}" href="${p.href}" style="--c:${p.color}; transition-delay:${i * 80}ms" data-id="${p.id}">
+      <a class="feat-card" href="${p.href}" style="--c:${p.color}; transition-delay:${i * 80}ms" data-id="${p.id}">
         <span class="feat-card__glow" style="--c:${p.color}"></span>
         <span class="feat-card__balloon" style="--c:${p.color}"></span>
-        <span class="feat-card__label">${p.locked ? t("featLocked") : t("featPicked")}</span>
+        <span class="feat-card__label">${t("featPicked")}</span>
         <h3>${p.title}</h3>
         <p>${p.desc}</p>
         <span class="feat-card__go">${t("featOpen")}</span>
@@ -1044,6 +1010,30 @@ window.EDR_I18N = {
       localStorage.setItem("edr_lang", lang);
     } catch (_) {}
     applyI18n(true);
+  });
+
+  /* Silly / playful interactions on hero stats */
+  document.querySelectorAll(".hero__stats .stat").forEach((stat) => {
+    const play = () => {
+      if (reduce) return;
+      stat.classList.remove("is-pop");
+      void stat.offsetWidth;
+      stat.classList.add("is-pop");
+      const n = stat.querySelector(".stat__n");
+      if (!n) return;
+      n.style.transition = "transform 0.35s cubic-bezier(0.22,1,0.36,1)";
+      n.style.transform = `scale(1.12) rotate(${(Math.random() * 8 - 4).toFixed(1)}deg)`;
+      window.setTimeout(() => {
+        n.style.transform = "";
+      }, 380);
+    };
+    stat.addEventListener("mouseenter", play);
+    stat.addEventListener("click", (e) => {
+      if (stat.tagName === "A") {
+        /* keep navigation, still play pop */
+      }
+      play();
+    });
   });
 
   applyI18n(false);
