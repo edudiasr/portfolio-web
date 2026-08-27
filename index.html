@@ -1,438 +1,119 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eduardo Dias do Rosario — Portfólio Front-end</title>
-  <meta name="description" content="Portfólio de Eduardo Dias do Rosario: sites e landing pages em HTML, CSS e JavaScript. +20 certificados e 1 formação Alura. Engenharia de Software na Católica SC — Joinville." />
-  <meta name="author" content="Eduardo Dias do Rosario" />
+  <title>Para Sabrina — com amor, Eduardo</title>
+  <meta name="description" content="Uma carta de amor interativa de Eduardo Dias para Sabrina Schulz." />
+  <meta name="robots" content="noindex, nofollow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./assets/css/portfolio.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
-  <div class="progress" id="progress" aria-hidden="true"></div>
-  <div class="cursor" id="cursor" aria-hidden="true"></div>
-  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
-  <div class="ambient" aria-hidden="true"></div>
-
-  <header class="topbar">
-    <a class="brand" href="#topo">
-      <span class="brand__mark"></span>
-      <span class="brand__text">EDR<span>.</span></span>
-    </a>
-    <nav class="nav" aria-label="Principal">
-      <a href="#sobre" data-i18n="navAbout">Sobre</a>
-      <a href="#destaques" data-i18n="navFeatured">Destaques</a>
-      <a href="#projetos" data-i18n="navProjects">Projetos</a>
-      <a href="#contato" data-i18n="navContact">Contato</a>
-    </nav>
-    <div class="lang" id="langSwitch" role="group" data-i18n-aria="langLabel" aria-label="Idioma">
-      <button type="button" class="lang__btn is-active" data-lang="pt" aria-pressed="true">PT</button>
-      <button type="button" class="lang__btn" data-lang="en" aria-pressed="false">EN</button>
-      <button type="button" class="lang__btn" data-lang="es" aria-pressed="false">ES</button>
-    </div>
-    <div class="social-dock" aria-label="Redes sociais">
-      <a class="social-btn" href="https://www.instagram.com/edudiasr_/" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-      </a>
-      <a class="social-btn" href="https://github.com/edudiasr" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.52 2.87 8.35 6.84 9.71.5.1.68-.22.68-.48 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.27 2.75 1.05A9.3 9.3 0 0 1 12 6.84c.85 0 1.71.12 2.51.35 1.91-1.32 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.48A10.01 10.01 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg>
-      </a>
-      <a class="social-btn social-btn--wa" href="https://wa.me/5547992072891?text=Ol%C3%A1%20Eduardo!%20Vi%20seu%20portf%C3%B3lio%20e%20quero%20conversar." target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.43-9.91 9.88 0 1.74.46 3.44 1.34 4.94L2 22l5.33-1.4a9.9 9.9 0 0 0 4.71 1.2h.01c5.46 0 9.91-4.43 9.91-9.88C21.96 6.43 17.5 2 12.04 2zm5.77 14.06c-.24.68-1.41 1.25-1.95 1.33-.5.07-1.13.1-1.83-.11-.42-.13-.97-.32-1.67-.62-2.94-1.27-4.85-4.23-5-4.42-.14-.19-1.19-1.58-1.19-3.02 0-1.43.75-2.14 1.02-2.43.27-.29.59-.36.79-.36h.57c.18 0 .42-.07.66.5.24.58.82 2 .89 2.15.07.14.12.32.02.51-.1.2-.15.32-.3.49-.14.17-.31.38-.44.51-.14.14-.29.29-.12.57.16.28.73 1.2 1.56 1.95 1.08.96 1.98 1.26 2.26 1.4.28.14.44.12.61-.07.16-.19.7-.81.89-1.09.18-.28.37-.23.62-.14.25.1 1.58.74 1.85.88.27.13.45.2.52.31.07.11.07.64-.17 1.32z"/></svg>
-      </a>
-    </div>
-    <button class="menu-toggle" id="menuToggle" data-i18n-aria="menuOpen" aria-label="Abrir menu" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-  </header>
-
-  <div class="mobile-menu" id="mobileMenu" hidden>
-    <a href="#sobre" data-i18n="navAbout">Sobre</a>
-    <a href="#destaques" data-i18n="navFeatured">Destaques</a>
-    <a href="#projetos" data-i18n="navProjects">Projetos</a>
-    <a href="#contato" data-i18n="navContact">Contato</a>
-    <div class="lang lang--mobile" role="group" aria-label="Idioma">
-      <button type="button" class="lang__btn is-active" data-lang="pt">PT</button>
-      <button type="button" class="lang__btn" data-lang="en">EN</button>
-      <button type="button" class="lang__btn" data-lang="es">ES</button>
-    </div>
-    <div class="mobile-menu__social">
-      <a href="https://www.instagram.com/edudiasr_/" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://github.com/edudiasr" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://wa.me/5547992072891" target="_blank" rel="noopener">WhatsApp</a>
-    </div>
+  <div class="bg" aria-hidden="true">
+    <div class="bg__image" id="bgImage"></div>
+    <div class="bg__overlay"></div>
   </div>
 
-  <main id="topo">
-    <section class="hero">
-      <div class="hero__orb hero__orb--1" aria-hidden="true"></div>
-      <div class="hero__orb hero__orb--2" aria-hidden="true"></div>
-      <p class="eyebrow reveal" data-i18n="heroEyebrow">Portfólio · Front-end · Joinville/SC</p>
-      <h1 class="reveal">
-        <span class="hero__name">Eduardo Dias<br />do Rosario</span>
-        <span class="hero__tagline" data-i18n-html="heroTagline">Sites que convertem.<br />Interfaces que ficam na memória.</span>
-      </h1>
-      <p class="hero__lead reveal" data-i18n-html="heroLead">
-        Cursando <strong>Engenharia de Software</strong> na <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville.
-        Na <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>:
-        <strong>+20 certificados</strong> de conclusão (front-end) e
-        <strong>1 formação</strong> em Programação.
-        HTML, CSS e JavaScript vanilla para negócios reais.
+  <canvas class="hearts-canvas" id="heartsCanvas" aria-hidden="true"></canvas>
+  <div class="float-hearts" id="floatHearts" aria-hidden="true"></div>
+
+  <header class="letter-header reveal">
+    <p class="letter-header__from" data-slot="header-from"></p>
+    <p class="letter-header__to" data-slot="header-to"></p>
+  </header>
+
+  <main>
+  <!-- Abertura -->
+  <section class="section section--opening" id="abertura">
+    <div class="opening reveal">
+      <figure class="photo-frame photo-frame--hero">
+        <img data-img="opening" alt="Sabrina" width="520" height="640" loading="eager" />
+      </figure>
+      <div class="opening__text glass">
+        <h1 class="opening__greeting" data-slot="opening-greeting"></h1>
+        <div class="opening__body prose" data-slot="opening-body"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transição -->
+  <section class="section section--transition" id="transicao">
+    <blockquote class="transition-quote reveal">
+      <p data-slot="transition-quote"></p>
+    </blockquote>
+    <figure class="letter-frame reveal">
+      <div class="letter-frame__paper">
+        <img data-img="letter" alt="Cartinha" width="480" height="360" loading="lazy" />
+      </div>
+    </figure>
+  </section>
+
+  <!-- Filhos -->
+  <section class="section section--children" id="filhos">
+    <div class="children-head reveal">
+      <p class="children-head__intro" data-slot="children-intro"></p>
+      <h2 class="children-head__title" data-slot="children-title"></h2>
+    </div>
+    <div class="children-grid">
+      <article class="reveal-card glass" data-reveal="son">
+        <div class="reveal-card__front">
+          <span class="reveal-card__emoji" data-slot="son-emoji"></span>
+          <h3 data-slot="son-label"></h3>
+          <button type="button" class="btn-reveal" data-reveal-btn="son">
+            <span data-slot="son-btn"></span>
+          </button>
+        </div>
+        <div class="reveal-card__back" hidden>
+          <figure class="photo-frame photo-frame--child">
+            <img data-img="son" alt="Nosso filho — imaginação" width="320" height="400" loading="lazy" />
+          </figure>
+        </div>
+      </article>
+      <article class="reveal-card glass" data-reveal="daughter">
+        <div class="reveal-card__front">
+          <span class="reveal-card__emoji" data-slot="daughter-emoji"></span>
+          <h3 data-slot="daughter-label"></h3>
+          <button type="button" class="btn-reveal" data-reveal-btn="daughter">
+            <span data-slot="daughter-btn"></span>
+          </button>
+        </div>
+        <div class="reveal-card__back" hidden>
+          <figure class="photo-frame photo-frame--child">
+            <img data-img="daughter" alt="Nossa filha — imaginação" width="320" height="400" loading="lazy" />
+          </figure>
+        </div>
+      </article>
+    </div>
+    <p class="children-after reveal" data-slot="children-after" hidden></p>
+  </section>
+
+  <!-- Futuro -->
+  <section class="section section--future" id="futuro">
+    <div class="future-text glass reveal">
+      <div class="prose prose--future" data-slot="future-body"></div>
+    </div>
+    <figure class="photo-frame photo-frame--spotlight reveal">
+      <img data-img="childhood" alt="Sabrina pequena" width="560" height="700" loading="lazy" />
+    </figure>
+  </section>
+
+  <!-- Encerramento -->
+  <section class="section section--closing" id="final">
+    <div class="closing reveal">
+      <p class="closing__intro" data-slot="closing-intro"></p>
+      <h2 class="closing__highlight" data-slot="closing-highlight"></h2>
+      <p class="closing__signature">
+        <span data-slot="closing-signature"></span><br />
+        <strong data-slot="closing-name"></strong>
       </p>
-      <div class="hero__cta reveal">
-        <a class="btn btn--primary magnetic" href="#projetos" data-i18n="ctaProjects">Ver projetos</a>
-        <a class="btn btn--ghost magnetic" href="https://wa.me/5547992072891?text=Ol%C3%A1%20Eduardo!%20Quero%20um%20site." target="_blank" rel="noopener" data-i18n="ctaWhatsApp">Falar no WhatsApp</a>
-      </div>
-      <div class="hero__stats reveal" aria-label="Números">
-        <div class="stat">
-          <span class="stat__n" data-count="22">0</span>
-          <span class="stat__l" data-i18n="statProjects">projetos</span>
-        </div>
-        <div class="stat">
-          <span class="stat__n"><span class="stat__fix" aria-hidden="true">+</span><span data-count="20">0</span></span>
-          <span class="stat__l" data-i18n="statCourses">certificados</span>
-        </div>
-        <div class="stat stat--accent">
-          <span class="stat__n" data-count="1">0</span>
-          <span class="stat__l" data-i18n="statTrack">formação Alura</span>
-        </div>
-        <a
-          class="stat stat--journey stat--wine"
-          href="#sobre"
-          data-i18n-aria="statCampusAria"
-          aria-label="25% da graduação na Católica SC"
-        >
-          <span class="stat__n"><span data-count="25">0</span><span class="stat__pct" aria-hidden="true">%</span></span>
-          <span class="stat__l" data-i18n="statCampus">Católica SC</span>
-          <span class="stat__soft" data-i18n="statCampusStatus">em andamento</span>
-        </a>
-        <div class="stat">
-          <span class="stat__n"><span data-count="100">0</span><span class="stat__pct" aria-hidden="true">%</span></span>
-          <span class="stat__l" data-i18n="statResponsive">responsivo</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="about section" id="sobre">
-      <div class="section__head reveal">
-        <p class="eyebrow" data-i18n="aboutEyebrow">Sobre mim</p>
-        <h2 data-i18n="aboutTitle">Quem faz os sites</h2>
-      </div>
-      <div class="about__grid">
-        <article class="about__card reveal tilt">
-          <h3>Eduardo Dias do Rosario</h3>
-          <p data-i18n="aboutBio">
-            Desenvolvedor front-end em formação, focado em landing pages e sites
-            institucionais com visual premium, interação e conversão via WhatsApp.
-          </p>
-          <ul class="about__list">
-            <li data-i18n-html="aboutEdu"><strong>Engenharia de Software</strong> — <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a>, Joinville · <strong>2/8</strong> · <strong>25%</strong></li>
-            <li data-i18n-html="aboutAlura"><strong>+20 certificados</strong> (front-end) + <strong>1 formação</strong> em Programação na <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a></li>
-            <li data-i18n-html="aboutStack">Stack: <strong>HTML · CSS · JavaScript</strong> (vanilla)</li>
-            <li data-i18n="aboutBase">Base: Centro de Joinville, SC · Brasil</li>
-          </ul>
-        </article>
-        <article class="about__card about__card--campus reveal">
-          <h3 data-i18n="campusTitle">Engenharia de Software</h3>
-          <p class="campus__lead" data-i18n-html="campusLead">
-            Cursando na <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — campus Joinville.
-          </p>
-          <div class="campus__map">
-            <iframe
-              title="Católica SC — Joinville no Google Maps"
-              src="https://www.google.com/maps?q=-26.3043078,-48.85104&amp;z=16&amp;hl=pt-BR&amp;output=embed"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              allowfullscreen
-            ></iframe>
-            <a
-              class="campus__map-pin"
-              href="https://maps.app.goo.gl/Vcq2SpbN2U1kdabR9"
-              target="_blank"
-              rel="noopener"
-              data-i18n-aria="campusMapAria"
-              aria-label="Abrir Católica SC no Google Maps"
-            >
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/></svg>
-              <span data-i18n="campusMapCta">Maps</span>
-            </a>
-          </div>
-        </article>
-        <article class="about__card about__card--skills reveal tilt">
-          <h3 data-i18n="skillsTitle">O que entrega cada demo</h3>
-          <div class="skill-chips">
-            <span data-i18n="skill1">UI dark/premium</span>
-            <span data-i18n="skill2">Microinterações</span>
-            <span data-i18n="skill3">Filtros &amp; simuladores</span>
-            <span data-i18n="skill4">Mobile-first</span>
-            <span data-i18n="skill5">CTAs WhatsApp</span>
-            <span data-i18n="skill6">SEO semântico</span>
-            <span data-i18n="skill7">Acessibilidade</span>
-            <span data-i18n="skill8">Código limpo</span>
-          </div>
-          <p class="about__note" data-i18n="aboutNote">
-            Cada pasta do repositório é um projeto independente — abra, explore e teste no celular.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="featured section" id="destaques">
-      <div class="section__head reveal">
-        <p class="eyebrow" data-i18n="featuredEyebrow">Em alta</p>
-        <h2 data-i18n="featuredTitle">Projetos em destaque</h2>
-        <p class="section__sub" data-i18n-html="featuredSub">
-          Seleção aleatória de 3 demos do portfólio. Clique para sortear de novo.
-        </p>
-      </div>
-      <div class="featured__toolbar reveal">
-        <button type="button" class="btn btn--ghost magnetic" id="raffleBtn">
-          <span class="raffle-icon" aria-hidden="true">✦</span>
-          <span data-i18n="raffleBtn">Sortear destaques</span>
-        </button>
-        <p class="featured__hint" id="raffleHint" data-i18n="raffleHint">Clique para girar a seleção</p>
-      </div>
-      <div class="featured__grid" id="featuredGrid" aria-live="polite"></div>
-    </section>
-
-    <section class="projects section" id="projetos">
-      <div class="section__head reveal">
-        <p class="eyebrow" data-i18n="projectsEyebrow">Todos os trabalhos</p>
-        <h2 data-i18n="projectsTitle">Projetos</h2>
-        <p class="section__sub" data-i18n="projectsSub">Mais recentes no topo. Filtre por tecnologia ou tipo de entrega.</p>
-      </div>
-
-      <div class="filters reveal" id="filters" role="toolbar" data-i18n-aria="filterAria" aria-label="Filtrar projetos">
-        <button type="button" class="filter is-active" data-filter="all" data-i18n="filterAll">Todos</button>
-        <button type="button" class="filter" data-filter="html">HTML</button>
-        <button type="button" class="filter" data-filter="css">CSS</button>
-        <button type="button" class="filter" data-filter="javascript">JavaScript</button>
-        <button type="button" class="filter" data-filter="ui">UI</button>
-        <button type="button" class="filter" data-filter="responsivo" data-i18n="filterResponsive">Responsivo</button>
-        <button type="button" class="filter" data-filter="simulador" data-i18n="filterSimulator">Simulador</button>
-        <button type="button" class="filter" data-filter="landing">Landing</button>
-        <button type="button" class="filter" data-filter="interativo" data-i18n="filterInteractive">Interativo</button>
-        <button type="button" class="filter" data-filter="carrinho" data-i18n="filterCart">Carrinho</button>
-      </div>
-      <p class="filter-count reveal" id="filterCount"></p>
-
-      <div class="grid" id="projectGrid">
-        <a class="card tilt" href="./site-seguros/" data-tags="html css javascript ui responsivo simulador interativo" data-color="#4d8bff" data-id="seguros" data-new="1">
-          <span class="card__glow" style="--c:#4d8bff"></span>
-          <span class="card__balloon" style="--c:#4d8bff" data-i18n-title="colorTitle" title="Cor do projeto"></span>
-          <span class="card__badge" data-i18n="badgeNew">Novo</span>
-          <h3 data-proj="title">Aegis — Corretora de Seguros</h3>
-          <p data-proj="desc">Navy/mint: cotação, quiz de cobertura e WhatsApp.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span data-i18n="filterSimulator">Simulador</span><span>UI</span></div>
-        </a>
-
-        <a class="card tilt" href="./site-otica/" data-tags="html css javascript ui responsivo interativo" data-color="#7dd3fc" data-id="otica" data-new="1">
-          <span class="card__glow" style="--c:#7dd3fc"></span>
-          <span class="card__balloon" style="--c:#7dd3fc"></span>
-          <span class="card__badge" data-i18n="badgeNew">Novo</span>
-          <h3 data-proj="title">Iris Ótica — Ótica</h3>
-          <p data-proj="desc">Midnight/cyan: lente, filtros e provador de aros.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI</span><span data-i18n="filterInteractive">Interativo</span></div>
-        </a>
-
-        <a class="card tilt" href="./site-hotel/" data-tags="html css javascript ui responsivo interativo" data-color="#e8d5b5" data-id="hotel" data-new="1">
-          <span class="card__glow" style="--c:#e8d5b5"></span>
-          <span class="card__balloon" style="--c:#e8d5b5"></span>
-          <span class="card__badge" data-i18n="badgeNew">Novo</span>
-          <h3 data-proj="title">Alba Hotel — Pousada</h3>
-          <p data-proj="desc">Espresso/champagne: quartos, datas e hospitalidade WA.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI</span><span data-i18n="filterResponsive">Responsivo</span></div>
-        </a>
-
-        <a class="card tilt" href="./site-construtora/" data-tags="html css javascript ui responsivo simulador interativo" data-color="#ff6b2c" data-id="construtora" data-new="1">
-          <span class="card__glow" style="--c:#ff6b2c"></span>
-          <span class="card__balloon" style="--c:#ff6b2c"></span>
-          <h3 data-proj="title">Base — Construtora</h3>
-          <p data-proj="desc">Concreto/laranja: canteiro, m² e cronograma.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span data-i18n="filterSimulator">Simulador</span></div>
-        </a>
-
-        <a class="card tilt" href="./site-fisioterapia/" data-tags="html css javascript ui responsivo interativo" data-color="#6ec5b8" data-id="fisio">
-          <span class="card__glow" style="--c:#6ec5b8"></span>
-          <span class="card__balloon" style="--c:#6ec5b8"></span>
-          <h3 data-proj="title">Alinha — Fisio &amp; Pilates</h3>
-          <p data-proj="desc">Ink/teal: body map, planos e agenda.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span data-i18n="filterInteractive">Interativo</span></div>
-        </a>
-
-        <a class="card tilt" href="./site-lavanderia/" data-tags="html css javascript ui responsivo simulador interativo" data-color="#3ecfcf" data-id="lavanderia">
-          <span class="card__glow" style="--c:#3ecfcf"></span>
-          <span class="card__balloon" style="--c:#3ecfcf"></span>
-          <h3 data-proj="title">Ciclo — Lavanderia</h3>
-          <p data-proj="desc">Slate/aqua: máquina, calculadora e status.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span data-i18n="filterSimulator">Simulador</span></div>
-        </a>
-
-        <a class="card tilt" href="./site-cafeteria/" data-tags="html css javascript ui responsivo carrinho interativo" data-color="#b8f154" data-id="cafeteria">
-          <span class="card__glow" style="--c:#b8f154"></span>
-          <span class="card__balloon" style="--c:#b8f154"></span>
-          <h3 data-proj="title">Pulp — Café &amp; Açaí</h3>
-          <p data-proj="desc">Berry/lime: builder de bowl e carrinho.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span data-i18n="filterCart">Carrinho</span></div>
-        </a>
-
-        <a class="card tilt" href="./site-arquitetura/" data-tags="html css javascript ui responsivo simulador interativo" data-color="#c9895a" data-id="arquitetura">
-          <span class="card__glow" style="--c:#c9895a"></span>
-          <span class="card__balloon" style="--c:#c9895a"></span>
-          <h3 data-proj="title">Traço Studio — Arquitetura</h3>
-          <p data-proj="desc">Charcoal/cobre: planta, antes/depois e mood.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI</span></div>
-        </a>
-
-        <a class="card tilt" href="./site-idiomas/" data-tags="html css javascript ui responsivo interativo" data-color="#58a6ff" data-id="idiomas">
-          <span class="card__glow" style="--c:#58a6ff"></span>
-          <span class="card__balloon" style="--c:#58a6ff"></span>
-          <h3 data-proj="title">Echo Idiomas — Escola</h3>
-          <p data-proj="desc">Night/sky: chat, quiz CEFR e cursos.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span data-i18n="filterInteractive">Interativo</span></div>
-        </a>
-
-        <a class="card tilt" href="./site-contabilidade/" data-tags="html css javascript ui responsivo simulador interativo" data-color="#2dd4a8" data-id="contabilidade">
-          <span class="card__glow" style="--c:#2dd4a8"></span>
-          <span class="card__balloon" style="--c:#2dd4a8"></span>
-          <h3 data-proj="title">Nexo Contábil</h3>
-          <p data-proj="desc">Ink/esmeralda: regime fiscal e checklist.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span data-i18n="filterSimulator">Simulador</span></div>
-        </a>
-
-        <a class="card tilt" href="./site-oficina/" data-tags="html css javascript ui responsivo simulador interativo" data-color="#ffb020" data-id="oficina">
-          <span class="card__glow" style="--c:#ffb020"></span>
-          <span class="card__balloon" style="--c:#ffb020"></span>
-          <h3 data-proj="title">Torque Auto — Oficina</h3>
-          <p data-proj="desc">Asphalt/âmbar: HUD e diagnóstico por sintomas.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI</span></div>
-        </a>
-
-        <a class="card tilt" href="./site-salao/" data-tags="html css javascript ui responsivo landing" data-color="#e8cfc0" data-id="salao">
-          <span class="card__glow" style="--c:#e8cfc0"></span>
-          <span class="card__balloon" style="--c:#e8cfc0"></span>
-          <h3 data-proj="title">Opaline — Estética</h3>
-          <p data-proj="desc">Plum/champagne: serviços, ritual e pacotes.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI</span><span>Landing</span></div>
-        </a>
-
-        <a class="card tilt" href="./site-padaria/" data-tags="html css javascript ui responsivo carrinho" data-color="#e8c872" data-id="padaria">
-          <span class="card__glow" style="--c:#e8c872"></span>
-          <span class="card__balloon" style="--c:#e8c872"></span>
-          <h3 data-proj="title">Levain — Padaria</h3>
-          <p data-proj="desc">Espresso/manteiga: carrinho e kits.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span data-i18n="filterCart">Carrinho</span></div>
-        </a>
-
-        <a class="card tilt" href="./site-academia/" data-tags="html css javascript ui responsivo landing" data-color="#ffe600" data-id="academia">
-          <span class="card__glow" style="--c:#ffe600"></span>
-          <span class="card__balloon" style="--c:#ffe600"></span>
-          <h3 data-proj="title">Pulse — Academia</h3>
-          <p data-proj="desc">Preto/amarelo: modalidades e trial de 7 dias.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Landing</span></div>
-        </a>
-
-        <a class="card tilt" href="./site-energia-solar/" data-tags="html css javascript ui responsivo simulador" data-color="#f5b942" data-id="solar">
-          <span class="card__glow" style="--c:#f5b942"></span>
-          <span class="card__balloon" style="--c:#f5b942"></span>
-          <h3 data-proj="title">Solara — Energia Solar</h3>
-          <p data-proj="desc">Navy/dourado: economia e projetos filtráveis.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span data-i18n="filterSimulator">Simulador</span></div>
-        </a>
-
-        <a class="card tilt" href="./site-petshop/" data-tags="html css javascript ui responsivo" data-color="#ff7a59" data-id="petshop">
-          <span class="card__glow" style="--c:#ff7a59"></span>
-          <span class="card__balloon" style="--c:#ff7a59"></span>
-          <h3 data-proj="title">Amora Pet — Clínica &amp; Pet Shop</h3>
-          <p data-proj="desc">Coral/mint: serviços, planos e hotelzinho.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI</span></div>
-        </a>
-
-        <a class="card tilt" href="./site-advocacia/" data-tags="html css javascript ui responsivo landing" data-color="#9b2d3a" data-id="advocacia">
-          <span class="card__glow" style="--c:#9b2d3a"></span>
-          <span class="card__balloon" style="--c:#9b2d3a"></span>
-          <h3 data-proj="title">Meridian — Advogados</h3>
-          <p data-proj="desc">Charcoal/vinho: institucional e consulta WA.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Landing</span></div>
-        </a>
-
-        <a class="card tilt" href="./site-imobiliaria/" data-tags="html css javascript ui responsivo interativo" data-color="#7d9b76" data-id="imobiliaria">
-          <span class="card__glow" style="--c:#7d9b76"></span>
-          <span class="card__balloon" style="--c:#7d9b76"></span>
-          <h3 data-proj="title">Vértice — Imóveis</h3>
-          <p data-proj="desc">Charcoal/sage: filtros, cards e visita WhatsApp.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span data-i18n="filterInteractive">Interativo</span></div>
-        </a>
-
-        <a class="card tilt" href="./site-clinica-dentista/" data-tags="html css javascript ui responsivo landing" data-color="#60a5fa" data-id="dentista">
-          <span class="card__glow" style="--c:#60a5fa"></span>
-          <span class="card__balloon" style="--c:#60a5fa"></span>
-          <h3 data-proj="title">Áurea — Odontologia</h3>
-          <p data-proj="desc">Azul premium: before/after e luxury UI.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI</span><span>Landing</span></div>
-        </a>
-
-        <a class="card tilt" href="./site-hamburgueria/" data-tags="html css javascript ui responsivo carrinho" data-color="#ff6b2c" data-id="burger">
-          <span class="card__glow" style="--c:#ff6b2c"></span>
-          <span class="card__balloon" style="--c:#ff6b2c"></span>
-          <h3 data-proj="title">Brasa — Hamburgueria</h3>
-          <p data-proj="desc">Charcoal/fogo: cardápio, combos e carrinho.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span data-i18n="filterCart">Carrinho</span></div>
-        </a>
-
-        <a class="card tilt" href="./landing-barbearia/" data-tags="html css javascript ui responsivo landing" data-color="#c4a574" data-id="barbearia">
-          <span class="card__glow" style="--c:#c4a574"></span>
-          <span class="card__balloon" style="--c:#c4a574"></span>
-          <h3 data-proj="title">Ónix — Barbearia</h3>
-          <p data-proj="desc">Charcoal/brass: corte, barba e agenda WA.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Landing</span></div>
-        </a>
-
-        <a class="card tilt" href="./site-informatica/" data-tags="html css javascript ui responsivo" data-color="#0ea5e9" data-id="informatica">
-          <span class="card__glow" style="--c:#0ea5e9"></span>
-          <span class="card__balloon" style="--c:#0ea5e9"></span>
-          <h3 data-proj="title">CtrlTec — Assistência Técnica</h3>
-          <p data-proj="desc">Sky/indigo: serviços, planos e dark mode.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>UI</span></div>
-        </a>
-      </div>
-    </section>
-
-    <section class="contact section" id="contato">
-      <div class="contact__panel reveal tilt">
-        <p class="eyebrow" data-i18n="contactEyebrow">Contato</p>
-        <h2 data-i18n="contactTitle">Vamos conversar sobre o seu site</h2>
-        <p data-i18n="contactText">
-          Ideias, orçamentos ou só um oi — me chama no WhatsApp, Instagram ou GitHub.
-        </p>
-        <div class="contact__links">
-          <a class="btn btn--primary magnetic" href="https://wa.me/5547992072891?text=Ol%C3%A1%20Eduardo!" target="_blank" rel="noopener">WhatsApp (47) 99207-2891</a>
-          <a class="btn btn--ghost magnetic" href="https://www.instagram.com/edudiasr_/" target="_blank" rel="noopener">Instagram @edudiasr_</a>
-          <a class="btn btn--ghost magnetic" href="https://github.com/edudiasr" target="_blank" rel="noopener">github.com/edudiasr</a>
-          <a class="btn btn--ghost magnetic" href="mailto:edudiasr6@gmail.com">edudiasr6@gmail.com</a>
-        </div>
-        <p class="contact__meta" data-i18n="contactPlace">Centro de Joinville, SC · Brasil</p>
-      </div>
-    </section>
+    </div>
+  </section>
   </main>
 
-  <footer class="footer">
-    <p>© <span id="year"></span> <span data-i18n="footerCopy">Eduardo Dias do Rosario · Portfólio front-end</span></p>
-    <p data-i18n-html="footerEdu">
-      Formação com
-      <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>
-      · <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> Joinville
-    </p>
-  </footer>
-
-  <a class="to-top" id="toTop" href="#topo" data-i18n-aria="toTop" aria-label="Voltar ao topo">↑</a>
-  <a class="float-wa" href="https://wa.me/5547992072891?text=Ol%C3%A1%20Eduardo!%20Vi%20seu%20portf%C3%B3lio." target="_blank" rel="noopener" aria-label="WhatsApp">
-    <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M12.04 2c-5.46 0-9.91 4.43-9.91 9.88 0 1.74.46 3.44 1.34 4.94L2 22l5.33-1.4a9.9 9.9 0 0 0 4.71 1.2h.01c5.46 0 9.91-4.43 9.91-9.88C21.96 6.43 17.5 2 12.04 2zm5.77 14.06c-.24.68-1.41 1.25-1.95 1.33-.5.07-1.13.1-1.83-.11-.42-.13-.97-.32-1.67-.62-2.94-1.27-4.85-4.23-5-4.42-.14-.19-1.19-1.58-1.19-3.02 0-1.43.75-2.14 1.02-2.43.27-.29.59-.36.79-.36h.57c.18 0 .42-.07.66.5.24.58.82 2 .89 2.15.07.14.12.32.02.51-.1.2-.15.32-.3.49-.14.17-.31.38-.44.51-.14.14-.29.29-.12.57.16.28.73 1.2 1.56 1.95 1.08.96 1.98 1.26 2.26 1.4.28.14.44.12.61-.07.16-.19.7-.81.89-1.09.18-.28.37-.23.62-.14.25.1 1.58.74 1.85.88.27.13.45.2.52.31.07.11.07.64-.17 1.32z"/></svg>
-  </a>
-
-  <script src="./assets/js/portfolio.js"></script>
+  <script src="./assets/js/content.js"></script>
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>
