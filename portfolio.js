@@ -35,8 +35,8 @@ window.EDR_I18N = {
     campusTitle: "Engenharia de Software",
     campusLead:
       'Cursando na <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — campus Joinville.',
-    campusMapAria: "Abrir Católica SC no Google Maps",
     campusMapCta: "Maps",
+    campusMapAria: "Abrir Católica SC no Google Maps",
     skillsTitle: "O que entrega cada demo",
     skill1: "UI dark/premium",
     skill2: "Microinterações",
@@ -51,7 +51,7 @@ window.EDR_I18N = {
     featuredEyebrow: "Em alta",
     featuredTitle: "Projetos em destaque",
     featuredSub:
-      "Seleção aleatória de 3 demos do portfólio. Clique para sortear de novo.",
+      "Sorteio de 3 demos entre os lançamentos recentes — a imobiliária <strong>Vértice</strong> sempre entra na seleção.",
     raffleBtn: "Sortear destaques",
     raffleHint: "Clique para girar a seleção",
     raffleNow: "Agora:",
@@ -229,7 +229,7 @@ window.EDR_I18N = {
     heroEyebrow: "Portfolio · Front-end · Joinville/SC",
     heroTagline: "Sites that convert.<br />Interfaces you remember.",
     heroLead:
-      'Studying <strong>Software Engineering</strong> at <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville. On <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>: <strong>+20 completion certificates</strong> (front-end) and <strong>1 Programming track</strong>. Vanilla HTML, CSS and JavaScript for real businesses.',
+      'Studying <strong>Software Engineering</strong> at <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville. At <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>: <strong>+20 completion certificates</strong> (front-end) and <strong>1 career track</strong> in Programming. Vanilla HTML, CSS and JavaScript for real businesses.',
     ctaProjects: "View projects",
     ctaWhatsApp: "Chat on WhatsApp",
     statProjects: "projects",
@@ -246,14 +246,14 @@ window.EDR_I18N = {
     aboutEdu:
       '<strong>Software Engineering</strong> — <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a>, Joinville · <strong>2/8</strong> · <strong>25%</strong>',
     aboutAlura:
-      '<strong>+20 certificates</strong> (front-end) + <strong>1 Programming track</strong> at <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>',
+      '<strong>+20 certificates</strong> (front-end) + <strong>1 career track</strong> in Programming at <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>',
     aboutStack: "Stack: <strong>HTML · CSS · JavaScript</strong> (vanilla)",
     aboutBase: "Based in downtown Joinville, SC · Brazil",
     campusTitle: "Software Engineering",
     campusLead:
       'Studying at <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville campus.',
-    campusMapAria: "Open Católica SC on Google Maps",
     campusMapCta: "Maps",
+    campusMapAria: "Open Católica SC on Google Maps",
     skillsTitle: "What each demo delivers",
     skill1: "Dark/premium UI",
     skill2: "Micro-interactions",
@@ -268,7 +268,7 @@ window.EDR_I18N = {
     featuredEyebrow: "Trending",
     featuredTitle: "Featured projects",
     featuredSub:
-      "A random pick of 3 demos from the portfolio. Click to shuffle again.",
+      "A raffle of 3 demos from recent launches — the real-estate brand <strong>Vértice</strong> is always included.",
     raffleBtn: "Shuffle featured",
     raffleHint: "Click to reshuffle the selection",
     raffleNow: "Now:",
@@ -469,8 +469,8 @@ window.EDR_I18N = {
     campusTitle: "Ingeniería de Software",
     campusLead:
       'Cursando en <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — campus Joinville.',
-    campusMapAria: "Abrir Católica SC en Google Maps",
     campusMapCta: "Maps",
+    campusMapAria: "Abrir Católica SC en Google Maps",
     skillsTitle: "Lo que entrega cada demo",
     skill1: "UI dark/premium",
     skill2: "Microinteracciones",
@@ -485,7 +485,7 @@ window.EDR_I18N = {
     featuredEyebrow: "En tendencia",
     featuredTitle: "Proyectos destacados",
     featuredSub:
-      "Selección aleatoria de 3 demos del portafolio. Haz clic para sortear de nuevo.",
+      "Sorteo de 3 demos entre los lanzamientos recientes — la inmobiliaria <strong>Vértice</strong> siempre entra en la selección.",
     raffleBtn: "Sortear destacados",
     raffleHint: "Haz clic para girar la selección",
     raffleNow: "Ahora:",
@@ -717,12 +717,17 @@ window.EDR_I18N = {
     reveals.forEach((el) => el.classList.add("is-visible"));
   }
 
-  /* Counters */
+  /* Counters + progress rings */
   const counters = document.querySelectorAll("[data-count]");
+  const formatCount = (el, value) => {
+    const prefix = el.dataset.prefix || "";
+    const suffix = el.dataset.suffix || "";
+    el.textContent = `${prefix}${value}${suffix}`;
+  };
   const animateCount = (el) => {
     const target = Number(el.dataset.count || 0);
     if (reduce) {
-      el.textContent = String(target);
+      formatCount(el, target);
       return;
     }
     const start = performance.now();
@@ -730,26 +735,37 @@ window.EDR_I18N = {
     const tick = (now) => {
       const p = Math.min(1, (now - start) / dur);
       const eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = String(Math.round(target * eased));
+      formatCount(el, Math.round(target * eased));
       if (p < 1) requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
+  };
+  const animateProgress = (el) => {
+    const target = Number(el.dataset.progress || 0);
+    if (reduce) {
+      el.style.setProperty("--p", String(target));
+      return;
+    }
+    requestAnimationFrame(() => el.style.setProperty("--p", String(target)));
   };
   if ("IntersectionObserver" in window) {
     const cio = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
           if (e.isIntersecting) {
-            animateCount(e.target);
+            if (e.target.hasAttribute("data-count")) animateCount(e.target);
+            if (e.target.hasAttribute("data-progress")) animateProgress(e.target);
             cio.unobserve(e.target);
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.35 }
     );
     counters.forEach((c) => cio.observe(c));
+    document.querySelectorAll("[data-progress]").forEach((el) => cio.observe(el));
   } else {
     counters.forEach(animateCount);
+    document.querySelectorAll("[data-progress]").forEach(animateProgress);
   }
 
   /* Custom cursor */
@@ -883,6 +899,8 @@ window.EDR_I18N = {
         title: p.short || p.title || "",
         desc: p.feat || p.desc || "",
         color: card.dataset.color || "#38bdf8",
+        locked: card.dataset.featuredLock === "1",
+        isNew: card.dataset.new === "1",
       };
     });
 
@@ -895,8 +913,25 @@ window.EDR_I18N = {
     return a;
   };
 
-  /* Sorteio 100% aleatório entre todos os projetos */
-  const pickFeatured = () => shuffle(projectData()).slice(0, 3);
+  const pickFeatured = () => {
+    const all = projectData();
+    const locked = all.find((p) => p.id === "imobiliaria");
+    const recentPool = all.filter(
+      (p) => p.id !== "imobiliaria" && (p.isNew || all.indexOf(p) < 10)
+    );
+    let hits = {};
+    try {
+      hits = JSON.parse(localStorage.getItem("edr_hits") || "{}");
+    } catch (_) {}
+
+    const weighted = shuffle(recentPool).sort((a, b) => {
+      const ha = hits[a.id] || 0;
+      const hb = hits[b.id] || 0;
+      return hb - ha || Math.random() - 0.5;
+    });
+
+    return shuffle([locked, ...weighted.slice(0, 2)].filter(Boolean));
+  };
 
   const renderFeatured = (animate, keepSelection) => {
     if (!featuredGrid) return;
@@ -917,10 +952,10 @@ window.EDR_I18N = {
     featuredGrid.innerHTML = picks
       .map(
         (p, i) => `
-      <a class="feat-card" href="${p.href}" style="--c:${p.color}; transition-delay:${i * 80}ms" data-id="${p.id}">
+      <a class="feat-card${p.locked ? " is-locked" : ""}" href="${p.href}" style="--c:${p.color}; transition-delay:${i * 80}ms" data-id="${p.id}">
         <span class="feat-card__glow" style="--c:${p.color}"></span>
         <span class="feat-card__balloon" style="--c:${p.color}"></span>
-        <span class="feat-card__label">${t("featPicked")}</span>
+        <span class="feat-card__label">${p.locked ? t("featLocked") : t("featPicked")}</span>
         <h3>${p.title}</h3>
         <p>${p.desc}</p>
         <span class="feat-card__go">${t("featOpen")}</span>

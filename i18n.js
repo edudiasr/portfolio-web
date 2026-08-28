@@ -2,7 +2,7 @@ window.EDR_I18N = {
   pt: {
     metaTitle: "Eduardo Dias do Rosario — Portfólio Front-end",
     metaDesc:
-      "Portfólio de Eduardo Dias do Rosario: sites e landing pages em HTML, CSS e JavaScript. Cursando Engenharia de Software na Católica SC — Joinville.",
+      "Portfólio de Eduardo Dias do Rosario: sites e landing pages em HTML, CSS e JavaScript. +20 certificados e 1 formação Alura. Engenharia de Software na Católica SC — Joinville.",
     navAbout: "Sobre",
     navFeatured: "Destaques",
     navProjects: "Projetos",
@@ -12,22 +12,36 @@ window.EDR_I18N = {
     heroEyebrow: "Portfólio · Front-end · Joinville/SC",
     heroTagline: "Sites que convertem.<br />Interfaces que ficam na memória.",
     heroLead:
-      'Cursando <strong>Engenharia de Software</strong> na <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville. Formação e <strong>14 conclusões de cursos</strong> pela <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>. HTML, CSS e JavaScript vanilla para negócios reais.',
+      'Cursando <strong>Engenharia de Software</strong> na <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville. Na <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>: <strong>+20 certificados</strong> de conclusão (front-end) e <strong>1 formação</strong> em Programação. HTML, CSS e JavaScript vanilla para negócios reais.',
     ctaProjects: "Ver projetos",
     ctaWhatsApp: "Falar no WhatsApp",
     statProjects: "projetos",
-    statCourses: "cursos Alura",
-    statResponsive: "% responsivo",
+    statCourses: "certificados",
+    statTrack: "formação Alura",
+    statCampus: "Católica SC",
+    statCampusAria: "25% da graduação na Católica SC",
+    statResponsive: "responsivo",
     aboutEyebrow: "Sobre mim",
     aboutTitle: "Quem faz os sites",
     aboutBio:
       "Desenvolvedor front-end em formação, focado em landing pages e sites institucionais com visual premium, interação e conversão via WhatsApp.",
     aboutEdu:
-      '<strong>Engenharia de Software</strong> — <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a>, Joinville',
+      '<strong>Engenharia de Software</strong> — <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a>, Joinville · <strong>2/8</strong> · <strong>25%</strong>',
     aboutAlura:
-      '<strong>14 conclusões</strong> de cursos na <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>',
+      '<strong>+20 certificados</strong> (front-end) + <strong>1 formação</strong> em Programação na <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>',
     aboutStack: "Stack: <strong>HTML · CSS · JavaScript</strong> (vanilla)",
     aboutBase: "Base: Centro de Joinville, SC · Brasil",
+    campusEyebrow: "Graduação",
+    campusTitle: "Engenharia de Software",
+    campusLead:
+      'Cursando na <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — campus Joinville.',
+    campusSemesterLabel: "2º semestre",
+    campusSemesterAria: "Semestre 2 de 8",
+    campusProgressLabel: "Trilha da graduação",
+    campusProgressHint: "2 de 8 semestres · em andamento",
+    campusProgressAria: "25% concluído na Católica SC",
+    campusMapCta: "Maps",
+    campusMapAria: "Abrir Católica SC no Google Maps",
     skillsTitle: "O que entrega cada demo",
     skill1: "UI dark/premium",
     skill2: "Microinterações",
@@ -210,7 +224,7 @@ window.EDR_I18N = {
   en: {
     metaTitle: "Eduardo Dias do Rosario — Front-end Portfolio",
     metaDesc:
-      "Portfolio by Eduardo Dias do Rosario: websites and landing pages in HTML, CSS and JavaScript. Studying Software Engineering at Católica SC — Joinville.",
+      "Portfolio by Eduardo Dias do Rosario: websites and landing pages in HTML, CSS and JavaScript. +20 certificates and 1 Alura track. Software Engineering at Católica SC — Joinville.",
     navAbout: "About",
     navFeatured: "Featured",
     navProjects: "Projects",
@@ -220,22 +234,36 @@ window.EDR_I18N = {
     heroEyebrow: "Portfolio · Front-end · Joinville/SC",
     heroTagline: "Sites that convert.<br />Interfaces you remember.",
     heroLead:
-      'Studying <strong>Software Engineering</strong> at <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville. Training and <strong>14 completed courses</strong> via <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>. Vanilla HTML, CSS and JavaScript for real businesses.',
+      'Studying <strong>Software Engineering</strong> at <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville. At <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>: <strong>+20 completion certificates</strong> (front-end) and <strong>1 career track</strong> in Programming. Vanilla HTML, CSS and JavaScript for real businesses.',
     ctaProjects: "View projects",
     ctaWhatsApp: "Chat on WhatsApp",
     statProjects: "projects",
-    statCourses: "Alura courses",
-    statResponsive: "% responsive",
+    statCourses: "certificates",
+    statTrack: "Alura track",
+    statCampus: "Católica SC",
+    statCampusAria: "25% of the degree at Católica SC",
+    statResponsive: "responsive",
     aboutEyebrow: "About me",
     aboutTitle: "Who builds the sites",
     aboutBio:
       "Front-end developer in training, focused on landing pages and institutional sites with premium visuals, interaction and WhatsApp conversion.",
     aboutEdu:
-      '<strong>Software Engineering</strong> — <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a>, Joinville',
+      '<strong>Software Engineering</strong> — <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a>, Joinville · <strong>2/8</strong> · <strong>25%</strong>',
     aboutAlura:
-      '<strong>14 completed courses</strong> at <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>',
+      '<strong>+20 certificates</strong> (front-end) + <strong>1 career track</strong> in Programming at <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>',
     aboutStack: "Stack: <strong>HTML · CSS · JavaScript</strong> (vanilla)",
     aboutBase: "Based in downtown Joinville, SC · Brazil",
+    campusEyebrow: "Degree",
+    campusTitle: "Software Engineering",
+    campusLead:
+      'Studying at <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville campus.',
+    campusSemesterLabel: "2nd semester",
+    campusSemesterAria: "Semester 2 of 8",
+    campusProgressLabel: "Degree progress",
+    campusProgressHint: "2 of 8 semesters · in progress",
+    campusProgressAria: "25% completed at Católica SC",
+    campusMapCta: "Maps",
+    campusMapAria: "Open Católica SC on Google Maps",
     skillsTitle: "What each demo delivers",
     skill1: "Dark/premium UI",
     skill2: "Micro-interactions",
@@ -418,7 +446,7 @@ window.EDR_I18N = {
   es: {
     metaTitle: "Eduardo Dias do Rosario — Portafolio Front-end",
     metaDesc:
-      "Portafolio de Eduardo Dias do Rosario: sitios y landing pages en HTML, CSS y JavaScript. Cursando Ingeniería de Software en Católica SC — Joinville.",
+      "Portafolio de Eduardo Dias do Rosario: sitios y landing pages en HTML, CSS y JavaScript. +20 certificados y 1 formación Alura. Ingeniería de Software en Católica SC — Joinville.",
     navAbout: "Sobre mí",
     navFeatured: "Destacados",
     navProjects: "Proyectos",
@@ -428,22 +456,36 @@ window.EDR_I18N = {
     heroEyebrow: "Portafolio · Front-end · Joinville/SC",
     heroTagline: "Sitios que convierten.<br />Interfaces que se recuerdan.",
     heroLead:
-      'Cursando <strong>Ingeniería de Software</strong> en <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville. Formación y <strong>14 cursos concluidos</strong> en <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>. HTML, CSS y JavaScript vanilla para negocios reales.',
+      'Cursando <strong>Ingeniería de Software</strong> en <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville. En <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>: <strong>+20 certificados</strong> de conclusión (front-end) y <strong>1 formación</strong> en Programación. HTML, CSS y JavaScript vanilla para negocios reales.',
     ctaProjects: "Ver proyectos",
     ctaWhatsApp: "Hablar por WhatsApp",
     statProjects: "proyectos",
-    statCourses: "cursos Alura",
-    statResponsive: "% responsivo",
+    statCourses: "certificados",
+    statTrack: "formación Alura",
+    statCampus: "Católica SC",
+    statCampusAria: "25% de la carrera en Católica SC",
+    statResponsive: "responsivo",
     aboutEyebrow: "Sobre mí",
     aboutTitle: "Quién hace los sitios",
     aboutBio:
       "Desarrollador front-end en formación, enfocado en landing pages y sitios institucionales con visual premium, interacción y conversión por WhatsApp.",
     aboutEdu:
-      '<strong>Ingeniería de Software</strong> — <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a>, Joinville',
+      '<strong>Ingeniería de Software</strong> — <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a>, Joinville · <strong>2/8</strong> · <strong>25%</strong>',
     aboutAlura:
-      '<strong>14 cursos concluidos</strong> en <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>',
+      '<strong>+20 certificados</strong> (front-end) + <strong>1 formación</strong> en Programación en <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>',
     aboutStack: "Stack: <strong>HTML · CSS · JavaScript</strong> (vanilla)",
     aboutBase: "Base: Centro de Joinville, SC · Brasil",
+    campusEyebrow: "Carrera",
+    campusTitle: "Ingeniería de Software",
+    campusLead:
+      'Cursando en <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — campus Joinville.',
+    campusSemesterLabel: "2.º semestre",
+    campusSemesterAria: "Semestre 2 de 8",
+    campusProgressLabel: "Ruta de la carrera",
+    campusProgressHint: "2 de 8 semestres · en curso",
+    campusProgressAria: "25% completado en Católica SC",
+    campusMapCta: "Maps",
+    campusMapAria: "Abrir Católica SC en Google Maps",
     skillsTitle: "Lo que entrega cada demo",
     skill1: "UI dark/premium",
     skill2: "Microinteracciones",
@@ -623,3 +665,401 @@ window.EDR_I18N = {
     },
   },
 };
+
+(() => {
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const dict = window.EDR_I18N || {};
+  const htmlLang = { pt: "pt-BR", en: "en", es: "es" };
+
+  let lang = "pt";
+  try {
+    const saved = localStorage.getItem("edr_lang");
+    if (saved && dict[saved]) lang = saved;
+  } catch (_) {}
+
+  const t = (key) => (dict[lang] && dict[lang][key]) || (dict.pt && dict.pt[key]) || key;
+  const proj = (id) => (dict[lang]?.projects?.[id]) || dict.pt?.projects?.[id] || {};
+
+  const year = document.getElementById("year");
+  if (year) year.textContent = String(new Date().getFullYear());
+
+  /* Progress */
+  const progress = document.getElementById("progress");
+  const onScroll = () => {
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    const pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+    if (progress) progress.style.width = `${pct}%`;
+    const toTop = document.getElementById("toTop");
+    if (toTop) toTop.classList.toggle("is-on", h.scrollTop > 480);
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  /* Mobile menu */
+  const toggle = document.getElementById("menuToggle");
+  const menu = document.getElementById("mobileMenu");
+  if (toggle && menu) {
+    toggle.addEventListener("click", () => {
+      const open = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!open));
+      menu.hidden = open;
+    });
+    menu.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => {
+        menu.hidden = true;
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  /* Reveal */
+  const reveals = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window && !reduce) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("is-visible");
+            io.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+    reveals.forEach((el) => io.observe(el));
+  } else {
+    reveals.forEach((el) => el.classList.add("is-visible"));
+  }
+
+  /* Counters + progress rings */
+  const counters = document.querySelectorAll("[data-count]");
+  const formatCount = (el, value) => {
+    const prefix = el.dataset.prefix || "";
+    const suffix = el.dataset.suffix || "";
+    el.textContent = `${prefix}${value}${suffix}`;
+  };
+  const animateCount = (el) => {
+    const target = Number(el.dataset.count || 0);
+    if (reduce) {
+      formatCount(el, target);
+      return;
+    }
+    const start = performance.now();
+    const dur = 1200;
+    const tick = (now) => {
+      const p = Math.min(1, (now - start) / dur);
+      const eased = 1 - Math.pow(1 - p, 3);
+      formatCount(el, Math.round(target * eased));
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+  const animateProgress = (el) => {
+    const target = Number(el.dataset.progress || 0);
+    if (reduce) {
+      el.style.setProperty("--p", String(target));
+      return;
+    }
+    requestAnimationFrame(() => el.style.setProperty("--p", String(target)));
+  };
+  if ("IntersectionObserver" in window) {
+    const cio = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            if (e.target.hasAttribute("data-count")) animateCount(e.target);
+            if (e.target.hasAttribute("data-progress")) animateProgress(e.target);
+            cio.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.35 }
+    );
+    counters.forEach((c) => cio.observe(c));
+    document.querySelectorAll("[data-progress]").forEach((el) => cio.observe(el));
+  } else {
+    counters.forEach(animateCount);
+    document.querySelectorAll("[data-progress]").forEach(animateProgress);
+  }
+
+  /* Custom cursor */
+  const cursor = document.getElementById("cursor");
+  const cursorDot = document.getElementById("cursorDot");
+  const fine = window.matchMedia("(pointer: fine)").matches;
+  if (fine && !reduce && cursor && cursorDot) {
+    document.body.classList.add("has-cursor");
+    let x = 0;
+    let y = 0;
+    let cx = 0;
+    let cy = 0;
+    window.addEventListener(
+      "mousemove",
+      (e) => {
+        x = e.clientX;
+        y = e.clientY;
+        cursorDot.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+        cursor.classList.add("is-on");
+        cursorDot.classList.add("is-on");
+      },
+      { passive: true }
+    );
+    const loop = () => {
+      cx += (x - cx) * 0.18;
+      cy += (y - cy) * 0.18;
+      cursor.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
+      requestAnimationFrame(loop);
+    };
+    loop();
+    document.querySelectorAll("a, button").forEach((el) => {
+      el.addEventListener("mouseenter", () => cursor.classList.add("is-hover"));
+      el.addEventListener("mouseleave", () => cursor.classList.remove("is-hover"));
+    });
+  }
+
+  /* Magnetic */
+  if (fine && !reduce) {
+    document.querySelectorAll(".magnetic").forEach((btn) => {
+      btn.addEventListener("mousemove", (e) => {
+        const r = btn.getBoundingClientRect();
+        const dx = e.clientX - (r.left + r.width / 2);
+        const dy = e.clientY - (r.top + r.height / 2);
+        btn.style.transform = `translate(${dx * 0.18}px, ${dy * 0.22}px)`;
+      });
+      btn.addEventListener("mouseleave", () => {
+        btn.style.transform = "";
+      });
+    });
+  }
+
+  /* Tilt */
+  if (fine && !reduce) {
+    document.querySelectorAll(".tilt").forEach((card) => {
+      card.addEventListener("mousemove", (e) => {
+        const r = card.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width - 0.5;
+        const py = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transform = `perspective(700px) rotateY(${px * 8}deg) rotateX(${-py * 8}deg) translateY(-2px)`;
+      });
+      card.addEventListener("mouseleave", () => {
+        card.style.transform = "";
+      });
+    });
+  }
+
+  document.querySelectorAll(".card[data-color]").forEach((card) => {
+    card.style.setProperty("--c", card.dataset.color);
+  });
+
+  /* Filters */
+  const filters = document.getElementById("filters");
+  const grid = document.getElementById("projectGrid");
+  const countEl = document.getElementById("filterCount");
+  const cards = () => [...(grid?.querySelectorAll(".card") || [])];
+
+  const updateCount = (visible) => {
+    if (!countEl) return;
+    const total = cards().length;
+    countEl.textContent =
+      visible === total
+        ? t("countAll").replace("{n}", total)
+        : t("countFiltered").replace("{v}", visible).replace("{n}", total);
+  };
+
+  const applyFilter = (key) => {
+    let visible = 0;
+    cards().forEach((card) => {
+      const tags = (card.dataset.tags || "").split(/\s+/);
+      const show = key === "all" || tags.includes(key);
+      card.classList.toggle("is-hidden", !show);
+      if (show) visible += 1;
+    });
+    updateCount(visible);
+  };
+
+  if (filters) {
+    filters.addEventListener("click", (e) => {
+      const btn = e.target.closest(".filter");
+      if (!btn) return;
+      filters.querySelectorAll(".filter").forEach((b) => b.classList.remove("is-active"));
+      btn.classList.add("is-active");
+      applyFilter(btn.dataset.filter || "all");
+    });
+  }
+
+  const track = (id) => {
+    try {
+      const key = "edr_hits";
+      const raw = JSON.parse(localStorage.getItem(key) || "{}");
+      raw[id] = (raw[id] || 0) + 1;
+      localStorage.setItem(key, JSON.stringify(raw));
+    } catch (_) {}
+  };
+  cards().forEach((card) => {
+    card.addEventListener("click", () => track(card.dataset.id));
+  });
+
+  /* Featured raffle */
+  const featuredGrid = document.getElementById("featuredGrid");
+  const raffleBtn = document.getElementById("raffleBtn");
+  const raffleHint = document.getElementById("raffleHint");
+  let lastPicks = [];
+
+  const projectData = () =>
+    cards().map((card) => {
+      const p = proj(card.dataset.id);
+      return {
+        id: card.dataset.id,
+        href: card.getAttribute("href"),
+        title: p.short || p.title || "",
+        desc: p.feat || p.desc || "",
+        color: card.dataset.color || "#38bdf8",
+        locked: card.dataset.featuredLock === "1",
+        isNew: card.dataset.new === "1",
+      };
+    });
+
+  const shuffle = (arr) => {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  };
+
+  const pickFeatured = () => {
+    const all = projectData();
+    const locked = all.find((p) => p.id === "imobiliaria");
+    const recentPool = all.filter(
+      (p) => p.id !== "imobiliaria" && (p.isNew || all.indexOf(p) < 10)
+    );
+    let hits = {};
+    try {
+      hits = JSON.parse(localStorage.getItem("edr_hits") || "{}");
+    } catch (_) {}
+
+    const weighted = shuffle(recentPool).sort((a, b) => {
+      const ha = hits[a.id] || 0;
+      const hb = hits[b.id] || 0;
+      return hb - ha || Math.random() - 0.5;
+    });
+
+    return shuffle([locked, ...weighted.slice(0, 2)].filter(Boolean));
+  };
+
+  const renderFeatured = (animate, keepSelection) => {
+    if (!featuredGrid) return;
+    const picks =
+      keepSelection && lastPicks.length
+        ? lastPicks.map((old) => {
+            const p = proj(old.id);
+            return {
+              ...old,
+              title: p.short || p.title || old.title,
+              desc: p.feat || p.desc || old.desc,
+            };
+          })
+        : pickFeatured();
+    lastPicks = picks;
+
+    featuredGrid.classList.toggle("is-spinning", Boolean(animate) && !reduce);
+    featuredGrid.innerHTML = picks
+      .map(
+        (p, i) => `
+      <a class="feat-card${p.locked ? " is-locked" : ""}" href="${p.href}" style="--c:${p.color}; transition-delay:${i * 80}ms" data-id="${p.id}">
+        <span class="feat-card__glow" style="--c:${p.color}"></span>
+        <span class="feat-card__balloon" style="--c:${p.color}"></span>
+        <span class="feat-card__label">${p.locked ? t("featLocked") : t("featPicked")}</span>
+        <h3>${p.title}</h3>
+        <p>${p.desc}</p>
+        <span class="feat-card__go">${t("featOpen")}</span>
+      </a>`
+      )
+      .join("");
+
+    requestAnimationFrame(() => {
+      featuredGrid.querySelectorAll(".feat-card").forEach((el) => {
+        requestAnimationFrame(() => el.classList.add("is-in"));
+        el.addEventListener("click", () => track(el.dataset.id));
+      });
+    });
+
+    if (raffleHint) {
+      const names = picks.map((p) => p.title.split("—")[0].trim()).join(" · ");
+      raffleHint.textContent = `${t("raffleNow")} ${names}`;
+    }
+
+    window.setTimeout(() => featuredGrid.classList.remove("is-spinning"), 600);
+  };
+
+  if (raffleBtn) {
+    raffleBtn.addEventListener("click", () => renderFeatured(true, false));
+  }
+
+  /* i18n apply */
+  const applyI18n = (keepFeatured) => {
+    document.documentElement.lang = htmlLang[lang] || "pt-BR";
+    document.title = t("metaTitle");
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute("content", t("metaDesc"));
+
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      if (el.id === "raffleHint" && lastPicks.length) return;
+      const key = el.getAttribute("data-i18n");
+      const val = t(key);
+      if (val != null) el.textContent = val;
+    });
+
+    document.querySelectorAll("[data-i18n-html]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-html");
+      const val = t(key);
+      if (val != null) el.innerHTML = val;
+    });
+
+    document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-aria");
+      const val = t(key);
+      if (val != null) el.setAttribute("aria-label", val);
+    });
+
+    document.querySelectorAll("[data-i18n-title]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-title");
+      const val = t(key);
+      if (val != null) el.setAttribute("title", val);
+    });
+
+    document.querySelectorAll(".card[data-id]").forEach((card) => {
+      const p = proj(card.dataset.id);
+      const title = card.querySelector("[data-proj='title']");
+      const desc = card.querySelector("[data-proj='desc']");
+      if (title && p.title) title.textContent = p.title;
+      if (desc && p.desc) desc.textContent = p.desc;
+    });
+
+    document.querySelectorAll(".lang__btn").forEach((btn) => {
+      const active = btn.dataset.lang === lang;
+      btn.classList.toggle("is-active", active);
+      btn.setAttribute("aria-pressed", String(active));
+    });
+
+    const activeFilter =
+      document.querySelector(".filter.is-active")?.dataset.filter || "all";
+    applyFilter(activeFilter);
+    renderFeatured(false, Boolean(keepFeatured));
+  };
+
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".lang__btn");
+    if (!btn) return;
+    const next = btn.dataset.lang;
+    if (!next || !dict[next] || next === lang) return;
+    lang = next;
+    try {
+      localStorage.setItem("edr_lang", lang);
+    } catch (_) {}
+    applyI18n(true);
+  });
+
+  applyI18n(false);
+})();
