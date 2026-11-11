@@ -1,5 +1,730 @@
+window.EDR_I18N = {
+  pt: {
+    metaTitle: "Eduardo Dias do Rosario — Portfólio",
+    metaDesc:
+      "Portfólio de Eduardo Dias do Rosario: sites e landing pages em HTML, CSS e JavaScript e ferramentas em Python, C++ e C#. +20 certificados e 1 formação Alura. Engenharia de Software na Católica SC — Joinville.",
+    navAbout: "Sobre",
+    navFeatured: "Destaques",
+    navProjects: "Projetos",
+    navContact: "Contato",
+    menuOpen: "Abrir menu",
+    langLabel: "Idioma",
+    heroEyebrow: "Portfólio · Front-end · Joinville/SC",
+    heroTagline: "Sites que convertem.<br />Interfaces que ficam na memória.",
+    heroLead:
+      'Cursando <strong>Engenharia de Software</strong> na <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville. Na <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>: <strong>+20 certificados</strong> de conclusão (front-end) e <strong>1 formação</strong> em Programação. HTML, CSS e JavaScript vanilla para negócios reais.',
+    ctaProjects: "Ver projetos",
+    ctaWhatsApp: "Falar no WhatsApp",
+    statProjects: "sites",
+    statCourses: "certificados",
+    statTrack: "formação Alura",
+    statCampus: "Católica SC",
+    statCampusStatus: "em andamento",
+    statCampusAria: "25% da graduação na Católica SC — em andamento",
+    statResponsive: "responsivo",
+    aboutEyebrow: "Sobre mim",
+    aboutTitle: "Quem faz os sites",
+    aboutBio:
+      "Desenvolvedor front-end em formação, focado em landing pages e sites institucionais com visual premium, interação e conversão via WhatsApp.",
+    aboutEdu:
+      '<strong>Engenharia de Software</strong> — <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a>, Joinville · <strong>2/8</strong> · <strong>25%</strong>',
+    aboutAlura:
+      '<strong>+20 certificados</strong> (front-end) + <strong>1 formação</strong> em Programação na <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>',
+    aboutStack: "Stack: <strong>HTML · CSS · JavaScript</strong> nos sites, <strong>Python · C++ · C#</strong> nas ferramentas",
+    aboutBase: "Base: Centro de Joinville, SC · Brasil",
+    campusTitle: "Engenharia de Software",
+    campusLead:
+      'Cursando na <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — campus Joinville.',
+    campusMapCta: "Maps",
+    campusMapAria: "Abrir Católica SC no Google Maps",
+    skillsTitle: "O que entrega cada demo",
+    skill1: "UI dark/premium",
+    skill2: "Microinterações",
+    skill3: "Filtros & simuladores",
+    skill4: "Mobile-first",
+    skill5: "CTAs WhatsApp",
+    skill6: "SEO semântico",
+    skill7: "Acessibilidade",
+    skill8: "Código limpo",
+    aboutNote:
+      "Cada pasta do repositório é um projeto independente — abra, explore e teste no celular.",
+    featuredEyebrow: "Em alta",
+    featuredTitle: "Projetos em destaque",
+    featuredSub:
+      "Sorteio de 3 demos entre os lançamentos recentes — a imobiliária <strong>Vértice</strong> sempre entra na seleção.",
+    raffleBtn: "Sortear destaques",
+    raffleHint: "Clique para girar a seleção",
+    raffleNow: "Agora:",
+    featLocked: "Destaque fixo",
+    featPicked: "Sorteado",
+    featOpen: "Abrir demo →",
+    projectsEyebrow: "Todos os trabalhos",
+    projectsTitle: "Projetos",
+    projectsSub: "Mais recentes no topo. Filtre por tecnologia ou tipo de entrega.",
+    filterAll: "Todos",
+    filterResponsive: "Responsivo",
+    filterSimulator: "Simulador",
+    filterInteractive: "Interativo",
+    filterCart: "Carrinho",
+    filterAria: "Filtrar projetos",
+    countAll: "{n} projetos",
+    countFiltered: "{v} de {n} projetos",
+    badgeNew: "Novo",
+    colorTitle: "Cor do projeto",
+    contactEyebrow: "Contato",
+    contactTitle: "Vamos conversar sobre o seu site",
+    contactText:
+      "Ideias, orçamentos ou só um oi — me chama no WhatsApp, Instagram ou GitHub.",
+    contactPlace: "Centro de Joinville, SC · Brasil",
+    footerCopy: "Eduardo Dias do Rosario · Portfólio",
+    navCode: "Código",
+    codeEyebrow: "Além dos sites",
+    codeTitle: "Ferramentas pro meu servidor de DayZ",
+    codeSub:
+      "Eu mantenho sozinho o DIA-Z HARDCORE, um servidor de DayZ. Esses projetos saíram de problemas reais dele, cada um numa linguagem.",
+    codeValidatorDesc:
+      "Confere o types.xml (a economia do servidor) antes do restart e mostra a linha de cada erro: item duplicado, min maior que nominal, usage que não existe.",
+    codeAnalyzerDesc:
+      "Lê os logs .ADM e .RPT do servidor e resume do que o pessoal morre, quem jogou mais e quais mods estão dando erro. 255 MB de log em menos de 4 segundos.",
+    codeApiDesc:
+      "Importa os logs pra um banco SQLite e entrega jogadores, mortes e rankings em JSON, com paginação, filtros, chave de API e documentação OpenAPI.",
+    codeModDesc:
+      "O servidor em si. Montei e mantenho sozinho: economia, mods, scripts em Enforce Script (a linguagem do DayZ) e o modpack publicado na Steam Workshop.",
+    codePreview: "Exemplo de saída",
+    codePreviewServer: "Resumo do servidor",
+    codeRepo: "Ver código ↗",
+    codeWorkshop: "Ver na Steam Workshop ↗",
+    codeNoDeps: "sem dependências",
+    codeTests: "97 testes",
+    codeServerAdmin: "administração de servidor",
+    footerEdu:
+      'Formação com <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a> · <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> Joinville',
+    toTop: "Voltar ao topo",
+    projects: {
+      seguros: {
+        title: "Aegis — Corretora de Seguros",
+        short: "Aegis — Corretora",
+        desc: "Navy/mint: cotação, quiz de cobertura e WhatsApp.",
+        feat: "Simulador de cotação, quiz de cobertura e produtos filtráveis.",
+      },
+      otica: {
+        title: "Iris Ótica — Ótica",
+        short: "Iris — Ótica",
+        desc: "Midnight/cyan: lente, filtros e provador de aros.",
+        feat: "Lente interativa, provador de aros e exame via WhatsApp.",
+      },
+      hotel: {
+        title: "Alba Hotel — Pousada",
+        short: "Alba — Hotel",
+        desc: "Espresso/champagne: quartos, datas e hospitalidade WA.",
+        feat: "Boutique urbana com quartos filtráveis e reserva por datas.",
+      },
+      construtora: {
+        title: "Base — Construtora",
+        short: "Base — Construtora",
+        desc: "Concreto/laranja: canteiro, m² e cronograma.",
+        feat: "Canteiro ao vivo, estimativa m² e briefing WhatsApp.",
+      },
+      fisio: {
+        title: "Alinha — Fisio & Pilates",
+        short: "Alinha — Fisio",
+        desc: "Ink/teal: body map, planos e agenda.",
+        feat: "Mapa do corpo, grade de aulas e agendamento WhatsApp.",
+      },
+      lavanderia: {
+        title: "Ciclo — Lavanderia",
+        short: "Ciclo — Lavanderia",
+        desc: "Slate/aqua: máquina, calculadora e status.",
+        feat: "Máquina ao vivo, calculadora por kg e coleta WhatsApp.",
+      },
+      cafeteria: {
+        title: "Pulp — Café & Açaí",
+        short: "Pulp — Café & Açaí",
+        desc: "Berry/lime: builder de bowl e carrinho.",
+        feat: "Bowl builder, carrinho drawer e pedido WhatsApp.",
+      },
+      arquitetura: {
+        title: "Traço Studio — Arquitetura",
+        short: "Traço — Arquitetura",
+        desc: "Charcoal/cobre: planta, antes/depois e mood.",
+        feat: "Planta ao vivo, mood de materiais e estimativa.",
+      },
+      idiomas: {
+        title: "Echo Idiomas — Escola",
+        short: "Echo — Idiomas",
+        desc: "Night/sky: chat, quiz CEFR e cursos.",
+        feat: "Chat ao vivo, teste CEFR e aula experimental.",
+      },
+      contabilidade: {
+        title: "Nexo Contábil",
+        short: "Nexo — Contábil",
+        desc: "Ink/esmeralda: regime fiscal e checklist.",
+        feat: "Simulador de regime, checklist e prazos ao vivo.",
+      },
+      oficina: {
+        title: "Torque Auto — Oficina",
+        short: "Torque — Oficina",
+        desc: "Asphalt/âmbar: HUD e diagnóstico por sintomas.",
+        feat: "HUD industrial, diagnóstico e orçamento WhatsApp.",
+      },
+      salao: {
+        title: "Opaline — Estética",
+        short: "Opaline — Estética",
+        desc: "Plum/champagne: serviços, ritual e pacotes.",
+        feat: "Ritual, pacotes e agenda com visual champagne.",
+      },
+      padaria: {
+        title: "Levain — Padaria",
+        short: "Levain — Padaria",
+        desc: "Espresso/manteiga: carrinho e kits.",
+        feat: "Cardápio com carrinho e encomendas WhatsApp.",
+      },
+      academia: {
+        title: "Pulse — Academia",
+        short: "Pulse — Academia",
+        desc: "Preto/amarelo: modalidades e trial de 7 dias.",
+        feat: "Modalidades, planos, grade e trial WhatsApp.",
+      },
+      solar: {
+        title: "Solara — Energia Solar",
+        short: "Solara — Energia Solar",
+        desc: "Navy/dourado: economia e projetos filtráveis.",
+        feat: "Simulador de economia e proposta WhatsApp.",
+      },
+      petshop: {
+        title: "Amora Pet — Clínica & Pet Shop",
+        short: "Amora Pet",
+        desc: "Coral/mint: serviços, planos e hotelzinho.",
+        feat: "Vet e pet shop com planos e hotelzinho.",
+      },
+      advocacia: {
+        title: "Meridian — Advogados",
+        short: "Meridian — Advogados",
+        desc: "Charcoal/vinho: institucional e consulta WA.",
+        feat: "Áreas, equipe e consulta reservada WhatsApp.",
+      },
+      imobiliaria: {
+        title: "Vértice — Imóveis",
+        short: "Vértice — Imóveis",
+        desc: "Charcoal/sage: filtros, cards e visita WhatsApp.",
+        feat: "Filtros, listings e visita pelos bairros de Joinville.",
+      },
+      dentista: {
+        title: "Áurea — Odontologia",
+        short: "Áurea — Odontologia",
+        desc: "Azul premium: before/after e luxury UI.",
+        feat: "Estética, implantes, before/after e agenda.",
+      },
+      burger: {
+        title: "Brasa — Hamburgueria",
+        short: "Brasa — Hamburgueria",
+        desc: "Charcoal/fogo: cardápio, combos e carrinho.",
+        feat: "Cardápio filtrável, combos e pedido WhatsApp.",
+      },
+      barbearia: {
+        title: "Ónix — Barbearia",
+        short: "Ónix — Barbearia",
+        desc: "Charcoal/brass: corte, barba e agenda WA.",
+        feat: "Landing premium com preços e agendamento WhatsApp.",
+      },
+      informatica: {
+        title: "CtrlTec — Assistência Técnica",
+        short: "CtrlTec — Informática",
+        desc: "Sky/indigo: serviços, planos e dark mode.",
+        feat: "Assistência técnica com dark mode e WhatsApp.",
+      },
+    },
+  },
+
+  en: {
+    metaTitle: "Eduardo Dias do Rosario — Portfolio",
+    metaDesc:
+      "Portfolio by Eduardo Dias do Rosario: websites and landing pages in HTML, CSS and JavaScript, plus tools in Python, C++ and C#. +20 certificates and 1 Alura track. Software Engineering at Católica SC — Joinville.",
+    navAbout: "About",
+    navFeatured: "Featured",
+    navProjects: "Projects",
+    navContact: "Contact",
+    menuOpen: "Open menu",
+    langLabel: "Language",
+    heroEyebrow: "Portfolio · Front-end · Joinville/SC",
+    heroTagline: "Sites that convert.<br />Interfaces you remember.",
+    heroLead:
+      'Studying <strong>Software Engineering</strong> at <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville. At <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>: <strong>+20 completion certificates</strong> (front-end) and <strong>1 career track</strong> in Programming. Vanilla HTML, CSS and JavaScript for real businesses.',
+    ctaProjects: "View projects",
+    ctaWhatsApp: "Chat on WhatsApp",
+    statProjects: "websites",
+    statCourses: "certificates",
+    statTrack: "Alura track",
+    statCampus: "Católica SC",
+    statCampusStatus: "in progress",
+    statCampusAria: "25% of the degree at Católica SC — in progress",
+    statResponsive: "responsive",
+    aboutEyebrow: "About me",
+    aboutTitle: "Who builds the sites",
+    aboutBio:
+      "Front-end developer in training, focused on landing pages and institutional sites with premium visuals, interaction and WhatsApp conversion.",
+    aboutEdu:
+      '<strong>Software Engineering</strong> — <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a>, Joinville · <strong>2/8</strong> · <strong>25%</strong>',
+    aboutAlura:
+      '<strong>+20 certificates</strong> (front-end) + <strong>1 career track</strong> in Programming at <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>',
+    aboutStack: "Stack: <strong>HTML · CSS · JavaScript</strong> for websites, <strong>Python · C++ · C#</strong> for tools",
+    aboutBase: "Based in downtown Joinville, SC · Brazil",
+    campusTitle: "Software Engineering",
+    campusLead:
+      'Studying at <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville campus.',
+    campusMapCta: "Maps",
+    campusMapAria: "Open Católica SC on Google Maps",
+    skillsTitle: "What each demo delivers",
+    skill1: "Dark/premium UI",
+    skill2: "Micro-interactions",
+    skill3: "Filters & simulators",
+    skill4: "Mobile-first",
+    skill5: "WhatsApp CTAs",
+    skill6: "Semantic SEO",
+    skill7: "Accessibility",
+    skill8: "Clean code",
+    aboutNote:
+      "Each repo folder is an independent project — open it, explore and test on mobile.",
+    featuredEyebrow: "Trending",
+    featuredTitle: "Featured projects",
+    featuredSub:
+      "A raffle of 3 demos from recent launches — the real-estate brand <strong>Vértice</strong> is always included.",
+    raffleBtn: "Shuffle featured",
+    raffleHint: "Click to reshuffle the selection",
+    raffleNow: "Now:",
+    featLocked: "Always featured",
+    featPicked: "Picked",
+    featOpen: "Open demo →",
+    projectsEyebrow: "All work",
+    projectsTitle: "Projects",
+    projectsSub: "Newest first. Filter by technology or delivery type.",
+    filterAll: "All",
+    filterResponsive: "Responsive",
+    filterSimulator: "Simulator",
+    filterInteractive: "Interactive",
+    filterCart: "Cart",
+    filterAria: "Filter projects",
+    countAll: "{n} projects",
+    countFiltered: "{v} of {n} projects",
+    badgeNew: "New",
+    colorTitle: "Project color",
+    contactEyebrow: "Contact",
+    contactTitle: "Let's talk about your site",
+    contactText:
+      "Ideas, quotes or just a hello — reach me on WhatsApp, Instagram or GitHub.",
+    contactPlace: "Downtown Joinville, SC · Brazil",
+    footerCopy: "Eduardo Dias do Rosario · Portfolio",
+    navCode: "Code",
+    codeEyebrow: "Beyond websites",
+    codeTitle: "Tools for my DayZ server",
+    codeSub:
+      "I run DIA-Z HARDCORE, a DayZ server, on my own. These projects came out of real problems with it, each one in a different language.",
+    codeValidatorDesc:
+      "Checks types.xml (the server economy) before a restart and points to the line of each error: duplicated items, min above nominal, usage names that don't exist.",
+    codeAnalyzerDesc:
+      "Reads the server's .ADM and .RPT logs and sums up what players die from, who played the most and which mods are throwing errors. 255 MB of logs in under 4 seconds.",
+    codeApiDesc:
+      "Imports the logs into a SQLite database and serves players, deaths and leaderboards as JSON, with paging, filters, an API key and OpenAPI docs.",
+    codeModDesc:
+      "The server itself. I built it and keep it running alone: economy, mods, Enforce Script scripts (DayZ's scripting language) and the modpack published on the Steam Workshop.",
+    codePreview: "Sample output",
+    codePreviewServer: "Server summary",
+    codeRepo: "View code ↗",
+    codeWorkshop: "View on Steam Workshop ↗",
+    codeNoDeps: "no dependencies",
+    codeTests: "97 tests",
+    codeServerAdmin: "server administration",
+    footerEdu:
+      'Trained with <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a> · <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> Joinville',
+    toTop: "Back to top",
+    projects: {
+      seguros: {
+        title: "Aegis — Insurance Broker",
+        short: "Aegis — Insurance",
+        desc: "Navy/mint: quotes, coverage quiz and WhatsApp.",
+        feat: "Quote simulator, coverage quiz and filterable products.",
+      },
+      otica: {
+        title: "Iris Optical — Eyewear",
+        short: "Iris — Optical",
+        desc: "Midnight/cyan: lens, filters and frame try-on.",
+        feat: "Interactive lens, frame picker and exam via WhatsApp.",
+      },
+      hotel: {
+        title: "Alba Hotel — Boutique Stay",
+        short: "Alba — Hotel",
+        desc: "Espresso/champagne: rooms, dates and hospitality WA.",
+        feat: "Urban boutique with filterable rooms and date booking.",
+      },
+      construtora: {
+        title: "Base — Construction",
+        short: "Base — Construction",
+        desc: "Concrete/orange: site yard, m² and timeline.",
+        feat: "Live job site, m² estimate and WhatsApp briefing.",
+      },
+      fisio: {
+        title: "Alinha — Physio & Pilates",
+        short: "Alinha — Physio",
+        desc: "Ink/teal: body map, plans and schedule.",
+        feat: "Body map, class grid and WhatsApp booking.",
+      },
+      lavanderia: {
+        title: "Ciclo — Laundry",
+        short: "Ciclo — Laundry",
+        desc: "Slate/aqua: machine, calculator and status.",
+        feat: "Live machine, per-kg calculator and pickup WhatsApp.",
+      },
+      cafeteria: {
+        title: "Pulp — Café & Açaí",
+        short: "Pulp — Café & Açaí",
+        desc: "Berry/lime: bowl builder and cart.",
+        feat: "Bowl builder, drawer cart and WhatsApp order.",
+      },
+      arquitetura: {
+        title: "Traço Studio — Architecture",
+        short: "Traço — Architecture",
+        desc: "Charcoal/copper: floor plan, before/after and mood.",
+        feat: "Live floor plan, material mood and estimate.",
+      },
+      idiomas: {
+        title: "Echo Languages — School",
+        short: "Echo — Languages",
+        desc: "Night/sky: chat, CEFR quiz and courses.",
+        feat: "Live chat, CEFR test and trial class.",
+      },
+      contabilidade: {
+        title: "Nexo Accounting",
+        short: "Nexo — Accounting",
+        desc: "Ink/emerald: tax regime and checklist.",
+        feat: "Regime simulator, checklist and live deadlines.",
+      },
+      oficina: {
+        title: "Torque Auto — Workshop",
+        short: "Torque — Workshop",
+        desc: "Asphalt/amber: HUD and symptom diagnosis.",
+        feat: "Industrial HUD, diagnosis and WhatsApp quote.",
+      },
+      salao: {
+        title: "Opaline — Beauty",
+        short: "Opaline — Beauty",
+        desc: "Plum/champagne: services, ritual and packages.",
+        feat: "Ritual, packages and champagne-look booking.",
+      },
+      padaria: {
+        title: "Levain — Bakery",
+        short: "Levain — Bakery",
+        desc: "Espresso/butter: cart and kits.",
+        feat: "Menu with cart and WhatsApp orders.",
+      },
+      academia: {
+        title: "Pulse — Gym",
+        short: "Pulse — Gym",
+        desc: "Black/yellow: modalities and 7-day trial.",
+        feat: "Modalities, plans, schedule and WhatsApp trial.",
+      },
+      solar: {
+        title: "Solara — Solar Energy",
+        short: "Solara — Solar",
+        desc: "Navy/gold: savings and filterable projects.",
+        feat: "Savings simulator and WhatsApp proposal.",
+      },
+      petshop: {
+        title: "Amora Pet — Clinic & Shop",
+        short: "Amora Pet",
+        desc: "Coral/mint: services, plans and pet hotel.",
+        feat: "Vet and pet shop with plans and boarding.",
+      },
+      advocacia: {
+        title: "Meridian — Law Firm",
+        short: "Meridian — Law",
+        desc: "Charcoal/wine: institutional and WA consult.",
+        feat: "Practice areas, team and private WhatsApp consult.",
+      },
+      imobiliaria: {
+        title: "Vértice — Real Estate",
+        short: "Vértice — Real Estate",
+        desc: "Charcoal/sage: filters, cards and WhatsApp visit.",
+        feat: "Filters, listings and visits across Joinville neighborhoods.",
+      },
+      dentista: {
+        title: "Áurea — Dentistry",
+        short: "Áurea — Dentistry",
+        desc: "Premium blue: before/after and luxury UI.",
+        feat: "Aesthetics, implants, before/after and booking.",
+      },
+      burger: {
+        title: "Brasa — Burger Joint",
+        short: "Brasa — Burgers",
+        desc: "Charcoal/fire: menu, combos and cart.",
+        feat: "Filterable menu, combos and WhatsApp order.",
+      },
+      barbearia: {
+        title: "Ónix — Barbershop",
+        short: "Ónix — Barbershop",
+        desc: "Charcoal/brass: cut, beard and WA booking.",
+        feat: "Premium landing with prices and WhatsApp booking.",
+      },
+      informatica: {
+        title: "CtrlTec — Tech Support",
+        short: "CtrlTec — IT",
+        desc: "Sky/indigo: services, plans and dark mode.",
+        feat: "Tech support site with dark mode and WhatsApp.",
+      },
+    },
+  },
+
+  es: {
+    metaTitle: "Eduardo Dias do Rosario — Portafolio",
+    metaDesc:
+      "Portafolio de Eduardo Dias do Rosario: sitios y landing pages en HTML, CSS y JavaScript y herramientas en Python, C++ y C#. +20 certificados y 1 formación Alura. Ingeniería de Software en Católica SC — Joinville.",
+    navAbout: "Sobre mí",
+    navFeatured: "Destacados",
+    navProjects: "Proyectos",
+    navContact: "Contacto",
+    menuOpen: "Abrir menú",
+    langLabel: "Idioma",
+    heroEyebrow: "Portafolio · Front-end · Joinville/SC",
+    heroTagline: "Sitios que convierten.<br />Interfaces que se recuerdan.",
+    heroLead:
+      'Cursando <strong>Ingeniería de Software</strong> en <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — Joinville. En <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>: <strong>+20 certificados</strong> de conclusión (front-end) y <strong>1 formación</strong> en Programación. HTML, CSS y JavaScript vanilla para negocios reales.',
+    ctaProjects: "Ver proyectos",
+    ctaWhatsApp: "Hablar por WhatsApp",
+    statProjects: "sitios",
+    statCourses: "certificados",
+    statTrack: "formación Alura",
+    statCampus: "Católica SC",
+    statCampusStatus: "en curso",
+    statCampusAria: "25% de la carrera en Católica SC — en curso",
+    statResponsive: "responsivo",
+    aboutEyebrow: "Sobre mí",
+    aboutTitle: "Quién hace los sitios",
+    aboutBio:
+      "Desarrollador front-end en formación, enfocado en landing pages y sitios institucionales con visual premium, interacción y conversión por WhatsApp.",
+    aboutEdu:
+      '<strong>Ingeniería de Software</strong> — <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a>, Joinville · <strong>2/8</strong> · <strong>25%</strong>',
+    aboutAlura:
+      '<strong>+20 certificados</strong> (front-end) + <strong>1 formación</strong> en Programación en <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>',
+    aboutStack: "Stack: <strong>HTML · CSS · JavaScript</strong> en los sitios, <strong>Python · C++ · C#</strong> en las herramientas",
+    aboutBase: "Base: Centro de Joinville, SC · Brasil",
+    campusTitle: "Ingeniería de Software",
+    campusLead:
+      'Cursando en <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> — campus Joinville.',
+    campusMapCta: "Maps",
+    campusMapAria: "Abrir Católica SC en Google Maps",
+    skillsTitle: "Lo que entrega cada demo",
+    skill1: "UI dark/premium",
+    skill2: "Microinteracciones",
+    skill3: "Filtros y simuladores",
+    skill4: "Mobile-first",
+    skill5: "CTAs WhatsApp",
+    skill6: "SEO semántico",
+    skill7: "Accesibilidad",
+    skill8: "Código limpio",
+    aboutNote:
+      "Cada carpeta del repositorio es un proyecto independiente — ábrela, explora y prueba en el celular.",
+    featuredEyebrow: "En tendencia",
+    featuredTitle: "Proyectos destacados",
+    featuredSub:
+      "Sorteo de 3 demos entre los lanzamientos recientes — la inmobiliaria <strong>Vértice</strong> siempre entra en la selección.",
+    raffleBtn: "Sortear destacados",
+    raffleHint: "Haz clic para girar la selección",
+    raffleNow: "Ahora:",
+    featLocked: "Destacado fijo",
+    featPicked: "Sorteado",
+    featOpen: "Abrir demo →",
+    projectsEyebrow: "Todos los trabajos",
+    projectsTitle: "Proyectos",
+    projectsSub: "Los más recientes arriba. Filtra por tecnología o tipo de entrega.",
+    filterAll: "Todos",
+    filterResponsive: "Responsivo",
+    filterSimulator: "Simulador",
+    filterInteractive: "Interactivo",
+    filterCart: "Carrito",
+    filterAria: "Filtrar proyectos",
+    countAll: "{n} proyectos",
+    countFiltered: "{v} de {n} proyectos",
+    badgeNew: "Nuevo",
+    colorTitle: "Color del proyecto",
+    contactEyebrow: "Contacto",
+    contactTitle: "Hablemos de tu sitio",
+    contactText:
+      "Ideas, presupuestos o solo un hola — escríbeme por WhatsApp, Instagram o GitHub.",
+    contactPlace: "Centro de Joinville, SC · Brasil",
+    footerCopy: "Eduardo Dias do Rosario · Portafolio",
+    navCode: "Código",
+    codeEyebrow: "Más allá de los sitios",
+    codeTitle: "Herramientas para mi servidor de DayZ",
+    codeSub:
+      "Administro solo DIA-Z HARDCORE, un servidor de DayZ. Estos proyectos salieron de problemas reales del servidor, cada uno en un lenguaje distinto.",
+    codeValidatorDesc:
+      "Revisa el types.xml (la economía del servidor) antes del reinicio y muestra la línea de cada error: ítems duplicados, min mayor que nominal, usage que no existe.",
+    codeAnalyzerDesc:
+      "Lee los logs .ADM y .RPT del servidor y resume de qué mueren los jugadores, quién jugó más y qué mods están fallando. 255 MB de logs en menos de 4 segundos.",
+    codeApiDesc:
+      "Importa los logs a una base SQLite y entrega jugadores, muertes y rankings en JSON, con paginación, filtros, clave de API y documentación OpenAPI.",
+    codeModDesc:
+      "El servidor en sí. Lo armé y lo mantengo solo: economía, mods, scripts en Enforce Script (el lenguaje de DayZ) y el modpack publicado en Steam Workshop.",
+    codePreview: "Ejemplo de salida",
+    codePreviewServer: "Resumen del servidor",
+    codeRepo: "Ver código ↗",
+    codeWorkshop: "Ver en Steam Workshop ↗",
+    codeNoDeps: "sin dependencias",
+    codeTests: "97 pruebas",
+    codeServerAdmin: "administración de servidor",
+    footerEdu:
+      'Formación con <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a> · <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> Joinville',
+    toTop: "Volver arriba",
+    projects: {
+      seguros: {
+        title: "Aegis — Corredora de Seguros",
+        short: "Aegis — Seguros",
+        desc: "Navy/mint: cotización, quiz de cobertura y WhatsApp.",
+        feat: "Simulador de cotización, quiz de cobertura y productos filtrables.",
+      },
+      otica: {
+        title: "Iris Óptica — Óptica",
+        short: "Iris — Óptica",
+        desc: "Midnight/cyan: lente, filtros y probador de armazones.",
+        feat: "Lente interactiva, probador de armazones y examen por WhatsApp.",
+      },
+      hotel: {
+        title: "Alba Hotel — Posada",
+        short: "Alba — Hotel",
+        desc: "Espresso/champagne: habitaciones, fechas y hospitalidad WA.",
+        feat: "Boutique urbana con habitaciones filtrables y reserva por fechas.",
+      },
+      construtora: {
+        title: "Base — Constructora",
+        short: "Base — Constructora",
+        desc: "Concreto/naranja: obra, m² y cronograma.",
+        feat: "Obra en vivo, estimación m² y briefing WhatsApp.",
+      },
+      fisio: {
+        title: "Alinha — Fisio y Pilates",
+        short: "Alinha — Fisio",
+        desc: "Ink/teal: mapa corporal, planes y agenda.",
+        feat: "Mapa del cuerpo, grilla de clases y agenda WhatsApp.",
+      },
+      lavanderia: {
+        title: "Ciclo — Lavandería",
+        short: "Ciclo — Lavandería",
+        desc: "Slate/aqua: máquina, calculadora y estado.",
+        feat: "Máquina en vivo, calculadora por kg y recolección WhatsApp.",
+      },
+      cafeteria: {
+        title: "Pulp — Café y Açaí",
+        short: "Pulp — Café y Açaí",
+        desc: "Berry/lime: builder de bowl y carrito.",
+        feat: "Bowl builder, carrito drawer y pedido WhatsApp.",
+      },
+      arquitetura: {
+        title: "Traço Studio — Arquitectura",
+        short: "Traço — Arquitectura",
+        desc: "Charcoal/cobre: planta, antes/después y mood.",
+        feat: "Planta en vivo, mood de materiales y estimación.",
+      },
+      idiomas: {
+        title: "Echo Idiomas — Escuela",
+        short: "Echo — Idiomas",
+        desc: "Night/sky: chat, quiz CEFR y cursos.",
+        feat: "Chat en vivo, test CEFR y clase experimental.",
+      },
+      contabilidade: {
+        title: "Nexo Contable",
+        short: "Nexo — Contable",
+        desc: "Ink/esmeralda: régimen fiscal y checklist.",
+        feat: "Simulador de régimen, checklist y plazos en vivo.",
+      },
+      oficina: {
+        title: "Torque Auto — Taller",
+        short: "Torque — Taller",
+        desc: "Asphalt/ámbar: HUD y diagnóstico por síntomas.",
+        feat: "HUD industrial, diagnóstico y presupuesto WhatsApp.",
+      },
+      salao: {
+        title: "Opaline — Estética",
+        short: "Opaline — Estética",
+        desc: "Plum/champagne: servicios, ritual y paquetes.",
+        feat: "Ritual, paquetes y agenda con visual champagne.",
+      },
+      padaria: {
+        title: "Levain — Panadería",
+        short: "Levain — Panadería",
+        desc: "Espresso/mantequilla: carrito y kits.",
+        feat: "Menú con carrito y pedidos WhatsApp.",
+      },
+      academia: {
+        title: "Pulse — Gimnasio",
+        short: "Pulse — Gimnasio",
+        desc: "Negro/amarillo: modalidades y trial de 7 días.",
+        feat: "Modalidades, planes, grilla y trial WhatsApp.",
+      },
+      solar: {
+        title: "Solara — Energía Solar",
+        short: "Solara — Solar",
+        desc: "Navy/dorado: ahorro y proyectos filtrables.",
+        feat: "Simulador de ahorro y propuesta WhatsApp.",
+      },
+      petshop: {
+        title: "Amora Pet — Clínica y Pet Shop",
+        short: "Amora Pet",
+        desc: "Coral/mint: servicios, planes y hotelito.",
+        feat: "Vet y pet shop con planes y hospedaje.",
+      },
+      advocacia: {
+        title: "Meridian — Abogados",
+        short: "Meridian — Abogados",
+        desc: "Charcoal/vino: institucional y consulta WA.",
+        feat: "Áreas, equipo y consulta reservada WhatsApp.",
+      },
+      imobiliaria: {
+        title: "Vértice — Inmuebles",
+        short: "Vértice — Inmuebles",
+        desc: "Charcoal/sage: filtros, cards y visita WhatsApp.",
+        feat: "Filtros, listings y visitas por barrios de Joinville.",
+      },
+      dentista: {
+        title: "Áurea — Odontología",
+        short: "Áurea — Odontología",
+        desc: "Azul premium: before/after y luxury UI.",
+        feat: "Estética, implantes, before/after y agenda.",
+      },
+      burger: {
+        title: "Brasa — Hamburguesería",
+        short: "Brasa — Hamburguesas",
+        desc: "Charcoal/fuego: menú, combos y carrito.",
+        feat: "Menú filtrable, combos y pedido WhatsApp.",
+      },
+      barbearia: {
+        title: "Ónix — Barbería",
+        short: "Ónix — Barbería",
+        desc: "Charcoal/brass: corte, barba y agenda WA.",
+        feat: "Landing premium con precios y agenda WhatsApp.",
+      },
+      informatica: {
+        title: "CtrlTec — Asistencia Técnica",
+        short: "CtrlTec — Informática",
+        desc: "Sky/indigo: servicios, planes y dark mode.",
+        feat: "Asistencia técnica con dark mode y WhatsApp.",
+      },
+    },
+  },
+};
+
 (() => {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const dict = window.EDR_I18N || {};
+  const htmlLang = { pt: "pt-BR", en: "en", es: "es" };
+
+  let lang = "pt";
+  try {
+    const saved = localStorage.getItem("edr_lang");
+    if (saved && dict[saved]) lang = saved;
+  } catch (_) {}
+
+  const t = (key) => (dict[lang] && dict[lang][key]) || (dict.pt && dict.pt[key]) || key;
+  const proj = (id) => (dict[lang]?.projects?.[id]) || dict.pt?.projects?.[id] || {};
+
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 
@@ -52,42 +777,58 @@
     reveals.forEach((el) => el.classList.add("is-visible"));
   }
 
-  /* Counters */
+  /* Counters + progress rings */
   const counters = document.querySelectorAll("[data-count]");
+  const formatCount = (el, value) => {
+    const prefix = el.dataset.prefix || "";
+    const suffix = el.dataset.suffix || "";
+    el.textContent = `${prefix}${value}${suffix}`;
+  };
   const animateCount = (el) => {
     const target = Number(el.dataset.count || 0);
     if (reduce) {
-      el.textContent = String(target);
+      formatCount(el, target);
       return;
     }
     const start = performance.now();
     const dur = 1200;
-    const tick = (t) => {
-      const p = Math.min(1, (t - start) / dur);
+    const tick = (now) => {
+      const p = Math.min(1, (now - start) / dur);
       const eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = String(Math.round(target * eased));
+      formatCount(el, Math.round(target * eased));
       if (p < 1) requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
+  };
+  const animateProgress = (el) => {
+    const target = Number(el.dataset.progress || 0);
+    if (reduce) {
+      el.style.setProperty("--p", String(target));
+      return;
+    }
+    requestAnimationFrame(() => el.style.setProperty("--p", String(target)));
   };
   if ("IntersectionObserver" in window) {
     const cio = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
           if (e.isIntersecting) {
-            animateCount(e.target);
+            if (e.target.hasAttribute("data-count")) animateCount(e.target);
+            if (e.target.hasAttribute("data-progress")) animateProgress(e.target);
             cio.unobserve(e.target);
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.35 }
     );
     counters.forEach((c) => cio.observe(c));
+    document.querySelectorAll("[data-progress]").forEach((el) => cio.observe(el));
   } else {
     counters.forEach(animateCount);
+    document.querySelectorAll("[data-progress]").forEach(animateProgress);
   }
 
-  /* Custom cursor (desktop) */
+  /* Custom cursor */
   const cursor = document.getElementById("cursor");
   const cursorDot = document.getElementById("cursorDot");
   const fine = window.matchMedia("(pointer: fine)").matches;
@@ -121,7 +862,7 @@
     });
   }
 
-  /* Magnetic buttons */
+  /* Magnetic */
   if (fine && !reduce) {
     document.querySelectorAll(".magnetic").forEach((btn) => {
       btn.addEventListener("mousemove", (e) => {
@@ -136,7 +877,7 @@
     });
   }
 
-  /* Tilt cards */
+  /* Tilt */
   if (fine && !reduce) {
     document.querySelectorAll(".tilt").forEach((card) => {
       card.addEventListener("mousemove", (e) => {
@@ -151,7 +892,6 @@
     });
   }
 
-  /* Color CSS var on cards */
   document.querySelectorAll(".card[data-color]").forEach((card) => {
     card.style.setProperty("--c", card.dataset.color);
   });
@@ -167,8 +907,8 @@
     const total = cards().length;
     countEl.textContent =
       visible === total
-        ? `${total} projetos`
-        : `${visible} de ${total} projetos`;
+        ? t("countAll").replace("{n}", total)
+        : t("countFiltered").replace("{v}", visible).replace("{n}", total);
   };
 
   const applyFilter = (key) => {
@@ -190,10 +930,8 @@
       btn.classList.add("is-active");
       applyFilter(btn.dataset.filter || "all");
     });
-    applyFilter("all");
   }
 
-  /* Track visits locally for mild “popularity” weight */
   const track = (id) => {
     try {
       const key = "edr_hits";
@@ -206,22 +944,25 @@
     card.addEventListener("click", () => track(card.dataset.id));
   });
 
-  /* Featured raffle — always include imobiliária */
+  /* Featured raffle */
   const featuredGrid = document.getElementById("featuredGrid");
   const raffleBtn = document.getElementById("raffleBtn");
   const raffleHint = document.getElementById("raffleHint");
+  let lastPicks = [];
 
   const projectData = () =>
-    cards().map((card) => ({
-      id: card.dataset.id,
-      href: card.getAttribute("href"),
-      title: card.dataset.title || card.querySelector("h3")?.textContent || "",
-      desc: card.dataset.desc || card.querySelector("p")?.textContent || "",
-      color: card.dataset.color || "#38bdf8",
-      locked: card.dataset.featuredLock === "1",
-      isNew: card.dataset.new === "1",
-      recent: true,
-    }));
+    cards().map((card) => {
+      const p = proj(card.dataset.id);
+      return {
+        id: card.dataset.id,
+        href: card.getAttribute("href"),
+        title: p.short || p.title || "",
+        desc: p.feat || p.desc || "",
+        color: card.dataset.color || "#38bdf8",
+        locked: card.dataset.featuredLock === "1",
+        isNew: card.dataset.new === "1",
+      };
+    });
 
   const shuffle = (arr) => {
     const a = [...arr];
@@ -249,13 +990,24 @@
       return hb - ha || Math.random() - 0.5;
     });
 
-    const picks = [locked, ...weighted.slice(0, 2)].filter(Boolean);
-    return shuffle(picks);
+    return shuffle([locked, ...weighted.slice(0, 2)].filter(Boolean));
   };
 
-  const renderFeatured = (animate) => {
+  const renderFeatured = (animate, keepSelection) => {
     if (!featuredGrid) return;
-    const picks = pickFeatured();
+    const picks =
+      keepSelection && lastPicks.length
+        ? lastPicks.map((old) => {
+            const p = proj(old.id);
+            return {
+              ...old,
+              title: p.short || p.title || old.title,
+              desc: p.feat || p.desc || old.desc,
+            };
+          })
+        : pickFeatured();
+    lastPicks = picks;
+
     featuredGrid.classList.toggle("is-spinning", Boolean(animate) && !reduce);
     featuredGrid.innerHTML = picks
       .map(
@@ -263,10 +1015,10 @@
       <a class="feat-card${p.locked ? " is-locked" : ""}" href="${p.href}" style="--c:${p.color}; transition-delay:${i * 80}ms" data-id="${p.id}">
         <span class="feat-card__glow" style="--c:${p.color}"></span>
         <span class="feat-card__balloon" style="--c:${p.color}"></span>
-        <span class="feat-card__label">${p.locked ? "Destaque fixo" : "Sorteado"}</span>
+        <span class="feat-card__label">${p.locked ? t("featLocked") : t("featPicked")}</span>
         <h3>${p.title}</h3>
         <p>${p.desc}</p>
-        <span class="feat-card__go">Abrir demo →</span>
+        <span class="feat-card__go">${t("featOpen")}</span>
       </a>`
       )
       .join("");
@@ -280,14 +1032,79 @@
 
     if (raffleHint) {
       const names = picks.map((p) => p.title.split("—")[0].trim()).join(" · ");
-      raffleHint.textContent = `Agora: ${names}`;
+      raffleHint.textContent = `${t("raffleNow")} ${names}`;
     }
 
     window.setTimeout(() => featuredGrid.classList.remove("is-spinning"), 600);
   };
 
   if (raffleBtn) {
-    raffleBtn.addEventListener("click", () => renderFeatured(true));
+    raffleBtn.addEventListener("click", () => renderFeatured(true, false));
   }
-  renderFeatured(false);
+
+  /* i18n apply */
+  const applyI18n = (keepFeatured) => {
+    document.documentElement.lang = htmlLang[lang] || "pt-BR";
+    document.title = t("metaTitle");
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute("content", t("metaDesc"));
+
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      if (el.id === "raffleHint" && lastPicks.length) return;
+      const key = el.getAttribute("data-i18n");
+      const val = t(key);
+      if (val != null) el.textContent = val;
+    });
+
+    document.querySelectorAll("[data-i18n-html]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-html");
+      const val = t(key);
+      if (val != null) el.innerHTML = val;
+    });
+
+    document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-aria");
+      const val = t(key);
+      if (val != null) el.setAttribute("aria-label", val);
+    });
+
+    document.querySelectorAll("[data-i18n-title]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-title");
+      const val = t(key);
+      if (val != null) el.setAttribute("title", val);
+    });
+
+    document.querySelectorAll(".card[data-id]").forEach((card) => {
+      const p = proj(card.dataset.id);
+      const title = card.querySelector("[data-proj='title']");
+      const desc = card.querySelector("[data-proj='desc']");
+      if (title && p.title) title.textContent = p.title;
+      if (desc && p.desc) desc.textContent = p.desc;
+    });
+
+    document.querySelectorAll(".lang__btn").forEach((btn) => {
+      const active = btn.dataset.lang === lang;
+      btn.classList.toggle("is-active", active);
+      btn.setAttribute("aria-pressed", String(active));
+    });
+
+    const activeFilter =
+      document.querySelector(".filter.is-active")?.dataset.filter || "all";
+    applyFilter(activeFilter);
+    renderFeatured(false, Boolean(keepFeatured));
+  };
+
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".lang__btn");
+    if (!btn) return;
+    const next = btn.dataset.lang;
+    if (!next || !dict[next] || next === lang) return;
+    lang = next;
+    try {
+      localStorage.setItem("edr_lang", lang);
+    } catch (_) {}
+    applyI18n(true);
+  });
+
+  applyI18n(false);
 })();
