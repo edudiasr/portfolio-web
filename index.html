@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eduardo Dias do Rosario — Portfólio Front-end</title>
-  <meta name="description" content="Portfólio de Eduardo Dias do Rosario: sites e landing pages em HTML, CSS e JavaScript. +20 certificados e 1 formação Alura. Engenharia de Software na Católica SC — Joinville." />
+  <title>Eduardo Dias do Rosario — Portfólio</title>
+  <meta name="description" content="Portfólio de Eduardo Dias do Rosario: sites e landing pages em HTML, CSS e JavaScript e ferramentas em Python, C++ e C#. +20 certificados e 1 formação Alura. Engenharia de Software na Católica SC — Joinville." />
   <meta name="author" content="Eduardo Dias do Rosario" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,6 +25,7 @@
     <nav class="nav" aria-label="Principal">
       <a href="#sobre" data-i18n="navAbout">Sobre</a>
       <a href="#destaques" data-i18n="navFeatured">Destaques</a>
+      <a href="#codigo" data-i18n="navCode">Código</a>
       <a href="#projetos" data-i18n="navProjects">Projetos</a>
       <a href="#contato" data-i18n="navContact">Contato</a>
     </nav>
@@ -52,6 +53,7 @@
   <div class="mobile-menu" id="mobileMenu" hidden>
     <a href="#sobre" data-i18n="navAbout">Sobre</a>
     <a href="#destaques" data-i18n="navFeatured">Destaques</a>
+    <a href="#codigo" data-i18n="navCode">Código</a>
     <a href="#projetos" data-i18n="navProjects">Projetos</a>
     <a href="#contato" data-i18n="navContact">Contato</a>
     <div class="lang lang--mobile" role="group" aria-label="Idioma">
@@ -89,7 +91,7 @@
       <div class="hero__stats reveal" aria-label="Números">
         <div class="stat">
           <span class="stat__n" data-count="22">0</span>
-          <span class="stat__l" data-i18n="statProjects">projetos</span>
+          <span class="stat__l" data-i18n="statProjects">sites</span>
         </div>
         <div class="stat">
           <span class="stat__n"><span class="stat__fix" aria-hidden="true">+</span><span data-count="20">0</span></span>
@@ -131,7 +133,7 @@
           <ul class="about__list">
             <li data-i18n-html="aboutEdu"><strong>Engenharia de Software</strong> — <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a>, Joinville · <strong>2/8</strong> · <strong>25%</strong></li>
             <li data-i18n-html="aboutAlura"><strong>+20 certificados</strong> (front-end) + <strong>1 formação</strong> em Programação na <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a></li>
-            <li data-i18n-html="aboutStack">Stack: <strong>HTML · CSS · JavaScript</strong> (vanilla)</li>
+            <li data-i18n-html="aboutStack">Stack: <strong>HTML · CSS · JavaScript</strong> nos sites, <strong>Python · C++ · C#</strong> nas ferramentas</li>
             <li data-i18n="aboutBase">Base: Centro de Joinville, SC · Brasil</li>
           </ul>
         </article>
@@ -197,6 +199,74 @@
         <p class="featured__hint" id="raffleHint" data-i18n="raffleHint">Clique para girar a seleção</p>
       </div>
       <div class="featured__grid" id="featuredGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="code section" id="codigo">
+      <div class="section__head reveal">
+        <p class="eyebrow" data-i18n="codeEyebrow">Além dos sites</p>
+        <h2 data-i18n="codeTitle">Ferramentas pro meu servidor de DayZ</h2>
+        <p class="section__sub" data-i18n="codeSub">
+          Eu mantenho sozinho o DIA-Z HARDCORE, um servidor de DayZ. Esses projetos saíram de problemas reais dele, cada um numa linguagem.
+        </p>
+      </div>
+
+      <div class="code-grid">
+        <article class="code-card reveal" style="--c:#fbbf24">
+          <div class="code-card__head">
+            <span class="code-card__lang">Python</span>
+            <h3>dayz-types-validator</h3>
+          </div>
+          <p data-i18n="codeValidatorDesc">Confere o types.xml (a economia do servidor) antes do restart e mostra a linha de cada erro: item duplicado, min maior que nominal, usage que não existe.</p>
+          <figure class="term">
+            <div class="term__bar" aria-hidden="true"><span></span><span></span><span></span><em>types_validator</em></div>
+            <pre data-i18n-aria="codePreview" aria-label="Exemplo de saída"><code><span class="t-l t-cmd" style="--i:0">$ python -m types_validator types.xml</span><span class="t-l" style="--i:1">  linha  7  <b class="t-err">ERRO</b>  E008 [AKM] min (6) maior que nominal (4)</span><span class="t-l" style="--i:2">  linha 13  <b class="t-err">ERRO</b>  E013 [AKM] &lt;usage name="Militar"&gt; não existe</span><span class="t-l" style="--i:3">  linha 16  <b class="t-err">ERRO</b>  E004 [akm] tipo duplicado (primeira na linha 3)</span><span class="t-l" style="--i:4">  linha 42  <b class="t-warn">AVISO</b> W003 [Apple] nominal &gt; 0 sem lugar pra nascer</span><span class="t-l t-dim" style="--i:5">  4 tipos · 7 erro(s), 5 aviso(s)</span></code></pre>
+          </figure>
+          <div class="tags"><span>Python</span><span data-i18n="codeNoDeps">sem dependências</span><span>unittest</span><span>GitHub Actions</span></div>
+          <a class="code-card__link" href="https://github.com/edudiasr/Dayz-Types-Validator" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
+        </article>
+
+        <article class="code-card reveal" style="--c:#60a5fa">
+          <div class="code-card__head">
+            <span class="code-card__lang">C++17</span>
+            <h3>dayz-log-analyzer</h3>
+          </div>
+          <p data-i18n="codeAnalyzerDesc">Lê os logs .ADM e .RPT do servidor e resume do que o pessoal morre, quem jogou mais e quais mods estão dando erro. 255 MB de log em menos de 4 segundos.</p>
+          <figure class="term">
+            <div class="term__bar" aria-hidden="true"><span></span><span></span><span></span><em>dayzlog</em></div>
+            <pre data-i18n-aria="codePreview" aria-label="Exemplo de saída"><code><span class="t-l t-cmd" style="--i:0">$ dayzlog profiles/</span><span class="t-l" style="--i:1">  7 mortes de jogadores (2 PvP, 1 pela IA)</span><span class="t-l" style="--i:2">  Tiro mais longo: Lobo, Mosin9130, <b class="t-ok">462.3 m</b></span><span class="t-l t-dim" style="--i:3">  Mais tempo online</span><span class="t-l" style="--i:4">    Lobo     1h 33min</span><span class="t-l" style="--i:5">    Corvo       33min</span><span class="t-l t-dim" style="--i:6">  Erros que mais se repetem</span><span class="t-l" style="--i:7">    <b class="t-err">2x</b>  NULL pointer  [missao_manager.c:216]</span></code></pre>
+          </figure>
+          <div class="tags"><span>C++17</span><span>CMake</span><span data-i18n="codeTests">97 testes</span><span>Linux + Windows</span></div>
+          <a class="code-card__link" href="https://github.com/edudiasr/dayz-log-analyzer" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
+        </article>
+
+        <article class="code-card reveal" style="--c:#a78bfa">
+          <div class="code-card__head">
+            <span class="code-card__lang">C#</span>
+            <h3>dayz-stats-api</h3>
+          </div>
+          <p data-i18n="codeApiDesc">Importa os logs pra um banco SQLite e entrega jogadores, mortes e rankings em JSON, com paginação, filtros, chave de API e documentação OpenAPI.</p>
+          <figure class="term">
+            <div class="term__bar" aria-hidden="true"><span></span><span></span><span></span><em>GET /api/leaderboard</em></div>
+            <pre data-i18n-aria="codePreview" aria-label="Exemplo de saída"><code><span class="t-l t-cmd" style="--i:0">$ curl "localhost:5199/api/leaderboard?by=playtime&amp;top=3"</span><span class="t-l" style="--i:1">[</span><span class="t-l" style="--i:2">  { "rank": 1, "name": "Lobo",     "value": <b class="t-ok">1.55</b> },</span><span class="t-l" style="--i:3">  { "rank": 2, "name": "Corvo",    "value": <b class="t-ok">0.57</b> },</span><span class="t-l" style="--i:4">  { "rank": 3, "name": "Survivor", "value": <b class="t-ok">0.52</b> }</span><span class="t-l" style="--i:5">]</span></code></pre>
+          </figure>
+          <div class="tags"><span>ASP.NET Core</span><span>EF Core</span><span>SQLite</span><span>xUnit</span></div>
+          <a class="code-card__link" href="https://github.com/edudiasr/dayz-stats-api" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
+        </article>
+
+        <article class="code-card reveal" style="--c:#fb7185">
+          <div class="code-card__head">
+            <span class="code-card__lang">Enforce Script</span>
+            <h3>DIA-Z HARDCORE</h3>
+          </div>
+          <p data-i18n="codeModDesc">O servidor em si. Montei e mantenho sozinho: economia, mods, scripts em Enforce Script (a linguagem do DayZ) e o modpack publicado na Steam Workshop.</p>
+          <figure class="term">
+            <div class="term__bar" aria-hidden="true"><span></span><span></span><span></span><em>dia-z hardcore</em></div>
+            <pre data-i18n-aria="codePreviewServer" aria-label="Resumo do servidor"><code><span class="t-l" style="--i:0"><span class="t-dim">no ar desde</span>  <b class="t-ok">mar/2026</b></span><span class="t-l" style="--i:1"><span class="t-dim">pico       </span>  ~10 jogadores</span><span class="t-l" style="--i:2"><span class="t-dim">discord    </span>  50+ membros</span><span class="t-l" style="--i:3"><span class="t-dim">modpack    </span>  Steam Workshop</span></code></pre>
+          </figure>
+          <div class="tags"><span>Enforce Script</span><span>XML</span><span data-i18n="codeServerAdmin">administração de servidor</span></div>
+          <a class="code-card__link" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3797176699" target="_blank" rel="noopener" data-i18n="codeWorkshop">Ver na Steam Workshop ↗</a>
+        </article>
+      </div>
     </section>
 
     <section class="projects section" id="projetos">
@@ -421,7 +491,7 @@
   </main>
 
   <footer class="footer">
-    <p>© <span id="year"></span> <span data-i18n="footerCopy">Eduardo Dias do Rosario · Portfólio front-end</span></p>
+    <p>© <span id="year"></span> <span data-i18n="footerCopy">Eduardo Dias do Rosario · Portfólio</span></p>
     <p data-i18n-html="footerEdu">
       Formação com
       <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a>
