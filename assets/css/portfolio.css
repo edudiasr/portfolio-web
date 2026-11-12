@@ -1205,6 +1205,28 @@ main {
   text-decoration: underline;
 }
 
+.code-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
+  margin-top: 0.9rem;
+}
+
+.code-card__links .code-card__link {
+  margin-top: 0;
+}
+
+.code-card__link--try {
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--c) 16%, transparent);
+}
+
+.code-card__link--try:hover {
+  text-decoration: none;
+  background: color-mix(in srgb, var(--c) 26%, transparent);
+}
+
 @keyframes termLine {
   from {
     opacity: 0;
