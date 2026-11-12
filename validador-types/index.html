@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Validador de types.xml · DayZ</title>
+  <meta name="description" content="Confere o types.xml de um servidor de DayZ direto no navegador: item duplicado, min maior que nominal, usage que não existe e mais 19 regras, com a linha de cada erro." />
+  <meta name="author" content="Eduardo Dias do Rosario" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="top">
+    <a class="top__back" href="../#codigo">← portfólio</a>
+    <a class="top__repo" href="https://github.com/edudiasr/Dayz-Types-Validator" target="_blank" rel="noopener">código no GitHub ↗</a>
+  </header>
+
+  <main class="wrap">
+    <section class="intro">
+      <p class="eyebrow">DayZ · Central Economy</p>
+      <h1>Validador de types.xml</h1>
+      <p class="intro__lead">
+        Confere a economia do servidor antes do restart e mostra a linha de cada problema.
+        O arquivo é lido aqui no seu navegador, não vai pra servidor nenhum.
+      </p>
+    </section>
+
+    <section class="drop" id="drop" tabindex="0" aria-describedby="dropHint">
+      <input type="file" id="fileInput" accept=".xml,text/xml" multiple hidden />
+      <div class="drop__icon" aria-hidden="true">⇪</div>
+      <p class="drop__title">Solte aqui o <code>types.xml</code></p>
+      <p class="drop__hint" id="dropHint">
+        Pode soltar junto o <code>cfglimitsdefinition.xml</code> e o <code>cfglimitsdefinitionuser.xml</code>
+        pra conferir os nomes de usage, value, tag e category. Dá pra mandar vários types de uma vez (os dos mods, por exemplo).
+      </p>
+      <div class="drop__actions">
+        <button type="button" class="btn btn--primary" id="pickBtn">Escolher arquivos</button>
+        <button type="button" class="btn" id="exampleBtn">Usar exemplo com erros</button>
+      </div>
+    </section>
+
+    <ul class="files" id="fileList" aria-label="Arquivos carregados"></ul>
+    <p class="notice" id="notice" role="status" hidden></p>
+
+    <section class="results" id="results" hidden>
+      <div class="tabs" id="tabs" role="tablist" aria-label="Arquivos types"></div>
+
+      <div class="summary" id="summary"></div>
+      <p class="verdict" id="verdict"></p>
+
+      <div class="toolbar">
+        <div class="chips" role="group" aria-label="Filtrar">
+          <button type="button" class="chip is-on" data-filter="all">Todos</button>
+          <button type="button" class="chip chip--err" data-filter="erro">Erros</button>
+          <button type="button" class="chip chip--warn" data-filter="aviso">Avisos</button>
+        </div>
+        <input type="search" id="search" class="search" placeholder="Buscar item ou código (ex.: AKM, E008)" aria-label="Buscar" />
+        <button type="button" class="btn btn--small" id="exportBtn">Baixar JSON</button>
+      </div>
+
+      <div class="panes">
+        <div class="issues">
+          <p class="issues__count" id="issueCount"></p>
+          <ol class="issues__list" id="issueList"></ol>
+          <button type="button" class="btn btn--small issues__more" id="moreBtn" hidden>Mostrar mais</button>
+        </div>
+        <aside class="preview" id="preview" aria-live="polite">
+          <p class="preview__empty">Clique num problema pra ver o trecho do arquivo.</p>
+        </aside>
+      </div>
+
+      <section class="cats" id="cats" hidden>
+        <h2>Nominal total por categoria</h2>
+        <p class="cats__sub">Quanto de cada coisa o servidor tenta manter no mapa ao mesmo tempo.</p>
+        <div class="cats__bars" id="catBars"></div>
+      </section>
+    </section>
+
+    <details class="rules">
+      <summary>O que ele confere (22 regras)</summary>
+      <div class="rules__grid">
+        <div>
+          <h3>Erros</h3>
+          <ul>
+            <li><b>E001</b> XML quebrado (tag sem fechar, <code>--</code> dentro de comentário, <code>&amp;</code> solto…)</li>
+            <li><b>E002</b> raiz não é <code>&lt;types&gt;</code></li>
+            <li><b>E003</b> <code>&lt;type&gt;</code> sem name</li>
+            <li><b>E004</b> item duplicado (sem diferenciar maiúscula, igual o jogo)</li>
+            <li><b>E005</b> tag repetida no mesmo item</li>
+            <li><b>E006</b> número que não é número</li>
+            <li><b>E007</b> valor negativo</li>
+            <li><b>E008</b> min maior que nominal (com nominal &gt; 0)</li>
+            <li><b>E009</b> quantmin/quantmax fora de -1 ou 0–100</li>
+            <li><b>E010</b> quantmin maior que quantmax</li>
+            <li><b>E011</b> flag diferente de 0 ou 1</li>
+            <li><b>E012</b> usage/value/tag/category sem name</li>
+            <li><b>E013</b> nome que não existe no cfglimitsdefinition</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Avisos</h3>
+          <ul>
+            <li><b>W001</b> tag desconhecida</li>
+            <li><b>W002</b> falta tag padrão (nominal, lifetime, flags…)</li>
+            <li><b>W003</b> nominal &gt; 0 sem lugar pra nascer</li>
+            <li><b>W004</b> só um entre quantmin e quantmax é -1</li>
+            <li><b>W005</b> usage/value/tag repetida</li>
+            <li><b>W006</b> atributo estranho no <code>&lt;flags&gt;</code></li>
+            <li><b>W007</b> <code>&lt;flags&gt;</code> faltando atributo</li>
+            <li><b>W008</b> coisa fora de <code>&lt;type&gt;</code></li>
+            <li><b>W009</b> usage/value que não existe, mas o item tem outra válida</li>
+          </ul>
+        </div>
+      </div>
+    </details>
+  </main>
+
+  <footer class="foot">
+    Feito por <a href="../">Eduardo Dias</a> · as mesmas regras do
+    <a href="https://github.com/edudiasr/Dayz-Types-Validator" target="_blank" rel="noopener">validador em Python</a>,
+    portadas pra JavaScript
+  </footer>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
