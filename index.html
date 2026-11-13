@@ -205,7 +205,7 @@
         <p class="eyebrow" data-i18n="codeEyebrow">Back-end · Dados · Ferramentas</p>
         <h2 data-i18n="codeTitle">Engenharia além do front-end</h2>
         <p class="section__sub" data-i18n="codeSub">
-          Ferramentas de linha de comando, APIs e processamento de dados criados a partir de problemas reais de um servidor de jogo em produção. Todos com testes automatizados e integração contínua.
+          APIs, bancos de dados, ferramentas de linha de comando e processamento de dados, criados a partir de problemas reais de um servidor de jogo em produção. Todos com testes automatizados e integração contínua.
         </p>
       </div>
 
@@ -216,6 +216,7 @@
         <button type="button" class="filter" data-stack="cpp">C++</button>
         <button type="button" class="filter" data-stack="csharp">C#</button>
         <button type="button" class="filter" data-stack="sql">SQL</button>
+        <button type="button" class="filter" data-stack="nosql">NoSQL</button>
         <button type="button" class="filter" data-stack="enforce">Enforce Script</button>
       </div>
 
@@ -330,6 +331,232 @@
           <div class="tags"><span>ASP.NET Core</span><span>EF Core</span><span>SQLite</span><span>xUnit</span><span>OpenAPI</span></div>
           <div class="code-card__links">
             <a class="code-card__link" href="https://github.com/edudiasr/dayz-stats-api" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
+          </div>
+        </article>
+
+        <article class="code-card reveal" style="--c:#f97316" data-stack="csharp sql">
+          <div class="code-card__head">
+            <span class="code-card__lang">C# · MySQL</span>
+            <h3>Game Store</h3>
+          </div>
+          <p data-i18n="codeStoreDesc">Loja de itens virtuais com o MySQL como guardião das regras: estoque, cupons, carteira e pagamentos em procedures transacionais, com travas de linha contra compras simultâneas e webhook idempotente.</p>
+          <ul class="code-card__facts">
+            <li><b>21</b> <span data-i18n="factIntegrationMysql">testes contra MySQL real</span></li>
+            <li><b>0</b> <span data-i18n="factNoOversell">vendas além do estoque, mesmo em paralelo</span></li>
+            <li><b>HMAC</b> <span data-i18n="factWebhook">no webhook de pagamento</span></li>
+          </ul>
+          <figure class="term" data-term>
+            <div class="term__bar">
+              <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <div class="term__tabs" role="tablist">
+                <button type="button" role="tab" aria-selected="true" data-pane="out" data-i18n="tabOutput">saída</button>
+                <button type="button" role="tab" aria-selected="false" data-pane="src" data-i18n="tabCode">código</button>
+              </div>
+              <button type="button" class="term__replay" data-i18n-aria="replay" aria-label="Rodar de novo">↻</button>
+            </div>
+            <pre class="term__pane" data-pane="out"><code><span class="t-l t-cmd" style="--i:0">$ dotnet test --solution GameStore.slnx</span><span class="t-l" style="--i:1">  <b class="t-ok">✓</b> TwoBuyersForTheLastItem_OnlyOneGetsIt</span><span class="t-l" style="--i:2">  <b class="t-ok">✓</b> Payment_CreditsCoinsOnce_EvenIfTheNotificationArrivesTwice</span><span class="t-l" style="--i:3">  <b class="t-ok">✓</b> SpendingCoins_InParallel_NeverGoesBelowZero</span><span class="t-l" style="--i:4">  <b class="t-ok">✓</b> CouponWithUsageLimit_StopsAtTheLimit</span><span class="t-l" style="--i:5">  <b class="t-ok">✓</b> Constraints_ProtectTheData_EvenWithoutTheProcedures</span><span class="t-l t-dim" style="--i:6">  21 testes · 0 falhas</span></code></pre>
+            <pre class="term__pane" data-pane="src" hidden><code><span class="t-dim">-- sp_place_order: trava os produtos do carrinho até o fim da transação.</span>
+<span class="t-dim">-- Uma segunda compra do mesmo item espera aqui e já enxerga o estoque novo.</span>
+<span class="t-key">SELECT</span> COUNT(*) <span class="t-key">INTO</span> v_found
+<span class="t-key">FROM</span> products p <span class="t-key">JOIN</span> tmp_cart c <span class="t-key">ON</span> c.sku = p.sku
+<span class="t-key">WHERE</span> p.active
+<span class="t-key">FOR UPDATE OF</span> p;
+
+<span class="t-key">IF</span> v_short &gt; 0 <span class="t-key">THEN</span>
+    <span class="t-key">SIGNAL SQLSTATE</span> <span class="t-str">'45000'</span> <span class="t-key">SET</span> MESSAGE_TEXT = <span class="t-str">'estoque insuficiente'</span>;
+<span class="t-key">END IF</span>;</code></pre>
+          </figure>
+          <div class="tags"><span>MySQL 8.4</span><span>ASP.NET Core</span><span>Dapper</span><span>Stored procedures</span><span>xUnit</span></div>
+          <div class="code-card__links">
+            <a class="code-card__link" href="https://github.com/edudiasr/game-store-mysql" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
+          </div>
+        </article>
+
+        <article class="code-card reveal" style="--c:#ef4444" data-stack="python nosql">
+          <div class="code-card__head">
+            <span class="code-card__lang">Python · Redis</span>
+            <h3>Realtime Leaderboard</h3>
+          </div>
+          <p data-i18n="codeLeaderboardDesc">Ranking ao vivo com Redis: sorted sets por dia, semana e geral, script Lua que registra a kill de forma atômica, cache, limite de requisições e página que atualiza sozinha via Server-Sent Events.</p>
+          <ul class="code-card__facts">
+            <li><b>19</b> <span data-i18n="factTests">testes</span></li>
+            <li><b>Lua</b> <span data-i18n="factLuaAtomic">kill gravada numa ida só ao Redis</span></li>
+            <li><b>SSE</b> <span data-i18n="factLiveBrowser">ranking ao vivo no navegador</span></li>
+          </ul>
+          <figure class="term" data-term>
+            <div class="term__bar">
+              <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <div class="term__tabs" role="tablist">
+                <button type="button" role="tab" aria-selected="true" data-pane="out" data-i18n="tabOutput">saída</button>
+                <button type="button" role="tab" aria-selected="false" data-pane="src" data-i18n="tabCode">código</button>
+              </div>
+              <button type="button" class="term__replay" data-i18n-aria="replay" aria-label="Rodar de novo">↻</button>
+            </div>
+            <pre class="term__pane" data-pane="out"><code><span class="t-l t-cmd" style="--i:0">$ curl "localhost:8000/boards/kills?period=day&amp;limit=3"</span><span class="t-l" style="--i:1">[</span><span class="t-l" style="--i:2">  { "rank": 1, "name": "Lobo",   "score": <b class="t-ok">14</b> },</span><span class="t-l" style="--i:3">  { "rank": 2, "name": "Raposa", "score": <b class="t-ok">11</b> },</span><span class="t-l" style="--i:4">  { "rank": 3, "name": "Corvo",  "score": <b class="t-ok">9</b> }</span><span class="t-l" style="--i:5">]</span><span class="t-l t-dim" style="--i:6">  X-Cache: HIT · X-RateLimit-Remaining: 117</span></code></pre>
+            <pre class="term__pane" data-pane="src" hidden><code><span class="t-dim">-- RECORD_KILL: tudo de uma vez, nenhum cliente vê o ranking pela metade</span>
+<span class="t-key">for</span> i = 1, 3 <span class="t-key">do</span> redis.call(<span class="t-str">'ZINCRBY'</span>, KEYS[i], 1, killer) <span class="t-key">end</span>
+<span class="t-key">if</span> ARGV[5] == <span class="t-str">'1'</span> <span class="t-key">then</span>
+    <span class="t-key">for</span> i = 4, 6 <span class="t-key">do</span> redis.call(<span class="t-str">'ZINCRBY'</span>, KEYS[i], 1, killer) <span class="t-key">end</span>
+<span class="t-key">end</span>
+<span class="t-dim">-- GT: só troca se a distância nova for maior que o recorde do jogador</span>
+<span class="t-key">for</span> i = 7, 9 <span class="t-key">do</span> redis.call(<span class="t-str">'ZADD'</span>, KEYS[i], <span class="t-str">'GT'</span>, distance, killer) <span class="t-key">end</span>
+<span class="t-dim">-- NX: o prazo do ranking do dia começa quando ele nasce, não a cada kill</span>
+<span class="t-key">for</span> _, i <span class="t-key">in</span> ipairs({2, 5, 8}) <span class="t-key">do</span> redis.call(<span class="t-str">'EXPIRE'</span>, KEYS[i], day_ttl, <span class="t-str">'NX'</span>) <span class="t-key">end</span></code></pre>
+          </figure>
+          <div class="tags"><span>Redis 8</span><span>FastAPI</span><span>Lua</span><span>SSE</span><span>pytest</span></div>
+          <div class="code-card__links">
+            <a class="code-card__link" href="https://github.com/edudiasr/realtime-leaderboard-redis" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
+          </div>
+        </article>
+
+        <article class="code-card reveal" style="--c:#22c55e" data-stack="python nosql">
+          <div class="code-card__head">
+            <span class="code-card__lang">Python · MongoDB</span>
+            <h3>Game Events</h3>
+          </div>
+          <p data-i18n="codeEventsDesc">Eventos de partida no MongoDB: parser de log, validação com $jsonSchema, importação idempotente, índice geoespacial e relatórios em aggregation pipeline, com o explain() mostrando o efeito de cada índice.</p>
+          <ul class="code-card__facts">
+            <li><b>470 → 6 ms</b> <span data-i18n="factWithIndex">com o índice certo</span></li>
+            <li><b>493</b> <span data-i18n="factRealEvents">eventos de logs reais</span></li>
+            <li><b>15</b> <span data-i18n="factTests">testes</span></li>
+          </ul>
+          <figure class="term" data-term>
+            <div class="term__bar">
+              <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <div class="term__tabs" role="tablist">
+                <button type="button" role="tab" aria-selected="true" data-pane="out" data-i18n="tabOutput">saída</button>
+                <button type="button" role="tab" aria-selected="false" data-pane="src" data-i18n="tabCode">código</button>
+              </div>
+              <button type="button" class="term__replay" data-i18n-aria="replay" aria-label="Rodar de novo">↻</button>
+            </div>
+            <pre class="term__pane" data-pane="out"><code><span class="t-l t-cmd" style="--i:0">$ python -m events explain</span><span class="t-l t-dim" style="--i:1">  histórico de um jogador (1.969 eventos)</span><span class="t-l" style="--i:2">    sem índice  COLLSCAN  374.463 lidos  <b class="t-err">470 ms</b></span><span class="t-l" style="--i:3">    com índice  IXSCAN      1.969 lidos  <b class="t-ok">6 ms</b></span><span class="t-l t-dim" style="--i:4">  todas as kills (20% da coleção)</span><span class="t-l" style="--i:5">    sem índice  COLLSCAN  374.463 lidos  699 ms</span><span class="t-l" style="--i:6">    com índice  IXSCAN     74.551 lidos  672 ms</span></code></pre>
+            <pre class="term__pane" data-pane="src" hidden><code><span class="t-dim"># reports.py: cada desconexão pareada com o evento anterior do mesmo jogador</span>
+{<span class="t-str">"$setWindowFields"</span>: {
+    <span class="t-str">"partitionBy"</span>: <span class="t-str">"$player.id"</span>,
+    <span class="t-str">"sortBy"</span>: {<span class="t-str">"ts"</span>: 1},
+    <span class="t-str">"output"</span>: {<span class="t-str">"previous"</span>: {<span class="t-str">"$shift"</span>: {
+        <span class="t-str">"output"</span>: {<span class="t-str">"type"</span>: <span class="t-str">"$type"</span>, <span class="t-str">"ts"</span>: <span class="t-str">"$ts"</span>}, <span class="t-str">"by"</span>: -1}}},
+}},
+{<span class="t-str">"$match"</span>: {<span class="t-str">"type"</span>: <span class="t-str">"disconnect"</span>, <span class="t-str">"previous.type"</span>: <span class="t-str">"connect"</span>}},
+<span class="t-dim"># se o anterior foi uma conexão, é uma sessão: duração com $dateDiff</span></code></pre>
+          </figure>
+          <div class="tags"><span>MongoDB 8</span><span>Aggregation pipeline</span><span>$jsonSchema</span><span>Índice 2d</span><span>pytest</span></div>
+          <div class="code-card__links">
+            <a class="code-card__link" href="https://github.com/edudiasr/game-events-mongodb" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
+          </div>
+        </article>
+
+        <article class="code-card reveal" style="--c:#818cf8" data-stack="python sql nosql">
+          <div class="code-card__head">
+            <span class="code-card__lang">Python · PostgreSQL · MongoDB</span>
+            <h3>SQL x NoSQL</h3>
+          </div>
+          <p data-i18n="codeBenchDesc">Comparativo honesto entre PostgreSQL e MongoDB: os mesmos 300 mil eventos nos dois, seis consultas que precisam devolver exatamente a mesma resposta antes de o tempo valer, e a análise do porquê de cada resultado.</p>
+          <ul class="code-card__facts">
+            <li><b>300 mil</b> <span data-i18n="factBothDbs">eventos nos dois bancos</span></li>
+            <li><b>6</b> <span data-i18n="factSameAnswer">consultas com resposta idêntica</span></li>
+            <li><b>8–12x</b> <span data-i18n="factPgAgg">Postgres nas agregações</span></li>
+          </ul>
+          <figure class="term" data-term>
+            <div class="term__bar">
+              <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <div class="term__tabs" role="tablist">
+                <button type="button" role="tab" aria-selected="true" data-pane="out" data-i18n="tabOutput">saída</button>
+                <button type="button" role="tab" aria-selected="false" data-pane="src" data-i18n="tabCode">código</button>
+              </div>
+              <button type="button" class="term__replay" data-i18n-aria="replay" aria-label="Rodar de novo">↻</button>
+            </div>
+            <pre class="term__pane" data-pane="out"><code><span class="t-l t-cmd" style="--i:0">$ python -m bench.run --events 300000</span><span class="t-l" style="--i:1">  histórico de um jogador   pg    4,0 ms  mongo    3,6 ms  <b class="t-ok">igual</b></span><span class="t-l" style="--i:2">  kills por arma            pg   64,7 ms  mongo  516,0 ms  <b class="t-ok">igual</b></span><span class="t-l" style="--i:3">  mapa de calor             pg   55,9 ms  mongo  676,7 ms  <b class="t-ok">igual</b></span><span class="t-l" style="--i:4">  sessões (janela)          pg  655,5 ms  mongo 3375,4 ms  <b class="t-ok">igual</b></span><span class="t-l" style="--i:5">  kills e mortes            pg  115,4 ms  mongo 1340,9 ms  <b class="t-ok">igual</b></span><span class="t-l t-dim" style="--i:6">  renomear jogador: pg 1 linha · mongo 228 documentos</span></code></pre>
+            <pre class="term__pane" data-pane="src" hidden><code><span class="t-dim"># run.py: tempo só conta se os dois bancos responderam a mesma coisa</span>
+<span class="t-key">for</span> key, title <span class="t-key">in</span> QUERIES:
+    pg_ms, pg_rows = timed(<span class="t-key">lambda</span>: getattr(pg, key)(conn, *args_), args.reps)
+    mg_ms, mg_rows = timed(<span class="t-key">lambda</span>: getattr(mongo, key)(db, *args_), args.reps)
+    ok = same(pg_rows, mg_rows)
+    <span class="t-key">if not</span> ok:
+        <span class="t-key">raise</span> SystemExit(f<span class="t-str">"resultado diferente em {key}"</span>)</code></pre>
+          </figure>
+          <div class="tags"><span>PostgreSQL 18</span><span>MongoDB 8</span><span>psycopg 3</span><span>EXPLAIN</span><span>pytest</span></div>
+          <div class="code-card__links">
+            <a class="code-card__link" href="https://github.com/edudiasr/sql-vs-nosql-benchmark" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
+          </div>
+        </article>
+
+        <article class="code-card reveal" style="--c:#2dd4bf" data-stack="cpp">
+          <div class="code-card__head">
+            <span class="code-card__lang">C++17</span>
+            <h3>kvlog</h3>
+          </div>
+          <p data-i18n="codeKvDesc">Banco chave-valor escrito do zero em log append-only: CRC em cada registro, índice em memória, compactação com ponto de commit e recuperação que sobrevive a kill -9 sem perder escrita confirmada.</p>
+          <ul class="code-card__facts">
+            <li><b>kill -9</b> <span data-i18n="factKill9">sem perder escrita confirmada</span></li>
+            <li><b>60</b> <span data-i18n="factChecks">verificações, incluindo queda em cada byte</span></li>
+            <li><b>212 mil</b> <span data-i18n="factReadsPerSec">leituras por segundo</span></li>
+          </ul>
+          <figure class="term" data-term>
+            <div class="term__bar">
+              <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <div class="term__tabs" role="tablist">
+                <button type="button" role="tab" aria-selected="true" data-pane="out" data-i18n="tabOutput">saída</button>
+                <button type="button" role="tab" aria-selected="false" data-pane="src" data-i18n="tabCode">código</button>
+              </div>
+              <button type="button" class="term__replay" data-i18n-aria="replay" aria-label="Rodar de novo">↻</button>
+            </div>
+            <pre class="term__pane" data-pane="out"><code><span class="t-l t-cmd" style="--i:0">$ bash tests/kill9.sh build/kvlog</span><span class="t-l" style="--i:1">  rodada 3: morto após 14623 confirmações -&gt; <b class="t-ok">ok</b></span><span class="t-l" style="--i:2">  rodada 4: morto após 63945 confirmações</span><span class="t-l t-dim" style="--i:3">    recuperação: descartados 3 bytes de uma escrita incompleta</span><span class="t-l" style="--i:4">    <b class="t-ok">ok</b>: 63945 confirmadas, 63945 no disco</span><span class="t-l" style="--i:5">  rodada 5: morto após 45225 confirmações -&gt; <b class="t-ok">ok</b></span></code></pre>
+            <pre class="term__pane" data-pane="src" hidden><code><span class="t-dim">// compact(): o rename é o commit. Antes dele nada mudou; depois dele,</span>
+<span class="t-dim">// se cair, o open() vê o .compact e termina a troca.</span>
+io::sync(out);
+std::fclose(out);
+fs::rename(tmp, path(target, <span class="t-str">".compact"</span>));
+io::sync_dir(dir_);
+
+<span class="t-key">for</span> (<span class="t-key">auto</span> id : merged) {
+    std::fclose(segments_[id].file);
+    segments_.erase(id);
+}
+finish_compaction(target);  <span class="t-dim">// apaga 1..N.log e renomeia N.compact -&gt; N.log</span></code></pre>
+          </figure>
+          <div class="tags"><span>C++17</span><span>CMake</span><span>CRC-32</span><span>fsync</span><span>GitHub Actions</span></div>
+          <div class="code-card__links">
+            <a class="code-card__link" href="https://github.com/edudiasr/kvlog" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
+          </div>
+        </article>
+
+        <article class="code-card reveal" style="--c:#facc15" data-stack="enforce python">
+          <div class="code-card__head">
+            <span class="code-card__lang">Enforce Script · Python</span>
+            <h3>Server Stats</h3>
+          </div>
+          <p data-i18n="codeStatsModDesc">Mod server-side para DayZ: killfeed no chat, estatísticas por jogador, ranking em JSON e log de kills que um relay em Python entrega à API de ranking em tempo real, retomando de onde parou.</p>
+          <ul class="code-card__facts">
+            <li><b>server-side</b> <span data-i18n="factNoDownload">nada para o jogador baixar</span></li>
+            <li><b>9</b> <span data-i18n="factRelayTests">testes no relay</span></li>
+            <li><b>JSONL → API</b> <span data-i18n="factFeedsRanking">alimenta o ranking ao vivo</span></li>
+          </ul>
+          <figure class="term" data-term>
+            <div class="term__bar">
+              <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <div class="term__tabs" role="tablist">
+                <button type="button" role="tab" aria-selected="true" data-pane="out" data-i18n="tabOutput">saída</button>
+                <button type="button" role="tab" aria-selected="false" data-pane="src" data-i18n="tabCode">código</button>
+              </div>
+              <button type="button" class="term__replay" data-i18n-aria="replay" aria-label="Rodar de novo">↻</button>
+            </div>
+            <pre class="term__pane" data-pane="out"><code><span class="t-l t-dim" style="--i:0">  [chat] Lobo matou Corvo com M4-A1 a 182 m (headshot)</span><span class="t-l t-cmd" style="--i:1">$ tail -1 profiles/ServerStats/killfeed.jsonl</span><span class="t-l" style="--i:2">  {"killer_name":"Lobo","victim_name":"Corvo","weapon":"M4-A1","distance":182.4,"headshot":true}</span><span class="t-l t-cmd" style="--i:3">$ python relay/relay.py --file killfeed.jsonl --once</span><span class="t-l" style="--i:4">  enviadas <b class="t-ok">5</b>, puladas 0</span><span class="t-l t-cmd" style="--i:5">$ python relay/relay.py --file killfeed.jsonl --once</span><span class="t-l" style="--i:6">  enviadas <b class="t-ok">0</b>, puladas 0   <span class="t-dim"># nada reenviado</span></span></code></pre>
+            <pre class="term__pane" data-pane="src" hidden><code><span class="t-dim">// o "killer" é a arma quando é tiro e o próprio jogador no corpo a corpo</span>
+<span class="t-key">static</span> PlayerBase ResolvePlayer(Object killer)
+{
+    EntityAI source = EntityAI.Cast(killer);
+    <span class="t-key">if</span> (!source)
+        <span class="t-key">return null</span>;
+    PlayerBase player = PlayerBase.Cast(source.GetHierarchyRootPlayer());
+    <span class="t-key">if</span> (!player)
+        player = PlayerBase.Cast(source);
+    <span class="t-key">return</span> player;
+}</code></pre>
+          </figure>
+          <div class="tags"><span>Enforce Script</span><span>DayZ</span><span>JSON</span><span>Python</span><span>pytest</span></div>
+          <div class="code-card__links">
+            <a class="code-card__link" href="https://github.com/edudiasr/dayz-server-stats" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
           </div>
         </article>
 
