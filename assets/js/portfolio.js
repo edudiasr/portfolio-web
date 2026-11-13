@@ -51,7 +51,7 @@ window.EDR_I18N = {
     featuredEyebrow: "Em alta",
     featuredTitle: "Projetos em destaque",
     featuredSub:
-      "Sorteio de 3 demos entre os lançamentos recentes — a imobiliária <strong>Vértice</strong> sempre entra na seleção.",
+      "Três demos sorteadas entre os 22 sites do portfólio. Clique em sortear para ver outras.",
     raffleBtn: "Sortear destaques",
     raffleHint: "Clique para girar a seleção",
     raffleNow: "Agora:",
@@ -78,25 +78,33 @@ window.EDR_I18N = {
     contactPlace: "Centro de Joinville, SC · Brasil",
     footerCopy: "Eduardo Dias do Rosario · Portfólio",
     navCode: "Código",
-    codeEyebrow: "Além dos sites",
-    codeTitle: "Ferramentas pro meu servidor de DayZ",
-    codeSub:
-      "Eu mantenho sozinho o DIA-Z HARDCORE, um servidor de DayZ. Esses projetos saíram de problemas reais dele, cada um numa linguagem.",
-    codeValidatorDesc:
-      "Confere o types.xml (a economia do servidor) antes do restart e mostra a linha de cada erro: item duplicado, min maior que nominal, usage que não existe.",
-    codeAnalyzerDesc:
-      "Lê os logs .ADM e .RPT do servidor e resume do que o pessoal morre, quem jogou mais e quais mods estão dando erro. 255 MB de log em menos de 4 segundos.",
-    codeApiDesc:
-      "Importa os logs pra um banco SQLite e entrega jogadores, mortes e rankings em JSON, com paginação, filtros, chave de API e documentação OpenAPI.",
-    codeModDesc:
-      "O servidor em si. Montei e mantenho sozinho: economia, mods, scripts em Enforce Script (a linguagem do DayZ) e o modpack publicado na Steam Workshop.",
-    codePreview: "Exemplo de saída",
-    codePreviewServer: "Resumo do servidor",
+    codeEyebrow: "Back-end · Dados · Ferramentas",
+    codeTitle: "Engenharia além do front-end",
+    codeSub: "Ferramentas de linha de comando, APIs e processamento de dados criados a partir de problemas reais de um servidor de jogo em produção. Todos com testes automatizados e integração contínua.",
+    codeFilterAria: "Filtrar por tecnologia",
+    codeEmpty: "Nenhum projeto com essa tecnologia ainda.",
+    codeValidatorDesc: "Validador de configuração XML com 22 regras e relatório por linha. Roda no terminal e no navegador, com o mesmo resultado nas duas versões.",
+    codeAnalyzerDesc: "Processador de logs de alto volume: junta eventos de várias linhas, reconstrói sessões e agrupa erros de script por origem. Sem dependências externas.",
+    codeApiDesc: "API REST em ASP.NET Core com EF Core: importação idempotente e transacional, paginação, filtros, validação, autenticação por chave e documentação OpenAPI.",
+    codeModDesc: "Servidor de jogo em produção que eu administro: economia configurada em XML, lógica customizada em Enforce Script e pacote de conteúdo publicado na Steam Workshop.",
+    tabOutput: "saída",
+    tabCode: "código",
+    replay: "Rodar de novo",
+    factRules: "regras",
+    factRealFiles: "arquivos reais testados",
+    factBigFile: "para 1,5 MB",
+    factUnder4s: "em menos de 4 s",
+    factTests: "testes",
+    factCi: "no CI",
+    factTestsIntegration: "testes, com integração",
+    factLogsIn1s: "logs importados em ~1 s",
+    factLts: "LTS",
+    factSince: "no ar desde",
+    factItems: "itens na economia",
+    factCommunity: "na comunidade",
     codeRepo: "Ver código ↗",
     codeTry: "Testar no navegador →",
     codeWorkshop: "Ver na Steam Workshop ↗",
-    codeNoDeps: "sem dependências",
-    codeTests: "97 testes",
     codeServerAdmin: "administração de servidor",
     footerEdu:
       'Formação com <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a> · <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> Joinville',
@@ -289,7 +297,7 @@ window.EDR_I18N = {
     featuredEyebrow: "Trending",
     featuredTitle: "Featured projects",
     featuredSub:
-      "A raffle of 3 demos from recent launches — the real-estate brand <strong>Vértice</strong> is always included.",
+      "Three demos picked at random from the 22 websites. Shuffle to see others.",
     raffleBtn: "Shuffle featured",
     raffleHint: "Click to reshuffle the selection",
     raffleNow: "Now:",
@@ -316,25 +324,33 @@ window.EDR_I18N = {
     contactPlace: "Downtown Joinville, SC · Brazil",
     footerCopy: "Eduardo Dias do Rosario · Portfolio",
     navCode: "Code",
-    codeEyebrow: "Beyond websites",
-    codeTitle: "Tools for my DayZ server",
-    codeSub:
-      "I run DIA-Z HARDCORE, a DayZ server, on my own. These projects came out of real problems with it, each one in a different language.",
-    codeValidatorDesc:
-      "Checks types.xml (the server economy) before a restart and points to the line of each error: duplicated items, min above nominal, usage names that don't exist.",
-    codeAnalyzerDesc:
-      "Reads the server's .ADM and .RPT logs and sums up what players die from, who played the most and which mods are throwing errors. 255 MB of logs in under 4 seconds.",
-    codeApiDesc:
-      "Imports the logs into a SQLite database and serves players, deaths and leaderboards as JSON, with paging, filters, an API key and OpenAPI docs.",
-    codeModDesc:
-      "The server itself. I built it and keep it running alone: economy, mods, Enforce Script scripts (DayZ's scripting language) and the modpack published on the Steam Workshop.",
-    codePreview: "Sample output",
-    codePreviewServer: "Server summary",
+    codeEyebrow: "Back-end · Data · Tooling",
+    codeTitle: "Engineering beyond the front-end",
+    codeSub: "Command-line tools, APIs and data processing built from real problems of a live game server. All of them with automated tests and continuous integration.",
+    codeFilterAria: "Filter by technology",
+    codeEmpty: "No project with this technology yet.",
+    codeValidatorDesc: "XML configuration validator with 22 rules and line-level reports. Runs in the terminal and in the browser, with the same result in both versions.",
+    codeAnalyzerDesc: "High-volume log processor: merges multi-line events, rebuilds player sessions and groups script errors by origin. No external dependencies.",
+    codeApiDesc: "REST API in ASP.NET Core with EF Core: idempotent, transactional imports, paging, filters, validation, API key auth and OpenAPI docs.",
+    codeModDesc: "A live game server I run: economy configured in XML, custom logic in Enforce Script and a content pack published on the Steam Workshop.",
+    tabOutput: "output",
+    tabCode: "code",
+    replay: "Replay",
+    factRules: "rules",
+    factRealFiles: "real files tested",
+    factBigFile: "for 1.5 MB",
+    factUnder4s: "in under 4 s",
+    factTests: "tests",
+    factCi: "in CI",
+    factTestsIntegration: "tests, incl. integration",
+    factLogsIn1s: "logs imported in ~1 s",
+    factLts: "LTS",
+    factSince: "live since",
+    factItems: "items in the economy",
+    factCommunity: "in the community",
     codeRepo: "View code ↗",
     codeTry: "Try it in the browser →",
     codeWorkshop: "View on Steam Workshop ↗",
-    codeNoDeps: "no dependencies",
-    codeTests: "97 tests",
     codeServerAdmin: "server administration",
     footerEdu:
       'Trained with <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a> · <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> Joinville',
@@ -527,7 +543,7 @@ window.EDR_I18N = {
     featuredEyebrow: "En tendencia",
     featuredTitle: "Proyectos destacados",
     featuredSub:
-      "Sorteo de 3 demos entre los lanzamientos recientes — la inmobiliaria <strong>Vértice</strong> siempre entra en la selección.",
+      "Tres demos sorteadas entre los 22 sitios del portafolio. Haz clic en sortear para ver otras.",
     raffleBtn: "Sortear destacados",
     raffleHint: "Haz clic para girar la selección",
     raffleNow: "Ahora:",
@@ -554,25 +570,33 @@ window.EDR_I18N = {
     contactPlace: "Centro de Joinville, SC · Brasil",
     footerCopy: "Eduardo Dias do Rosario · Portafolio",
     navCode: "Código",
-    codeEyebrow: "Más allá de los sitios",
-    codeTitle: "Herramientas para mi servidor de DayZ",
-    codeSub:
-      "Administro solo DIA-Z HARDCORE, un servidor de DayZ. Estos proyectos salieron de problemas reales del servidor, cada uno en un lenguaje distinto.",
-    codeValidatorDesc:
-      "Revisa el types.xml (la economía del servidor) antes del reinicio y muestra la línea de cada error: ítems duplicados, min mayor que nominal, usage que no existe.",
-    codeAnalyzerDesc:
-      "Lee los logs .ADM y .RPT del servidor y resume de qué mueren los jugadores, quién jugó más y qué mods están fallando. 255 MB de logs en menos de 4 segundos.",
-    codeApiDesc:
-      "Importa los logs a una base SQLite y entrega jugadores, muertes y rankings en JSON, con paginación, filtros, clave de API y documentación OpenAPI.",
-    codeModDesc:
-      "El servidor en sí. Lo armé y lo mantengo solo: economía, mods, scripts en Enforce Script (el lenguaje de DayZ) y el modpack publicado en Steam Workshop.",
-    codePreview: "Ejemplo de salida",
-    codePreviewServer: "Resumen del servidor",
+    codeEyebrow: "Back-end · Datos · Herramientas",
+    codeTitle: "Ingeniería más allá del front-end",
+    codeSub: "Herramientas de línea de comandos, APIs y procesamiento de datos creados a partir de problemas reales de un servidor de juego en producción. Todos con pruebas automatizadas e integración continua.",
+    codeFilterAria: "Filtrar por tecnología",
+    codeEmpty: "Todavía no hay proyectos con esta tecnología.",
+    codeValidatorDesc: "Validador de configuración XML con 22 reglas e informe por línea. Funciona en la terminal y en el navegador, con el mismo resultado en ambas versiones.",
+    codeAnalyzerDesc: "Procesador de logs de alto volumen: une eventos de varias líneas, reconstruye sesiones y agrupa errores de script por origen. Sin dependencias externas.",
+    codeApiDesc: "API REST en ASP.NET Core con EF Core: importación idempotente y transaccional, paginación, filtros, validación, autenticación por clave y documentación OpenAPI.",
+    codeModDesc: "Servidor de juego en producción que administro: economía configurada en XML, lógica personalizada en Enforce Script y paquete de contenido publicado en Steam Workshop.",
+    tabOutput: "salida",
+    tabCode: "código",
+    replay: "Repetir",
+    factRules: "reglas",
+    factRealFiles: "archivos reales probados",
+    factBigFile: "para 1,5 MB",
+    factUnder4s: "en menos de 4 s",
+    factTests: "pruebas",
+    factCi: "en el CI",
+    factTestsIntegration: "pruebas, con integración",
+    factLogsIn1s: "logs importados en ~1 s",
+    factLts: "LTS",
+    factSince: "en línea desde",
+    factItems: "ítems en la economía",
+    factCommunity: "en la comunidad",
     codeRepo: "Ver código ↗",
     codeTry: "Probar en el navegador →",
     codeWorkshop: "Ver en Steam Workshop ↗",
-    codeNoDeps: "sin dependencias",
-    codeTests: "97 pruebas",
     codeServerAdmin: "administración de servidor",
     footerEdu:
       'Formación con <a href="https://www.alura.com.br/" target="_blank" rel="noopener">Alura</a> · <a href="https://www.catolicasc.org.br" target="_blank" rel="noopener">Católica SC</a> Joinville',
@@ -978,10 +1002,7 @@ window.EDR_I18N = {
 
   const pickFeatured = () => {
     const all = projectData();
-    const locked = all.find((p) => p.id === "imobiliaria");
-    const recentPool = all.filter(
-      (p) => p.id !== "imobiliaria" && (p.isNew || all.indexOf(p) < 10)
-    );
+    const recentPool = all; // os 22 entram no sorteio, nenhum fica fixo
     let hits = {};
     try {
       hits = JSON.parse(localStorage.getItem("edr_hits") || "{}");
@@ -993,7 +1014,7 @@ window.EDR_I18N = {
       return hb - ha || Math.random() - 0.5;
     });
 
-    return shuffle([locked, ...weighted.slice(0, 2)].filter(Boolean));
+    return shuffle(weighted.slice(0, 3));
   };
 
   const renderFeatured = (animate, keepSelection) => {
@@ -1092,7 +1113,7 @@ window.EDR_I18N = {
     });
 
     const activeFilter =
-      document.querySelector(".filter.is-active")?.dataset.filter || "all";
+      document.querySelector("#filters .filter.is-active")?.dataset.filter || "all";
     applyFilter(activeFilter);
     renderFeatured(false, Boolean(keepFeatured));
   };
@@ -1107,6 +1128,53 @@ window.EDR_I18N = {
       localStorage.setItem("edr_lang", lang);
     } catch (_) {}
     applyI18n(true);
+  });
+
+  /* Seção de código: filtro por tecnologia, abas do terminal e "rodar de novo" */
+  const codeFilters = document.getElementById("codeFilters");
+  const codeCards = [...document.querySelectorAll(".code-card")];
+  const codeEmpty = document.getElementById("codeEmpty");
+
+  codeFilters?.addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-stack]");
+    if (!btn) return;
+    codeFilters.querySelectorAll(".filter").forEach((b) => b.classList.toggle("is-active", b === btn));
+    const key = btn.dataset.stack;
+    let shown = 0;
+    codeCards.forEach((card) => {
+      const match = key === "all" || (card.dataset.stack || "").split(" ").includes(key);
+      card.classList.toggle("is-hidden", !match);
+      if (match) {
+        shown += 1;
+        card.classList.add("is-visible");
+      }
+    });
+    if (codeEmpty) codeEmpty.hidden = shown > 0;
+  });
+
+  const replayTerm = (term) => {
+    const lines = term.querySelectorAll('.term__pane[data-pane="out"] .t-l');
+    lines.forEach((l) => (l.style.animation = "none"));
+    void term.offsetWidth; // força o navegador a reiniciar a animação
+    lines.forEach((l) => (l.style.animation = ""));
+  };
+
+  const showPane = (term, pane) => {
+    term.querySelectorAll('[role="tab"]').forEach((t) => t.setAttribute("aria-selected", String(t.dataset.pane === pane)));
+    term.querySelectorAll(".term__pane").forEach((p) => (p.hidden = p.dataset.pane !== pane));
+  };
+
+  document.querySelectorAll("[data-term]").forEach((term) => {
+    term.addEventListener("click", (e) => {
+      const tab = e.target.closest('[role="tab"]');
+      if (tab) {
+        showPane(term, tab.dataset.pane);
+        if (tab.dataset.pane === "out") replayTerm(term);
+      } else if (e.target.closest(".term__replay")) {
+        showPane(term, "out");
+        replayTerm(term);
+      }
+    });
   });
 
   applyI18n(false);
