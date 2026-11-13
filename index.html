@@ -187,8 +187,7 @@
         <p class="eyebrow" data-i18n="featuredEyebrow">Em alta</p>
         <h2 data-i18n="featuredTitle">Projetos em destaque</h2>
         <p class="section__sub" data-i18n-html="featuredSub">
-          Sorteio de 3 demos entre os lançamentos recentes — a imobiliária
-          <strong>Vértice</strong> sempre entra na seleção.
+          Três demos sorteadas entre os 22 sites do portfólio. Clique em sortear para ver outras.
         </p>
       </div>
       <div class="featured__toolbar reveal">
@@ -203,73 +202,155 @@
 
     <section class="code section" id="codigo">
       <div class="section__head reveal">
-        <p class="eyebrow" data-i18n="codeEyebrow">Além dos sites</p>
-        <h2 data-i18n="codeTitle">Ferramentas pro meu servidor de DayZ</h2>
+        <p class="eyebrow" data-i18n="codeEyebrow">Back-end · Dados · Ferramentas</p>
+        <h2 data-i18n="codeTitle">Engenharia além do front-end</h2>
         <p class="section__sub" data-i18n="codeSub">
-          Eu mantenho sozinho o DIA-Z HARDCORE, um servidor de DayZ. Esses projetos saíram de problemas reais dele, cada um numa linguagem.
+          Ferramentas de linha de comando, APIs e processamento de dados criados a partir de problemas reais de um servidor de jogo em produção. Todos com testes automatizados e integração contínua.
         </p>
       </div>
 
-      <div class="code-grid">
-        <article class="code-card reveal" style="--c:#fbbf24">
+      <div class="code-filters reveal" id="codeFilters" role="toolbar" data-i18n-aria="codeFilterAria" aria-label="Filtrar por tecnologia">
+        <button type="button" class="filter is-active" data-stack="all" data-i18n="filterAll">Todos</button>
+        <button type="button" class="filter" data-stack="python">Python</button>
+        <button type="button" class="filter" data-stack="javascript">JavaScript</button>
+        <button type="button" class="filter" data-stack="cpp">C++</button>
+        <button type="button" class="filter" data-stack="csharp">C#</button>
+        <button type="button" class="filter" data-stack="sql">SQL</button>
+        <button type="button" class="filter" data-stack="enforce">Enforce Script</button>
+      </div>
+
+      <div class="code-grid" id="codeGrid">
+        <article class="code-card reveal" style="--c:#fbbf24" data-stack="python javascript">
           <div class="code-card__head">
-            <span class="code-card__lang">Python</span>
-            <h3>dayz-types-validator</h3>
+            <span class="code-card__lang">Python · JS</span>
+            <h3>Types Validator</h3>
           </div>
-          <p data-i18n="codeValidatorDesc">Confere o types.xml (a economia do servidor) antes do restart e mostra a linha de cada erro: item duplicado, min maior que nominal, usage que não existe.</p>
-          <figure class="term">
-            <div class="term__bar" aria-hidden="true"><span></span><span></span><span></span><em>types_validator</em></div>
-            <pre data-i18n-aria="codePreview" aria-label="Exemplo de saída"><code><span class="t-l t-cmd" style="--i:0">$ python -m types_validator types.xml</span><span class="t-l" style="--i:1">  linha  7  <b class="t-err">ERRO</b>  E008 [AKM] min (6) maior que nominal (4)</span><span class="t-l" style="--i:2">  linha 13  <b class="t-err">ERRO</b>  E013 [AKM] &lt;usage name="Militar"&gt; não existe</span><span class="t-l" style="--i:3">  linha 16  <b class="t-err">ERRO</b>  E004 [akm] tipo duplicado (primeira na linha 3)</span><span class="t-l" style="--i:4">  linha 42  <b class="t-warn">AVISO</b> W003 [Apple] nominal &gt; 0 sem lugar pra nascer</span><span class="t-l t-dim" style="--i:5">  4 tipos · 7 erro(s), 5 aviso(s)</span></code></pre>
+          <p data-i18n="codeValidatorDesc">Validador de configuração XML com 22 regras e relatório por linha. Roda no terminal e no navegador, com o mesmo resultado nas duas versões.</p>
+          <ul class="code-card__facts">
+            <li><b>22</b> <span data-i18n="factRules">regras</span></li>
+            <li><b>207</b> <span data-i18n="factRealFiles">arquivos reais testados</span></li>
+            <li><b>0,6 s</b> <span data-i18n="factBigFile">para 1,5 MB</span></li>
+          </ul>
+          <figure class="term" data-term>
+            <div class="term__bar">
+              <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <div class="term__tabs" role="tablist">
+                <button type="button" role="tab" aria-selected="true" data-pane="out" data-i18n="tabOutput">saída</button>
+                <button type="button" role="tab" aria-selected="false" data-pane="src" data-i18n="tabCode">código</button>
+              </div>
+              <button type="button" class="term__replay" data-i18n-aria="replay" aria-label="Rodar de novo">↻</button>
+            </div>
+            <pre class="term__pane" data-pane="out"><code><span class="t-l t-cmd" style="--i:0">$ python -m types_validator types.xml</span><span class="t-l" style="--i:1">  linha  7  <b class="t-err">ERRO</b>  E008 [AKM] min (6) maior que nominal (4)</span><span class="t-l" style="--i:2">  linha 13  <b class="t-err">ERRO</b>  E013 [AKM] &lt;usage name="Militar"&gt; não existe</span><span class="t-l" style="--i:3">  linha 16  <b class="t-err">ERRO</b>  E004 [akm] tipo duplicado (primeira na linha 3)</span><span class="t-l" style="--i:4">  linha 42  <b class="t-warn">AVISO</b> W003 [Apple] nominal &gt; 0 sem lugar pra nascer</span><span class="t-l t-dim" style="--i:5">  4 tipos · 7 erro(s), 5 aviso(s)</span></code></pre>
+            <pre class="term__pane" data-pane="src" hidden><code><span class="t-dim"># validator.py: com nominal 0 o item não nasce, então min não importa</span>
+<span class="t-key">if</span> <span class="t-str">"min"</span> <span class="t-key">in</span> values <span class="t-key">and</span> values.get(<span class="t-str">"nominal"</span>, 0) &gt; 0 \
+        <span class="t-key">and</span> values[<span class="t-str">"min"</span>] &gt; values[<span class="t-str">"nominal"</span>]:
+    self.error(<span class="t-str">"E008"</span>,
+               f<span class="t-str">"min ({values['min']}) maior que nominal (...)"</span>,
+               line_of[<span class="t-str">"min"</span>], name)</code></pre>
           </figure>
-          <div class="tags"><span>Python</span><span data-i18n="codeNoDeps">sem dependências</span><span>unittest</span><span>GitHub Actions</span></div>
+          <div class="tags"><span>Python</span><span>JavaScript</span><span>unittest</span><span>node:test</span><span>GitHub Actions</span></div>
           <div class="code-card__links">
             <a class="code-card__link code-card__link--try" href="./validador-types/" data-i18n="codeTry">Testar no navegador →</a>
             <a class="code-card__link" href="https://github.com/edudiasr/Dayz-Types-Validator" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
           </div>
         </article>
 
-        <article class="code-card reveal" style="--c:#60a5fa">
+        <article class="code-card reveal" style="--c:#60a5fa" data-stack="cpp">
           <div class="code-card__head">
             <span class="code-card__lang">C++17</span>
-            <h3>dayz-log-analyzer</h3>
+            <h3>Log Analyzer</h3>
           </div>
-          <p data-i18n="codeAnalyzerDesc">Lê os logs .ADM e .RPT do servidor e resume do que o pessoal morre, quem jogou mais e quais mods estão dando erro. 255 MB de log em menos de 4 segundos.</p>
-          <figure class="term">
-            <div class="term__bar" aria-hidden="true"><span></span><span></span><span></span><em>dayzlog</em></div>
-            <pre data-i18n-aria="codePreview" aria-label="Exemplo de saída"><code><span class="t-l t-cmd" style="--i:0">$ dayzlog profiles/</span><span class="t-l" style="--i:1">  7 mortes de jogadores (2 PvP, 1 pela IA)</span><span class="t-l" style="--i:2">  Tiro mais longo: Lobo, Mosin9130, <b class="t-ok">462.3 m</b></span><span class="t-l t-dim" style="--i:3">  Mais tempo online</span><span class="t-l" style="--i:4">    Lobo     1h 33min</span><span class="t-l" style="--i:5">    Corvo       33min</span><span class="t-l t-dim" style="--i:6">  Erros que mais se repetem</span><span class="t-l" style="--i:7">    <b class="t-err">2x</b>  NULL pointer  [missao_manager.c:216]</span></code></pre>
+          <p data-i18n="codeAnalyzerDesc">Processador de logs de alto volume: junta eventos de várias linhas, reconstrói sessões e agrupa erros de script por origem. Sem dependências externas.</p>
+          <ul class="code-card__facts">
+            <li><b>255 MB</b> <span data-i18n="factUnder4s">em menos de 4 s</span></li>
+            <li><b>97</b> <span data-i18n="factTests">testes</span></li>
+            <li><b>GCC + MSVC</b> <span data-i18n="factCi">no CI</span></li>
+          </ul>
+          <figure class="term" data-term>
+            <div class="term__bar">
+              <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <div class="term__tabs" role="tablist">
+                <button type="button" role="tab" aria-selected="true" data-pane="out" data-i18n="tabOutput">saída</button>
+                <button type="button" role="tab" aria-selected="false" data-pane="src" data-i18n="tabCode">código</button>
+              </div>
+              <button type="button" class="term__replay" data-i18n-aria="replay" aria-label="Rodar de novo">↻</button>
+            </div>
+            <pre class="term__pane" data-pane="out"><code><span class="t-l t-cmd" style="--i:0">$ dayzlog profiles/</span><span class="t-l" style="--i:1">  7 mortes de jogadores (2 PvP, 1 pela IA)</span><span class="t-l" style="--i:2">  Tiro mais longo: Lobo, Mosin9130, <b class="t-ok">462.3 m</b></span><span class="t-l t-dim" style="--i:3">  Mais tempo online</span><span class="t-l" style="--i:4">    Lobo     1h 33min</span><span class="t-l" style="--i:5">    Corvo       33min</span><span class="t-l t-dim" style="--i:6">  Erros que mais se repetem</span><span class="t-l" style="--i:7">    <b class="t-err">2x</b>  NULL pointer  [missao_manager.c:216]</span></code></pre>
+            <pre class="term__pane" data-pane="src" hidden><code><span class="t-dim">// adm.cpp: a mesma morte vem em até 3 linhas, em qualquer ordem</span>
+<span class="t-key">void</span> AdmParser::add_death(<span class="t-key">const</span> std::string&amp; key, <span class="t-key">const</span> std::string&amp; cause,
+                          <span class="t-key">long long</span> t, <span class="t-key">bool</span> from_hit) {
+    <span class="t-key">auto</span> it = dead_.find(key);
+    <span class="t-key">if</span> (it != dead_.end()) {          <span class="t-dim">// já morto: só completa a causa</span>
+        <span class="t-key">auto</span>&amp; d = report_.deaths[it-&gt;second];
+        <span class="t-key">if</span> (d.cause.empty() || (d.cause_from_hit &amp;&amp; !from_hit)) d.cause = cause;
+        <span class="t-key">return</span>;
+    }
+    dead_[key] = report_.deaths.size();
+    report_.deaths.push_back({key, cause, t, from_hit});
+}</code></pre>
           </figure>
-          <div class="tags"><span>C++17</span><span>CMake</span><span data-i18n="codeTests">97 testes</span><span>Linux + Windows</span></div>
-          <a class="code-card__link" href="https://github.com/edudiasr/dayz-log-analyzer" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
+          <div class="tags"><span>C++17</span><span>CMake</span><span>string_view</span><span>GitHub Actions</span></div>
+          <div class="code-card__links">
+            <a class="code-card__link" href="https://github.com/edudiasr/dayz-log-analyzer" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
+          </div>
         </article>
 
-        <article class="code-card reveal" style="--c:#a78bfa">
+        <article class="code-card reveal" style="--c:#a78bfa" data-stack="csharp sql">
           <div class="code-card__head">
-            <span class="code-card__lang">C#</span>
-            <h3>dayz-stats-api</h3>
+            <span class="code-card__lang">C# · SQL</span>
+            <h3>Stats API</h3>
           </div>
-          <p data-i18n="codeApiDesc">Importa os logs pra um banco SQLite e entrega jogadores, mortes e rankings em JSON, com paginação, filtros, chave de API e documentação OpenAPI.</p>
-          <figure class="term">
-            <div class="term__bar" aria-hidden="true"><span></span><span></span><span></span><em>GET /api/leaderboard</em></div>
-            <pre data-i18n-aria="codePreview" aria-label="Exemplo de saída"><code><span class="t-l t-cmd" style="--i:0">$ curl "localhost:5199/api/leaderboard?by=playtime&amp;top=3"</span><span class="t-l" style="--i:1">[</span><span class="t-l" style="--i:2">  { "rank": 1, "name": "Lobo",     "value": <b class="t-ok">1.55</b> },</span><span class="t-l" style="--i:3">  { "rank": 2, "name": "Corvo",    "value": <b class="t-ok">0.57</b> },</span><span class="t-l" style="--i:4">  { "rank": 3, "name": "Survivor", "value": <b class="t-ok">0.52</b> }</span><span class="t-l" style="--i:5">]</span></code></pre>
+          <p data-i18n="codeApiDesc">API REST em ASP.NET Core com EF Core: importação idempotente e transacional, paginação, filtros, validação, autenticação por chave e documentação OpenAPI.</p>
+          <ul class="code-card__facts">
+            <li><b>25</b> <span data-i18n="factTestsIntegration">testes, com integração</span></li>
+            <li><b>26</b> <span data-i18n="factLogsIn1s">logs importados em ~1 s</span></li>
+            <li><b>.NET 10</b> <span data-i18n="factLts">LTS</span></li>
+          </ul>
+          <figure class="term" data-term>
+            <div class="term__bar">
+              <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <div class="term__tabs" role="tablist">
+                <button type="button" role="tab" aria-selected="true" data-pane="out" data-i18n="tabOutput">saída</button>
+                <button type="button" role="tab" aria-selected="false" data-pane="src" data-i18n="tabCode">código</button>
+              </div>
+              <button type="button" class="term__replay" data-i18n-aria="replay" aria-label="Rodar de novo">↻</button>
+            </div>
+            <pre class="term__pane" data-pane="out"><code><span class="t-l t-cmd" style="--i:0">$ curl "localhost:5199/api/leaderboard?by=playtime&amp;top=3"</span><span class="t-l" style="--i:1">[</span><span class="t-l" style="--i:2">  { "rank": 1, "name": "Lobo",     "value": <b class="t-ok">1.55</b> },</span><span class="t-l" style="--i:3">  { "rank": 2, "name": "Corvo",    "value": <b class="t-ok">0.57</b> },</span><span class="t-l" style="--i:4">  { "rank": 3, "name": "Survivor", "value": <b class="t-ok">0.52</b> }</span><span class="t-l" style="--i:5">]</span></code></pre>
+            <pre class="term__pane" data-pane="src" hidden><code><span class="t-dim">// StatsEndpoints.cs: o tipo de retorno documenta as respostas no OpenAPI</span>
+<span class="t-key">static async</span> Task&lt;Results&lt;Ok&lt;PagedResult&lt;DeathInfo&gt;&gt;, ValidationProblem&gt;&gt; ListDeaths(
+    StatsDbContext db, CancellationToken ct, <span class="t-key">string</span>? cause = <span class="t-key">null</span>,
+    <span class="t-key">int</span> page = 1, <span class="t-key">int</span> pageSize = 20)
+{
+    <span class="t-key">if</span> (PagingErrors(page, pageSize) <span class="t-key">is</span> { } errors)
+        <span class="t-key">return</span> TypedResults.ValidationProblem(errors);
+    <span class="t-dim">// filtra e pagina a entidade antes de montar o DTO (senão não vira SQL)</span>
+    ...
+}</code></pre>
           </figure>
-          <div class="tags"><span>ASP.NET Core</span><span>EF Core</span><span>SQLite</span><span>xUnit</span></div>
-          <a class="code-card__link" href="https://github.com/edudiasr/dayz-stats-api" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
+          <div class="tags"><span>ASP.NET Core</span><span>EF Core</span><span>SQLite</span><span>xUnit</span><span>OpenAPI</span></div>
+          <div class="code-card__links">
+            <a class="code-card__link" href="https://github.com/edudiasr/dayz-stats-api" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
+          </div>
         </article>
 
-        <article class="code-card reveal" style="--c:#fb7185">
+        <article class="code-card reveal" style="--c:#fb7185" data-stack="enforce">
           <div class="code-card__head">
             <span class="code-card__lang">Enforce Script</span>
             <h3>DIA-Z HARDCORE</h3>
           </div>
-          <p data-i18n="codeModDesc">O servidor em si. Montei e mantenho sozinho: economia, mods, scripts em Enforce Script (a linguagem do DayZ) e o modpack publicado na Steam Workshop.</p>
-          <figure class="term">
-            <div class="term__bar" aria-hidden="true"><span></span><span></span><span></span><em>dia-z hardcore</em></div>
-            <pre data-i18n-aria="codePreviewServer" aria-label="Resumo do servidor"><code><span class="t-l" style="--i:0"><span class="t-dim">no ar desde</span>  <b class="t-ok">mar/2026</b></span><span class="t-l" style="--i:1"><span class="t-dim">pico       </span>  ~10 jogadores</span><span class="t-l" style="--i:2"><span class="t-dim">discord    </span>  50+ membros</span><span class="t-l" style="--i:3"><span class="t-dim">modpack    </span>  Steam Workshop</span></code></pre>
-          </figure>
+          <p data-i18n="codeModDesc">Servidor de jogo em produção que eu administro: economia configurada em XML, lógica customizada em Enforce Script e pacote de conteúdo publicado na Steam Workshop.</p>
+          <ul class="code-card__facts">
+            <li><b>mar/2026</b> <span data-i18n="factSince">no ar desde</span></li>
+            <li><b>3.123</b> <span data-i18n="factItems">itens na economia</span></li>
+            <li><b>50+</b> <span data-i18n="factCommunity">na comunidade</span></li>
+          </ul>
           <div class="tags"><span>Enforce Script</span><span>XML</span><span data-i18n="codeServerAdmin">administração de servidor</span></div>
-          <a class="code-card__link" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3797176699" target="_blank" rel="noopener" data-i18n="codeWorkshop">Ver na Steam Workshop ↗</a>
+          <div class="code-card__links">
+            <a class="code-card__link" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3797176699" target="_blank" rel="noopener" data-i18n="codeWorkshop">Ver na Steam Workshop ↗</a>
+          </div>
         </article>
       </div>
+      <p class="code-empty" id="codeEmpty" hidden data-i18n="codeEmpty">Nenhum projeto com essa tecnologia ainda.</p>
     </section>
 
     <section class="projects section" id="projetos">
@@ -433,7 +514,7 @@
           <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Landing</span></div>
         </a>
 
-        <a class="card tilt" href="./site-imobiliaria/" data-tags="html css javascript ui responsivo interativo" data-color="#7d9b76" data-id="imobiliaria" data-featured-lock="1">
+        <a class="card tilt" href="./site-imobiliaria/" data-tags="html css javascript ui responsivo interativo" data-color="#7d9b76" data-id="imobiliaria">
           <span class="card__glow" style="--c:#7d9b76"></span>
           <span class="card__balloon" style="--c:#7d9b76"></span>
           <h3 data-proj="title">Vértice — Imóveis</h3>
