@@ -1126,21 +1126,102 @@ main {
   background: rgba(16, 24, 40, 0.7);
 }
 
-.term__bar span {
+.term__dots {
+  display: flex;
+  gap: 6px;
+}
+
+.term__dots i {
   width: 9px;
   height: 9px;
   border-radius: 50%;
   background: #334155;
 }
 
-.term__bar em {
-  margin-left: 0.4rem;
+.term__tabs {
+  display: flex;
+  gap: 2px;
+  margin-left: 0.5rem;
+}
+
+.term__tabs button,
+.term__replay {
+  border: 0;
+  background: transparent;
   color: var(--muted);
-  font-size: 0.7rem;
-  font-style: normal;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font: 600 0.7rem/1 var(--font);
+  letter-spacing: 0.04em;
+  padding: 0.35rem 0.55rem;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.2s var(--ease);
+}
+
+.term__tabs button:hover,
+.term__replay:hover {
+  color: var(--text);
+}
+
+.term__tabs button[aria-selected="true"] {
+  background: color-mix(in srgb, var(--c) 18%, transparent);
+  color: var(--c);
+}
+
+.term__replay {
+  margin-left: auto;
+  font-size: 0.9rem;
+}
+
+.term__replay:active {
+  transform: rotate(-90deg);
+}
+
+.term__pane[data-pane="src"] code {
+  display: block;
+  white-space: pre;
+}
+
+.t-key {
+  color: #c084fc;
+}
+
+.t-str {
+  color: #86efac;
+}
+
+/* filtros e números da seção de código */
+.code-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1.2rem;
+}
+
+.code-card.is-hidden {
+  display: none;
+}
+
+.code-empty {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.code-card__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.1rem;
+  margin: 0.9rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.code-card__facts b {
+  color: var(--text);
+  font-family: var(--display);
+  font-size: 0.95rem;
+  letter-spacing: -0.02em;
 }
 
 .term pre {
