@@ -856,6 +856,45 @@ location = /api/ranking/stream {
           </div>
         </article>
 
+        <article class="code-card reveal" style="--c:#2f8f83" data-stack="typescript javascript sql docker">
+          <div class="code-card__head">
+            <span class="code-card__lang">TypeScript · Next.js · PostgreSQL</span>
+            <h3>Balcão</h3>
+          </div>
+          <p data-i18n="codeBalcaoDesc">Sistema de gestão para pequeno comércio: frente de caixa com leitor de código de barras e pagamento dividido, estoque com histórico de cada movimentação, abertura e fechamento de caixa com conferência da gaveta, clientes, relatórios com exportação em CSV e dois perfis de acesso (admin e vendedor).</p>
+          <ul class="code-card__facts">
+            <li><b>40</b> <span data-i18n="factBalcaoTests">testes, 21 deles contra um PostgreSQL de verdade</span></li>
+            <li><b>1</b> <span data-i18n="factBalcaoRace">venda passa quando duas disputam o último item</span></li>
+            <li><b>0</b> <span data-i18n="factBalcaoFloat">números quebrados: dinheiro guardado em centavos</span></li>
+          </ul>
+          <figure class="term" data-term>
+            <div class="term__bar">
+              <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <div class="term__tabs" role="tablist">
+                <button type="button" role="tab" aria-selected="true" data-pane="out" data-i18n="tabOutput">saída</button>
+                <button type="button" role="tab" aria-selected="false" data-pane="src" data-i18n="tabCode">código</button>
+              </div>
+              <button type="button" class="term__replay" data-i18n-aria="replay" aria-label="Rodar de novo">↻</button>
+            </div>
+            <pre class="term__pane" data-pane="out"><code><span class="t-l t-cmd" style="--i:0">$ npm test</span><span class="t-l" style="--i:1"><b class="t-ok">✔</b> duas vendas disputando o último item: só uma passa</span><span class="t-l" style="--i:2"><b class="t-ok">✔</b> cancelar devolve o estoque uma vez só, mesmo com dois cancelamentos juntos</span><span class="t-l" style="--i:3"><b class="t-ok">✔</b> fechamento confere a gaveta e exige explicação quando dá diferença</span><span class="t-l" style="--i:4">Tests <b class="t-ok">40 passed</b> (40)</span></code></pre>
+            <pre class="term__pane" data-pane="src" hidden><code><span class="t-dim">// servicos/vendas.ts: o "estoque >= quantidade" no where</span>
+<span class="t-dim">// faz a baixa e a conferência num passo só</span>
+<span class="t-key">const</span> p = <span class="t-key">await</span> tx.produto.update({
+  where: { id: i.produtoId, estoque: { gte: i.quantidade } },
+  data: { estoque: { decrement: i.quantidade } },
+  select: { estoque: <span class="t-key">true</span> },
+});
+<span class="t-key">await</span> tx.movimentoEstoque.create({
+  data: { produtoId: i.produtoId, tipo: <span class="t-str">'VENDA'</span>,
+          quantidade: -i.quantidade, saldoApos: p.estoque },
+});</code></pre>
+          </figure>
+          <div class="tags"><span>Next.js 16</span><span>React</span><span>TypeScript</span><span>PostgreSQL</span><span>Prisma</span><span>Vitest</span><span>Docker</span><span>GitHub Actions</span></div>
+          <div class="code-card__links">
+            <a class="code-card__link" href="https://github.com/edudiasr/balcao" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
+          </div>
+        </article>
+
         <article class="code-card reveal" style="--c:#f472b6" data-stack="python">
           <div class="code-card__head">
             <span class="code-card__lang">Python · pandas</span>
