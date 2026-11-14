@@ -817,6 +817,45 @@ location = /api/ranking/stream {
           </div>
         </article>
 
+        <article class="code-card reveal" style="--c:#3fbf5a" data-stack="javascript">
+          <div class="code-card__head">
+            <span class="code-card__lang">JavaScript · Canvas</span>
+            <h3>Clareira</h3>
+          </div>
+          <p data-i18n="codeClareiraDesc">Jogo de estratégia no navegador: construa uma vila no meio da floresta, produza madeira, pedra, ferro e moedas, e monte torres, canhões, morteiros e teslas contra as ondas que saem da mata a cada 15 minutos. Visão isométrica desenhada toda em código; com o jogo fechado, as ondas são simuladas e o resultado aparece ao voltar.</p>
+          <ul class="code-card__facts">
+            <li><b>22</b> <span data-i18n="factClareiraTests">testes da economia, do mapa, do A* e das batalhas</span></li>
+            <li><b>9</b> <span data-i18n="factClareiraEnemies">tipos de inimigo, com chefe a cada 5 ondas</span></li>
+            <li><b>0</b> <span data-i18n="factClareiraImages">imagens: prédios, tropas e floresta desenhados no Canvas</span></li>
+          </ul>
+          <figure class="term" data-term>
+            <div class="term__bar">
+              <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <div class="term__tabs" role="tablist">
+                <button type="button" role="tab" aria-selected="true" data-pane="out" data-i18n="tabOutput">saída</button>
+                <button type="button" role="tab" aria-selected="false" data-pane="src" data-i18n="tabCode">código</button>
+              </div>
+              <button type="button" class="term__replay" data-i18n-aria="replay" aria-label="Rodar de novo">↻</button>
+            </div>
+            <pre class="term__pane" data-pane="out"><code><span class="t-l t-cmd" style="--i:0">$ npm test</span><span class="t-l" style="--i:1"><b class="t-ok">✔</b> A* desvia de obstáculo e devolve null quando não tem saída</span><span class="t-l" style="--i:2"><b class="t-ok">✔</b> batalha é determinística: mesma vila, mesmo resultado</span><span class="t-l" style="--i:3"><b class="t-ok">✔</b> ondas perdidas com o jogo fechado são simuladas ao voltar</span><span class="t-l" style="--i:4">tests 22  pass <b class="t-ok">22</b>  fail 0</span></code></pre>
+            <pre class="term__pane" data-pane="src" hidden><code><span class="t-dim">// combate.js: quanto custa cada casa para a tropa.</span>
+<span class="t-dim">// muro e prédio no meio "custam" mais, então ela só</span>
+<span class="t-dim">// quebra se contornar sair mais caro</span>
+<span class="t-key">function</span> custoTile(b, e, x, y) {
+  <span class="t-key">if</span> (tile(b.mapa, x, y) === ROCHA) <span class="t-key">return</span> Infinity;
+  <span class="t-key">const</span> p = b.grade[idx(x, y)];
+  <span class="t-key">if</span> (p &amp;&amp; p !== e.alvo) <span class="t-key">return</span> p.id === <span class="t-str">'muro'</span> ? <span class="t-key">9</span> : <span class="t-key">30</span>;
+  <span class="t-key">if</span> (tile(b.mapa, x, y) === ARVORE) <span class="t-key">return</span> <span class="t-key">2.2</span>;
+  <span class="t-key">return</span> <span class="t-key">1</span>;
+}</code></pre>
+          </figure>
+          <div class="tags"><span>JavaScript</span><span>Canvas 2D</span><span>A*</span><span>Web Audio</span><span>node:test</span><span>GitHub Pages</span></div>
+          <div class="code-card__links">
+            <a class="code-card__link code-card__link--try" href="https://edudiasr.github.io/clareira/" target="_blank" rel="noopener" data-i18n="codeTryGame">Jogar no navegador →</a>
+            <a class="code-card__link" href="https://github.com/edudiasr/clareira" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
+          </div>
+        </article>
+
         <article class="code-card reveal" style="--c:#f472b6" data-stack="python">
           <div class="code-card__head">
             <span class="code-card__lang">Python · pandas</span>
