@@ -777,6 +777,46 @@ location = /api/ranking/stream {
           </div>
         </article>
 
+        <article class="code-card reveal" style="--c:#d4a24c" data-stack="javascript">
+          <div class="code-card__head">
+            <span class="code-card__lang">JavaScript · HTML · CSS</span>
+            <h3>Barbearia Dias</h3>
+          </div>
+          <p data-i18n="codeBarbeariaDesc">Site de barbearia com agenda ao vivo de cada barbeiro, calendário que mostra os horários livres do dia, agendamento só com login, loja com carrinho e checkout (retirada ou entrega com busca de CEP) e suporte direto no WhatsApp. Tudo em JavaScript puro, sem framework.</p>
+          <ul class="code-card__facts">
+            <li><b>27</b> <span data-i18n="factBarbeariaTests">testes das regras de horário, do login e do checkout</span></li>
+            <li><b>8</b> <span data-i18n="factBarbeariaSpam">proteções anti-spam: campo-isca, limite de tentativas e mais</span></li>
+            <li><b>0</b> <span data-i18n="factBarbeariaDeps">dependências: nem framework, nem etapa de build</span></li>
+          </ul>
+          <figure class="term" data-term>
+            <div class="term__bar">
+              <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <div class="term__tabs" role="tablist">
+                <button type="button" role="tab" aria-selected="true" data-pane="out" data-i18n="tabOutput">saída</button>
+                <button type="button" role="tab" aria-selected="false" data-pane="src" data-i18n="tabCode">código</button>
+              </div>
+              <button type="button" class="term__replay" data-i18n-aria="replay" aria-label="Rodar de novo">↻</button>
+            </div>
+            <pre class="term__pane" data-pane="out"><code><span class="t-l t-cmd" style="--i:0">$ npm test</span><span class="t-l" style="--i:1"><b class="t-ok">✔</b> horário ocupado e serviço que não cabe</span><span class="t-l" style="--i:2"><b class="t-ok">✔</b> login certo, errado e bloqueio após 5 erros</span><span class="t-l" style="--i:3"><b class="t-ok">✔</b> agendamento ocupa o horário e ninguém marca em cima</span><span class="t-l" style="--i:4">tests 27  pass <b class="t-ok">27</b>  fail 0</span></code></pre>
+            <pre class="term__pane" data-pane="src" hidden><code><span class="t-dim">// regras.js: limite de tentativas por janela de tempo</span>
+<span class="t-dim">// (ex.: 5 logins errados a cada 5 minutos)</span>
+<span class="t-key">registrar</span>(chave) {
+  <span class="t-key">const</span> r = <span class="t-key">this</span>.verificar(chave);
+  <span class="t-key">if</span> (r.ok) <span class="t-key">this</span>.registros[chave].push(<span class="t-key">this</span>.agora());
+  <span class="t-key">return</span> r; <span class="t-dim">// { ok: false, esperaMs } quando estoura</span>
+}
+
+<span class="t-dim">// servidor.js: confere de novo antes de salvar o horário</span>
+<span class="t-key">if</span> (!h || h.estado !== <span class="t-str">'livre'</span>)
+  <span class="t-key">return</span> falha(<span class="t-str">'Esse horário acabou de ser ocupado.'</span>, <span class="t-str">'ocupado'</span>);</code></pre>
+          </figure>
+          <div class="tags"><span>JavaScript</span><span>ES Modules</span><span>Web Crypto</span><span>BroadcastChannel</span><span>node:test</span><span>GitHub Pages</span></div>
+          <div class="code-card__links">
+            <a class="code-card__link code-card__link--try" href="https://edudiasr.github.io/barbearia-dias/" target="_blank" rel="noopener" data-i18n="codeTry">Testar no navegador →</a>
+            <a class="code-card__link" href="https://github.com/edudiasr/barbearia-dias" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
+          </div>
+        </article>
+
         <article class="code-card reveal" style="--c:#f472b6" data-stack="python">
           <div class="code-card__head">
             <span class="code-card__lang">Python · pandas</span>
