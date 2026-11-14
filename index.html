@@ -214,6 +214,8 @@
         <button type="button" class="filter" data-stack="python">Python</button>
         <button type="button" class="filter" data-stack="javascript">JavaScript</button>
         <button type="button" class="filter" data-stack="typescript">TypeScript</button>
+        <button type="button" class="filter" data-stack="java">Java</button>
+        <button type="button" class="filter" data-stack="c">C</button>
         <button type="button" class="filter" data-stack="cpp">C++</button>
         <button type="button" class="filter" data-stack="csharp">C#</button>
         <button type="button" class="filter" data-stack="php">PHP</button>
@@ -729,6 +731,127 @@ location = /api/ranking/stream {
           <div class="tags"><span>Docker</span><span>Compose</span><span>Nginx</span><span>MySQL</span><span>Redis</span><span>Prometheus</span></div>
           <div class="code-card__links">
             <a class="code-card__link" href="https://github.com/edudiasr/game-server-stack" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
+          </div>
+        </article>
+
+        <article class="code-card reveal" style="--c:#4ade80" data-stack="java typescript javascript sql docker">
+          <div class="code-card__head">
+            <span class="code-card__lang">Java · Spring Boot · React</span>
+            <h3>Agenda de barbearia</h3>
+          </div>
+          <p data-i18n="codeAgendaDesc">Sistema de agendamento completo: API REST em Java 21 com Spring Boot, PostgreSQL e login com JWT, e front em React + TypeScript. O cliente escolhe serviço, profissional e horário livre; o dono vê a agenda do dia e marca quem foi atendido.</p>
+          <ul class="code-card__facts">
+            <li><b>10</b> <span data-i18n="factAgendaRace">pedidos no mesmo horário, ao mesmo tempo: só 1 grava</span></li>
+            <li><b>30</b> <span data-i18n="factAgendaTests">testes: 19 na API, contra PostgreSQL real, e 11 no front</span></li>
+            <li><b>0</b> <span data-i18n="factAgendaDb">horários sobrepostos: quem garante é o banco</span></li>
+          </ul>
+          <figure class="term" data-term>
+            <div class="term__bar">
+              <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <div class="term__tabs" role="tablist">
+                <button type="button" role="tab" aria-selected="true" data-pane="out" data-i18n="tabOutput">saída</button>
+                <button type="button" role="tab" aria-selected="false" data-pane="src" data-i18n="tabCode">código</button>
+              </div>
+              <button type="button" class="term__replay" data-i18n-aria="replay" aria-label="Rodar de novo">↻</button>
+            </div>
+            <pre class="term__pane" data-pane="out"><code><span class="t-l t-cmd" style="--i:0">$ ./mvnw verify</span><span class="t-l" style="--i:1">Tests run: 6  <b class="t-ok">ok</b>  CalculadoraDeHorariosTest</span><span class="t-l" style="--i:2">Tests run: 13 <b class="t-ok">ok</b>  AgendamentoTest</span><span class="t-l t-cmd" style="--i:3">$ curl -X POST .../api/agendamentos   <span class="t-dim"># horário já ocupado</span></span><span class="t-l" style="--i:4">HTTP <b class="t-err">409</b>  "Esse horário acabou de ser ocupado. Escolha outro."</span></code></pre>
+            <pre class="term__pane" data-pane="src" hidden><code><span class="t-dim">-- V1__estrutura.sql: o mesmo profissional não pode ter dois horários</span>
+<span class="t-dim">-- que se cruzam; cancelados não contam e o horário volta a ficar livre</span>
+<span class="t-key">CONSTRAINT</span> agendamento_sem_sobreposicao
+    <span class="t-key">EXCLUDE USING</span> gist (profissional_id <span class="t-key">WITH</span> =,
+                       tstzrange(inicio, fim) <span class="t-key">WITH</span> &amp;&amp;)
+    <span class="t-key">WHERE</span> (status &lt;&gt; <span class="t-str">'CANCELADO'</span>)
+
+<span class="t-dim">// AgendaService.java: dois clientes passaram na conferência juntos?</span>
+<span class="t-dim">// o banco só deixa um gravar, e o outro recebe 409</span>
+<span class="t-key">try</span> {
+    agendamentos.saveAndFlush(novo);
+} <span class="t-key">catch</span> (DataIntegrityViolationException e) {
+    <span class="t-key">throw</span> NegocioException.conflito(<span class="t-str">"Esse horário acabou de ser ocupado."</span>);
+}</code></pre>
+          </figure>
+          <div class="tags"><span>Java 21</span><span>Spring Boot</span><span>PostgreSQL</span><span>JWT</span><span>Testcontainers</span><span>React</span><span>TypeScript</span></div>
+          <div class="code-card__links">
+            <a class="code-card__link" href="https://github.com/edudiasr/agenda-api" target="_blank" rel="noopener" data-i18n="codeRepoApi">Código da API ↗</a>
+            <a class="code-card__link" href="https://github.com/edudiasr/agenda-web" target="_blank" rel="noopener" data-i18n="codeRepoWeb">Código do front ↗</a>
+          </div>
+        </article>
+
+        <article class="code-card reveal" style="--c:#f472b6" data-stack="python">
+          <div class="code-card__head">
+            <span class="code-card__lang">Python · pandas</span>
+            <h3>Inflação no Brasil</h3>
+          </div>
+          <p data-i18n="codeInflacaoDesc">Análise de dados do IPCA, salário mínimo, Selic e dólar de 2015 a 2026, com os dados vindos direto da API do Banco Central. Mostra quanto os preços subiram, quais grupos pesaram mais e se o salário mínimo ganhou da inflação.</p>
+          <ul class="code-card__facts">
+            <li><b>13</b> <span data-i18n="factSeries">séries baixadas da API do Banco Central</span></li>
+            <li><b>89,8%</b> <span data-i18n="factIpca">de inflação acumulada desde 2015</span></li>
+            <li><b>0,02</b> <span data-i18n="factIbge">ponto de diferença dos números oficiais do IBGE</span></li>
+          </ul>
+          <figure class="term" data-term>
+            <div class="term__bar">
+              <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <div class="term__tabs" role="tablist">
+                <button type="button" role="tab" aria-selected="true" data-pane="out" data-i18n="tabOutput">saída</button>
+                <button type="button" role="tab" aria-selected="false" data-pane="src" data-i18n="tabCode">código</button>
+              </div>
+              <button type="button" class="term__replay" data-i18n-aria="replay" aria-label="Rodar de novo">↻</button>
+            </div>
+            <pre class="term__pane" data-pane="out"><code><span class="t-l t-cmd" style="--i:0">$ jupyter nbconvert --execute analise.ipynb</span><span class="t-l" style="--i:1">IPCA jan/2015 a out/2026   <b class="t-warn">89,82%</b></span><span class="t-l" style="--i:2">R$ 100 de 2015 hoje        R$ 189,82</span><span class="t-l" style="--i:3">pico em 12 meses           <b class="t-err">12,13%</b> (abr/2022)</span><span class="t-l" style="--i:4">salário mínimo, ganho real <b class="t-ok">+9,7%</b></span></code></pre>
+            <pre class="term__pane" data-pane="src" hidden><code><span class="t-dim"># calculos.py: inflação não se soma, se multiplica.</span>
+<span class="t-dim"># 1% e depois 2% dá 1,01 x 1,02 = 3,02%, e não 3%</span>
+<span class="t-key">def</span> acumulada(variacoes_pct):
+    <span class="t-key">return</span> ((<span class="t-key">1</span> + variacoes_pct / <span class="t-key">100</span>).prod() - <span class="t-key">1</span>) * <span class="t-key">100</span>
+
+<span class="t-dim"># subiu 10% com inflação de 5%: 1,10 / 1,05 = ganho real de 4,76%</span>
+<span class="t-key">def</span> ganho_real(nominal_pct, inflacao_pct):
+    <span class="t-key">return</span> ((<span class="t-key">1</span> + nominal_pct / <span class="t-key">100</span>) / (<span class="t-key">1</span> + inflacao_pct / <span class="t-key">100</span>) - <span class="t-key">1</span>) * <span class="t-key">100</span></code></pre>
+          </figure>
+          <div class="tags"><span>Python</span><span>pandas</span><span>matplotlib</span><span>Jupyter</span><span>pytest</span><span>API do BCB</span></div>
+          <div class="code-card__links">
+            <a class="code-card__link" href="https://github.com/edudiasr/inflacao-brasil" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
+          </div>
+        </article>
+
+        <article class="code-card reveal" style="--c:#94a3b8" data-stack="c">
+          <div class="code-card__head">
+            <span class="code-card__lang">C</span>
+            <h3>estruturas-de-dados</h3>
+          </div>
+          <p data-i18n="codeEstruturasDesc">Estruturas de dados clássicas escritas do zero em C: lista ligada, pilha, fila circular, árvore de busca, heap, tabela hash e grafo com BFS e Dijkstra. Cada uma tem teste, e o CI confere vazamento de memória com Valgrind e AddressSanitizer.</p>
+          <ul class="code-card__facts">
+            <li><b>1097</b> <span data-i18n="factDsChecks">verificações nos testes</span></li>
+            <li><b>0</b> <span data-i18n="factLeaks">erros no Valgrind e no AddressSanitizer</span></li>
+            <li><b>7</b> <span data-i18n="factStructures">estruturas, sem biblioteca além da padrão</span></li>
+          </ul>
+          <figure class="term" data-term>
+            <div class="term__bar">
+              <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <div class="term__tabs" role="tablist">
+                <button type="button" role="tab" aria-selected="true" data-pane="out" data-i18n="tabOutput">saída</button>
+                <button type="button" role="tab" aria-selected="false" data-pane="src" data-i18n="tabCode">código</button>
+              </div>
+              <button type="button" class="term__replay" data-i18n-aria="replay" aria-label="Rodar de novo">↻</button>
+            </div>
+            <pre class="term__pane" data-pane="out"><code><span class="t-l t-cmd" style="--i:0">$ make test</span><span class="t-l" style="--i:1">  rota Joinville -&gt; Lages (325 km): Joinville Blumenau Lages</span><span class="t-l" style="--i:2"><b class="t-ok">1097/1097</b> verificações ok</span><span class="t-l t-cmd" style="--i:3">$ make comparacao   <span class="t-dim"># busca com 100 mil itens</span></span><span class="t-l" style="--i:4">lista <b class="t-err">1651 µs</b> · árvore <b class="t-warn">5,7 µs</b> · hash <b class="t-ok">0,3 µs</b></span></code></pre>
+            <pre class="term__pane" data-pane="src" hidden><code><span class="t-dim">/* arvore.c: com ponteiro pra ponteiro, remover a raiz ou um nó do</span>
+<span class="t-dim">   meio é o mesmo código, sem guardar quem é o pai */</span>
+NoArvore **lugar = &amp;a-&gt;raiz;
+<span class="t-key">while</span> (*lugar &amp;&amp; (*lugar)-&gt;valor != valor)
+    lugar = valor &lt; (*lugar)-&gt;valor ? &amp;(*lugar)-&gt;esquerda : &amp;(*lugar)-&gt;direita;
+NoArvore *alvo = *lugar;
+<span class="t-key">if</span> (!alvo) <span class="t-key">return</span> false;
+<span class="t-key">if</span> (!alvo-&gt;esquerda)      *lugar = alvo-&gt;direita;
+<span class="t-key">else if</span> (!alvo-&gt;direita) *lugar = alvo-&gt;esquerda;
+<span class="t-key">else</span> {  <span class="t-dim">/* 2 filhos: o sucessor toma o lugar */</span>
+    NoArvore **suc = &amp;alvo-&gt;direita;
+    <span class="t-key">while</span> ((*suc)-&gt;esquerda) suc = &amp;(*suc)-&gt;esquerda;
+    ...
+}</code></pre>
+          </figure>
+          <div class="tags"><span>C11</span><span>Makefile</span><span>Valgrind</span><span>AddressSanitizer</span><span>gcc · clang</span></div>
+          <div class="code-card__links">
+            <a class="code-card__link" href="https://github.com/edudiasr/estruturas-de-dados" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
           </div>
         </article>
 
