@@ -213,10 +213,14 @@
         <button type="button" class="filter is-active" data-stack="all" data-i18n="filterAll">Todos</button>
         <button type="button" class="filter" data-stack="python">Python</button>
         <button type="button" class="filter" data-stack="javascript">JavaScript</button>
+        <button type="button" class="filter" data-stack="typescript">TypeScript</button>
         <button type="button" class="filter" data-stack="cpp">C++</button>
         <button type="button" class="filter" data-stack="csharp">C#</button>
+        <button type="button" class="filter" data-stack="php">PHP</button>
+        <button type="button" class="filter" data-stack="go">Go</button>
         <button type="button" class="filter" data-stack="sql">SQL</button>
         <button type="button" class="filter" data-stack="nosql">NoSQL</button>
+        <button type="button" class="filter" data-stack="docker">Docker</button>
         <button type="button" class="filter" data-stack="enforce">Enforce Script</button>
       </div>
 
@@ -557,6 +561,174 @@ finish_compaction(target);  <span class="t-dim">// apaga 1..N.log e renomeia N.c
           <div class="tags"><span>Enforce Script</span><span>DayZ</span><span>JSON</span><span>Python</span><span>pytest</span></div>
           <div class="code-card__links">
             <a class="code-card__link" href="https://github.com/edudiasr/dayz-server-stats" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
+          </div>
+        </article>
+
+        <article class="code-card reveal" style="--c:#8b5cf6" data-stack="php sql">
+          <div class="code-card__head">
+            <span class="code-card__lang">PHP · MySQL</span>
+            <h3>Server Admin</h3>
+          </div>
+          <p data-i18n="codePainelDesc">Painel da equipe em PHP puro, sem framework: whitelist, banimentos com histórico, cargos, verificação em duas etapas (TOTP) e auditoria de tudo que é feito. Roteamento, sessão, CSRF e 2FA são código do próprio projeto.</p>
+          <ul class="code-card__facts">
+            <li><b>44</b> <span data-i18n="factPhpTests">testes, rodando em SQLite e MySQL</span></li>
+            <li><b>0</b> <span data-i18n="factNoFramework">frameworks: rotas, sessão e CSRF à mão</span></li>
+            <li><b>TOTP</b> <span data-i18n="factTotp">2FA conferido com os vetores da RFC</span></li>
+          </ul>
+          <figure class="term" data-term>
+            <div class="term__bar">
+              <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <div class="term__tabs" role="tablist">
+                <button type="button" role="tab" aria-selected="true" data-pane="out" data-i18n="tabOutput">saída</button>
+                <button type="button" role="tab" aria-selected="false" data-pane="src" data-i18n="tabCode">código</button>
+              </div>
+              <button type="button" class="term__replay" data-i18n-aria="replay" aria-label="Rodar de novo">↻</button>
+            </div>
+            <pre class="term__pane" data-pane="out"><code><span class="t-l t-cmd" style="--i:0">$ vendor/bin/phpunit</span><span class="t-l" style="--i:1">............................................  44 / 44</span><span class="t-l" style="--i:2"><b class="t-ok">OK</b> (44 tests, 169 assertions)</span><span class="t-l t-cmd" style="--i:3">$ PAINEL_TEST_MYSQL="mysql:host=127.0.0.1" vendor/bin/phpunit</span><span class="t-l" style="--i:4">............................................  44 / 44</span><span class="t-l" style="--i:5"><b class="t-ok">OK</b> (44 tests, 169 assertions)</span></code></pre>
+            <pre class="term__pane" data-pane="src" hidden><code><span class="t-dim">// Users.php: cada intervalo de 30 s do 2FA só vale uma vez.</span>
+<span class="t-dim">// O UPDATE só passa se o passo for maior que o último usado,</span>
+<span class="t-dim">// então nem dois logins ao mesmo tempo usam o mesmo código.</span>
+<span class="t-key">public function</span> consumeTotpStep(<span class="t-key">int</span> $id, <span class="t-key">int</span> $step): <span class="t-key">bool</span>
+{
+    <span class="t-key">return</span> $this-&gt;db-&gt;run(
+        <span class="t-str">'UPDATE users SET totp_last_step = :st WHERE id = :id'</span>
+        . <span class="t-str">' AND (totp_last_step IS NULL OR totp_last_step &lt; :st2)'</span>,
+        [<span class="t-str">'st'</span> =&gt; $step, <span class="t-str">'st2'</span> =&gt; $step, <span class="t-str">'id'</span> =&gt; $id],
+    ) === 1;
+}</code></pre>
+          </figure>
+          <div class="tags"><span>PHP 8.4</span><span>PDO</span><span>MySQL</span><span>SQLite</span><span>PHPUnit</span><span>TOTP</span></div>
+          <div class="code-card__links">
+            <a class="code-card__link" href="https://github.com/edudiasr/server-admin-php" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
+          </div>
+        </article>
+
+        <article class="code-card reveal" style="--c:#06b6d4" data-stack="go">
+          <div class="code-card__head">
+            <span class="code-card__lang">Go</span>
+            <h3>a2s-monitor</h3>
+          </div>
+          <p data-i18n="codeMonitorDesc">Monitor de servidores de jogo em Go pelo protocolo de consulta da Steam (A2S via UDP): challenge, respostas divididas em vários pacotes, métricas pro Prometheus, histórico e aviso no Discord quando um servidor cai ou volta.</p>
+          <ul class="code-card__facts">
+            <li><b>487 mil</b> <span data-i18n="factFuzz">entradas no fuzzing sem nenhum pânico</span></li>
+            <li><b>16 MB</b> <span data-i18n="factImage">de imagem Docker, sem shell</span></li>
+            <li><b>0</b> <span data-i18n="factNoDeps">dependências fora da biblioteca padrão</span></li>
+          </ul>
+          <figure class="term" data-term>
+            <div class="term__bar">
+              <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <div class="term__tabs" role="tablist">
+                <button type="button" role="tab" aria-selected="true" data-pane="out" data-i18n="tabOutput">saída</button>
+                <button type="button" role="tab" aria-selected="false" data-pane="src" data-i18n="tabCode">código</button>
+              </div>
+              <button type="button" class="term__replay" data-i18n-aria="replay" aria-label="Rodar de novo">↻</button>
+            </div>
+            <pre class="term__pane" data-pane="out"><code><span class="t-l t-cmd" style="--i:0">$ a2s-monitor query 127.0.0.1:27016</span><span class="t-l" style="--i:1">nome       DIA-Z | Hardcore</span><span class="t-l" style="--i:2">jogadores  <b class="t-ok">12 / 60</b></span><span class="t-l" style="--i:3">resposta   1ms</span><span class="t-l t-cmd" style="--i:4">$ curl -s localhost:9105/metrics | grep a2s_up</span><span class="t-l" style="--i:5">a2s_up{server="DIA-Z"} <b class="t-ok">1</b></span><span class="t-l" style="--i:6">a2s_up{server="Teste"} <b class="t-err">0</b></span></code></pre>
+            <pre class="term__pane" data-pane="src" hidden><code><span class="t-dim">// o servidor pode responder com um challenge em vez dos dados</span>
+<span class="t-dim">// (proteção contra amplificação de UDP); aí o pedido volta com o número</span>
+<span class="t-key">for</span> attempt := 0; attempt &lt; 3; attempt++ {
+    req := []<span class="t-key">byte</span>{0xFF, 0xFF, 0xFF, 0xFF, kind}
+    req = append(append(req, body...), challenge...)
+    <span class="t-key">if</span> _, err := conn.Write(req); err != nil {
+        <span class="t-key">return</span> nil, err
+    }
+    payload, err := readResponse(conn) <span class="t-dim">// remonta pacotes divididos</span>
+    <span class="t-key">if</span> err == nil &amp;&amp; len(payload) == 5 &amp;&amp; payload[0] == typeChallenge {
+        challenge = payload[1:5]
+        <span class="t-key">continue</span>
+    }
+    <span class="t-key">return</span> payload, err
+}</code></pre>
+          </figure>
+          <div class="tags"><span>Go</span><span>UDP</span><span>Prometheus</span><span>Fuzzing</span><span>Docker</span></div>
+          <div class="code-card__links">
+            <a class="code-card__link" href="https://github.com/edudiasr/a2s-monitor" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
+          </div>
+        </article>
+
+        <article class="code-card reveal" style="--c:#38bdf8" data-stack="javascript typescript">
+          <div class="code-card__head">
+            <span class="code-card__lang">React · TypeScript</span>
+            <h3>Server Dashboard</h3>
+          </div>
+          <p data-i18n="codeDashDesc">Painel ao vivo em React + TypeScript que junta o monitor em Go e o ranking em Redis: estado dos servidores, gráfico de jogadores, ranking e kills chegando por Server-Sent Events. A demonstração roda no navegador.</p>
+          <ul class="code-card__facts">
+            <li><b>74 kB</b> <span data-i18n="factGzip">de JavaScript com gzip</span></li>
+            <li><b>19</b> <span data-i18n="factDashTests">testes com Testing Library</span></li>
+            <li><b>SSE</b> <span data-i18n="factSse">kills ao vivo, sem recarregar</span></li>
+          </ul>
+          <figure class="term" data-term>
+            <div class="term__bar">
+              <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <div class="term__tabs" role="tablist">
+                <button type="button" role="tab" aria-selected="true" data-pane="out" data-i18n="tabOutput">saída</button>
+                <button type="button" role="tab" aria-selected="false" data-pane="src" data-i18n="tabCode">código</button>
+              </div>
+              <button type="button" class="term__replay" data-i18n-aria="replay" aria-label="Rodar de novo">↻</button>
+            </div>
+            <pre class="term__pane" data-pane="out"><code><span class="t-l t-cmd" style="--i:0">$ npm test</span><span class="t-l" style="--i:1"> <b class="t-ok">✓</b> src/test/demo.test.ts (5 tests)</span><span class="t-l" style="--i:2"> <b class="t-ok">✓</b> src/test/components.test.tsx (14 tests)</span><span class="t-l" style="--i:3"> Tests  <b class="t-ok">19 passed</b> (19)</span><span class="t-l t-cmd" style="--i:4">$ npm run build</span><span class="t-l" style="--i:5">dist/assets/index.js   235 kB │ gzip: 74 kB</span></code></pre>
+            <pre class="term__pane" data-pane="src" hidden><code><span class="t-dim">// usePolling: se uma busca falhar, o último dado continua na tela.</span>
+<span class="t-dim">// Trocou a aba (key)? Cancela a busca anterior antes de começar outra.</span>
+<span class="t-key">const</span> run = <span class="t-key">async</span> () =&gt; {
+  controller.abort()
+  controller = <span class="t-key">new</span> AbortController()
+  <span class="t-key">try</span> {
+    <span class="t-key">const</span> data = <span class="t-key">await</span> fetcherRef.current(controller.signal)
+    <span class="t-key">if</span> (alive) setStored({ data, error: undefined, updatedAt: Date.now(), key })
+  } <span class="t-key">catch</span> (e) {
+    <span class="t-key">if</span> (!alive || isAbort(e)) <span class="t-key">return</span>
+    setStored((s) =&gt; ({ ...s, error: asError(e), key }))  <span class="t-dim">// mantém s.data</span>
+  }
+}</code></pre>
+          </figure>
+          <div class="tags"><span>React 19</span><span>TypeScript</span><span>Vite</span><span>Vitest</span><span>SSE</span><span>SVG</span></div>
+          <div class="code-card__links">
+            <a class="code-card__link code-card__link--try" href="https://edudiasr.github.io/server-dashboard/" target="_blank" rel="noopener" data-i18n="codeTry">Testar no navegador →</a>
+            <a class="code-card__link" href="https://github.com/edudiasr/server-dashboard" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
+          </div>
+        </article>
+
+        <article class="code-card reveal" style="--c:#2496ed" data-stack="docker">
+          <div class="code-card__head">
+            <span class="code-card__lang">Docker Compose</span>
+            <h3>game-server-stack</h3>
+          </div>
+          <p data-i18n="codeStackDesc">Um docker compose up que sobe os projetos conversando entre si: dashboard atrás do Nginx, monitor, ranking, painel PHP, loja em C#, MySQL, Redis e Prometheus. O código de cada serviço vem do repositório dele.</p>
+          <ul class="code-card__facts">
+            <li><b>12</b> <span data-i18n="factServices">serviços em 5 linguagens</span></li>
+            <li><b>1</b> <span data-i18n="factOneCommand">comando pra subir tudo</span></li>
+            <li><b>7</b> <span data-i18n="factSmoke">checagens de ponta a ponta no CI</span></li>
+          </ul>
+          <figure class="term" data-term>
+            <div class="term__bar">
+              <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <div class="term__tabs" role="tablist">
+                <button type="button" role="tab" aria-selected="true" data-pane="out" data-i18n="tabOutput">saída</button>
+                <button type="button" role="tab" aria-selected="false" data-pane="src" data-i18n="tabCode">código</button>
+              </div>
+              <button type="button" class="term__replay" data-i18n-aria="replay" aria-label="Rodar de novo">↻</button>
+            </div>
+            <pre class="term__pane" data-pane="out"><code><span class="t-l t-cmd" style="--i:0">$ docker compose up -d --build</span><span class="t-l" style="--i:1">dashboard <b class="t-ok">ok</b></span><span class="t-l" style="--i:2">monitor <b class="t-ok">ok</b></span><span class="t-l" style="--i:3">ranking <b class="t-ok">ok</b></span><span class="t-l" style="--i:4">painel <b class="t-ok">ok</b></span><span class="t-l" style="--i:5">loja <b class="t-ok">ok</b>  ·  seed da loja <b class="t-ok">ok</b></span><span class="t-l" style="--i:6">sse <b class="t-ok">ok</b></span></code></pre>
+            <pre class="term__pane" data-pane="src" hidden><code><span class="t-dim"># o código vem do repositório de cada projeto; pra testar</span>
+<span class="t-dim"># mudança local, a variável aponta pra pasta no disco</span>
+ranking:
+  build:
+    context: ./services/ranking
+    additional_contexts:
+      src: <span class="t-str">${RANKING_SRC:-https://github.com/edudiasr/realtime-leaderboard-redis.git#main}</span>
+  depends_on:
+    redis: { condition: service_healthy }
+
+<span class="t-dim"># nginx: SSE sem buffer, senão as kills chegam em lote</span>
+location = /api/ranking/stream {
+    proxy_pass http://ranking:8000/stream;
+    proxy_buffering off;
+    proxy_read_timeout 1h;
+}</code></pre>
+          </figure>
+          <div class="tags"><span>Docker</span><span>Compose</span><span>Nginx</span><span>MySQL</span><span>Redis</span><span>Prometheus</span></div>
+          <div class="code-card__links">
+            <a class="code-card__link" href="https://github.com/edudiasr/game-server-stack" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
           </div>
         </article>
 
