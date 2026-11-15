@@ -895,6 +895,42 @@ location = /api/ranking/stream {
           </div>
         </article>
 
+        <article class="code-card reveal" style="--c:#e0234e" data-stack="typescript sql docker">
+          <div class="code-card__head">
+            <span class="code-card__lang">TypeScript · NestJS · PostgreSQL · Redis</span>
+            <h3>Chamados API</h3>
+          </div>
+          <p data-i18n="codeChamadosDesc">API de help desk: clientes abrem chamados e a equipe de suporte atende dentro do prazo (SLA) contado em horas úteis, que pausa enquanto espera o cliente. Login com JWT e refresh token que só vale uma vez, três papéis de acesso, histórico de tudo, notificações por fila (BullMQ) e relatório de SLA por agente. Documentada no Swagger.</p>
+          <ul class="code-card__facts">
+            <li><b>49</b> <span data-i18n="factChamadosTests">testes, 27 deles subindo a API contra Postgres e Redis reais</span></li>
+            <li><b>1</b> <span data-i18n="factChamadosRace">agente fica com o chamado quando dois clicam em "pegar" juntos</span></li>
+            <li><b>0</b> <span data-i18n="factChamadosWeekend">horas de fim de semana e feriado contam no prazo</span></li>
+          </ul>
+          <figure class="term" data-term>
+            <div class="term__bar">
+              <span class="term__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <div class="term__tabs" role="tablist">
+                <button type="button" role="tab" aria-selected="true" data-pane="out" data-i18n="tabOutput">saída</button>
+                <button type="button" role="tab" aria-selected="false" data-pane="src" data-i18n="tabCode">código</button>
+              </div>
+              <button type="button" class="term__replay" data-i18n-aria="replay" aria-label="Rodar de novo">↻</button>
+            </div>
+            <pre class="term__pane" data-pane="out"><code><span class="t-l t-cmd" style="--i:0">$ npm run test:e2e</span><span class="t-l" style="--i:1"><b class="t-ok">✔</b> dois agentes pegam o mesmo chamado ao mesmo tempo: só um fica com ele</span><span class="t-l" style="--i:2"><b class="t-ok">✔</b> refresh token vale uma vez; se for reusado, a sessão inteira cai</span><span class="t-l" style="--i:3"><b class="t-ok">✔</b> esperando o cliente: quando ele responde, o chamado volta para a equipe</span><span class="t-l" style="--i:4">Tests <b class="t-ok">27 passed</b> (27)</span></code></pre>
+            <pre class="term__pane" data-pane="src" hidden><code><span class="t-dim">// chamados.service.ts: só grava se o responsável ainda</span>
+<span class="t-dim">// for o que a gente leu; quem chega depois leva 409</span>
+<span class="t-key">const</span> q = m.createQueryBuilder().update(Chamado)
+  .set(mudancas).where(<span class="t-str">'id = :id'</span>, { id: c.id });
+<span class="t-key">if</span> (c.responsavelId) q.andWhere(<span class="t-str">'responsavel_id = :atual'</span>, { atual: c.responsavelId });
+<span class="t-key">else</span> q.andWhere(<span class="t-str">'responsavel_id IS NULL'</span>);
+<span class="t-key">const</span> r = <span class="t-key">await</span> q.execute();
+<span class="t-key">if</span> (r.affected !== <span class="t-key">1</span>) <span class="t-key">throw new</span> ConflictException(...);</code></pre>
+          </figure>
+          <div class="tags"><span>NestJS</span><span>TypeScript</span><span>PostgreSQL</span><span>TypeORM</span><span>Redis</span><span>BullMQ</span><span>JWT</span><span>Swagger</span><span>Vitest</span><span>Docker</span></div>
+          <div class="code-card__links">
+            <a class="code-card__link" href="https://github.com/edudiasr/chamados-api" target="_blank" rel="noopener" data-i18n="codeRepo">Ver código ↗</a>
+          </div>
+        </article>
+
         <article class="code-card reveal" style="--c:#f472b6" data-stack="python">
           <div class="code-card__head">
             <span class="code-card__lang">Python · pandas</span>
